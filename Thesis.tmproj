@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>Constructive Alignment for Introductory Programming.tex</string>
+	<string>01-Intro.tex</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -18,22 +18,66 @@
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
-	<integer>295</integer>
+	<integer>377</integer>
 	<key>metaData</key>
 	<dict>
+		<key>01-Intro.tex</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>197</integer>
+				<key>line</key>
+				<integer>22</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>561</integer>
+			<key>firstVisibleLine</key>
+			<integer>10</integer>
+		</dict>
 		<key>Constructive Alignment for Introductory Programming.tex</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>29</integer>
+				<integer>15</integer>
 				<key>line</key>
-				<integer>264</integer>
+				<integer>41</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>225</integer>
+			<integer>11</integer>
+		</dict>
+		<key>SenteReferences.bib</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>18</integer>
+				<key>line</key>
+				<integer>689</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>664</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>6</integer>
+				<key>line</key>
+				<integer>689</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>18</integer>
+				<key>line</key>
+				<integer>689</integer>
+			</dict>
 		</dict>
 		<key>phdthesis.sty</key>
 		<dict>
@@ -49,11 +93,28 @@
 			<key>firstVisibleLine</key>
 			<integer>40</integer>
 		</dict>
+		<key>preamble.tex</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>47</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
 		<string>phdthesis.sty</string>
 		<string>Constructive Alignment for Introductory Programming.tex</string>
+		<string>01-Intro.tex</string>
+		<string>preamble.tex</string>
+		<string>SenteReferences.bib</string>
 	</array>
 	<key>shellVariables</key>
 	<array>
@@ -61,7 +122,7 @@
 			<key>enabled</key>
 			<true/>
 			<key>value</key>
-			<string>Constructive Alignment for Introductory Programming.tex</string>
+			<string>./Constructive Alignment for Introductory Programming.tex</string>
 			<key>variable</key>
 			<string>TM_LATEX_MASTER</string>
 		</dict>
@@ -81,6 +142,6 @@
 		</dict>
 	</dict>
 	<key>windowFrame</key>
-	<string>{{1031, 49}, {1388, 1369}}</string>
+	<string>{{0, 4}, {1280, 774}}</string>
 </dict>
 </plist>
