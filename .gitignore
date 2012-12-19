@@ -2,12 +2,12 @@
 /*.bbl
 /*.log
 /*.maf
-/Constructive Alignment for Introductory Programming.blg
-/Constructive Alignment for Introductory Programming.mtc
-/Constructive Alignment for Introductory Programming.mtc0
-/Constructive Alignment for Introductory Programming.out
+/*.blg
+/*.mtc*
+/*.out
 /Constructive Alignment for Introductory Programming.pdf
-/Constructive Alignment for Introductory Programming.pdfsync
-/Constructive Alignment for Introductory Programming.synctex
-/Constructive Alignment for Introductory Programming.synctex.gz
-/*.Constructive_Alignment_for_Introductory_Programming.out
+/*.pdfsync
+/*.synctex*
+/*.*.out
+/*.fdb*
+/*.sublime-workspace
