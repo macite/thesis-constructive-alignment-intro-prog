@@ -8,28 +8,47 @@
 \section{Guiding Principles} % (fold)
 \label{sec:guiding_principles}
 
-The model presented in this chapter is based upon the following principles. These  principles were derived from constructive alignment, including aspects from constructivism and aligned curriculum, as well as from computing education literature and our own experiences as software developers.
+Our model for delivering constructive aligned introductory programming, presented in this chapter, is based upon the following principles. These principles acted as guidelines for decision making, and in many ways they underpin the model as intended learning outcomes underpin constructively aligned teaching. Each aspect of the model, the associated curriculum, teaching and learning activities, and assessment tasks are aligned with one or more of these principles.
+
+The principles cover both \emph{how} the teaching and learning environment should operate, and \emph{what} should be taught. Originally derived from constructive alignment, the \emph{how} principles centre on constructivism and aligned curriculum. In relation to \emph{what} should be taught, the principles draw upon computing education literature and our own experiences as educators and software developers. Both sets of principles have developed over the course of this research through reflective practice.
+
+\subsection{Principles for how the environment should operate} % (fold)
+\label{sub:principles_for_how_the_environment_should_operate}
+
+In the following list we outline the principles we used to guide our decisions on \emph{how} the teaching and learning environment should operate. These principles are general and could, therefore, be applied to a range of teaching and learning contexts and topic domains.
 
 \begin{itemize}
-	\item Knowledge cannot be transmitted by communication alone, students must construct their knowledge in response to activity.
-	\item Teaching and learning activities and assessment tasks need to align with learning objectives that require students to engage high cognitive levels.
-	\item Programming concepts are more important than language syntax.
-	\item Programming languages must be used authentically, with all programs demonstrating appropriate use of language constructs.
-	\item Ensure each step of the learning process should present students with a coherent set of concepts, 
-	% Avoid using concepts before they are explained, thereby ensuring each step of the learning process provides students with a coherent model.
-	\item Focus on depth of understanding, over breadth of coverage: less is more.
-	\item Program code is not, by itself, a suitable means of measuring learning outcomes.
-	\item Students will achieve their best results if empowered to control their own learning, trusted to use this appropriately, and supported in their efforts.
+	\item Recognise that students construct knowledge in response to activity.
+	\item Align activities and assessment to intended learning outcomes.
+	\item Aim to assess learning outcomes not learning pace or product outcomes.
+	\item Focus on depth of understanding over breadth of coverage.
+	\item Have high expectations of students.
+	\item Actively support student efforts.
+	\item Trust and empower students to control their own learning.
+	\item Be agile and willing to change.
+	\item Embed reflective practice in all aspects.
 \end{itemize}
 
-Each of these principles is expanded upon in the following sections, and linked to associated research.
+\subsubsection{Relationships between Principles} % (fold)
+\label{ssub:relationships_between_principles}
 
-\subsection{Adopting Constructive Learning Theories } % (fold)
-\label{sub:ideas_adopted_from_constructivism}
+Individually each principle has its own intrinsic value but they are designed to work together, in which case their effects multiply. Together, each principle interacts with the other principles to create a productive student centred learning environment.
 
-Decisions about curriculum, teaching and learning activities and assessment tasks are all guided by the educator's theory of teaching and learning \cite{Argyris:1976,Ramsden:1992}. While constructivism is often the espoused theory, \citet{Phillips:2005} indicates this has not transitioned to common education practice, resulting in a ``dissonance'' between the elements of effective learning and the characteristics of typical university learning environments. This is symptomatic of the disconnect between educators espoused theory and their theory-in-use \cite{Argyris:1976}. To successfully implement constructive alignment it will, therefore, be important to adopt the practical aspects of constructivism outlined by \citet{Biggs:1996c}, \citet{Biggs:1997} and in \citet{Biggs:2007}. By consciously attempting to adopting constructivism as our theory-in-use we aim to create a educational setting which is ``in harmony'' with the principles of constructive alignment.
+\fref{fig:how_principles} shows the key interactions between these principles. The students active construction of knowledge is central, with various aspects of this being supported by the other principles. These various relationships will be discussed in the following sections.
 
-Our first principle reflects the central theme of constructivism, that learning is an active process requiring the leaner to construct their own understanding through individual and social activity \cite{Biggs:1996c,Cunningham:1996,Duffy:1992,Glasersfeld:1989,Steffe:1995}. During the development of the model presented in this thesis we actively worked to embed the following aspects of constructivism in our theory-in-use.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{HowPrinciples}
+	\caption{Key interaction between proposed principles.}
+	\label{fig:how_principles}
+\end{figure}
+
+\subsubsection{Recognise that students construct knowledge in response to activity} % (fold)
+\label{ssub:ideas_adopted_from_constructivism}
+
+Decisions about curriculum, teaching and learning activities and assessment tasks are all guided by the educator's theory of teaching and learning \cite{Argyris:1976,Ramsden:1992}. While constructivism is often the espoused theory, \citet{Phillips:2005} indicates this has not transitioned to common education practice, resulting in a ``dissonance'' between the elements of effective learning and the characteristics of typical university learning environments. This is symptomatic of the disconnect between educators espoused theory and their theory-in-use \cite{Argyris:1976}. To successfully implement constructive alignment it will, therefore, be important to adopt the key aspects from constructivism outlined by \citet{Biggs:1996c}, \citet{Biggs:1997} and in \citet{Biggs:2007}. By consciously attempting to adopt constructivism as our theory-in-use we aim to create a educational setting which is ``in harmony'' with the principles of constructive alignment.
+
+Central to all forms of constructivism is the principle that learning is an active process requiring the leaner to construct their own understanding through individual and social activity \cite{Biggs:1996c,Cunningham:1996,Duffy:1992,Glasersfeld:1989,Steffe:1995}. During the development of the model presented in this thesis we actively worked to embed the following aspects of constructivism in our theory-in-use.
 
 \begin{itemize}
 	\item Knowledge is constructed, not transmitted via communication alone.
@@ -37,37 +56,139 @@ Our first principle reflects the central theme of constructivism, that learning 
 	\item Errors in understanding are opportunities for further learning, these help indicate the students' current level of development and can be used to guide future learning activities.
 \end{itemize}
 
-We temper this with certain practical details:
+\citet{Biggs:1996c} reason for adopting constructivism as a central philosophy was due to its emphasis on the students active role in constructing their own knowledge. When taken to an extreme this results in approaches that rely upon students building their own understanding from first principles, such as in discovery learning \cite{Bruner:1961}. These approaches are often promoted in constructivist writings, such as in \citet{Glasersfeld:1989} and \citet{Cunningham:1996}. The unstructured nature of these teaching and learning environments have received strong criticism. \citet{Anderson:1998} criticises constructive learning theories when ``pursued to unproductive extremes'', as in the case with discovery learning. \citet{Mayer:2004} argues against discovery learning, instead suggesting that constructivist views of education may be better served through cognitive activity, instructional guidance, and curricular focus. Furthermore, \citet{Kirschner:2006} argue against discovery learning indicating that in highly complex environment, such as with software development, free exploration may generate a heavy workload and detrimentally affect learning.
+
+While we do take on board the central role of the learner in constructing their knowledge, we want to avoid detrimental aspects associated with taking these ideas to their extreme. As a result, we temper constructivism with certain practical details, an approach we feel is inline with the principles of constructive alignment. These details include the following:
+
 \begin{itemize}
-	\item Communication remains a valuable tool in helping shape the learning context. 
-	\item Guided instruction is valuable
-	\item 
+	\item Communication remains a valuable tool in helping shape the learning context.
+	\item Guided instruction is valuable and ensures student activity is likely to be productive.
+	\item Deliberate practice provides students with opportunities to engage with principles in action.
 \end{itemize}
-
-
-With constructivism teaching is seen as placing learners in a context 
-
-
-
-
-
-
-
-In discussing the application of constructivism in constructive alignment \citet{Biggs:1996c} summarises the various implications for teaching and learning using the following list from \citet{Wood:1995}:
-\begin{itemize}
-	\item provide instructional situations that elicit subject appropriate activities
-	\item view students' conceptions from their (the students') perspectives
-	\item see errors as reflecting a student's current level of development
-	\item recognise that substantive learning occurs in periods of conflict, surprise, over periods of time, and through social interaction.
-\end{itemize}
-
-Knowledge cannot be transmitted by communication alone, students must construct their knowledge in response to activity (constructivism)
-
-
-
-
 
 % subsection ideas_adopted_from_constructivism (end)
+
+\subsubsection{Align activities and assessment to intended learning outcomes} % (fold)
+\label{ssub:align_activities_and_assessment_to_intended_learning_outcomes_}
+
+The second pillar of constructive alignment is aligned curriculum. The impact of aligning teaching and learning activities and assessment tasks was highlighted by \citet{Cohen:1987}. In discussing instructional alignment \citet{Cohen:1987} reported that the effect sizes based on achievement tests was up to four times greater than in non-aligned instruction. In proposing constructive alignment \citet{Biggs:1996c} aligns teaching and learning activities and assessment tasks to intended learning outcomes, weaving a ``web of consistency'' to optimise the likelyhood of students engaging appropriately with learning activities \cite{Biggs:1999}. 
+
+In order to implement constructive alignment this ``web of consistency'' must also be achieved. The alignment of activities and assessment to intended learning outcomes will be critical for our model. As shown in \fref{fig:how_principles}, this alignment is seen as supporting student construction of knowledge. By aligning teaching and learning activities to the intended learning outcomes we ensure that students are constructing the required understanding. Similarly, by aligning assessment with these same intended learning outcomes we ensure that students are adequately prepared for this assessment and that the assessment is evaluating unit goals. 
+
+% subsubsection align_activities_and_assessment_to_intended_learning_outcomes_ (end)
+
+
+\subsubsection{Aim to assess learning outcomes not learning pace or product outcomes} % (fold)
+\label{ssub:aim_to_assess_learning_outcomes_not_learning_pace_or_product_outcomes_}
+
+Assessment in education is often seen as serving one of two purposes supporting learning or evaluating outcomes. These two purposes have come to be known as \emph{formative} and \emph{summative}, as proposed by \citet{Scriven:1967} and \citet{Bloom:1969}. To best support student construction of knowledge we want to maximise formative assessment. Using frequent formative assessment during the semester to aid students in developing appropriate understanding, delaying summative assessment until after unit delivery.
+
+To avoid assessing students pace of learning, 100\% of student grades will come from the summative assessment, ensuring that student are free to use formative assessment to develop their understanding. As this work will not have grades attached, students can highlight their misunderstandings and uncertainties without risking poor grades. This will enable errors evident in student work during the semester to be used formatively, allowing students to learn from their mistakes. 
+
+The formative assessment of learning outcomes during delivery helps students in the construction of their knowledge, and provides both staff and students with feedback on the teaching and learning activities. This role is highlighted in \fref{fig:how_principles}.
+
+The value of feedback in education is widely reported. 
+
+
+\citet{Ramsden:1992} indicates that of all items on the Course Evaluation Questionnaire \cite{Ramsden:1991} the one that most clearly distinguished between the best and worst courses related to the provision of helpful feedback.
+
+
+
+\citet{Black:1998} indicate that substantial learning gains can be achieved by innovations designed to strengthen the frequent feedback that students receive. Further more, 
+
+
+Furthermore, \citet{Black:1998} indicate that students pay more careful attention to feedback when there are no associated marks.
+
+
+
+
+The experience of \citet{Smith:2005}, however, indicates that shifting to formative assessment requires more than just removing the marks. \citet{Smith:2005} reported significantly worse results for the group of early secondary student who received only formative feedback. In discussing their results, \citet{Smith:2005} indicate that in this situation comments were not often constructive, were misunderstood by students, and were not integrated back into the teaching and learning context. It appears that in this case the assessment remained primarily summative in nature with marks being replaced by comments. To be effective, our formative feedback must be communicated effectively to students and provide them with clear means of addressing any shortcomings.
+
+
+
+
+% subsubsection aim_to_assess_learning_outcomes_not_learning_pace_or_product_outcomes_ (end)
+
+\subsubsection{Focus on depth of understanding over breadth of coverage} % (fold)
+\label{ssub:focus_on_depth_of_understanding_over_breadth_of_coverage_}
+
+% subsubsection focus_on_depth_of_understanding_over_breadth_of_coverage_ (end)
+
+\subsubsection{Have high expectations of students} % (fold)
+\label{ssub:have_high_expectations_of_students_}
+
+% subsubsection have_high_expectations_of_students_ (end)
+
+\subsubsection{Actively support student efforts} % (fold)
+\label{ssub:actively_support_student_efforts}
+
+% subsubsection actively_support_student_efforts (end)
+
+\subsubsection{Trust and empower students to control their own learning} % (fold)
+\label{ssub:trust_and_empower_students_to_control_their_own_learning}
+
+% subsubsection trust_and_empower_students_to_control_their_own_learning (end)
+
+\subsubsection{Be agile and willing to change} % (fold)
+\label{ssub:be_agile_and_willing_to_change}
+
+% subsubsection be_agile_and_willing_to_change (end)
+
+\subsubsection{Embed reflective practice in all aspects} % (fold)
+\label{ssub:embed_reflective_practice_in_all_aspects}
+
+% subsubsection embed_reflective_practice_in_all_aspects (end)
+
+
+
+
+
+\subsubsection{Related Work on Education Principles} % (fold)
+\label{ssub:related_work_on_education_principles}
+
+
+
+% subsubsection related_work_on_education_principles (end)
+
+% subsection relationships_between_principles (end)
+
+
+
+% subsection principles_for_how_the_environment_should_operate (end)
+
+Principles specific to teaching introductory programming are presented in the following list. While the general principles helped shape the overall learning environment, these principles helped shape specifics in the curriculum, teaching and learning activities, and assessment tasks.
+
+\begin{itemize}
+	\item Focus on programming concepts.
+	\item Introduce programming concepts incrementally, building on earlier concepts.
+	\item Treat syntax as a means of expressing programming concepts, mapping conceptual programs to code for the compiler.
+	\item Use the language as it is intended to be used.
+	\item Avoid language features before they can be explained.
+	\item Introduce concepts early and provide students with time to put them into practice.
+	% \item Program code is not, by itself, a suitable means of measuring learning outcomes.
+\end{itemize}
+
+Each of these principles is expanded upon in the following sections, and linked to associated research.
+
+
+
+
+
+
+\subsection{Supporting Student Learning} % (fold)
+\label{sub:supporting_student_learning}
+
+High Expectations: strive for excellence, responsibility for learning, be proud of their achievements.
+
+\citet{Chickering:1987}:
+
+\citet{Gibbs:2004} 
+
+\begin{quote}
+	The trick when designing assessment regimes is to generate engagement with learning tasks without generating piles of marking.
+\end{quote}
+
+% subsection supporting_student_learning (end)
 
 
 \subsection{Adopted Principles} % (fold)
