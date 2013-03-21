@@ -248,6 +248,9 @@ INPUT /usr/local/texlive/2012/texmf-dist/fonts/vf/adobe/palatino/pplb7t.vf
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/vf/adobe/palatino/pplr7t.vf
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
+INPUT Figures/CAApproach/StrategyResourcesActivities.pdf
+INPUT ./Figures/CAApproach/StrategyResourcesActivities.pdf
+INPUT ./Figures/CAApproach/StrategyResourcesActivities.pdf
 INPUT Figures/CAApproach/ProcessOverview.pdf
 INPUT ./Figures/CAApproach/ProcessOverview.pdf
 INPUT ./Figures/CAApproach/ProcessOverview.pdf
