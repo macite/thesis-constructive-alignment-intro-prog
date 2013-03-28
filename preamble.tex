@@ -4,27 +4,32 @@
 %\usepackage{times}
 %\usepackage{helvet}
 
+
+
 \usepackage{amsmath, amssymb, amsthm, amstext}
 \usepackage[font=small, labelfont=bf, margin=20pt]{caption} 
-\usepackage[pdftex]{graphicx,color}
-%\usepackage[left=1.5in, right=1in, top=1in, bottom=1in, headheight=13.6pt]{geometry}
+\usepackage[pdftex]{graphicx}
 \usepackage[left=40mm, right=25mm, top=33mm, bottom=33mm, headheight=14pt]{geometry}
 
 \usepackage[authoryear]{natbib}
 \bibliographystyle{agsm} %{abbrv}
+
 \usepackage{subfig}
 \usepackage{flushend}
 \usepackage{rotating}
-\usepackage{array,longtable}
+% \usepackage{array,longtable} breaks tables?
+% \usepackage{tabulary}
 \usepackage{multicol}
 \usepackage{multirow}
 \usepackage{setspace}
 \usepackage{cite}
 \usepackage{url}
+\usepackage{enumitem}
+\usepackage{pdflscape}
 
 \usepackage{nameref}
 
-\usepackage {pdfsync}
+\usepackage{pdfsync}
 
 \renewcommand{\cite}{\citep}
 
@@ -134,72 +139,72 @@
 \newcommand{\edge}[2]{\langle{#1},{#2}\rangle}
 \newcommand{\card}[1]{\mid\! #1 \!\mid}  %% Will only work in Math mode
 %-------------------------------------------------------------------------
-% Metrics used
-\newcommand{\fanin}{In-Degree Count\xspace}
-\newcommand{\fanout}{Out-Degree Count\xspace}
-\newcommand{\indeg}{In-Degree\xspace}
-\newcommand{\outdeg}{Out-Degree\xspace}
-\newcommand{\WMC}{Weighted Method Count\xspace}
-\newcommand{\bc}{Branch Count\xspace}
-\newcommand{\fcount}{Field Count\xspace}
-\newcommand{\mcount}{Method Count\xspace}
-\newcommand{\icount}{Interface Count\xspace}
-\newcommand{\supcount}{Super Class Count\xspace}
-\newcommand{\paracount}{Parameter Count\xspace}
-\newcommand{\tycount}{Type Construction Count\xspace}
+% % Metrics used
+% \newcommand{\fanin}{In-Degree Count\xspace}
+% \newcommand{\fanout}{Out-Degree Count\xspace}
+% \newcommand{\indeg}{In-Degree\xspace}
+% \newcommand{\outdeg}{Out-Degree\xspace}
+% \newcommand{\WMC}{Weighted Method Count\xspace}
+% \newcommand{\bc}{Branch Count\xspace}
+% \newcommand{\fcount}{Field Count\xspace}
+% \newcommand{\mcount}{Method Count\xspace}
+% \newcommand{\icount}{Interface Count\xspace}
+% \newcommand{\supcount}{Super Class Count\xspace}
+% \newcommand{\paracount}{Parameter Count\xspace}
+% \newcommand{\tycount}{Type Construction Count\xspace}
 
-\newcommand{\OSS}{Open Source Software}
-\newcommand{\OSYS}{Open Source Software Systems}
-\newcommand{\OO}{object oriented}
+% \newcommand{\OSS}{Open Source Software}
+% \newcommand{\OSYS}{Open Source Software Systems}
+% \newcommand{\OO}{object oriented}
 
 
-% used metrics
-\newcommand{\Metric}[1]{\emph{#1} \emph{Count}}
-\newcommand{\Gini}{Gini Coefficient}
-\newcommand{\Ginis}{Gini Coefficients}
+% % used metrics
+% \newcommand{\Metric}[1]{\emph{#1} \emph{Count}}
+% \newcommand{\Gini}{Gini Coefficient}
+% \newcommand{\Ginis}{Gini Coefficients}
 
-\newcommand{\LIC}{\emph{Load Instruction Count}}
-\newcommand{\SIC}{\emph{Store Instruction Count}}
-\newcommand{\CC}{\emph{Number of Branches}}
-\newcommand{\NOB}{\emph{Number of Branches}}
-\newcommand{\IDC}{\emph{In-Degree Count}}
-\newcommand{\ODC}{\emph{Out-Degree Count}}
-\newcommand{\MC}{\emph{Number of Methods}}
-\newcommand{\NOM}{\emph{Number of Methods}}
-\newcommand{\PMC}{\emph{Public Method Count}}
-\newcommand{\NOF}{\emph{Number of Fields}}
-\newcommand{\NOA}{\emph{Number of Attributes}}
-\newcommand{\FC}{\emph{Number of Attributes}}
-\newcommand{\MIC}{\emph{Fan-Out Count}}
-\newcommand{\TCC}{\emph{Type Construction Count}}
-\newcommand{\NOD}{\emph{Number of Descendants}}
-\newcommand{\NOC}{\emph{Number of Children}}
-\newcommand{\DIT}{\emph{Depth of Inheritance Tree}}
-\newcommand{\MCC}{\emph{Fan-Out Count}}
+% \newcommand{\LIC}{\emph{Load Instruction Count}}
+% \newcommand{\SIC}{\emph{Store Instruction Count}}
+% \newcommand{\CC}{\emph{Number of Branches}}
+% \newcommand{\NOB}{\emph{Number of Branches}}
+% \newcommand{\IDC}{\emph{In-Degree Count}}
+% \newcommand{\ODC}{\emph{Out-Degree Count}}
+% \newcommand{\MC}{\emph{Number of Methods}}
+% \newcommand{\NOM}{\emph{Number of Methods}}
+% \newcommand{\PMC}{\emph{Public Method Count}}
+% \newcommand{\NOF}{\emph{Number of Fields}}
+% \newcommand{\NOA}{\emph{Number of Attributes}}
+% \newcommand{\FC}{\emph{Number of Attributes}}
+% \newcommand{\MIC}{\emph{Fan-Out Count}}
+% \newcommand{\TCC}{\emph{Type Construction Count}}
+% \newcommand{\NOD}{\emph{Number of Descendants}}
+% \newcommand{\NOC}{\emph{Number of Children}}
+% \newcommand{\DIT}{\emph{Depth of Inheritance Tree}}
+% \newcommand{\MCC}{\emph{Fan-Out Count}}
 
-\newcommand{\LICs}{LIC}
-\newcommand{\SICs}{SIC}
-\newcommand{\CCs}{NOB}
-\newcommand{\IDCs}{IDC}
-\newcommand{\ODCs}{ODC}
-\newcommand{\MCs}{NOM}
-\newcommand{\PMCs}{PMC}
-\newcommand{\FCs}{NOA}
-\newcommand{\MICs}{FOC}
-\newcommand{\TCCs}{TCC}
-\newcommand{\NODs}{NOD}
-\newcommand{\NOCs}{NOC}
-\newcommand{\DITs}{DIT}
-\newcommand{\MCCs}{MCC}
+% \newcommand{\LICs}{LIC}
+% \newcommand{\SICs}{SIC}
+% \newcommand{\CCs}{NOB}
+% \newcommand{\IDCs}{IDC}
+% \newcommand{\ODCs}{ODC}
+% \newcommand{\MCs}{NOM}
+% \newcommand{\PMCs}{PMC}
+% \newcommand{\FCs}{NOA}
+% \newcommand{\MICs}{FOC}
+% \newcommand{\TCCs}{TCC}
+% \newcommand{\NODs}{NOD}
+% \newcommand{\NOCs}{NOC}
+% \newcommand{\DITs}{DIT}
+% \newcommand{\MCCs}{MCC}
 
-\newcommand{\GC}{\Metric{Getter}}
-\newcommand{\SC}{\Metric{Setter}}
-\newcommand{\BC}{\Metric{Boxing}}
+% \newcommand{\GC}{\Metric{Getter}}
+% \newcommand{\SC}{\Metric{Setter}}
+% \newcommand{\BC}{\Metric{Boxing}}
 
-%% Additional commands to provide for commenting and notes
-\newcommand{\rb}[1]{\raisebox{1.5ex}[0pt]{#1}}
-\newcommand{\rbp}[1]{\raisebox{1.5ex}[0pt]{\parbox{7cm}{#1}}}
-\newcommand{\cl}{\\ \cline{3-4}}
+% %% Additional commands to provide for commenting and notes
+% \newcommand{\rb}[1]{\raisebox{1.5ex}[0pt]{#1}}
+% \newcommand{\rbp}[1]{\raisebox{1.5ex}[0pt]{\parbox{7cm}{#1}}}
+% \newcommand{\cl}{\\ \cline{3-4}}
 
 
 
@@ -225,7 +230,7 @@
 %\renewcommand{\chaptermark}[1]{\markboth{\textsc{\@chapapp} \thechapter: #1}{}}
 \renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{\chaptername \xspace \thechapter. #1}}{}}
 \cfoot{} % remove the page number in the middle of footer
-%\rfoot{\thepage}
+% \rfoot{\thepage}
 \fancyfoot[R]{\thepage}
 %\fancyhead[R]{\thepage}
 
@@ -330,9 +335,11 @@
 
 \usepackage{listings}
 \usepackage{color}
-\usepackage{textcomp}
+% \usepackage{textcomp}
+
 %\definecolor{listinggray}{gray}{0.9}
 %\definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
+
 \lstset{
     %float=p,
     %floatplacement=p,
@@ -369,3 +376,5 @@
 \else
 \DeclareGraphicsExtensions{.eps, .jpg}
 \fi
+
+\usepackage{phdthesis}
