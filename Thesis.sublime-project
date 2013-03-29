@@ -3,7 +3,7 @@
 	[
 		{
 			"path": "/Users/acain/working/Papers/Thesis",
-			"file_exclude_patterns": ["*.aux","*.log","*.bbl","*.out","*.pdfsync","*.blg","*.fdb_latexmk","*.maf","*.mtc*","*.synctex*"]
+			"file_exclude_patterns": ["*.aux","*.log","*.bbl","*.out","*.pdfsync","*.blg","*.fdb_latexmk","*.maf","*.mtc*","*.synctex*","*.fls"]
 		}
 	]
 }
