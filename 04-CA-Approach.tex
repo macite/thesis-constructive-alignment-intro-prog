@@ -5,328 +5,78 @@
 
 \graphicspath{{Figures/CAApproach/}}
 
-Pascal \cite{Becker:2002}
+\cref{cha:guiding_principles} outlined nine principles for guiding \emph{how} to teach introductory programming, and three principles for \emph{what} should be taught. This chapter proposes a model for applying constructive alignment for teaching introductory programming.
 
-To avoid assessing students pace of learning 100\% of each student's grade will be determined from the summative assessment. This ensures students are free to use the formative assessment to develop their understanding. As this work will not have marks attached students can highlight their misunderstandings and uncertainties without losing marks. We want to encourage students to use these formative tasks to demonstrate what they \emph{do not} know, as much as what they \emph{do}. 
+\section{Assessment Strategy} % (fold)
+\label{sec:assessment_strategy}
 
-%Traditionally programming units focus on code writing activities, and assessment then focuses on evaluating the programs produced. \citet{Lister:2004} augmented this with code reading and tracing activities to help better assess student understanding. We want to take this work further and assess, formatively and summatively, students ability to \emph{describe} and \emph{explain} underlying principles, code structures, and development processes. This will mean the code itself will be insufficient, and additional teaching and learning activities will need to get students to describe and explain aspects of software development.
+One of the overarching principles from \cref{cha:guiding_principles} was the requirement to be agile and willing to change (\pref{itm:agile}). In discussing this principle, \sref{ssub:be_agile_and_willing_to_change} outlines that teaching and learning resources need to be guided by an overall strategy. This strategy informs, and is shaped by, the assessment approach. 
 
+Assessment plays an important role in defining what students learn. \citet{Rowntree:1977} indicated the central role of assessment procedures in understanding any education system. This is supported by \citet{Ramsden:2003}, who stated that ``from our students' point of view, assessment always defines the actual curriculum'', and further supported by \citet{Biggs:2007} who indicated that ``students learn what they \emph{thing} they will be tested on''. In presenting their conditions for effective assessment, \citet{Gibbs:2004} discussed the dominant influence of assessment in defining what students focus on, indicating that students are able to distinguish between what assessment requires them to pay attention to and what is likely to result in effective learning. So the selection of an assessment approach will have a significant impact on the overall strategy for both students and staff. 
 
+Traditionally introductory programming was taught using a number of assignments and a final examination. This approach, while commonly used, is not in keeping with several of our guiding principles. The use of summative assessment during the semester goes against \pref{itm:formative} with its goal of assessing outcomes. The use of assignments to motivate students is also contrary to \pref{itm:theory_y}, with marks being used for motivation in either a hard or soft form of Theory X strategy. These principles required us to examine other forms of assessment.
 
-
-
-% section guiding_principles (end)
-
-\clearpage
-
-Prior to conducting this research we have experienced introductory programming using both imperative-first and objects-first approaches. Our view mirrors those of \citet{Rist:1996} who reported on plans and cognitive schemas, the fundamental units of program design. In relating plans to objects, \citet{Rist:1996} indicated that objects were not different, they were more as objects require additional overhead related to defining object\footnote{Object structures are typically defined using classes or similar mechanisms in languages such as Java} structures. Given this, units that take an objects-first approach will still need to have a significant focus on procedural aspects, as indicated by \citet{Robins:2003}. In many ways this work was started by our desire to move ``back to basics'' \cite{Reges:2006} in our introductory programming units, and therefore an objects-later approach was taken.
-
-While objects would not appear in the first programming unit, their importance in students' education remained a focus. Rather than seeing programming as being delivered in a single stand alone unit, we designed a sequence of two units that worked closely together. The first covers structured procedural programming, focusing on aspects such as control flow. The second on object oriented programming, which can then use a model driven approach similar to the one reported in \citet{Bennedsen:2004} but without having to cover procedural programming aspects such as control flow.
-
-Introductory Programming will use a procedures-first approach, and focus on the structured programming principles of organising code using \emph{sequence}, \emph{selection} and \emph{repetition}. Students will learn to use functional and modular decomposition to break problems down, and implement solutions using functions and procedures. Data will be managed using arrays and custom data types. Pointers and memory management will be covered. Parameter passing will be covered, including both pass-by-value and pass-by-reference. Weaved through this will be an iterative development process, a focus on writing clear and legible code, and other good programming practices. In addition to writing code, students will learn to read code for the debugging purposes and to demonstrate the ability to interpret other peoples code. All of this is captured in the intended learning outcomes for Introductory Programming:
-\begin{enumerate}
-	\item Apply code reading and debugging techniques to analyse, interpret, and describe the purpose of program code, and locate within this code errors in syntax, logic, and/or good practice.
-	\item Describe the principles of structured programming, relate these to the syntactical elements of the programming language used, and the way programs are developed using this language.
-	\item Construct small programs, using the programming languages covered that include the use of arrays, functions and procedures, parameter passing with call by value and call by reference, custom data types, and pointers.
-	\item Use modular and functional decomposition to break problems down functionally, represent the resulting structures diagrammatically, and implement the structure in code as functions and procedures.
-\end{enumerate}
-
-Object Oriented Programming takes students who have completed Introductory Programming and introduces them to the object oriented programming paradigm. Students will learn about the core principles of object oriented programming, and how these can be used to create object oriented programs. They will develop programs using integrated development environments, including  unit testing tools. Students will be introduced to visual ways of communicating object oriented designs using the Unified Modelling Language \cite{Fowler:2004}, including both class diagrams and sequence diagrams. Design patterns and heuristics will be used to provide students with a means of evaluating the quality of their designs. As with Introductory Programming students will use a iterative development process. The intended learning outcomes for Object Oriented Programming are:
-\begin{enumerate}
-	\item Explain the principles of the object oriented programming paradigm specifically including abstraction, encapsulation, inheritance and polymorphism, and explain how these principles are used to create object oriented programs.
-	\item Design, develop, test, and debug object oriented programs, using an integrated development environment.
-	\item Select and use appropriate collection classes, from the language's class library, to manage collections of multiple objects.
-	\item Construct appropriate diagrams and textual descriptions to communicate the static structure and dynamic behaviour of an object oriented solution.
-	\item Apply accepted good practices related to the construction of object oriented programs.
-\end{enumerate}
-
-\section{Implementation} % (fold)
-\label{sec:design}
-
-Constructive alignment, as proposed by Biggs~\cite{Biggs:1996c}, is an amalgamation of constructive learning theory and aligned instruction design. It aims to elicit deep learning approaches from all students. Biggs' model is student focused, with clear and intentional alignment of assessment, teaching and learning activities, and unit objectives. The focus on the central role of the learner in building meaning is derived from constructivist learning theories, whilst the alignment of assessment, teaching, and learning activities, has its foundation in instructional design literature. 
-
-\fref{fig:constructive_alignment} illustrates the constructive alignment model presented in~\cite{Houghton:2004}, which consists of the following blocks:
-
-\begin{itemize}
-	\item \emph{Intended learning outcomes} clearly define required learning in terms of ``performances of understanding''.
-	\item \emph{Performance objectives} emerge from the desired outcomes, and can be ranked to become the assessment criteria.
-	\item \emph{Teaching and learning activities} are designed to place students in situations likely to elicit the required learning.
-	\item Students provide \emph{evidence of their learning}, that is assessed against the criteria to determine grade outcomes.
+One strategy to address this would be to consider abandoning coursework assignments, delay final summative assessment to an examination worth 100\% of the student's grade. While this would address \pref{itm:formative}, such a heavy weight examination is very much a hard Theory X approach. The value of coursework assignments was strongly argued for in \citet{Gibbs:2004}. This work provided several strong arguments for coursework assignments, including the following:
+\begin{itemize}[noitemsep,nolistsep]
+	\item Students attain better results from coursework than examinations, referring to their Gibbs' earlier work that indicated a strong positive correlation between proportion of coursework and average marks.
+	\item Students prefer coursework assignments over examinations. A position that is supported by \citet{Kniveton:1996} who stated that students prefer coursework assignments to exams as assignments assessed a better range of their abilities and enabled them to organise their time to a greater extent.
+	\item Coursework assignments are at least as valid a form of assessment as examinations:
+	\begin{itemize}
+		\item Exams are a poor predictor of future performance.
+		\item Coursework assignments are a better predictor of long term learning than exam results \cite{Conway:1992}. This supports the idea that students adopt surface approaches to preparing for exams \citet{Marton:1976a}. 
+		\item The quality of learning is higher in assignment-based units, when compared to exam-based units.
+	\end{itemize}
 \end{itemize}
 
-% \begin{figure}[t!]
-% 	\centering
-% 	\includegraphics[width=\columnwidth]{Houghton_constructive_alignment_1}
-% 	\caption{Constructive alignment model presented by Houghton in~\cite{Houghton:2004}}
-% 	\label{fig:constructive_alignment}
-% \end{figure}
+The challenge, therefore, is to define an assessment approach that enables students to construct their knowledge, uses coursework assignments in a formative manner, and enables 100\% of the students grade to be determined after the end of the teaching period.
 
-The first stage of our research was to determine how Biggs' model of constructive alignment~\cite{Biggs:1996c}, and the details on using portfolio assessment suggested by Biggs and Tang in~\cite{Biggs:1997}, could be used to guide the creation of an introductory programming unit. Examining the practical advice from Biggs and Tang in~\cite{Biggs:2007}, which further elaborates on both his model of constructive alignment and portfolio assessment, a model of constructive alignment for introductory programming was defined. The model is presented in \fref{fig:process_overview}, which captures staff and student processes and the artefacts generated and exchanged throughout the learning process.
+\subsection{Portfolio Assessment} % (fold)
+\label{sub:portfolio_assessment}
 
-\begin{figure*}[t!]
+In proposing Constructive Alignment, \citet{Biggs:1996c} advocated strongly for the use of an assessment portfolio, and indicated that the principles of constructive alignment had evolved with the decision to use portfolio assessment. This work was extended in \cite{Biggs:1997} which outlined suggestions for implementing portfolio assessment and a generalised model for instruction design. Further advice and details of the generalised model were presented in \citet{Biggs:2007} text on quality learning at university.
+
+Assessment involves three components, all of which are typically under the control of the teacher \cite{Biggs:1997}. These include \emph{setting criteria}, \emph{selecting evidence} and \emph{making a judgement}. With the assessment portfolio the students take control of at least the selection of evidence. The portfolio is then a collection of work that the student puts forward for assessment against the unit's intended learning outcomes.
+
+\citet{Smith:2001,Smith:2003} identified four different kinds of portfolios evident in the research literature: dossier, reflective, training and personal development. These reflected the combination of two factors: the purpose of the portfolio as either for selection/promotion or learning, and whether the portfolio is self-directed or mandated. The details of these are described in the following list, and shown in \fref{fig:portfolio_types}.
+
+\begin{description}[noitemsep,nolistsep]
+	\item[Dossier] is a portfolio for the purpose of selection or promotion that contains a mandated collection of work to demonstrate achievement. (selection/promotion, mandated)
+	\item[Reflective] portfolios contain a self selected collection of work that demonstrates growth or accomplishment for the purpose of admission or promotion. The portfolio is accompanied by a self-appraisal, with the justification for the selection of pieces being as important as the evidence itself. (selection/promotion, self-directed)
+	\item[Training] portfolios are a mandated collection of work performed in a learning context. The portfolio has a fixed format, and contains representative work from the student demonstrating acquired skills, knowledge and competencies. (learning, mandated)
+	\item[Personal development] portfolios are a self selected collection of work, and reflective account of personal growth over an extended period. (learning, self-directed)
+\end{description}
+
+\begin{figure}[htbp]
 	\centering
-	\includegraphics[width=6in]{ProcessOverview}
-	\caption{An overview of teacher and students roles, and iterative delivery, in the constructive alignment model developed for introductory programming.}
-	\label{fig:process_overview}
-\end{figure*}
-
-The model is divided into \emph{student} and \emph{teacher}\footnote{Teacher in this context encompasses all teaching staff related to the unit, though each stage may not involve all staff members.} processes, distributed throughout unit design and delivery. This is highlighted in \fref{fig:process_overview} by columns for the teacher and student processes, and three rows for the stages in which they occur. The stages identified are \emph{prior} to unit delivery, \emph{during} unit delivery, and \emph{post} unit delivery.
-
-Prior to the unit delivery (a) the teaching staff \emph{define intended learning outcomes} and \emph{construct assessment criteria}, which together form the critical components of the unit outline. Such a document is a common practice, and forms the central focus for the unit. The unit outline is then used to inform and guide staff in the \emph{development of teaching and learning activities}. Unit outlines may also be used by students in evaluating units to select in their course.
-
-During the teaching period (b), staff \emph{deliver the unit} using the developed teaching and learning activities. Ideally these activities help student's to \emph{construct knowledge}. As a result, students produce artefacts that demonstrate their depth of understanding, which may then be selected by the student and \emph{submitted for formative feedback}. This provides an opportunity for teaching staff to \emph{provide feedback and guidance}. The process of activities, knowledge construction, and formative feedback is designed to be an ongoing iterative process.
-
-After the delivery of the unit (c) students \emph{construct and submit a portfolio for assessment}, which is then \emph{assessed by} the teaching staff against the intended learning outcomes and assessment criteria prepared prior to the unit's delivery.
-
-The central role of intended learning outcomes and assessment criteria is to, as Biggs elegantly phrased it, ``entrap'' students ``in this web of consistency, optimising the likelihood that they will engage the appropriate learning activities.''~\cite{Biggs:1999}
-
-While each of the processes described is important, some are of more interest than others when defining a constructively aligned approach. Of specific interest is the definition of the intended learning outcomes, the setting of the assessment criteria, the use of formative feedback during delivery, and the assessment of the portfolio.
-
-\section{Model Process Details} % (fold)
-\label{sec:process_details}
-
-Here we outline the different processes of the model presented, with supportive examples from an initial implementation. The model was applied to a second level programming unit that focused on object oriented programming. Students are assumed to have been previously introduced to procedural programming, and as such were expected to have a working understanding of basic programming constructs (sequence, selection, repetition), as well as function and procedure declarations and parameter passing. 
-
-The goals of the second programming unit were to introduce students to objects, object oriented principles, responsibility driven design, and to develop proficiency using an object oriented programming language. In this early example of the model's application, the unit was taken by 83 students and taught by a small team of staff. The model has been subsequently adapted and applied to other introductory programming units which are not dissimilar, though not discussed in this paper.
-
-\subsection{Defining Intended Learning Outcomes} % (fold)
-\label{sub:defining_intended_learning_outcomes}
-
-When using constructive alignment, the intended learning outcomes are central to the assessment of the unit. With more \emph{traditional} forms of assessment, teaching staff take responsibility for aligning assessment to required outcomes. With portfolio assessment, teaching staff relinquish control of this aspect and the outcomes themselves take on a dual purpose: as a statement of what will be \emph{taught}, and what will be \emph{assessed}. Effectively the specified unit outcomes become the assessment, thereby taking advantage of the fact that ``assessment always drives the curriculum'' (Ramsden~\cite{Ramsden:1992}).  In this arrangement there is little opportunity for misalignment between the unit objectives and assessment, but a greater importance on the exact nature of the intended learning outcomes. This critical role of the intended learning outcomes means that they are instrumental in the success of the unit. 
-
-For an introductory programming unit it is important to design the intended learning outcomes so that, as a group, they cover the required programming competencies as well as the associated conceptual knowledge. As the outcomes drive the entire process -- including both student and teacher processes -- it is important they are expressed clearly and simply so as to be understood by all involved.
-
-A variety of sources serve as inputs into this process, though these are not shown in \fref{fig:process_overview}. In preparing learning outcomes, Thota and Whitfield propose inputs related to pedagogic theory (constructivism and phenomenography) as well as student factors such as approach to learning, learning styles, and prior knowledge. Armarego~\cite{Armarego:2009} highlights the needs for input related to industry requirements and domain characteristics, such as the Computer Science and Software Engineering Curriculum from professional standards bodies (see~\cite{Lethbridge:2006} and~\cite{Cassel:2008}), and associated Bodies of Knowledge (see~\cite{Abran:2001}).
-
-We developed the following principles which can be used to guide the formation of the intended learning outcomes for portfolio assessed programming units:
-\begin{itemize}
-  \item Express outcomes using verbs at an appropriate level of understanding with reference to the SOLO taxonomy. (See~\cite{Biggs:2007} and~\cite{Biggs:1982}.)
-  \item Cover both the required \emph{conceptual knowledge}, and \emph{programming competencies}.
-  \item Use \emph{simple terms} (where possible) to communicate outcomes, ensuring they are understood by all students undertaking the unit.
-  \item The number of outcomes should be \emph{minimal}, ideally between four and six (\emph{cf.}~\cite{Biggs:2007} and~\cite{Gardner:1994}). This is to help ensure that each outcome covers a meaningful body of knowledge to a sufficient depth.
-  \item Outcomes need to be \emph{general} to facilitate assessment of diverse portfolios, and \emph{sufficient} to ensure that differing degrees of proficiency and understanding can be assessed.
-  \item There needs to be \emph{flexibility} to enable students to choose a range of means when addressing outcomes.
-\end{itemize}
-
-In the example implementation presented in this work, the learning objectives had been predefined, as required by the outside influence of accreditation processes, but were expressed using appropriate action verbs. \tref{tbl:example_intended_learning_outcomes} lists the outcomes from the example unit delivered using this model.
-
-\begin{table}[!t]
-  \footnotesize
-% increase table row spacing, adjust to taste
-\renewcommand{\arraystretch}{1.3}
-% if using array.sty, it might be a good idea to tweak the value of
-% \extrarowheight as needed to properly center the text within the cells
-\caption{Example intended learning outcomes}
-\label{tbl:example_intended_learning_outcomes}
-\centering
-% Some packages, such as MDW tools, offer better commands for making tables
-% than the plain LaTeX2e tabular which is used here.
-\begin{tabular}{|l p{4.25in}|}
-\hline
-1) & Explain the use, implementation of, and relationships between, the principles of the object oriented programming paradigm specifically including abstraction, encapsulation, inheritance, and polymorphism.
-\\
-\hline
-2) & Explain object oriented programming language implementation details and language specific culture, features, and environments.
-\\
-\hline
-3) & Design, develop, test, and debug programs using object oriented principles in conjuncture with development tools including integrated development environments, debuggers, unit testing tools, and version control tools. \\
-\hline
-4) & Construct appropriate diagrams and textual descriptions to communicate the static structure and dynamic behaviour of an object oriented solution, explain these structures to other developers, and convert them into working implementations.\\
-\hline
-5) & Describe and explain the factors that contribute to a good object oriented solution, using your own experiences and by drawing upon accepted good practices. \\
-\hline
-\end{tabular}
-\end{table}
-
-% subsection defining_intended_learning_outcomes (end)
-
-
-
-
-
-
-\subsection{Constructing Assessment Criteria} % (fold)
-\label{sub:constructing_assessment_criteria}
-
-Alongside the development of the intended learning outcomes is the definition of the assessment criteria. These criteria are used to assess student portfolios, but also guide the teaching and learning activities. Providing assessment criteria in the unit outline creates a simplified learning contract~\cite{Stephenson:1993}, in which students know ``up front'' what is required to achieve the different grade results.
-
-To provide a holistic judgement, the portfolio assessment is \emph{criterion-referenced} as suggested by Biggs and Tang in~\cite{Biggs:1997}. The assessment criteria development process takes input from the intended learning outcomes, along with guidelines for portfolio assessment~\cite{Biggs:2007} and levels of achievement from the SOLO taxonomy~\cite{Biggs:1982}. The resulting criteria are also placed in the unit outline.
-
-There is some contention regarding the specification of assessment criteria for assessing portfolios. For example, some consider that by overly specifying criteria students are limited in what can be included (see~\cite{Driessen:2005,Tigelaar:2007}). However, it was thought by the staff involved in this work that students in introductory programming units require specific guidance, a position supported by Thorpe~\cite{Thorpe:2000}, who suggests that students find it difficult to reflect on what they have learnt. Thorpe also noted that this process is made easier for students if they apply criteria defined by teaching staff. 
-
-The following principles were used to guide the definition and communication of the assessment criteria:
-
-\begin{itemize}
-  \item \emph{Outline} what is required to achieve the different levels of understanding for each of the intended learning outcomes.
-  \item Communicate assessment criteria using \emph{simple terms} (as suggested for the outcomes).
-  \item Higher grades should require evidence of \emph{deeper learning}, while specifically avoiding an excessive volume of work.
-  \item Clearly \emph{map assessment criteria} to grade outcomes, ensuring students and staff have a shared understanding of how a portfolio relates to final grades.
-\end{itemize}
-
-\begin{table}[!t]
-  \footnotesize
-% increase table row spacing, adjust to taste
-% \renewcommand{\arraystretch}{1.3}
-% if using array.sty, it might be a good idea to tweak the value of
-% \extrarowheight as needed to properly center the text within the cells
-\caption{Example Assessment Criteria related to the intended learning outcome 2 from Table~\ref{tbl:example_intended_learning_outcomes}}
-\label{tbl:example_assessment_criteria}
-\centering
-% Some packages, such as MDW tools, offer better commands for making tables
-% than the plain LaTeX2e tabular which is used here.
-\begin{tabular}{|p{1.5in}|p{1.5in}|p{1.5in}|p{1.5in}|}
-\hline
-\textbf{Marginal} & \textbf{Adequate} & \textbf{Good} & \textbf{Excellent} \\
-\hline
-Evidence shows a minimally acceptable understanding of the language chosen and the ability to use the language to implement object oriented programs. 
-&
-There is evidence of adequate understanding of the language chosen and the ability to use it to implement object oriented programs.
-
-Programs illustrate appropriate use of language features.
-
-Programs illustrate a correct use of the language’s tools, and programming standards.
-&
-	Illustrates a good mastery of the language chosen, its culture, environment, and tools.
-
-Programs illustrate appropriate use of language features, and evidence of considered selection of classes from the language’s class library.	
-&
-As in “good” but provides further depth through either:
-
-\begin{itemize}
-  \item Wider reading and the use of more advanced language features or classes, or
-  \item Elegant application of the language to solve problems, or
-  \item Other research or analysis related to programming languages.
-\end{itemize}
-\\
-\hline
-\end{tabular}
-\end{table}
-
-% \begin{table*}[!t]
-%   \footnotesize
-% % increase table row spacing, adjust to taste
-% \renewcommand{\arraystretch}{1.3}
-% % if using array.sty, it might be a good idea to tweak the value of
-% % \extrarowheight as needed to properly center the text within the cells
-% \caption{Example mapping from piece assessment, to final grades}
-% \label{tbl:example_mapping_to_grades}
-% \centering
-% % Some packages, such as MDW tools, offer better commands for making tables
-% % than the plain LaTeX2e tabular which is used here.
-% \begin{tabular}{|c|c|c|>{\centering\arraybackslash}m{0.375in}|>{\centering\arraybackslash}m{0.375in}|>{\centering\arraybackslash}m{0.375in}|>{\centering\arraybackslash}m{0.375in}|>{\centering\arraybackslash}m{0.375in}|>{\centering\arraybackslash}m{0.375in}|>{\centering\arraybackslash}m{0.375in}|>{\centering\arraybackslash}m{0.375in}|>{\centering\arraybackslash}m{0.375in}|}
-% \hline
-% \multicolumn{3}{|c|}{50 P} &
-% 58 P & 62 P & 65 C & 75 D & 78 D & 82 D & 95 HD & 98 HD & 100 HD  \\
-% \hline
-% \multicolumn{3}{|p{1.5in}|}{All intended learning outcomes are addressed to at least a marginal level.
-
-% No outcomes are poor or missing.} &
-% \multicolumn{3}{|p{1.5in}|}{At least three of the intended learning outcomes are addressed to an adequate or higher level. 
-
-% Other outcomes are addressed at a marginal level.
-% } &
-% \multicolumn{3}{|p{1.5in}|}{At least two intended learning outcomes are at a good level or higher.
-
-% Other outcomes must be addressed to at least an adequate level.
-
-% No outcomes are marginal.
-% } &
-% \multicolumn{3}{|p{1.5in}|}{At least two of the intended learning outcomes are addressed to an excellent level.
-
-% All other outcomes are addressed to a good level.
-
-% No outcomes are less than good.
-% } \\
-
-% \hline
-% \end{tabular}
-% \end{table*}
-
-In the example unit it was decided to grade each of the intended learning outcomes, and from this derive each student's grade result. \tref{tbl:example_assessment_criteria} shows the criteria for one of the intended learning outcomes from the example implementation. 
-
-The assessment criteria were divided into four categories, following examples from~\cite{Biggs:2007}, representing \emph{marginal}, \emph{adequate}, \emph{good}, and \emph{excellent} evidence of the required learning. For each outcome the \emph{marginal} category was associated with minimally acceptable standards of achievement, \emph{adequate} with an understanding of core aspects, \emph{good} with an integrated understanding, and \emph{excellent} with higher degrees of originality or deeper levels of performance being demonstrated. These map to the SOLO taxonomy's multi-structural, and relational levels of achievement, with the \emph{excellent} category bordering on extended abstract.
-
-Further criteria specified how the assessment of the individual learning outcomes formed the student's final grade. The criteria used is shown in \tref{tbl:example_mapping_to_grades}, and required that a number of the learning outcomes were met at the indicated level in order to achieve each grade. For example, a distinction required that at least two of the outcomes were at a \emph{good} level. This approach allowed students to focus on areas of the unit they were more interested in, while still ensuring that they demonstrated a good coverage for higher grades.
-
-% subsection constructing_assessment_criteria (end)
-
-\subsection{Iterative Delivery} % (fold)
-\label{sub:iterative_delivery}
-
-Constructive learning theories emphasise the active role of the learner in constructing knowledge. Biggs' model of constructive alignment takes a pragmatic view of constructivism, using the phrase ``It's what the student does that counts.''~\cite{Biggs:1996c} % , a statement that can be traced back to Tyler's quote, ``It is what he does that he learns, not what the teacher does''~\cite{Tyler:1969}.
-
-Existing work on constructive approaches to teaching introductory programming provide some advice on designing and delivering student centred teaching and learning activities. \citet{BenAri:1998,BenAri:2001} discusses the need for students to construct appropriate models of the computer. Van Gorp and Grissom~\cite{VanGorp:2001} discuss collaborative and constructive environments with the use of code walkthroughs, writing code, debugging and other activities. Thramboulidis~\cite{Thramboulidis:2003a} presents a design first approach to object oriented programming. Wulf~\cite{Wulf:2005} discusses strategies such as moving content from lectures to online video presentations. Similarly the work of Thota and Whitfield~\cite{Thota:2010} also presents constructive approaches to teaching introductory programming.
-
-\begin{figure}[t!]
-	\centering
-	\includegraphics[width=2.5in]{DeliveryProcess}
-	\caption{Iterative nature of the delivery process}
-	\label{fig:delivery_overview}
+	\includegraphics[width=0.50\textwidth]{PortfolioTypes}
+	\caption{The four kinds of portfolio based upon purpose and use from \citet{Smith:2001}.}
+	\label{fig:portfolio_types}
 \end{figure}
 
-One critical aspect in our model is the iterative use of \emph{formative} feedback to help students construct appropriate knowledge, and to address misconceptions, as shown in \fref{fig:delivery_overview}. Teaching staff deliver teaching and learning activities to help students construct knowledge. These activities give students opportunities to create potential portfolio pieces that demonstrate their understanding. These pieces are submitted for feedback, that then inform future activities and provide students with advice they can use to help them address misconceptions, or otherwise improve their work.
+Biggs' use of an \emph{assessment portfolio} clearly fits with the \emph{Training} portfolio classification, being a mandated part of the unit assessment for the purpose of evaluating learning outcomes. In the study of a small group of professionals, \citet{Smith:2001} found the training portfolio to be highly rated. Their findings indicated that students found the training portfolio confusing initially, but that once they had understood its function and rational they liked the approach, were easily able to construct their portfolio, and felt it was a fair way to assess their learning.
 
-The following principles were developed and used to guide the planning and delivery of teaching and learning activities:
+\citet{Tang:1999} provides further evidence of the value of portfolio assessment. In evaluating how students approach study, \citet{Tang:1999} found that students tended to have a narrow, surface approach to studying for tests. These same students were found to adopt wider, more cognitively challenging, approaches when preparing for a portfolio assessment. 
 
-\begin{itemize}
-  \item Provide opportunities through activity design to actively engage students -- \emph{it is what the student does that counts}.  
-  \item Relate all activities to the objectives, providing students with opportunities to create evidence for their portfolio.
-  \item Use ungraded formative feedback to aid knowledge construction, with preference for small, frequent guidance.
-\end{itemize}
+Portfolio assessment enables the shift from Theory X ``sage on the stage'' views to a Theory Y ``guide by the side'' view. The traditional approach of setting assignments and exams in which educators test student ability becomes inverted with portfolio assessment. With portfolio assessment it is the students responsibility to demonstrate how they have met the unit's intended learning outcomes. This frees educators to help students and to guide them in the preparation of their evidence. We are now working side by side with the students, helping them to achieve the intended learning outcomes.
 
-In the example unit we avoided the use of traditional lecture style presentations, and included constructivist activities such as interactive presentations using audience response systems, role-plays, group design activities, and code walkthroughs. 
+Portfolio assessment appears to align well with all nine ``\emph{how}'' principles listed in \cref{cha:guiding_principles}. 
+\begin{enumerate}[noitemsep,nolistsep]
+	\item The portfolio consists of a collection of work the student feels demonstrates the depth of their knowledge. (\Pref{itm:construct})
+	\item Assessment criteria for the portfolio can be aligned with the unit's intended learning outcomes. (\Pref{itm:align})
+	\item The portfolio can be used as the sole form of summative assessment, with students being able to take advantage of formative feedback throughout the teaching period. (\Pref{itm:formative})
+	\item A focus on depth will ensure the portfolio requires students to engage high cognitive levels, requiring them to explain, justify and reflect. (\Pref{itm:depth})
+	\item By communicating high expectations, students will strive to create high quality evidence for their portfolios. (\Pref{itm:expectations})
+	\item Students will develop evidence for their portfolio from day 1, everything they do could be of potential value. This will require active support from teaching staff. (\Pref{itm:support})
+	\item Without marks for motivation, an entirely portfolio assessed unit empowers students in the learning process, and must trust that they are able to effectively manage their own learning. (\Pref{itm:theory_y})
+	\item Portfolio assessment, with frequent formative feedback, is very much akin to agile software development processes. In addition, student portfolios will provide a wealth of evidence to help guide change. (\Pref{itm:agile})
+	\item Incorporating a reflective component in the portfolio will encourage students to engage in reflective practice. (\Pref{itm:reflect})
+\end{enumerate}
 
-Students developed a number of programs based on constructive activities including a sort visualisation program (to introduce language constructs), a shape drawing program (to explore objects and inheritance), and a board game (to learn about object design and implementation for a larger problem).
-
-% subsection the_role_of_formative_feedback (end)
-
-\subsection{Constructing and Assessing Portfolios} % (fold)
-\label{sub:assessing_the_portfolios}
-
-The final phase of the process is the development and submission of portfolios by students, and assessment by staff. This process uses the outcomes and assessment criteria to determine what needs to be demonstrated and assessed. 
-
-A number of papers discuss portfolio assessment for introductory programming units. Plimmer reports the successful use of portfolio assessment in an introductory programming unit in~\cite{Plimmer:2000}, where the portfolio contributed between 25\% and 60\% of the students' final grades. Programming portfolios were also discussed by Jones in~\cite{Jones:2010}, where students submitted a number of portfolio assignments during the semester. In both cases the portfolio was a collection of programs that were marked and contributed to a final grade.
-
-Our proposed assessment model uses 100\% portfolio assessment. Formative feedback allows students to improve their understanding during delivery, without penalty for demonstrating their misunderstandings. The final portfolio then includes a student's best work, encouraging them to incorporate the feedback they receive. This is a highly considered position based on our own experience in prior units. Graded assessment during unit delivery encourages students to ``cover up'' their lack of knowledge or shallow understanding. Surely it must be the final outcomes that matter, not the rate of progress. With this in mind the common use of mid-term summative assessment is surprising.
-
-% The use of an interview, or hurdle\footnote{In this case the hurdle test must be ``passed'' to pass the unit, but did not contribute to the final grade.} test, to help address plagiarism and increase confidence that the work in the portfolio is the students own work.
-
-Based on our experience we suggest the following principles be used to guide the creation and assessment activities of portfolios:
-
-\begin{itemize}
-  \item Encourage unique, diverse, concise, and strongly aligned evidence.
-  \item Motivate students to include evidence of learning from formative experience.
-  \item Accurately and consistently follow the terms of the assessment criteria, as this is the \emph{contract} the students work towards.
-  \item Require students to reflect on their learning, and the evidence in their portfolio, with respect to the intended learning outcomes of the unit and the assessment criteria.
-  \item Use an interview, or hurdle\footnote{In this case the hurdle test must be ``passed'' to pass the unit, but did not contribute to the final grade.} test, to check minimal pass criteria in an invigilated manner. Where tests are used they need only distinguish between pass and fail, and do not need to address higher grades. 
-\end{itemize}
-
-Portfolios in the example unit were required to include a \emph{reflective report}, a \emph{hurdle test}, and additional pieces to demonstrate coverage of the learning outcomes. Students were encouraged to incorporate feedback they received during the delivery, and to include a range of pieces such as programs, reports, and concept maps. The hurdle test covered all basic content, and students had to demonstrate a good understanding of the principles covered in the unit, as well as sufficient programming proficiency. Where students failed the hurdle they were permitted to re-sit an equivalent test once.
-
-% subsection assessing_the_portfolios (end)
-
-% section process_details (end)
-
-% subsection design_assessment_criteria (end)
-
-% section design (end)
-
-% section model (end)
+% subsection portfolio_assessment (end)
 
 
-\section{Discussion and Conclusion}
+% section assessment_strategy (end)
 
-This work presents a model for applying constructive alignment with portfolio assessment for teaching introductory programming, along with principles to help guide the development and delivery of such units. The model and principles presented have been applied to the delivery of a number of introductory programming units, with positive feedback from students and staff. The initial implementation demonstrated the potential of the approach, with the model appearing to be worth further investigation, but the delivery requiring some adjustments. 
-
-Students responded positively to the unit delivery as evidenced by the results in the university's student feedback on teaching survey. An additional survey was conducted to collect details on students approaches to learning, and their perceptions of the portfolio assessment. Only 16 students completed the survey with all comments being positive, as a quote from one student shows: 
-
-\begin{quote}
-  ``The portfolio was a great exercise, it stimulated me to do independent research and think about what I had learnt''   
-\end{quote}
-
-There were some challenges for staff related to a perceived \emph{loss of control}, \emph{via} vexation, with less motivated students not making the most of the formative opportunities. The unit had a lower than desired submission rate, with 64 portfolios being submitted from the initial enrolment of 83 students. Students achieved grades that indicate that the learning activities aligned with the outcomes, and interestingly resulted in an even distribution across the grade spectrum.
-
-Future publications will examine the implementation of this model more fully; looking in more detail at the portfolios submitted, student approaches to learning, and possible adjustments to the model and principles in light of this analysis.
 
 
 % chapter approaching_constructive_alignment_with_portfolio_assessment (end)
