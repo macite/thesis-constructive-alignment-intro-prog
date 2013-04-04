@@ -1,27 +1,85 @@
 %!TEX root = Constructive Alignment for Introductory Programming.tex
 
 \chapter{Constructively Aligned Introductory Programming Curriculum} % (fold)
-\label{cha:constructively_aligned_introductory_programming_curriculum}
+\label{cha:example_impl}
+
+\cref{cha:approach} proposed an approach to delivering constructively aligned introductory programming unit based upon the principles from \cref{cha:guiding_principles}. The proposed apporach makes uses portfolio assessment, with an objects-later apporach that divides the programming content across two introductory programming units. This chapter provides an example implementation of this approach, demonstrating how the principles from \cref{cha:guiding_principles} and the approach from \cref{cha:approach} can be realised in a programming curriculum.
+
+Sections of this chapter relate to the two introductory programming units: introductory programming, and object oriented programming. For each of these units the subsections are ordered to follow the processes from \cref{cha:approach}. First we outline the design of the intended learning outcomes, and the construction of the assessment criteria. This is followed by examples of the various teaching and learning activities and resources developed in implementing this curriculum.  
 
 
-\section{Background} % (fold)
-\label{sec:background}
+\section{Introductory Programming} % (fold)
+\label{sec:introductory_programming}
 
-% section background (end)
+\subsubsection{Aims} % (fold)
+\label{ssub:intro:aims}
+
+The aim of Introductory Programming is to introduce students to programming, and the software development fundamentals. 
+
+\cite{CSC2013}
+
+\begin{itemize}
+	\item 
+
+AL/Algorithmic Strategies: divide-and-conquer, recursive backtracking
+AL/Fundamental Data Structures and Algorithms: simple numeric algorithms, sequential search.
+
+CN/Processing: fundamental programming concepts
+
+DS/Basic Logic: truth tables
+
+GV/Fundamental Concepts: applications of computer graphics, double buffering, animation
+GV/Geometric Modeling: procedural models (fractals)
+
+HCI/Programming Interactive Systems: event management and user interaction
+
+PL/Event-Driven and Reactive Programming
+PL/Basic Type Systems
+PL/Language Translation and Execution
+
+SDF/Algorithms and Design
+SDF/Fundamental Programming Concepts
+SDF/Fundamental Data Structures
+SDF/Development Methods
+
+SE/Software Processes
+SE/Software Design
+SE/Software Construction
+
+SP/Professional Ethics (self assessment, reflective practice, initial, approach to learning)
+SP/Professional Communication (reading, understanding and communicating technical material)
+\end{itemize}
 
 
-\section{Concepts in Introductory Programming} % (fold)
-\label{sec:concepts_in_introductory_programming}
+
+\cite{Gregor:2008}
+
+% subsubsection aims (end)
+
 \subsection{Intended Learning Outcomes} % (fold)
-\label{sub:intended_learning_outcomes}
+\label{sec:intro:intended_learning_outcomes}
 
-Introductory Programming will use a procedures-first approach, and focus on the structured programming principles of organising code using \emph{sequence}, \emph{selection} and \emph{repetition}. Students will learn to use functional and modular decomposition to break problems down, and implement solutions using functions and procedures. Data will be managed using arrays and custom data types. Pointers and memory management will be covered. Parameter passing will be covered, including both pass-by-value and pass-by-reference. Weaved through this will be an iterative development process, a focus on writing clear and legible code, and other good programming practices. In addition to writing code, students will learn to read code for the debugging purposes and to demonstrate the ability to interpret other peoples code. All of this is captured in the intended learning outcomes for Introductory Programming:
-\begin{enumerate}
+
+
+Introductory Programming used a procedures-first approach, and focused on the structured programming principles of organising code using \emph{sequence}, \emph{selection} and \emph{repetition}. Students learnt to use functional and modular decomposition to break problems down, and implement solutions using functions and procedures. Data was managed using arrays and custom data types. Pointers and memory management were introduced. Various forms of parameter passing were covered, including pass-by-value and pass-by-reference. Weaved through this was an iterative development process, a focus on writing clear and legible code, and other good programming practices. In addition to writing code, students learnt to read code for the debugging purposes, and to demonstrate their ability to interpret other peoples code. All of this is captured in the intended learning outcomes for Introductory Programming:
+\begin{enumerate}[noitemsep,nolistsep]
 	\item Apply code reading and debugging techniques to analyse, interpret, and describe the purpose of program code, and locate within this code errors in syntax, logic, and/or good practice.
 	\item Describe the principles of structured programming, relate these to the syntactical elements of the programming language used, and the way programs are developed using this language.
 	\item Construct small programs, using the programming languages covered that include the use of arrays, functions and procedures, parameter passing with call by value and call by reference, custom data types, and pointers.
 	\item Use modular and functional decomposition to break problems down functionally, represent the resulting structures diagrammatically, and implement the structure in code as functions and procedures.
 \end{enumerate}
+
+% section introductory_programming (end)
+
+
+
+
+
+
+\subsection{Object Oriented Programming} % (fold)
+\label{sub:object_oriented_programming}
+
+% subsection object_oriented_programming (end)
 
 Object Oriented Programming takes students who have completed Introductory Programming and introduces them to the object oriented programming paradigm. Students will learn about the core principles of object oriented programming, and how these can be used to create object oriented programs. They will develop programs using integrated development environments, including  unit testing tools. Students will be introduced to visual ways of communicating object oriented designs using the Unified Modelling Language \cite{Fowler:2004}, including both class diagrams and sequence diagrams. Design patterns and heuristics will be used to provide students with a means of evaluating the quality of their designs. As with Introductory Programming students will use a iterative development process. The intended learning outcomes for Object Oriented Programming are:
 \begin{enumerate}
