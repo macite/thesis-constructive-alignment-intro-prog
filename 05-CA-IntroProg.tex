@@ -3,6 +3,8 @@
 \chapter{Constructively Aligned Introductory Programming Curriculum} % (fold)
 \label{cha:example_impl}
 
+\graphicspath{{Figures/CAIntroProg/}}
+
 \cref{cha:approach} proposed an approach to delivering constructively aligned introductory programming unit based upon the principles from \cref{cha:guiding_principles}. The proposed apporach makes uses portfolio assessment, with an objects-later apporach that divides the programming content across two introductory programming units. This chapter provides an example implementation of this approach, demonstrating how the principles from \cref{cha:guiding_principles} and the approach from \cref{cha:approach} can be realised in a programming curriculum.
 
 Sections of this chapter relate to the two introductory programming units: introductory programming, and object oriented programming. For each of these units the subsections are ordered to follow the processes from \cref{cha:approach}. First we outline the design of the intended learning outcomes, and the construction of the assessment criteria. This is followed by examples of the various teaching and learning activities and resources developed in implementing this curriculum.  
@@ -11,10 +13,26 @@ Sections of this chapter relate to the two introductory programming units: intro
 \section{Introductory Programming} % (fold)
 \label{sec:introductory_programming}
 
-\subsubsection{Aims for Introductory Programming} % (fold)
+\subsection{Aims for Introductory Programming} % (fold)
 \label{ssub:intro:aims}
 
 The aim of Introductory Programming is to introduce students to programming and software development fundamentals. While focusing on developing depth in this area, the wholistic nature of the portfolio assessment approach means that programming is placed in the context of software development in general. As a result, this unit will touch on a number of areas.
+
+
+% subsubsection aims (end)
+
+\subsection{Defining Intended Learning Outcomes} % (fold)
+\label{sec:intro:intended_learning_outcomes}
+
+\subsubsection{Influencing Factors} % (fold)
+\label{ssub:influencing_factors}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth]{ILOFactors}
+	\caption{Factors that influence the defining of a unit's intended learning outcomes, and the construction of assessment criteria. \fref{fig:defining_ilos}}
+	\label{fig:defining_ilos_intro}
+\end{figure}
 
 The Association for Computing Machinery and IEEE Computer Society 2013 Computer Science Curriculum \cite{CSC2013} outlines a number of areas to be covered in a Computer Science curriculum. In terms of this model curriculum, the Introductory Programming Unit presented here touched upon a range of areas, as shown in the following list. The primary focus was on the Software Development Fundamentals, but also integrated a number of other areas.
 
@@ -28,25 +46,29 @@ The Association for Computing Machinery and IEEE Computer Society 2013 Computer 
 	\item HCI/Programming Interactive Systems: students developed code to manage events and user interactions.
 	\item PL/Basic Type Systems: students explored the use of a range of basic types, along with the definition of custom enumerated and record types.
 	\item PL/Language Translation and Execution: students are introduced to the topics of compilers and interpreters, as well as run-time layout of memory (call-stack, heap, static data), and manual memory management.
-	\item SDF/Algorithms and Design: students were introducted to the concept of algorithms, problem solving using divide-and-conquer, abstraction and program decomposition.
+	\item SDF/Algorithms and Design: students were introduced to the concept of algorithms, problem solving using divide-and-conquer, abstraction and program decomposition.
 	\item SDF/Fundamental Programming Concepts: students used programming language syntax, develop programs that contained statements, expressions, use variables, simple input and output operations, with conditional control flow, included functions, various parameter passing techniques, and were introduced to the concept of recursion.
 	\item SDF/Fundamental Data Structures: programs students implemented made use of arrays, record structures, strings and basic string processing, and students implemented a simple linked list.
-	\item SDF/Development Methods: program conprehension was central to the unit, with basic details of program correctness being introduced. Students were also required to use basic refactoring techniques to restructure code, and program tracing was covered as a debugging technique.
+	\item SDF/Development Methods: program comprehension was central to the unit, with basic details of program correctness being introduced. Students were also required to use basic refactoring techniques to restructure code, and program tracing was covered as a debugging technique.
 	\item SE/Software Processes: students used an iterative software development process model, and were introduced to the phases of the software development lifecycle. 
-	\item SE/Software Design: students were introducted to the principles of the structured design paradigm, and used these principles in the design and development of the programs they created.
+	\item SE/Software Design: students were introduced to the principles of the structured design paradigm, and used these principles in the design and development of the programs they created.
 	\item SE/Software Construction: coding standards, and defensive coding practices were introduced to students.
 	\item SP/Professional Ethics: students develop skills in professional practice including self assessment, reflective practice, computer fluency, and general approach to life-long learning.
 	\item SP/Professional Communication: to demonstrate their understanding students were required to read, understand and communicate technical material using clear language and visual mediums.
 \end{itemize}
 
-The Australian Computer Society's document outlining the ICT profession and associated body of knowledge \cite{Gregor:2008}, 
+The Australian Computer Society (ACS) documented the ICT profession and associated body of knowledge \cite{Gregor:2008}, which indicated graduates should develop both skills and knowledge as part of their undergraduate education. The knowledge area is divided into three aspects: a core body of knowledge, role specific knowledge and complementary knowledge. The introductory programming unit develops student's skills and knowledge.
 
-% subsubsection aims (end)
+The skills component of the ACS document drew upon the skills documented in the Skills Framework for the Information Age (SFIA). In terms of the SFIA \cite{SFIA:2011} the Introductory Programming unit aimed to contribute to the development of programming and software development skills to a Level 2, \emph{assist}, standard. This indicates that students need to demonstrate the ability to design, code, test, correct, and document simple programs, and indicates that students are able to assist with the development of larger software solutions.
 
-\subsection{Intended Learning Outcomes} % (fold)
-\label{sec:intro:intended_learning_outcomes}
+The ACS divides the core body of knowledge into six areas: problem solving, professional knowledge, technology building, technology resources, service management and outcomes management.
 
+% subsubsection influencing_factors (end)
 
+\subsubsection{Intended Learning Outcomes} % (fold)
+\label{ssub:intended_learning_outcomes}
+
+% subsubsection intended_learning_outcomes (end)
 
 Introductory Programming used a procedures-first approach, and focused on the structured programming principles of organising code using \emph{sequence}, \emph{selection} and \emph{repetition}. Students learnt to use functional and modular decomposition to break problems down, and implement solutions using functions and procedures. Data was managed using arrays and custom data types. Pointers and memory management were introduced. Various forms of parameter passing were covered, including pass-by-value and pass-by-reference. Weaved through this was an iterative development process, a focus on writing clear and legible code, and other good programming practices. In addition to writing code, students learnt to read code for the debugging purposes, and to demonstrate their ability to interpret other peoples code. All of this is captured in the intended learning outcomes for Introductory Programming:
 \begin{enumerate}[noitemsep,nolistsep]
