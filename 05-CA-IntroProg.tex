@@ -335,25 +335,282 @@ By sticking as tightly to these ideas as possible the lecture presentations rema
 \subsubsection{Interactive Lecture Demonstrations} % (fold)
 \label{ssub:interactive_lecture_demonstrations}
 
+Delivering one fifteen minute presentation each week left a significant portion of the two hour lecture for other purposes. This time was used to demonstrate the application of the concepts, providing students with a first experience of how these concepts can be used to create working programs.
+
+The interactive sessions involved writing programs from scratch, and guiding students through the whole process. This involved questioning students about what we should do, and which concepts we needed to apply. The program's were developed together with the students, and were discussed as they evolved. This enabled us to focus on the thought processes behind program creation, talking students through the decisions that need to be made in crafting the design of the program we were creating.
+
+One important strategy applied in these interactive coding sessions was to become selectively forgetful, typically forgetting the syntax related to the current concept. This way we had to make use of the resources available to the students. For example, when focusing on how to declare variables this could be achieved by saying ``We want to create a variable here, but I cant remember the syntax. Where could I look to find the syntax for this?'' We would then locate the associated resource, and lookup the relevant section. Switching back to the code would be another point to ``forget'' the syntax again, ``So what do I type first?''. The aim of this was to demonstrate to the students how these resources could be used to learn the language's syntax.
+
+Depending on the topic, lectures typically follow one of two formats. Either the presentation was delivered in its entirety and was followed by the interactive session, or the interactive session was interwoven with the presentation itself. These two strategies were applied throughout the semester. 
+
+The topics in the first part of the unit tend to have the interactive sessions interwoven with the presentations. At this stage each of the concepts was totally new to the students. The presentations focused entirely on the concepts, makes each topic very abstract. By interweaving the demonstration with the presentation we aimed to address student apprehension about how these concepts are realised in practice.
+
+After switching programming language the situation changed, and the concepts were now being reinforced. In these lectures the presentations were delivered in their entirety before the interactive sessions. This helped reinforce the idea that the concepts were the same, all that had changed was how these concepts are expressed in code. Progressing through the concepts quickly promoted their value, and reassured students that the concepts they had already learnt still applied.
+
+It is important to note that at no point in either the presentation or the interaction sessions was the syntax fully described. Instead, students were equipped with knowledge of the concepts and the skills to learn the language themselves. Language details were of secondary importance, and resources containing the relevant details were made available for them to explore as they needed.
+
 % subsubsection interactive_lecture_demonstrations (end)
 
 
 \subsubsection{Laboratory Sessions} % (fold)
 \label{ssub:laboratory_sessions}
 
+Tasks for the laboratory sessions were organised into three groups: laboratory tasks, core tasks and extension tasks. The laboratory tasks were designed to be a guided exercise in class, the core tasks had to be completed and submitted for feedback while the extension tasks provided students with optional exercises they could use to extend themselves.
+
+Tutors guided the students through each week's laboratory tasks. These tasks were designed to give students a their first hands on experience with the week's concepts. The laboratory notes provided detailed step by step instructions to enable students to work through these on their own if they wanted, or need, to. At the end of the laboratory exercises students would be sufficiently prepared to undertake the core exercises.
+
+Core exercises were an integrated part of the formative feedback process. These exercises had students apply each weeks concepts in the creation of one or more small programs. Other core exercises had students performing code reading exercises, asking them to hand execute programs to explain the program's behaviour or to identify issues. 
+
+The core exercises also had students documenting their understanding of the core concepts each week in a glossary. The glossary recorded details on the following aspects of the unit:
+\begin{itemize}[noitemsep, nolistsep]
+	\item Core concepts:
+	\begin{itemize}[noitemsep, nolistsep]
+		\item Control flow
+		\item Structured programming principles
+		\item Functional and modular decomposition
+		\item Good programming practices
+	\end{itemize}
+	\item Programming terminology:
+	\begin{itemize}[noitemsep, nolistsep]
+		\item Statements
+		\item Expressions
+		\item Identifiers
+		\item Parameters, local variables and global variables
+	\end{itemize}
+	\item Programming abstractions:
+	\begin{itemize}[noitemsep, nolistsep]
+		\item Programs
+		\item Functions and Procedures
+		\item Constants and Variables
+		\item Arrays
+		\item Records and Enumerations
+		\item Pointers
+	\end{itemize}
+	\item Statements:
+	\begin{itemize}[noitemsep, nolistsep]
+		\item Function and procedure calls
+		\item Assignment statements
+		\item If and case statements
+		\item While and repeat/do..while loops
+		\item For loops
+	\end{itemize}
+\end{itemize}
+
+Extension tasks were provided to push students, and to encourage them to think about starting work on the custom and research projects necessary to receive higher grades. These tasks were related to each weeks concepts, but were loosely defined, requiring students to take greater responsibility for the analysis and design of the solution.
+
+Each week's laboratory class consisted of a number of activities. At the start of the class the teaching staff returned the feedback from the previous week's core exercises, but delayed discussing feedback with students until after working through the exercises. Students where then guided through the week's laboratory exercises, and the core exercises were discussed. Students spent the remaining laboratory time on the week's core exercises. During this time the teaching staff visited each student individually to discuss their progress, and to mark their work as signed off.
+
 % subsubsection laboratory_sessions (end)
+
+\subsubsection{Procedures First Topic Sequence} % (fold)
+\label{ssub:procedures_first_topic_sequence}
+
+The order of topics was guided by the principles from \cref{cha:guiding_principles}. The main objective being to enable each week's topic to build upon earlier topics, while providing a consistent set of abstractions for students to work with.
+
+This was achieved using a procedures-first approach, an approach which \citet{Pattis:1990} indicated was popular in textbooks prior to the current objects-first range. This approach has students program their own procedures from week 1.The following list indicates the concepts, programming abstractions and statements introduced each week.
+
+\begin{enumerate}[noitemsep,nolistsep]
+  \item Programs, Procedure, Compiling and Syntax
+  \begin{itemize}[noitemsep,nolistsep]
+  	\item \textbf{Sequence}: the focus of this week was on programs and procedures as a \emph{sequence} of instructions that get the computer to perform a task.
+  	\item \textbf{Syntax Rules}: students learnt to use visual ``railroad'' diagrams \cite{Braz:1990} to understand programming language syntax.
+  	\item \textbf{Program}: students created small programs that contained a sequence of procedure calls, with all values being hard coded.
+  	\item \textbf{Procedure}: students developed a small number of procedures, each with a defined task that contributed to the overall program.
+  \end{itemize}
+  \item User Input and Working with Data
+  \begin{itemize}[noitemsep,nolistsep]
+  	\item \textbf{Data}: The central idea of this week was \emph{data}, the idea that values can be stored and calculated.
+  	\item \textbf{Variables}: students created local variables, global variables and parameters.
+  	\item \textbf{Constants}: students declared constants.
+  	\item \textbf{Functions}: students used functions in the laboratory and core exercises, and developed their own in the extension tasks.
+  	\item \textbf{Assignment Statements}: students used assignment statements to store values in variables. 
+  \end{itemize}
+  \item Control Flow: Branches and Loops
+  \begin{itemize}[noitemsep,nolistsep]
+  	\item \textbf{Control Flow}: the ideas of sequence, selection and repetition were central to this week.
+  	\item \textbf{Selection}: students used \textbf{if statements} and  \textbf{case statements} to implement branching in their control flow.
+  	\item \textbf{Repetition}: students repeated code using \textbf{while loops} and \textbf{repeat loops}.
+  \end{itemize}
+  \item Procedural and Structured Programming
+  \begin{itemize}[noitemsep,nolistsep]
+  	\item \textbf{Functional and Modular Decomposition}: the idea of solving problems using divide-and-conquer was the main theme of this week.
+  	\item \textbf{Software Development Lifecycle}: the basic steps of the software development lifecycle were discussed.
+  	\item \textbf{Iterative Development}: the idea of iteratively working toward a solution was discussed.
+  	\item \textbf{Structured Programming}: the structured nature of a functions/procedures code was discussed, illustrating how these steps can be broken down into blocks performing sequence, selection or repetition.
+  	\item No new programming abstractions or statements were introduced in this week.
+  \end{itemize}
+  \item Arrays
+  \begin{itemize}[noitemsep,nolistsep]
+  	\item \textbf{Arrays}: students started to use arrays to store multiple values in their programs.
+  	\item \textbf{For loops}: the for loop was introduced as a convenient means of looping through the contents of an array, allowing the code to easily apply a set of operations on each element in the array.
+  \end{itemize}
+  \item Custom Data Types and Pointers
+  \begin{itemize}[noitemsep,nolistsep]
+  	\item \textbf{Types}: custom types and the role of types in a programming languages were discussed.
+  	\item \textbf{Records}: students developed their own custom record types to model entities associated with their programs.
+  	\item \textbf{Enumerations}: students use of enumerations as a means of creating a type to represent a list of options.
+  	\item \textbf{Pointers}: pointers were used to create relationships between values, and to illuminate how pass-by-reference worked internally.
+  \end{itemize}
+  \item Learning a New Language
+  \begin{itemize}[noitemsep,nolistsep]
+  	\item \textbf{Language Syntax}: ways to approach a new programming language were discussed, and students used a new language to recreate previously developed programs.
+  \end{itemize}
+  \item Programming in C
+  \begin{itemize}[noitemsep,nolistsep]
+  	\item No new programming concepts or abstractions were presented in this week. Instead the week was used to consolidate knowledge of the new language, and to develop a wider range of programs using the previously presented concepts.
+  \end{itemize}
+  \item File Input and Output
+  \begin{itemize}[noitemsep,nolistsep]
+  	\item \textbf{File Input and Output}: the idea of persisting data was presented, and students learnt to save data to a file and read it back. 
+  \end{itemize}
+
+  \item Dynamic Memory Management
+  \begin{itemize}[noitemsep,nolistsep]
+  	\item \textbf{Stack and Heap}: specifics related to memory layout were discussed, including the limitations of the stack.
+  	\item \textbf{Dynamic Memory Allocation}: students used memory allocation functions to allocate memory from the Heap, and used pointers to work with the newly allocated space.
+  \end{itemize}
+
+  \item Recursion and Backtracking
+  \begin{itemize}[noitemsep,nolistsep]
+  	\item \textbf{Recursion}: students developed simple recursive solutions for problems like the Fibonacci sequence and the Towers of Hanoi.
+  	\item \textbf{Backtracking}: the idea that a recursive solution can backtrack to search alternative paths was discussed, and extension tasks introduced backtracking to solve Sudoku and the Eight Queens puzzle.
+  \end{itemize}
+
+  \item Review and Future Studies
+  \begin{itemize}[noitemsep,nolistsep]
+  	\item This week did not introduce any new programming concepts or abstractions, instead it was used to review everything that had been covered and to discuss future programming units.
+  \end{itemize}
+\end{enumerate}
+
+\citet{Pattis:1990,Pattis:1993} indicated that the main challenge with the procedures first approach was that students did not have anything meaningful to program in their procedures prior to introducing control flow. \citet{Pattis:1993} reported that the majority of procedures-first texts had moved control flow prior to procedure declarations in response to this issue. We took an alternative approach, and introduced students to a game development framework in week one. This framework provided a range of useful procedures that students could call, and thereby addressed the issues that Pattis had raised. Details of this game development framework are presented in \cref{cha:supporting}.
+
+The following list outlines the focus of each week's tasks.
+\begin{enumerate}[noitemsep,nolistsep]
+  \item Programs, Procedure, Compiling and Syntax
+  \begin{itemize}[noitemsep,nolistsep]
+  	\item \textbf{House Drawing}: students created a procedure to draw a house at a fixed location on the screen.
+  	\item \textbf{Knock Knock}: students created a number of procedures to show images and play sound effects necessary to display a knock knock joke.
+  	\item \textbf{Custom Splash}: extensions encouraged students to develop a procedure to show their own splash screen.
+  \end{itemize}
+  \item User Input and Working with Data
+  \begin{itemize}[noitemsep,nolistsep]
+  	\item \textbf{House Drawing}: the fixed house was redeveloped to make use of parameters and local variables, allowing its position to be changed.
+  	\item \textbf{Bike Drawing}: students developed a procedure to draw a fixed size bike, using parameters for the bike's location and colour.
+  \end{itemize}
+  \item Control Flow: Branches and Loops
+  \begin{itemize}[noitemsep,nolistsep]
+  	\item \textbf{Lots of Bikes}: students created a custom screen saver like program that drew thousands of bikes to the screen.
+  	\item \textbf{Circle drawing}: students developed a program in which they could move a circle around the screen, switching it between outlined and filled, or clicking it to make it jump to a random position.
+  \end{itemize}
+  \item Procedural and Structured Programming
+  \begin{itemize}[noitemsep,nolistsep]
+  	\item \textbf{User input functions}: students created functions to read strings, integers, doubles, and ranges of values (between a minimum and maximum) from the user. These build on top of each other to demonstrate the power of functional decomposition.
+  	\item \textbf{Arcade game}: students were encouraged to develop a simple clicking arcade game using the concepts already covered.
+  \end{itemize}
+  \item Arrays
+  \begin{itemize}[noitemsep,nolistsep]
+  	\item \textbf{Statistics}: students developed a program that read in a number of values from the user and then calculated a number of statistics. This included median, which required the values in the array to be sorted.
+  \end{itemize}
+  \item Custom Data Types and Pointers
+  \begin{itemize}[noitemsep,nolistsep]
+  	\item \textbf{Address Book}: a simple address book, with links to friends was developed to demonstrate records and pointers.
+  	\item \textbf{Pop Game}: provided a larger, multiple iteration, project in which students developed a simple arcade style game. The game involved popping different kinds of shapes, with rounds of ten shapes each of random sizes and colours.
+  \end{itemize}
+  \item Learning a New Language
+  \begin{itemize}[noitemsep,nolistsep]
+  	\item \textbf{User input functions}: students redeveloped the user input functions using the new programming language. 
+  \end{itemize}
+  \item Programming in C
+  \begin{itemize}[noitemsep,nolistsep]
+  	\item \textbf{Statistics} was reimplemented in the new programming language.
+  \end{itemize}
+  \item File Input and Output
+  \begin{itemize}[noitemsep,nolistsep]
+  	\item \textbf{Address Book}: students reimplemented the address book in C, and added the ability to save it to file, and load it from file. 
+  \end{itemize}
+
+  \item Dynamic Memory Management
+  \begin{itemize}[noitemsep,nolistsep]
+  	\item \textbf{Address Book}: dynamic memory management was used to allow for a variable number of contacts in the address book.
+  	\item \textbf{Maze Game}: extension tasks had the students develop a network of rooms connected using pointers.
+  \end{itemize}
+
+  \item Recursion and Backtracking
+  \begin{itemize}[noitemsep,nolistsep]
+  	\item \textbf{Recursive Programs}: extension tasks had students develop recursive functions.
+  	\item \textbf{Linked List}: extension tasks demonstrated how to use pointers and records/structures to create a linked list.
+  \end{itemize}
+
+  \item Review and Future Studies
+  \begin{itemize}[noitemsep,nolistsep]
+  	\item There was no lab exercises this week, the lab was used to help students complete any outstanding tasks.
+  \end{itemize}
+\end{enumerate}
+
+% subsubsection procedures_first_topic_sequence (end)
 
 \subsubsection{Programming Language Choice} % (fold)
 \label{ssub:programming_language_choice}
 
-\cite{Becker:2002}
+Introductory programming aimed to teaching students to \emph{program}, not the details of a programming language. We did not aim to develop students' expertise in one programming language, but to equip them with the knowledge and skills to become experts in \textbf{any} imperative programming language.
 
-To facilitate the shift in programming language, students were introduced to ``understanding syntax'' from week one. Students learnt to read programming language syntax using the visual ``railroad'' diagram syntax notation \cite{Braz:1990}. Each of the lecture topics focused on concepts, with syntax being offloaded to programming demonstrations and supplied notes. In the teaching and learning resources, each programming statement had an associated railroad diagram, with small code examples to illustrate its application. These resources will be discussed further in \cref{cha:supporting}.
+Whenever discussing introductory programming it is always interesting to note how quickly people jump to the question of language. In the delivery of this unit the programming language was always a secondary concern, an enabling feature not an aspect of great importance. The language choice was made based on its ability to support the following requirements:
+\begin{itemize}[noitemsep,nolistsep]
+	\item \textbf{Explicit} \emph{over} implicit
+	\begin{itemize}[noitemsep,nolistsep]
+		\item Require explicit variable declaration, with clear indication of the variable's type.
+		\item Strongly typed, avoiding implicit type conversions.
+	\end{itemize}
+
+	\item \textbf{Procedural programming abstractions} \emph{over} support for other paradigms.
+	\begin{itemize}[noitemsep,nolistsep]
+		\item Functions and procedures.
+		\item Pass-by-value and pass-by-reference.
+		\item Arrays, constants and variables.
+		\item Declaration of custom types including enumerations and record structures.
+		\item Pointers and dynamic memory management.
+	\end{itemize}
+\end{itemize}
+
+\begin{table}
+	\renewcommand{\arraystretch}{1.6}
+	\centering
+	\caption{Comparison of programming languages for the introductory programming unit.}
+ 	\label{tbl:language_comparison}
+
+    \begin{tabular}{l|c|c|c|c|c|c}
+    ~                                   & C   & C++ & C\#     & Java & Pascal & Python \\ \hline
+    Explicit Variables                  & Yes & Yes & Yes     & Yes  & Yes    & ~      \\
+    Strongly Typed                      & ~   & ~   & Yes     & Yes  & Yes    & Yes    \\
+    Functions and procedures            & Yes & Yes & Partial & ~    & Yes    & Yes    \\
+    Parameter passing options & ~   & Yes & Yes     & ~    & Yes    & ~     \\
+    Data abstractions     & Yes & Yes & Yes     & Yes  & Yes    & Yes    \\
+    Records and enumerations  & Yes & Yes & Yes     & ~    & Yes    & ~      \\
+    Pointers                            & Yes & Yes & Partial & ~    & Yes    & ~      \\
+    Explicit memory management & Yes & Yes & ~ & ~    & Yes    & ~      \\
+    Used by staff     & Yes & Yes & Yes     & Yes  & Yes    & Yes    \\
+    \end{tabular}
+\end{table}
+
+\tref{tbl:language_comparison} lists the languages considered for the introductory programming unit. Pascal met all of the requirements, with C++ and C\# satisfied most. C\# was designed for object oriented programming, and therefore using it for procedural programming was against \pref{itm:authentic} which indicated we would only use languages as they were designed to be used. 
+
+The choice between C++ and Pascal was more challenging. C++ had the advantage of being widely used, and the popularity of the C-style syntax would mean that it apply more directly to other languages. However, the C++ language itself is cryptic and would be more challenging for students to master on their own. Pascal, on the other hand, was seen as having a more ``beginner friendly'' syntax. Pascal had also been used by \citet{Becker:2002}, who stated that it had enabled them to focus less on the syntax, as compared to C++.
+
+Rather than choosing \emph{either} language it was decided to take advantage of the strength of both languages, and it was decided to use \emph{both}. Students would be able to focus more on the concepts using Pascal's more friendly syntax over the first few weeks of the semester. Once all the concepts were covered the language could be switched and students could explore the procedural aspects of C++, getting a start with a C-style syntax.
+
+The focus on teaching students to ``understanding syntax'' from week one supported, and was supported by, the change of language. Students had been exposed to programming language syntax using the visual ``railroad'' diagram syntax notation \cite{Braz:1990}, and had used this to learning Pascal over the first weeks of the unit. After the switch to C++, students could reinforce these same skills by applying them to learn a second programming language. This approach aimed to encourage students to focus on the concepts, which would then enable them to more quickly learning the new language.
 
 % subsubsection programming_language_choice (end)
 
 % subsection developing_teaching_and_learning_activities (end)
 
+
+\subsection{Delivering the Unit} % (fold)
+\label{sub:delivering_the_unit}
+
+
+
+% subsection delivering_the_unit (end)
 
 
 \subsection{Assessing Student Portfolios} % (fold)
