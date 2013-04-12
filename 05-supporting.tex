@@ -3,6 +3,83 @@
 \chapter{Supporting the Curriculum with Tools and Technologies} % (fold)
 \label{cha:supporting}
 
+\graphicspath{{Figures/Supporting/}}
+
+\section{Visualising Progress to Support Formative Feedback} % (fold)
+\label{sec:doubtfire}
+
+\subsection{Background} % (fold)
+\label{sub:doubtfire_background}
+
+% subsection background (end)
+
+\subsection{Requirements} % (fold)
+\label{sub:doubtfire_requirements}
+
+The central requirement for the Doubtfire tool was to provide students with visual feedback on their progress using burn down charts. The burn down charts provide students with a visual representation of the tasks they need to complete over the teaching period, and show the number of tasks, their scheduled due date, and estimated task effort. Students should be able to use the tool to assess their progress throughout the teaching period, and to determine whether they need to increase their rate of progress (velocity) and, if so, commit more time to the unit or take greater advantage of resources available to them. 
+
+It was also seen that the scrum-style marking of tasks as completed could be extended to allow students to indicate if they were working on, or having trouble with, particular tasks. This requirement aimed to increase student engagement with the tool, and improve likelihood that they would make active use of it throughout the teaching period.
+
+To account for task heterogeneity, staff needed to be able to set a specific \emph{weight} for each task. This weight represents the estimated effort students needed to expend to satisfactorily complete the task. Rather than specifying predicted task weight in terms of hours, this was done in a more abstract unit. One popular approach with agile software development projects is to assign tasks ``\emph{t-shirt size}'' weights \cite{Peixoto:2010}. Using this approach tasks have their weight set to a common t-shirt size: \emph{extra small}, \emph{small}, \emph{medium}, \emph{large}, \emph{extra large} etcetera. The t-shirt sizes are then allocated weights, with each increment in size doubling the associated weight: extra small had a weight of one, small a weight of two, medium four, etcetera.  
+
+Task weights needed to be incorporated into the burn down chart, with each chart showing the cumulative number of \emph{task-points} remaining. 
+
+A student's projected completion should be recalculated as tasks and weeks progress. For example, if six tasks were completed in one week, based on the velocity, a thirty-six task project is expected to be completed in six weeks. 
+
+
+As Doubtfire should be an interactive system, a number of requirements are needed to ensure that the tool could be best utilised by all targeted user groups. The following were identified:
+\begin{itemize}[noitemsep,nolistsep]
+  \item \textbf{Online}: making the tool available online allows students to access the tool from virtually anywhere. It also avoids the need for client software, which makes the development process simpler (no platforms need to be supported) and means that students do not have to install clients.
+  \item \textbf{Easy to use}: if students struggle to interact with the tool, they may choose not to use it -- regardless of the advantages it may provide them. The usability of the tool must provide as small a barrier as possible to student adoption.
+  \item \textbf{Mobile friendly}: with the devices now available to students, we cannot assume that they are working on a desktop PC behind a desk. To ensure that they can check and report their status whenever they need, the tool must be able to provide those features on mobile devices.
+  \item \textbf{Aesthetically pleasing user interface}: to encourage adoption of the tool among students, a visually appealing user interface is ideal.
+\end{itemize}
+Simply, we want a tool that is simple and appealing for students to use and that can be accessed almost anywhere. We do not want the students to feel that interaction with the tool is work.
+
+Students, however, were not the only user group targeted by Doubtfire. Tutors need to be able to respond to students actions in the tool, and convenors need to be able to observe the performance of the student cohort and provide simple administrative actions. Both groups benefit from the requirements already listed. Most importantly, the mobile nature allows tutors to easily check and update students' progress during labs.
+
+In terms of the development and deployment of the tool, a number of software qualities are desirable. These include:
+\begin{itemize}
+  \item Quick to develop and extend: it is valuable to be able to produce features as soon as possible so that students may benefit from them early in the semester.
+  \item Supports adaptive teaching environments: the tool should fit inside the teaching environment; it should not be necessary to fit the teaching environment around the tool. It must remain a supportive technology.
+  \item Controllable: the schema that defines the way tutors and students interact over tasks must be easy to modify as the teaching requirements change in response to changing assessment criteria.
+\end{itemize}
+It is desirable that the tool conforms to standard quality requirements appropriate to online and mobile-accessible task tracking software: that it is easy to change, maintain and administrate.
+
+It is valuable to add features that track student behaviour in the tool to:
+\begin{itemize}
+  \item Determine whether the expected use of the software matches the actual.
+  \item Identify possible issues in the unit curriculum, such as inconsistent assignment weighting.
+  \item Identify possible flaws in the rule system governing student and tutor interaction in the software.
+  \item Exploit the information to insights into general teaching issues.
+  \item Optimise the experience based on how students use the software.
+\end{itemize}
+As this information is constantly generated through use of the tool, it is simply a matter of storing what actions have been performed. This provides unambiguous information that can then be analysed through quantitative methods.
+
+This section has described the requirements we deemed non-negotiable in the production of an effective progress management tool for the users identified. There are a number of minor requirements that were not considered significant enough to describe here. From these requirements were produced a number of features accessible to the convenor, tutor and student user groups, which are discussed in the following section.
+
+% subsection requirements (end)
+
+
+
+% section doubtfire_using_burndown_charts_to_support_formative_feedback (end)
+
+\section{Resources to Support Concept Focus} % (fold)
+\label{sec:arcana}
+
+% section itunesu_vodcasts_to_support_ (end)
+
+\section{A Game Library to Support Procedures First} % (fold)
+\label{sec:swingame}
+
+SwinGame Documentation Website
+
+Language translation
+
+
+
+% section swingame_a_game_library_to_support_procedures_first (end)
+
 
 
 % chapter supporting_the_curriculum (end)
