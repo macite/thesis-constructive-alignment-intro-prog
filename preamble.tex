@@ -376,3 +376,20 @@
 \DeclareGraphicsExtensions{.pdf, .jpg, .tif, .png}
 
 \usepackage{phdthesis}
+\usepackage{multirow}
+
+\input{tikzdata}
+
+\newcommand{\ebnfsnipet}[1]
+{
+  \lstset{language=bash}
+  \lstinline^#1^
+}
+
+\usepackage{verbatim}
+
+\newcommand{\ebnfcode}[1]
+{
+  \footnotesize
+  \verbatiminput{#1}
+}

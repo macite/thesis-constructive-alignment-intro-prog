@@ -1,0 +1,53 @@
+\begin{tikzpicture}[column sep=2mm, row sep=1mm,>=stealth,thick,draw=black!70,
+  point/.style={coordinate},
+  tip/.style={->,shorten >=1pt},every join/.style={rounded corners},
+  end/.style={-|,shorten >=1pt},
+  extender/.style={->>,shorten >= 1pt},
+  skip loop/.style={to path={-- ++(0,#1) -| (\tikztotarget)}},
+  hv path/.style={to path={-| (\tikztotarget)}},
+  vh path/.style={to path={|- (\tikztotarget)}}]
+\matrix[column sep=3mm] {
+		\node (n0-0) [syntax-rule] {param list}; & 	\node (p1-0) [point] {}; & 	\node (n2-0) [nonterminal] {parameter}; & 	\node (p3-0) [point] {}; &  &  & 	\node (p6-0) [point] {be-p}; & 	\node (p7-0) [point] {}; \\
+	 &  &  &  & 	\node (n4-1) [terminal] {,}; & 	\node (n5-1) [nonterminal] {param list}; &  &  \\
+};
+{
+	[start chain]		\chainin (p1-0);
+		\chainin (n2-0) [join=by tip];
+		\chainin (p3-0) [join];
+		{ [start branch]
+		\chainin (n4-1) [join=by {vh path,tip}];
+		\chainin (n5-1) [join=by tip];
+		\chainin (p6-0) [join=by {hv path,tip}];
+		}
+		\chainin (p6-0) [join];
+		\chainin (p7-0) [join=by end];
+}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}[column sep=2mm, row sep=1mm,>=stealth,thick,draw=black!70,
+  point/.style={coordinate},
+  tip/.style={->,shorten >=1pt},every join/.style={rounded corners},
+  end/.style={-|,shorten >=1pt},
+  extender/.style={->>,shorten >= 1pt},
+  skip loop/.style={to path={-- ++(0,#1) -| (\tikztotarget)}},
+  hv path/.style={to path={-| (\tikztotarget)}},
+  vh path/.style={to path={|- (\tikztotarget)}}]
+\matrix[column sep=3mm] {
+		\node (n0-0) [syntax-rule] {param list}; & 	\node (p1-0) [point] {}; & 	\node (p2-0) [point] {loop-start}; & 	\node (n3-0) [nonterminal] {parameter}; & 	\node (p4-0) [point] {be-p}; & 	\node (p5-0) [point] {}; \\
+	 &  &  & 	\node (n3-1) [terminal] {,}; &  &  \\
+};
+{
+	[start chain]		\chainin (p1-0);
+		\chainin (p2-0) [join];
+		\chainin (n3-0) [join=by tip];
+		\chainin (p4-0) [join];
+		{ [start branch]
+		\chainin (n3-1) [join=by {vh path,tip}];
+		\chainin (p2-0) [join=by {hv path,tip}];
+		}
+		\chainin (p5-0) [join=by end];
+}
+\end{tikzpicture}
+
+

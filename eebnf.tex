@@ -1,0 +1,312 @@
+\begin{tikzpicture}[column sep=2mm, row sep=1mm,>=stealth,thick,draw=black!70,
+  point/.style={coordinate},
+  tip/.style={->,shorten >=1pt},every join/.style={rounded corners},
+  end/.style={-|,shorten >=1pt},
+  extender/.style={->>,shorten >= 1pt},
+  skip loop/.style={to path={-- ++(0,#1) -| (\tikztotarget)}},
+  hv path/.style={to path={-| (\tikztotarget)}},
+  vh path/.style={to path={|- (\tikztotarget)}}]
+\matrix[column sep=3mm] {
+		\node (n0-0) [syntax-rule] {identifier}; & 	\node (p1-0) [point] {}; & 	\node (n2-0) [nonterminal] {letter}; & 	\node (p3-0) [point] {pre-loop}; &  &  &  &  &  &  & 	\node (p10-0) [point] {post-loop}; & 	\node (p11-0) [point] {}; \\
+	 &  &  &  & 	\node (p4-1) [point] {loop-start}; & 	\node (p5-1) [point] {}; & 	\node (n6-1) [nonterminal] {letter}; & 	\node (p7-1) [point] {se-p}; & 	\node (p8-1) [point] {fp}; & 	\node (p9-1) [point] {be-p}; &  &  \\
+	 &  &  &  &  &  & 	\node (n6-2) [nonterminal] {digit}; &  &  &  &  &  \\
+	 &  &  &  &  &  & 	\node (n6-3) [terminal] {\emph{space}}; &  &  &  &  &  \\
+};
+{
+	[start chain]		\chainin (p1-0);
+		\chainin (n2-0) [join=by tip];
+		\chainin (p3-0) [join];
+		{ [start branch]
+		\chainin (p4-1) [join=by {vh path}];
+		\chainin (p5-1) [join];
+		{ [start branch]
+		\chainin (n6-2) [join=by {vh path,tip}];
+		\chainin (p7-1) [join=by {hv path}];
+		}
+		{ [start branch]
+		\chainin (n6-3) [join=by {vh path,tip}];
+		\chainin (p7-1) [join=by {hv path}];
+		}
+		\chainin (n6-1) [join=by tip];
+		\chainin (p7-1) [join];
+		\chainin (p8-1) [join];
+		\chainin (p9-1) [join];
+		{ [start branch]
+		\chainin (p4-1) [join=by {skip loop=-18mm,tip}];
+		}
+		\chainin (p10-0) [join=by {hv path,tip}];
+		}
+		\chainin (p10-0) [join];
+		\chainin (p11-0) [join=by end];
+}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}[column sep=2mm, row sep=1mm,>=stealth,thick,draw=black!70,
+  point/.style={coordinate},
+  tip/.style={->,shorten >=1pt},every join/.style={rounded corners},
+  end/.style={-|,shorten >=1pt},
+  extender/.style={->>,shorten >= 1pt},
+  skip loop/.style={to path={-- ++(0,#1) -| (\tikztotarget)}},
+  hv path/.style={to path={-| (\tikztotarget)}},
+  vh path/.style={to path={|- (\tikztotarget)}}]
+\matrix[column sep=3mm] {
+		\node (n0-0) [syntax-rule] {terminal}; & 	\node (p1-0) [point] {}; & 	\node (p2-0) [point] {}; & 	\node (n3-0) [terminal] {'}; & 	\node (p4-0) [point] {loop-start}; & 	\node (n5-0) [nonterminal] {character}; & 	\node (p6-0) [point] {be-p}; & 	\node (n7-0) [terminal] {'}; & 	\node (p8-0) [point] {se-p}; & 	\node (p9-0) [point] {fp}; & 	\node (p10-0) [point] {}; \\
+	 &  &  &  &  &  &  &  &  &  &  \\
+	 &  &  &  &  &  &  &  &  &  &  \\
+	 &  &  & 	\node (n3-3) [terminal] {"}; & 	\node (p4-3) [point] {loop-start}; & 	\node (n5-3) [nonterminal] {character}; & 	\node (p6-3) [point] {be-p}; & 	\node (n7-3) [terminal] {"}; &  &  &  \\
+};
+{
+	[start chain]		\chainin (p1-0);
+		\chainin (p2-0) [join];
+		{ [start branch]
+		\chainin (n3-3) [join=by {vh path,tip}];
+		\chainin (p4-3) [join];
+		\chainin (n5-3) [join=by tip];
+		\chainin (p6-3) [join];
+		{ [start branch]
+		\chainin (p4-3) [join=by {skip loop=-6mm,tip}];
+		}
+		\chainin (n7-3) [join=by tip];
+		\chainin (p8-0) [join=by {hv path}];
+		}
+		\chainin (n3-0) [join=by tip];
+		\chainin (p4-0) [join];
+		\chainin (n5-0) [join=by tip];
+		\chainin (p6-0) [join];
+		{ [start branch]
+		\chainin (p4-0) [join=by {skip loop=-6mm,tip}];
+		}
+		\chainin (n7-0) [join=by tip];
+		\chainin (p8-0) [join];
+		\chainin (p9-0) [join];
+		\chainin (p10-0) [join=by end];
+}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}[column sep=2mm, row sep=1mm,>=stealth,thick,draw=black!70,
+  point/.style={coordinate},
+  tip/.style={->,shorten >=1pt},every join/.style={rounded corners},
+  end/.style={-|,shorten >=1pt},
+  extender/.style={->>,shorten >= 1pt},
+  skip loop/.style={to path={-- ++(0,#1) -| (\tikztotarget)}},
+  hv path/.style={to path={-| (\tikztotarget)}},
+  vh path/.style={to path={|- (\tikztotarget)}}]
+\matrix[column sep=3mm] {
+		\node (n0-0) [syntax-rule] {node}; & 	\node (p1-0) [point] {}; & 	\node (p2-0) [point] {}; & 	\node (n3-0) [nonterminal] {identifer}; & 	\node (p4-0) [point] {se-p}; & 	\node (p5-0) [point] {fp}; & 	\node (p6-0) [point] {}; \\
+	 &  &  & 	\node (n3-1) [nonterminal] {terminal}; &  &  &  \\
+	 &  &  & 	\node (n3-2) [nonterminal] {selection}; &  &  &  \\
+	 &  &  & 	\node (n3-3) [nonterminal] {repetition}; &  &  &  \\
+	 &  &  & 	\node (n3-4) [nonterminal] {optional}; &  &  &  \\
+	 &  &  & 	\node (n3-5) [nonterminal] {group}; &  &  &  \\
+};
+{
+	[start chain]		\chainin (p1-0);
+		\chainin (p2-0) [join];
+		{ [start branch]
+		\chainin (n3-1) [join=by {vh path,tip}];
+		\chainin (p4-0) [join=by {hv path}];
+		}
+		{ [start branch]
+		\chainin (n3-2) [join=by {vh path,tip}];
+		\chainin (p4-0) [join=by {hv path}];
+		}
+		{ [start branch]
+		\chainin (n3-3) [join=by {vh path,tip}];
+		\chainin (p4-0) [join=by {hv path}];
+		}
+		{ [start branch]
+		\chainin (n3-4) [join=by {vh path,tip}];
+		\chainin (p4-0) [join=by {hv path}];
+		}
+		{ [start branch]
+		\chainin (n3-5) [join=by {vh path,tip}];
+		\chainin (p4-0) [join=by {hv path}];
+		}
+		\chainin (n3-0) [join=by tip];
+		\chainin (p4-0) [join];
+		\chainin (p5-0) [join];
+		\chainin (p6-0) [join=by end];
+}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}[column sep=2mm, row sep=1mm,>=stealth,thick,draw=black!70,
+  point/.style={coordinate},
+  tip/.style={->,shorten >=1pt},every join/.style={rounded corners},
+  end/.style={-|,shorten >=1pt},
+  extender/.style={->>,shorten >= 1pt},
+  skip loop/.style={to path={-- ++(0,#1) -| (\tikztotarget)}},
+  hv path/.style={to path={-| (\tikztotarget)}},
+  vh path/.style={to path={|- (\tikztotarget)}}]
+\matrix[column sep=3mm] {
+		\node (n0-0) [syntax-rule] {sequence}; & 	\node (p1-0) [point] {}; & 	\node (p2-0) [point] {loop-start}; & 	\node (n3-0) [nonterminal] {node}; & 	\node (p4-0) [point] {be-p}; & 	\node (p5-0) [point] {}; \\
+	 &  &  & 	\node (n3-1) [terminal] {,}; &  &  \\
+};
+{
+	[start chain]		\chainin (p1-0);
+		\chainin (p2-0) [join];
+		\chainin (n3-0) [join=by tip];
+		\chainin (p4-0) [join];
+		{ [start branch]
+		\chainin (n3-1) [join=by {vh path,tip}];
+		\chainin (p2-0) [join=by {hv path,tip}];
+		}
+		\chainin (p5-0) [join=by end];
+}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}[column sep=2mm, row sep=1mm,>=stealth,thick,draw=black!70,
+  point/.style={coordinate},
+  tip/.style={->,shorten >=1pt},every join/.style={rounded corners},
+  end/.style={-|,shorten >=1pt},
+  extender/.style={->>,shorten >= 1pt},
+  skip loop/.style={to path={-- ++(0,#1) -| (\tikztotarget)}},
+  hv path/.style={to path={-| (\tikztotarget)}},
+  vh path/.style={to path={|- (\tikztotarget)}}]
+\matrix[column sep=3mm] {
+		\node (n0-0) [syntax-rule] {selection}; & 	\node (p1-0) [point] {}; & 	\node (p2-0) [point] {loop-start}; & 	\node (n3-0) [nonterminal] {node}; & 	\node (p4-0) [point] {be-p}; & 	\node (p5-0) [point] {}; \\
+	 &  &  & 	\node (n3-1) [terminal] {|}; &  &  \\
+};
+{
+	[start chain]		\chainin (p1-0);
+		\chainin (p2-0) [join];
+		\chainin (n3-0) [join=by tip];
+		\chainin (p4-0) [join];
+		{ [start branch]
+		\chainin (n3-1) [join=by {vh path,tip}];
+		\chainin (p2-0) [join=by {hv path,tip}];
+		}
+		\chainin (p5-0) [join=by end];
+}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}[column sep=2mm, row sep=1mm,>=stealth,thick,draw=black!70,
+  point/.style={coordinate},
+  tip/.style={->,shorten >=1pt},every join/.style={rounded corners},
+  end/.style={-|,shorten >=1pt},
+  extender/.style={->>,shorten >= 1pt},
+  skip loop/.style={to path={-- ++(0,#1) -| (\tikztotarget)}},
+  hv path/.style={to path={-| (\tikztotarget)}},
+  vh path/.style={to path={|- (\tikztotarget)}}]
+\matrix[column sep=3mm] {
+		\node (n0-0) [syntax-rule] {repetition}; & 	\node (p1-0) [point] {}; & 	\node (n2-0) [terminal] {\{}; & 	\node (n3-0) [nonterminal] {sequence}; & 	\node (n4-0) [terminal] {\}}; & 	\node (p5-0) [point] {}; & 	\node (n6-0) [terminal] {+}; & 	\node (p7-0) [point] {se-p}; & 	\node (p8-0) [point] {fp}; & 	\node (p9-0) [point] {}; &  &  &  & 	\node (p13-0) [point] {be-p}; & 	\node (p14-0) [point] {}; \\
+	 &  &  &  &  &  & 	\node (n6-1) [terminal] {*}; &  &  &  & 	\node (n10-1) [terminal] {(}; & 	\node (n11-1) [nonterminal] {terminal}; & 	\node (n12-1) [terminal] {)}; &  &  \\
+};
+{
+	[start chain]		\chainin (p1-0);
+		\chainin (n2-0) [join=by tip];
+		\chainin (n3-0) [join=by tip];
+		\chainin (n4-0) [join=by tip];
+		\chainin (p5-0) [join];
+		{ [start branch]
+		\chainin (n6-1) [join=by {vh path,tip}];
+		\chainin (p7-0) [join=by {hv path}];
+		}
+		\chainin (n6-0) [join=by tip];
+		\chainin (p7-0) [join];
+		\chainin (p8-0) [join];
+		\chainin (p9-0) [join];
+		{ [start branch]
+		\chainin (n10-1) [join=by {vh path,tip}];
+		\chainin (n11-1) [join=by tip];
+		\chainin (n12-1) [join=by tip];
+		\chainin (p13-0) [join=by {hv path,tip}];
+		}
+		\chainin (p13-0) [join];
+		\chainin (p14-0) [join=by end];
+}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}[column sep=2mm, row sep=1mm,>=stealth,thick,draw=black!70,
+  point/.style={coordinate},
+  tip/.style={->,shorten >=1pt},every join/.style={rounded corners},
+  end/.style={-|,shorten >=1pt},
+  extender/.style={->>,shorten >= 1pt},
+  skip loop/.style={to path={-- ++(0,#1) -| (\tikztotarget)}},
+  hv path/.style={to path={-| (\tikztotarget)}},
+  vh path/.style={to path={|- (\tikztotarget)}}]
+\matrix[column sep=3mm] {
+		\node (n0-0) [syntax-rule] {optional}; & 	\node (p1-0) [point] {}; & 	\node (n2-0) [terminal] {[}; & 	\node (n3-0) [nonterminal] {sequence}; & 	\node (n4-0) [terminal] {]}; & 	\node (p5-0) [point] {}; \\
+};
+{
+	[start chain]		\chainin (p1-0);
+		\chainin (n2-0) [join=by tip];
+		\chainin (n3-0) [join=by tip];
+		\chainin (n4-0) [join=by tip];
+		\chainin (p5-0) [join=by end];
+}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}[column sep=2mm, row sep=1mm,>=stealth,thick,draw=black!70,
+  point/.style={coordinate},
+  tip/.style={->,shorten >=1pt},every join/.style={rounded corners},
+  end/.style={-|,shorten >=1pt},
+  extender/.style={->>,shorten >= 1pt},
+  skip loop/.style={to path={-- ++(0,#1) -| (\tikztotarget)}},
+  hv path/.style={to path={-| (\tikztotarget)}},
+  vh path/.style={to path={|- (\tikztotarget)}}]
+\matrix[column sep=3mm] {
+		\node (n0-0) [syntax-rule] {group}; & 	\node (p1-0) [point] {}; & 	\node (n2-0) [terminal] {(}; & 	\node (n3-0) [nonterminal] {sequence}; & 	\node (n4-0) [terminal] {)}; & 	\node (p5-0) [point] {}; \\
+};
+{
+	[start chain]		\chainin (p1-0);
+		\chainin (n2-0) [join=by tip];
+		\chainin (n3-0) [join=by tip];
+		\chainin (n4-0) [join=by tip];
+		\chainin (p5-0) [join=by end];
+}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}[column sep=2mm, row sep=1mm,>=stealth,thick,draw=black!70,
+  point/.style={coordinate},
+  tip/.style={->,shorten >=1pt},every join/.style={rounded corners},
+  end/.style={-|,shorten >=1pt},
+  extender/.style={->>,shorten >= 1pt},
+  skip loop/.style={to path={-- ++(0,#1) -| (\tikztotarget)}},
+  hv path/.style={to path={-| (\tikztotarget)}},
+  vh path/.style={to path={|- (\tikztotarget)}}]
+\matrix[column sep=3mm] {
+		\node (n0-0) [syntax-rule] {rule}; & 	\node (p1-0) [point] {}; & 	\node (n2-0) [nonterminal] {identifier}; & 	\node (n3-0) [terminal] {=}; & 	\node (n4-0) [nonterminal] {sequence}; & 	\node (n5-0) [terminal] {;}; & 	\node (p6-0) [point] {}; \\
+};
+{
+	[start chain]		\chainin (p1-0);
+		\chainin (n2-0) [join=by tip];
+		\chainin (n3-0) [join=by tip];
+		\chainin (n4-0) [join=by tip];
+		\chainin (n5-0) [join=by tip];
+		\chainin (p6-0) [join=by end];
+}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}[column sep=2mm, row sep=1mm,>=stealth,thick,draw=black!70,
+  point/.style={coordinate},
+  tip/.style={->,shorten >=1pt},every join/.style={rounded corners},
+  end/.style={-|,shorten >=1pt},
+  extender/.style={->>,shorten >= 1pt},
+  skip loop/.style={to path={-- ++(0,#1) -| (\tikztotarget)}},
+  hv path/.style={to path={-| (\tikztotarget)}},
+  vh path/.style={to path={|- (\tikztotarget)}}]
+\matrix[column sep=3mm] {
+		\node (n0-0) [syntax-rule] {grammar}; & 	\node (p1-0) [point] {}; & 	\node (p2-0) [point] {loop-start}; & 	\node (n3-0) [nonterminal] {rule}; & 	\node (p4-0) [point] {be-p}; & 	\node (p5-0) [point] {}; \\
+};
+{
+	[start chain]		\chainin (p1-0);
+		\chainin (p2-0) [join];
+		\chainin (n3-0) [join=by tip];
+		\chainin (p4-0) [join];
+		{ [start branch]
+		\chainin (p2-0) [join=by {skip loop=-6mm,tip}];
+		}
+		\chainin (p5-0) [join=by end];
+}
+\end{tikzpicture}
+
+

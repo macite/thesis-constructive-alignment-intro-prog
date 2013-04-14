@@ -11,6 +11,24 @@
 \subsection{Background} % (fold)
 \label{sub:doubtfire_background}
 
+Formative feedback, \pref{itm:formative}, plays an important role in shaping the teaching and learning environment for the units implemented using the model presented in \cref{cha:approach}. This change helps support the focus on students active construction of their own knowledge, \pref{itm:construct}, but provides an additional challenge as students no longer have marks to guide their behaviour. To help address this challenge, an online task tracking system, named ``Doubtfire'', was developed. 
+
+Doubtfire allowed each student to track their progress against the weekly assessment tasks using a ``burn down chart'' as shown in \fref{fig:example_chart}, a technique adapted from the Scrum agile software development process \cite{Schwaber:2002}. The charts show the cumulative amount of work remaining week by week, which decreases as work is complete, or burns down over time.
+
+\begin{figure}[thb]
+  \centering
+  \includegraphics[width=0.9\textwidth]{ExampleChart}
+  \caption{An example burn down chart showing progress against weekly tasks.}
+  \label{fig:example_chart}
+\end{figure}
+
+
+Agile software development methods \cite{Beck:2001} embrace change \cite{Beck:2000} by allowing for adaptive, periodic adjustment of activities. The basis for this adaptation in Scrum is \emph{empirical} information; a consistent measure of the work remaining (``backlog''), and a measure of the rate work is being completed by the team (``velocity'').
+
+The purpose of a Scrum ``burn down chart'' is to allow stakeholders to consider, in an empirical manner, the velocity of the team with respect to the current backlog. This chart acts as a ``information radiator'' \cite{Cockburn:2002} for the team, providing details on either release or ``Sprint'' iteration schedules. Since quality of work should not be compromised, the requirements (backlog) of work can be adjusted in order to meet the required schedule and cost~\cite{Sutherland:2007}.
+
+In adapting burn down charts as a tool for supporting students engagement with formative assessment tasks, the assessment tasks become the ``backlog''. Students are then able to see the number of tasks remaining, and use their current ``velocity'' to determine if their progress is sufficient to complete the unit on time.
+
 % subsection background (end)
 
 \subsection{Requirements} % (fold)
@@ -20,52 +38,440 @@ The central requirement for the Doubtfire tool was to provide students with visu
 
 It was also seen that the scrum-style marking of tasks as completed could be extended to allow students to indicate if they were working on, or having trouble with, particular tasks. This requirement aimed to increase student engagement with the tool, and improve likelihood that they would make active use of it throughout the teaching period.
 
-To account for task heterogeneity, staff needed to be able to set a specific \emph{weight} for each task. This weight represents the estimated effort students needed to expend to satisfactorily complete the task. Rather than specifying predicted task weight in terms of hours, this was done in a more abstract unit. One popular approach with agile software development projects is to assign tasks ``\emph{t-shirt size}'' weights \cite{Peixoto:2010}. Using this approach tasks have their weight set to a common t-shirt size: \emph{extra small}, \emph{small}, \emph{medium}, \emph{large}, \emph{extra large} etcetera. The t-shirt sizes are then allocated weights, with each increment in size doubling the associated weight: extra small had a weight of one, small a weight of two, medium four, etcetera.  
+To account for task heterogeneity, staff needed to be able to set a specific \emph{weight} for each task. This weight represents the estimated effort students needed to expend to satisfactorily complete the task. Rather than specifying task weight in terms of hours, this was done in a more abstract unit. One popular approach with agile software development projects is to assign tasks ``\emph{t-shirt size}'' weights \cite{Peixoto:2010}. Using this approach tasks have their weight set to a common t-shirt size: \emph{extra small}, \emph{small}, \emph{medium}, \emph{large}, \emph{extra large} etcetera. The t-shirt sizes are then allocated weights, with each increment in size doubling the associated weight: extra small had a weight of one, small a weight of two, medium four, etcetera.
 
-Task weights needed to be incorporated into the burn down chart, with each chart showing the cumulative number of \emph{task-points} remaining. 
+Task weights needed to be incorporated into the burn down chart, with each chart showing the cumulative number of \emph{task-points} remaining. Using task-points in the burn down charts enables the chart to visually show weeks where more, or less, effort is likely to be required.
 
-A student's projected completion should be recalculated as tasks and weeks progress. For example, if six tasks were completed in one week, based on the velocity, a thirty-six task project is expected to be completed in six weeks. 
+Progress also needed to be projected to indicate an expected completion date. This projection can be calculated from the average number of task-points the student completes each week.  For example, if six task-points were completed in one week, based on the velocity, a thirty-six task-point project is expected to be completed in six weeks. Each student's projected completion should be recalculated as tasks and weeks progress. 
 
-
-As Doubtfire should be an interactive system, a number of requirements are needed to ensure that the tool could be best utilised by all targeted user groups. The following were identified:
+As an interactive system, Doubtfire had a number of requirements to ensure that it could be best utilised by all targeted users. The following requirements were identified:
 \begin{itemize}[noitemsep,nolistsep]
-  \item \textbf{Online}: making the tool available online allows students to access the tool from virtually anywhere. It also avoids the need for client software, which makes the development process simpler (no platforms need to be supported) and means that students do not have to install clients.
-  \item \textbf{Easy to use}: if students struggle to interact with the tool, they may choose not to use it -- regardless of the advantages it may provide them. The usability of the tool must provide as small a barrier as possible to student adoption.
-  \item \textbf{Mobile friendly}: with the devices now available to students, we cannot assume that they are working on a desktop PC behind a desk. To ensure that they can check and report their status whenever they need, the tool must be able to provide those features on mobile devices.
+  \item \textbf{Online}: students needed to be able to easily access the tool both in and out of scheduled class times. It was decided to make Doubtfire an online tool, thereby making it accessible from virtually anywhere. It also simplifies the development progress with only web platforms needing to be supported, and avoids the need for students to install client software.
+  \item \textbf{Easy to use}: the tool need to be simple enough to use, so the usability of the tools must provide as small a barrier as possible to student adoption.
+  \item \textbf{Mobile friendly}: students should be able to quickly check, and update, their progress from a range of devices. Ensuring that Doubtfire can be easily accessed via a mobile device will encourage students to access the tool even when they are away from their computers. 
   \item \textbf{Aesthetically pleasing user interface}: to encourage adoption of the tool among students, a visually appealing user interface is ideal.
 \end{itemize}
-Simply, we want a tool that is simple and appealing for students to use and that can be accessed almost anywhere. We do not want the students to feel that interaction with the tool is work.
+Simply, our aim was to create a tool that was simple and appealing for students to use and was easily accessible from a range of devices and locations. Students not should feel that interaction with the tool is work.
 
-Students, however, were not the only user group targeted by Doubtfire. Tutors need to be able to respond to students actions in the tool, and convenors need to be able to observe the performance of the student cohort and provide simple administrative actions. Both groups benefit from the requirements already listed. Most importantly, the mobile nature allows tutors to easily check and update students' progress during labs.
+In addition to students, Doubtfire also addressed needs of teaching staff. Tutors were responsible for managing classes, and therefore needed to be able to respond to student actions in the tool. Convenors had overall responsibility for the unit, and needed to be able to observe the performance of the student cohort and perform simple administrative actions. All teaching staff benefited from the requirements already listed. Most importantly, the mobile nature allowed tutors to easily check and update students' progress during scheduled classes.
+
+\medskip
 
 In terms of the development and deployment of the tool, a number of software qualities are desirable. These include:
-\begin{itemize}
-  \item Quick to develop and extend: it is valuable to be able to produce features as soon as possible so that students may benefit from them early in the semester.
-  \item Supports adaptive teaching environments: the tool should fit inside the teaching environment; it should not be necessary to fit the teaching environment around the tool. It must remain a supportive technology.
-  \item Controllable: the schema that defines the way tutors and students interact over tasks must be easy to modify as the teaching requirements change in response to changing assessment criteria.
+\begin{itemize}[noitemsep,nolistsep]
+  \item \textbf{Supports the teaching environment}: the tool plays a supportive role, and should therefore fit inside the teaching environment; it should not be necessary to fit the teaching environment around the tool.
+  \item \textbf{Quick to develop and extend}: it should be easy to produce features and adapt the tool to ensure it remains relevant to the students.
+  \item \textbf{Controllable}: the schema that defines the way tutors and students interact over tasks must be easy to alter to allow for adaptation if assessment criteria change.
 \end{itemize}
-It is desirable that the tool conforms to standard quality requirements appropriate to online and mobile-accessible task tracking software: that it is easy to change, maintain and administrate.
 
-It is valuable to add features that track student behaviour in the tool to:
-\begin{itemize}
-  \item Determine whether the expected use of the software matches the actual.
-  \item Identify possible issues in the unit curriculum, such as inconsistent assignment weighting.
-  \item Identify possible flaws in the rule system governing student and tutor interaction in the software.
-  \item Exploit the information to insights into general teaching issues.
-  \item Optimise the experience based on how students use the software.
-\end{itemize}
-As this information is constantly generated through use of the tool, it is simply a matter of storing what actions have been performed. This provides unambiguous information that can then be analysed through quantitative methods.
+% It is valuable to add features that track student behaviour in the tool to:
+% \begin{itemize}[noitemsep,nolistsep]
+%   \item Determine whether the expected use of the software matches the actual.
+%   \item Identify possible issues in the unit curriculum, such as inconsistent assignment weighting.
+%   \item Identify possible flaws in the rule system governing student and tutor interaction in the software.
+%   \item Exploit the information to insights into general teaching issues.
+%   \item Optimise the experience based on how students use the software.
+% \end{itemize}
+% As this information is constantly generated through use of the tool, it is simply a matter of storing what actions have been performed. This provides unambiguous information that can then be analysed through quantitative methods.
 
-This section has described the requirements we deemed non-negotiable in the production of an effective progress management tool for the users identified. There are a number of minor requirements that were not considered significant enough to describe here. From these requirements were produced a number of features accessible to the convenor, tutor and student user groups, which are discussed in the following section.
+% This section has described the requirements we deemed non-negotiable in the production of an effective progress management tool for the users identified. There are a number of minor requirements that were not considered significant enough to describe here. From these requirements were produced a number of features accessible to the convenor, tutor and student user groups, which are discussed in the following section.
 
 % subsection requirements (end)
 
+\subsection{Doubtfire Solution} % (fold)
+\label{sub:doubtfire_solution}
 
+\subsubsection{User Roles} % (fold)
+\label{sub:user_roles}
+
+The three user groups in Doubtfire were Convenor, Tutor and Student. Each of these groups had access to a different set of features as described in \tref{tab:user_features}. Convenor and Tutor roles were provided to support teaching staff, with the students having a separate role. 
+
+% This is what can do with the tool
+\begin{table}[htbp]
+  \renewcommand{\arraystretch}{1.6}
+  \centering
+  \caption{Available features for each user group in Doubtfire}
+  \label{tab:user_features}
+  \begin{tabular}{c|p{0.9\textwidth}}
+    Role & \multicolumn{1}{c}{Features} \\ \hline\hline
+    \multirow{5}{*}{\begin{sideways}\parbox{14mm}{Convenor}\end{sideways}}
+    & - \textbf{Unit Administration}: including the ability to enrol students and create tasks. \\
+    & - \textbf{Monitor Student Progress}: view distribution of students by progress indicators. \\
+    & - \textbf{Monitor Task Progress}: view progress distribution for each of the unit's tasks. \\
+    & - \textbf{Examine Student Progress}: view the list of tasks and their associated status by student. \\
+    & - \textbf{Update Task Status}: mark student work as complete. \\ 
+    & \\
+    \hline\hline
+    \multirow{2}{*}{\begin{sideways}\parbox{10mm}{Tutor}\end{sideways}}
+    & - \textbf{Examine Student Progress}: view the list of tasks and their associated status by student. \\
+    & - \textbf{Update Task Status}: mark student work as complete. \\ 
+    & \\
+    \hline\hline
+    \multirow{3}{*}{\begin{sideways}\parbox{11mm}{Student}\end{sideways}}
+    & - \textbf{Update Task Status}: mark student work as complete. \\ 
+    & - \textbf{Monitor Progress}: view progress on task completion using a burn down chart showing Target, Actual and Projected completion. \\
+    & \\
+  \end{tabular}
+\end{table}
+
+Unit convenors are responsible for the overall delivery and management of the unit. To support this role, Doubtfire provided these users with the tools to set up unit tasks and enrol students. A dashboard provided Convenors with an overview of student progress, and enabled quick access to views of student progress by task, and to individual students via their scheduled class. \fref{fig:dashboard} shows an example overview of students progress for a single unit from the Convenor Dashboard. While, \fref{fig:task_chart_view} shows an example chart that visualises the distribution of student status for each task. In addition to these tasks, Convenors also had the ability to perform the same actions as Tutors.
+
+\begin{figure}[thbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{Dashboard}%
+  \caption{Overview of progress by unit from the Convenor Dashboard.}%
+  \label{fig:dashboard}%
+\end{figure}
+
+\begin{figure}[thbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{TaskChart}%
+  \caption{Convenor view showing distribution of student status by task}%
+  \label{fig:task_chart_view}%
+\end{figure}
+
+Tutors are responsible for conducting the tutorial classes, and providing formative feedback for the students in these classes. To support this role, Doubtfire provided tutors with a class list view showing student progress. From the class list, tutors could drill down to view individual students and their burn down charts, and provided a convenient means of updating task status. 
+
+\fref{fig:tutor_view} shows an example of the class list used by Tutors. The class list shows the students in the tutors class, their names and id numbers have been obscured in \fref{fig:tutor_view}, with each task being represented by a coloured rectangle indicating the current status of the task for that student. Tutors are able to update the status of a student's tasks directly from the class list.
+
+\begin{figure*}[thbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{TutorView}
+  \caption{Tutors viewed class groups and could adjust task states}
+  \label{fig:tutor_view}
+\end{figure*}
+
+\fref{fig:home_page} shows an example of the dashboard provided to students. Each student was provided with a dashboard showing their progress for the units they were enrolled in. Students could view their burn down chart and task statuses by selecting units from their dashboard. When viewing a unit, students could update the status of their tasks as shown in \fref{fig:task_list}.
+
+\begin{figure*}[thbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{HomePage}%
+  \caption{Student home page in Doubtfire, showing progress on all enrolled projects}%
+  \label{fig:home_page}
+\end{figure*}
+
+\begin{figure}[thbp]
+  \centering
+  \includegraphics[width=0.6\textwidth]{StudentTasks}
+  \caption{The Tasks list enabled students to view and change task status}
+  \label{fig:task_list}
+\end{figure}
+
+Student progress could be viewed as a burn down chart that consisted of three lines, as shown in \fref{fig:example_chart}. The lines indicated:
+\begin{itemize}[noitemsep,nolistsep]
+  \item \textbf{Actual Completion}: showed the number of task-points signed off for the student by week.
+  \item \textbf{Target Completion}: showed the recommended schedule from the task due dates set by the convenor.
+  \item \textbf{Projected Completion}: indicated the current velocity, which was then projected to indicate an expected end date if current velocity was maintained.
+\end{itemize}
+
+% subsection user_roles (end)
+
+\subsubsection{Task Processes} % (fold)
+\label{sub:task_processes}
+
+Tasks in the Doubtfire system could have one of a number of statuses, with different users being responsible for updating task statuses at various times during unit delivery. The main statuses and the transitions between these is shown in \fref{fig:basic_process_chart} as a UML State Chart. 
+
+\begin{figure}[thbp]
+  \centering
+  \includegraphics[width=0.7\textwidth]{BasicProcessStateChart}
+  \caption{UML state chart showing task states and transitions.}
+  \label{fig:basic_process_chart}
+\end{figure}
+
+Initially all tasks are set to the \emph{Not Started} status. When students begin work on the task they are encouraged to update its status to \emph{Progressing}, and when it is ready for assessment to the \emph{Ready to Mark} status. Once tutors receive the work, they examine the work and provide the student with formative feedback. After having discussed the task with the student, the tutor updates the status by either returning it to a \emph{Progressing} status if the task needs to be fixed, or signing the task off as \emph{Complete}.
+
+The \emph{Progressing} status was divided into a number of sub-states for the purpose of providing students with finer-grained feedback. 
+
+Students were able to set the status of a task to \emph{Working on It} or \emph{Needs Help} to indicate their current progress on the task to their tutor and to the unit convenor. \emph{Fix} and \emph{Redo} statuses could be used by students to indicate that tasks needed some aspects adjusted (the \emph{Fix} status) or that it should be redone (the \emph{Redo} status). These status, shown in \fref{fig:detailed_states}, were designed to help provide more accurate details of progress for both staff and students. Students indicated how they were progressing with the tasks, and staff could provide feedback on the outcomes students had achieved.
+
+\begin{figure}[thbp]
+  \centering
+  \includegraphics[width=\textwidth]{DetailedStepsInProgress}
+  \caption{UML state chart showing the detailed states within the Progressing superstate.}
+  \label{fig:detailed_states}
+\end{figure}
+
+% subsection doubtfire_solution (end)
+
+\subsection{Use of Doubtfire} % (fold)
+\label{sub:use_of_doubtfire}
+
+While \cref{cha:evaluation} provides a more in-depth discussion of the use of Doubtfire, this section will briefly comment on how it was used in the delivery of both the introductory programming and object oriented programming units. In both cases the teaching and learning activities from \cref{cha:example_impl} were used as the tasks to be completed, and teaching staff assigned each a weighting to represent its relative size.
+
+The effectiveness of the tool, for students, depended on their engagement with the unit. The more capable students made active use of Doubtfire, and responded quickly to addressing issues and closing gaps in their knowledge. Students who struggled to complete the weekly tasks generally made poor use of the tool at the start of the teaching period, but engaged actively later in the semester. While some, more disengaged, students avoided use of the system and attempted to establish progress on their own terms. 
+
+For teaching staff, the Doubtfire tool provided useful information on how students were engaging with the formative process. It was easy to see which students were doing well, to identify those who were falling behind, and those who were not engaging with the unit at all. This information was used to prompt students, encouraging those who were doing well and suggesting appropriate resources for those who were falling behind.
+
+\subsection{Summary} % (fold)
+\label{sub:doubtfire_summary}
+
+The strong use of formative feedback in the model provides a challenge as students cannot be motivated by marks during the teaching period. This could lead to students allocating insufficient time to complete the unit's tasks, allowing them to fall behind in the unit.
+
+Doubtfire helped to address this concern through the use of burn down charts that visually represented the amount of work students had remaining in the unit. By using this tool staff and students were able to monitor progress throughout the teaching period.
+
+% subsection summary (end)
 
 % section doubtfire_using_burndown_charts_to_support_formative_feedback (end)
 
 \section{Resources to Support Concept Focus} % (fold)
 \label{sec:arcana}
+
+\subsection{Background} % (fold)
+\label{sub:arcana_background}
+
+Concepts were central to \emph{what} we aimed to teach. \pref{itm:concepts} indicates that we should aim to focus on concepts over language syntax. In addressing this principle the introductory programming unit from \cref{cha:example_impl} had little, if any, coverage of syntax in the lectures, leaving these details instead to teaching and learning resources.
+
+While concepts are important, syntax details need to be available to help students turn these concepts into working code. In order to achieve this two resources were made available: the ``Programming Arcana'' \cite{Cain:2013arcana}, and a range of video podcasts via iTunesU. Each of these resources was designed to support the concept focus and to provide details on the language syntaxes used in the unit. These resources used a range of audible, visual and textual mediums to present the details so as to better support a range of learning approaches.
+
+% subsection background (end)
+
+\subsection{Programming Arcana} % (fold)
+\label{sub:programming_arcana}
+
+One of the central ideas of ``Beyond Bullet Points'' is to fully document the notes attached to a presentation's slides \cite{Atkinson:2007}. In effect, the details are moved from the slide itself to the slides' notes, which can then be printed as an informative handout. In our approach this worked against \pref{itm:agile}, and would have resulted in significant effort being expended on the creation of each week's presentation, thereby adding resistance to changing these if they were found to be ineffective.Instead of documenting these notes in the presentations themselves, they were written up in a separate resource: the \emph{Programming Arcana} \cite{Cain:2013arcana}.
+
+Documenting the language details in a separate text also helped to address another issue raised as a result of choosing Pascal as one of the programming languages. Pascal is not currently a popular language with text book writers, and while the Free Pascal Language Reference Guide \cite{FPC:2013lang} provides details of the language it is not designed for beginners.
+
+
+\subsubsection{Chapter Sequence} % (fold)
+\label{ssub:chapter_sequence}
+
+Chapters in the Programming Arcana were designed to align with the main concept topics from the introductory programming unit. This meant that the text needed to embody the concepts-first approach, \pref{itm:concepts} discussed in \cref{cha:guiding_principles}. To best support this, each chapter needed to focus on providing a coherent set of concepts that built upon concepts presented earlier in the text. The following list illustrates how the programming concepts are presented in the Programming Arcana. This is followed by a discussion of how well the text was able to embody the concept first approach.
+
+\begin{enumerate}[noitemsep,nolistsep]
+  \item \textbf{Building Programs}: introduced students to the tools they required, and showed them a basic program they could compile to check the tools were working. The concepts in this chapter included: 
+  \begin{itemize}[noitemsep,nolistsep]
+    \item \textbf{Programs} were introduced as a sequence of instructions that get the computer to perform actions.
+    \item \textbf{Machine and Assembly code} provided some context as to why compilers are necessary. Machine code was presented as the computers natural language, and Assembly as a first step toward making this code more human-friendly.
+    \item \textbf{Source code and compilers} introduced the ideas of third generation languages, and the need for a compiler to convert this code to machine code.
+    \item The \textbf{Terminal} was introduced as a means of running programs, and the steps for using the compiler were presented. This section also introduced the \textbf{BASH} shell, along with commands to navigate through the file system. 
+    \item The final concept outlined the code for a \textbf{Hello World} program in C and Pascal, together with the steps needed to compile and run this program. 
+  \end{itemize}
+  \item \textbf{Program Creation}: described how code could be written to create a \emph{Program}.
+  \begin{itemize}[noitemsep,nolistsep]
+    \item This introduced the idea that a \textbf{Program} could be created in code, and that it had a name and a list of instructions for the computer to perform.
+    \item \textbf{Procedures} were introduced as a named group of instructions that performed a task. These instructions could be run using a \textbf{Procedure Call}.
+    \item The idea that procedures could be distributed in a \textbf{Library} was introduced.
+    \item Programming language terminology was also introduced, include \textbf{Statements} as the technical term for commands, \textbf{Expressions} for calculated values, \textbf{Types} to describe different kinds of data, and \textbf{Identifiers} as the names for artefacts such as the programs created and the procedures called. 
+    \item \textbf{Comments} were also discussed as a means of documenting code.
+  \end{itemize}
+  \item \textbf{Procedure Declaration}: introduced the idea that you can create your own procedures to encapsulate the steps of a task. 
+  \begin{itemize}[noitemsep,nolistsep]
+     \item \textbf{Procedure declaration} described how procedures could be created as a sequence of instructions that are run when the procedure is called.
+     \item The concept of a \textbf{Program} was extended to indicate that a program's code could include procedure declarations.
+   \end{itemize} 
+  \item \textbf{Storing and Using Data}: made programs more dynamic with variables and constants to store data, and functions to calculate values.
+  \begin{itemize}[noitemsep,nolistsep]
+    \item \textbf{Variables} were introduced as a means of storing data that changed within the code, while \textbf{Constants} were introduced as a means of storing data that does not change. 
+    \item The \textbf{assignment statement} was introduced as the means of storing a value in the variable, and the concept of an \textbf{expression} was updated to indicate it could read the value from the variable.
+    \item Programming terminology related to the location of a variable was introduced, with \textbf{local variables} being declared within a procedure, \textbf{global variables} within the program, and \textbf{parameters} as a means of enabling data to be passed to a procedure.
+    \item The different parameter passing options were presented, with \textbf{pass-by-value} indicating that the value of the expression in the procedure call was passed, while with \textbf{pass-by-reference} the parameter needs to be passed a \emph{variable} to which it will refer.
+    \item Creating \textbf{Functions} to calculate values was also introduced, along with updating expressions to indicate the use of \textbf{function calls}.
+    \item To realise these concepts, the previous \textbf{statement}, \textbf{program} and \textbf{procedure declaration} concepts were updated.
+  \end{itemize}
+  \item \textbf{Control Flow}: introduced the structured programming principles, along with the control flow mechanisms of selection and repetition.
+  \begin{itemize}[noitemsep,nolistsep]
+    \item \textbf{Boolean data} was discussed as a means of directing the control flow statements. This included the use of \textbf{comparisons} to calculate boolean values, as well as the \textbf{logical operators} (\emph{and}, \emph{or}, and \emph{not}).
+    \item Selection was described in terms of \textbf{branching}, this included the ideas of \textbf{if statements} and \textbf{case statements}.
+    \item \textbf{Looping} introduced \textbf{pre-test loops} that repeated code zero or more times, and \textbf{post-test loops} that repeated code one or more times. 
+    \item Other control flow statements were covered in the section on \textbf{jumping}. This included \textbf{break} to jump out of a loop, \textbf{continue} to jump to the end of a loop, \textbf{exit/return} to jump out of a function or procedure, and \textbf{goto}.
+    \item Finally, the idea of grouping statements in a \textbf{compound statement} was presented, and explained in terms of providing a sequence of statements within the control flow statements.
+  \end{itemize}
+  \item \textbf{Managing Multiple Values}: presented the use of arrays.
+  \begin{itemize}[noitemsep,nolistsep]
+    \item \textbf{Arrays} were presented as a means of managing a number of values in a single variable. \textbf{String} was discussed as an example of an array students had already been working with.
+    \item The importance of \textbf{pass-by-reference} was reintroduced.
+    \item \textbf{For loops} were introduced as a convenient means of looping over the elements of an array. 
+    \item The \textbf{Assignment statement} and \textbf{Expression} concepts were updated to indicate how arrays could be used.
+  \end{itemize}
+  \item \textbf{Custom Data Types}: described how developers can create types to help them organise the data in their programs, much as functions and procedures helped to organise functionality.
+  \begin{itemize}[noitemsep,nolistsep]
+    \item \textbf{Types} were described again, in more detail to provide context. 
+    \item \textbf{Type declaration} was discussed along with \textbf{records/structs}, \textbf{enumerated types} and \textbf{unions}. This required an update to the concept of what a \textbf{Program} can contain.
+    \item The \textbf{Assignment statement} and \textbf{Expression} concepts were updated to indicate how the various custom types could be used.
+  \end{itemize}
+  \item \textbf{Dynamic Memory Allocation}: extended programs beyond the confines of the stack, allowing the allocation of data on the heap.
+  \begin{itemize}[noitemsep,nolistsep]
+    \item The \textbf{Stack} and \textbf{Heap} were discussed. This highlighted the need for values on the stack to have a known size, requiring another ``space'' for allocating data when its size is not known at compile time.
+    \item \textbf{Pointers} were introduced as a means of referring to space allocated on the Heap.
+    \item The need for specific actions to \textbf{allocate memory}, and to \textbf{free} that allocation were also presented.
+    \item Common \textbf{issues with pointers} were also discussed, indicating why they are likely to occur and how to address these issues. This included \textbf{access violations}, \textbf{memory leaks} and \textbf{accessing released memory}. 
+  \end{itemize}
+  \item \textbf{Input and Output}: described how to save and load data from file.
+  \begin{itemize}[noitemsep,nolistsep]
+    \item The concept of \textbf{persisting data} discussed the idea of a process and its memory being freed after the program terminates. This lead to details on saving data from the program's memory onto persistent storage.
+    \item \textbf{Files} and text and binary \textbf{file formats} were discussed. 
+    \item \textbf{Interacting with Files} described the typical input and output operations you are likely to perform on a file.
+    \item \textbf{Other output devices} related the concepts presented to terminal input/output and the idea that the same concepts applied to sending data across a network connection.
+  \end{itemize}
+\end{enumerate}
+
+In proposing \pref{itm:concepts}, with its focus on programming concepts, \cref{cha:guiding_principles} outlined the requirement that we needed to ``Introduce programming concepts incrementally''. The Programming Arcana provides an example of how the details of the programming language can be presented in such a way as to ensure most topics are presented incrementally, with each topic building upon the previously presented topics. 
+
+There were two cases where concepts could not be suitably explained within the overall context presented in a chapter. Other than these two cases, all other chapters were able to explain all concepts in terms of the presented, or previously presented, concepts.
+\begin{itemize}[noitemsep,nolistsep]
+  \item In Chapter 1, of the Programming Arcana, a program was given to enable students to compile something before they understood what it represented. However, the main focus of the chapter was the tools being presented and not the program's code. 
+  \item Chapters 2 and 3 of the Programming Arcana passed values to procedures before topics related to how data can be stored in a program. The idea that data can be passed to a procedure was covered, but not how that data was received.
+\end{itemize}
+
+In general, mapping the concepts to syntax was simpler for the Pascal programming language. The main challenges with the C language\footnote{The C code was compiled with a C++ compiler to add support for function and procedure overloading, and pass-by-reference.} were the standard input and output functions, \texttt{printf} and \texttt{scanf} and associated details such as format strings and pointers, and the need to understand arrays before working with strings. This meant that early topics were reduced to using string literals and limiting variables to working with numeric values. In this way the one example could be mapped to both C and Pascal. 
+
+The use of Pascal in the first part of the unit meant that teaching and learning activities could take advantage of Pascal's more convenient support for strings and terminal input and output. For example, consider a program that asked the user to enter their name and then echoes back a welcome message. In C this requires an understanding of variables, format string syntax, arrays, pointers, and how arrays are automatically passed by references where other types are not. In Pascal the same program only requires an understanding of variables and pass-by-reference.
+
+% \begin{itemize}[noitemsep,nolistsep]
+%   \item Introduce programming concepts incrementally;
+%   \item Provide students with time to put concepts into practice;
+%   \item See syntax as a means to an end, not an end in itself;
+%   \item Avoid using language features before concepts that can explain their use; and
+%   \item Map concepts to code using programming language grammars.
+% \end{itemize} 
+
+
+% subsubsection chapter_sequence (end)
+
+\clearpage
+\subsubsection{Chapter Layout} % (fold)
+\label{ssub:chapter_layout}
+
+Each chapter of the Programming Arcana had a similar sequence to its sections. This aimed to promote a consistent approach to studying each of the topics. In keeping with \pref{itm:concepts}, the concepts were presented as the focus of each chapter. % The was followed with examples of how to apply the concepts, and then the language syntax for C and Pascal. Following this a section was dedicated to tracing the execution of the concepts in a conceptual machine, akin to the notional machine discussed by \citet{DuBoulay:1986}. Each chapter then concluded with examples and exercises.
+
+\begin{enumerate}[noitemsep,nolistsep]
+  \item \textbf{Concepts}: each chapter started with a list of related concepts.
+  \item \textbf{Applying the Concepts}: following the concepts was an example of applying those concepts in an abstract sense, using pseudocode and flowcharts to illustrate how the concepts could be applied.
+  \item \textbf{Syntax in C and Pascal}: details of how to code the concepts were first presented in C, with the following section detailing the syntax for Pascal.
+  \item \textbf{Understanding the Concepts}: traced the execution of the pseudocode on a conceptual machine, with the aim of showing students how the concepts are realised at run time. 
+  \item \textbf{Examples}: listed a number of examples, each presented in pseudocode then in C and Pascal code.
+  \item \textbf{Exercises}: a sequence of exercises students could use to develop their understanding of the topic.
+\end{enumerate}
+
+Details of the sections related to presenting the concepts follow. This outlines how the Programming Arcana implemented the concept-based approach, and reinforce the focus on concepts over syntax throughout the material presented. 
+
+\clearpage
+\paragraph{Concepts:} % (fold)
+\label{par:concepts}
+
+Each chapter started with a section that provided details of the concepts being presented. This section started with a brief overview that described how all of the concepts are related. This was followed by subsections that covered the details of each concept, with a textual description, visual concept map, and a series of notes with important details related to the topic. At the end of the concept section an overall concept map was included that visually showed the relationship between the concepts covered. 
+
+\fref{fig:arcana_concepts} shows an example of the concept of branching from chapter 5 of the Programming Arcana. The diagrams were deliberately drawn using irregular shapes to indicate these were a conceptualisation, rather than an exact representation of the associated concepts.
+
+One of the design goals was to fit each concept on a single page. This goal aimed to help support students active construction of their knowledge, \pref{itm:construct}. Aiming to keep each topic to a single page ensured that we focused on the most important details, and where topics expanded over multiple pages the details were examined to ensure we had not included any unnecessary details.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.7\textwidth]{ArcanaConcepts}
+  \caption{Example concept pages from the Programming Arcana.}
+  \label{fig:arcana_concepts}
+\end{figure}
+
+% paragraph concepts (end)
+
+\clearpage
+\paragraph{Applying the Concepts:} % (fold)
+\label{par:applying_the_concepts_}
+
+After the concepts were presented, the next section outlined how these concepts could work together to create an example program. This section always started with a specification of a program that was to be created. This was then followed by a discussion of how a the program could be designed using the concepts covered to that point in the text. The description of the design included pseudocode, flow charts, sequence diagrams and structure charts, and the section concluded with a complete design for specified program. \fref{fig:arcana_applying} shows an example of some pages related to applying control flow concepts.
+
+Explanatory text accompanied the design, and highlighted how the concepts covered contributed to the end result. This discussion also presented a way of approaching problems using the concepts to introduce students to the idea of designing their own programs.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.7\textwidth]{ArcanaApplying}
+  \caption{Example pages related to applying the concepts from the Programming Arcana.}
+  \label{fig:arcana_applying}
+\end{figure}
+
+% paragraph applying_the_concepts_ (end)
+
+\clearpage
+\paragraph{Syntax} % (fold)
+\label{par:syntax}
+
+Having covered the concepts, and how they can be used to create a conceptual program, the next two sections dealt with realising these concepts in C and Pascal code. The syntax sections of the Programming Arcana started with an implementation of the program designed in the section on applying the concepts, which was followed by the grammar to implement the various concepts discussed. An example of pages from this section is shown in \fref{fig:arcana_syntax}.
+
+As with the concepts, the aim was to explain each aspect of the syntax in a single page. This page started with a textual description of the syntax, which was followed by a graphical representation of the grammar and then one or two examples of its implementation in code. The grammar and examples presented focused on best representing the concepts, in many cases only presenting a suitable subset of what was possible with the programming language. 
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.7\textwidth]{ArcanaSyntax}
+  \caption{Example pages from the Programming Arcana showing C and Pascal syntax and examples.}
+  \label{fig:arcana_syntax}
+\end{figure}
+
+% paragraph syntax (end)
+
+\clearpage
+
+\paragraph{Understanding the Concepts:} % (fold)
+\label{par:understanding_the_concepts_}
+
+% paragraph understanding_the_concepts_ (end)
+
+Programming has been likened to understanding how to control a notional machine \cite{DuBoulay:1986}. The notional machine represents an ideal computer in which the programming constructs being taught are realised. To help students realise the goal of controlling this machine, the next section of each chapter in the Programming Arcana provided a series of illustrations that tried to communicate the state and behaviour of the notional machine being presented. 
+
+\fref{fig:arcana_understanding} shows some examples from the chapter on control flow. The illustration of the notional machine focuses on memory, and the instruction the computer is executing. Each instruction in the code is executed and explained on a single page.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.8\textwidth]{ArcanaUnderstand}
+  \caption{Examples of pages on how the concepts worked at a conceptual level in the machine from the Programming Arcana.}
+  \label{fig:arcana_understanding}
+\end{figure}
+
+\clearpage
+
+% \begin{figure}[p]
+%   \centering
+%   \includegraphics[width=0.8\textwidth]{ArcanaExamples}
+%   \caption{Example code from the Programming Arcana.}
+%   \label{fig:arcana_examples}
+% \end{figure}
+
+
+% subsubsection chapter_layout (end)
+
+
+\subsubsection{Generating Railroad Diagrams} % (fold)
+\label{ssub:railroad_diagrams}
+
+Another aim in constructing the Programming Arcana was to provide students with descriptions of the programming language grammar. This could be achieved using a textual representation of the programming language grammar with the Backus Naur Form (BNF) \cite{Backus:1959} or the Extended Backus Naur Form (EBNF) \cite{Wirth:1977}. Instead, it was decided to use the ``Railroad diagrams'' described by \citet{Braz:1990}. These provide a more visual means of presenting the grammar, which was intended to be benefit people reading these diagrams for the purpose of writing programs.
+
+To help automate the creation of the ninety syntax diagrams present in the programming arcana, a language translator was developed to convert grammars expressed textually into a graphical railroad diagram that could be included in the text and lecture slides. 
+
+Originally, grammars expressed in BNF used recursion to implement the repetition of elements in the language. In proposing EBNF, \cite{Wirth:1977} included an iteration construct that reduced the heavy use of recursion for expressing simple repetition of elements in the language. To simplify the generation of railroad diagrams, EBNF was extended further to cater for repeated patterns that included a separator. In BNF and EBNF this can be achieved using recursion, whereas in the railroad diagram the separator should be placed on the returning arrow that implemented the loop. The syntax diagram in \fref{syn:paramlist} illustrates these two approaches. 
+
+\syntax{syn:paramlist}{Examples of the declaration of a parameter list with recursion and without.}{paramlist}
+
+To cater for the more flexible representation in the railroad diagrams, an extended version of EBNF was used. This extension added the ability to indicate a separator for repetitions, and to indicate if the repetition occurred at least once. The grammar for this extended version of EBNF is shown in its own form in \fref{lst:eebnf}, and as a railroad diagram in \fref{syn:eebnf}.
+
+\ebnfsection{lst:eebnf}{Extended EBNF grammar in Extended EBNF}{\ebnfcode{syntax/eebnf.ebnf}}
+
+\syntax{syn:eebnf}{Syntax for grammar used in language diagram generation.}{eebnf}
+
+The \texttt{+ | *} after the repetition indicates either that the grammar had to be repeated one or more times (\texttt{+}) or zero or more times (\texttt{*}). The optional group following this indicated the presence of a separator, between each repetition of the grammar in the language. For example, the parameter list from \fref{syn:paramlist} could be coded as ``\texttt{param list = \{parameter\}+(",");}''.
+
+This grammar was used to create all of the railroad diagrams for the Programming Arcana, and enabled syntax to be quickly expressed and documented for both C and Pascal.
+
+% subsubsection railroad_diagrams (end)
+
+\subsubsection{Summary} % (fold)
+\label{ssub:arcana_summary}
+
+The Programming Arcana demonstrates how the concept-based approach can be embedded down to the syntax level. The text provided students with details programming concepts, how they apply to code design, the associated syntax, and details on how they worked within the notional machine. A range of learning styles were supported through the presentation of the syntax and concepts using both images and text. 
+
+% subsubsection summary (end)
+
+
+% subsection programming_arcana (end)
+
+\subsection{Video Podcasts} % (fold)
+\label{sub:vodcasts}
+
+% subsection vodcasts (end)
+
+\subsection{Summary} % (fold)
+\label{sub:arcana_summary}
+
+% subsection summary (end)
 
 % section itunesu_vodcasts_to_support_ (end)
 
