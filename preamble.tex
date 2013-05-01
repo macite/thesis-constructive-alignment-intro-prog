@@ -1,16 +1,15 @@
 %!TEX root = Constructive Alignment for Introductory Programming.tex
 
-% Essential packages
-%\usepackage{times}
-%\usepackage{helvet}
+% Use utf-8 encoding for foreign characters
+\usepackage[utf8]{inputenc}
 
 \usepackage[usenames,dvipsnames]{xcolor}
-% \usepackage[usenames,dvipsnames]{color}
 
 \usepackage{amsmath, amssymb, amsthm, amstext}
 \usepackage[font=small, labelfont=bf, margin=20pt]{caption} 
 \usepackage[pdftex]{graphicx}
 \usepackage[left=40mm, right=25mm, top=33mm, bottom=33mm, headheight=28pt]{geometry}
+
 
 \usepackage[authoryear]{natbib}
 \bibliographystyle{agsm} %{abbrv}
@@ -18,8 +17,7 @@
 \usepackage{subfig}
 \usepackage{flushend}
 \usepackage{rotating}
-% \usepackage{array,longtable} breaks tables?
-% \usepackage{tabulary}
+\usepackage{tabulary}
 \usepackage{multicol}
 \usepackage{multirow}
 \usepackage{setspace}
@@ -27,10 +25,13 @@
 \usepackage{url}
 \usepackage{enumitem}
 \usepackage{pdflscape}
+\usepackage{longtable}
 
 \usepackage{nameref}
 
-\usepackage{pdfsync}
+\usepackage{verbatim}
+\usepackage{fancyvrb}
+
 
 \renewcommand{\cite}{\citep}
 
@@ -344,9 +345,6 @@
 
 \DeclareGraphicsExtensions{.pdf, .jpg, .tif, .png}
 
-\usepackage{phdthesis}
-\usepackage{multirow}
-
 \input{tikzdata}
 
 \newcommand{\ebnfsnipet}[1]
@@ -354,9 +352,6 @@
   \lstset{language=bash}
   \lstinline^#1^
 }
-
-\usepackage{verbatim}
-\usepackage{fancyvrb}
 
 \newcommand{\ebnfcode}[1]
 {
@@ -392,3 +387,6 @@
 
 
 
+\usepackage{phdthesis}
+
+\onehalfspacing
