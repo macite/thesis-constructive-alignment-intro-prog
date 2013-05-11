@@ -13,7 +13,7 @@
 
 Constructive alignment, as proposed by \citet{Biggs:1996c}, is an amalgamation of constructive learning theory and aligned instruction design. It aims to elicit deep learning approaches from all students. Biggs' model is student focused, with clear and intentional alignment of assessment, teaching and learning activities, and unit objectives. The focus on the central role of the learner in building meaning is derived from constructivist learning theories, whilst the alignment of assessment, teaching, and learning activities, has its foundation in instructional design literature. 
 
-This section briefly describes these underlying principles, and related literature, each of which is later expanded upon in \cref{cha:guiding_principles}. \sref{sub:approaches_to_learning} describes the work on approaches to learning, and presents Robert and Susan as two caricatures of the deep and surface approaches to learning. The central focus on constructive learning theories is then discussed in \sref{sub:constructivism}, with a discussion of aligned curriculum following in \sref{sub:aligned_curriculum}. The section concludes with an overview of the model of constructive alignment, \sref{sub:the_model_of_constructive_alignment}, and then a brief discussion of the example implementation of these principles that was presented by \citet{Biggs:1996c}.
+This section briefly describes these underlying principles, and related literature, each of which is later expanded upon in \cref{cha:guiding_principles}. \sref{sub:approaches_to_learning} describes the work on approaches to learning, and discusses how the learning environment can influence students' approaches to learning. The central focus on constructive learning theories is then discussed in \sref{sub:constructivism}, with a discussion of aligned curriculum following in \sref{sub:aligned_curriculum}. The section concludes with an overview of the model of constructive alignment, \sref{sub:the_model_of_constructive_alignment}, and then a brief discussion of the example implementation of these principles that was presented by \citet{Biggs:1996c}.
 
 \subsection{Approaches to Learning} % (fold)
 \label{sub:approaches_to_learning}
@@ -23,16 +23,13 @@ This section briefly describes these underlying principles, and related literatu
 Marton and S\"{a}lj\"{o}'s work examined the different strategies students had used when adopting surface and deep approaches to learning, and attempted to provide activities designed to engage surface learners in similar activities to those adopting deep approaches \cite{Marton:2005}. For example, one strategy had the student answer questions similar to those spontaneously asked by students who had engaged in deep approaches to learning.  This strategy resulted in students adapting their surface learning approaches rather than in any change in the way they approached their student. Students continued to skim the surface of the text, but in such a way as to be able mention content from various sections in a very superficial way. An alternative strategy resulted in more positive results, as reported by \cite{Marton:1976b}. In this experiment, students were asked to read three chapters from a text with the aim of answering questions after reading that required either precise factual information, or broader understanding in terms of major lines of reasoning. Students who expected to answer factual questions tended to adopt surface approaches to learning. The group who expected broader questions had a mix of different approaches, with some adopting deep approaches, but not all. The major influencing factor had been the students interpretation of what was demanded of them, with only half of this group interpreting the demands as intended. 
 
 
+A range of subsequent studies have associated deep approaches to learning with higher quality learning outcomes \cite{Rossum:1984,Prosser:1989,Trigwell:1991,Ramsden:1992,Marton:2005,DeRaadt:2005}. The work reported by \citet{DeRaadt:2005} related to the teaching of introductory programming, and used \cite{Biggs:2001} two-factor study process questionnaire (R-SPQ-2F) to evaluate the affect of study approach on results for one hundred and seventy seven students across eleven tertiary education institutions across Australia and New Zealand. The work found that approach to learning  had the strongest correlation to success as compared to other cognitive and demographic measures.
 
+Student perceptions of their learning environment have been found to influence the approach they take in their study. A range of studies on students' perceptions of their learning environment, and its impact on the approach to learning were reported by \citet{Ramsden:1992}. Shallow approaches were adopted by students who perceived assessment as requiring memorisation and recall, and by those who perceived workload to be high. Perceptions of high quality teaching, freedom in choosing some aspects of what is to be learned, and clarity of goals and standards required were all related to deep approaches \cite{Trigwell:1991,Ramsden:1992,Trigwell:1999}. These finding provide additional support for the original work of \cite{Marton:1976b}, discussed above, that students adapt their learning based on what they perceive is expected of them.
 
-\citet{Trigwell:1991,Trigwell:1999}
+\citet{Trigwell:1999} suggest that, given the observed relations between perceived environment and approach to learning, improvements in learning outcomes may be achieved by creating an environment that encourages and supports deep approaches.  The work reported a number of important factors in creating this environment including teaching staff providing useful feedback, making objectives clear, motivating students and providing flexibility for students to determine what and how they learn. 
 
-\cite{DeRaadt:2005} approach to learning  had the strongest correlation to success as compared to other cognitive and demographic measures.
-
-
-In their study of students' experiences learning to program, \citet{Bruce:2003} categorised the way students engage with learning to program into five categories range from approaches focusing on ``\emph{getting through the unit}'', to approaches aimed at discovering what it means to be a programmer. Each of these categories can be broadly classified as either a surface or deep approach to learning \cite{Marton:1976a,Ramsden:1992} to program. When engaging surface approaches, students attempt to address the outcomes with as little effort as possible. This leads to situations in which students are primarily motivated by fear of failing, and experience the learning as a struggle, with the topic appearing tedious, hard and boring, adjectives that are too often associated with learning to program \cite{McGettrick:2005}. On the other hand, when engaging deep approaches to learning students seek meaning in what they do, and relate their learning to the bigger picture. To succeed at learning to program, students need to engage deep approaches to learning, as surface approaches alone are unlikely to be sufficient \cite{Bruce:2003}. Pedagogy that encourage students to adopt deep approaches to learning should, therefore, help address some of the issues related to this challenging topic.
-
-
+In their study of students' experiences learning to program, \citet{Bruce:2003} categorised the way students engage with learning to program into five categories range from approaches focusing on ``\emph{getting through the unit}'', to approaches aimed at discovering what it means to be a programmer. Each of these categories can be broadly classified as either a surface or deep approach to learning to program. When engaging surface approaches, students attempted to address the outcomes with as little effort as possible. This leads to situations in which students are primarily motivated by fear of failing, and experience the learning as a struggle, with the topic appearing tedious, hard and boring, adjectives that are too often associated with learning to program \cite{McGettrick:2005}. On the other hand, when engaging deep approaches to learning students seek meaning in what they do, and relate their learning to the bigger picture. To succeed at learning to program, students need to engage deep approaches to learning, as surface approaches alone are unlikely to be sufficient \cite{Bruce:2003}. Pedagogy that encourage students to adopt deep approaches to learning should, therefore, help address some of the issues related to this challenging topic.
 
 % subsection approaches_to_learning (end)
 
@@ -40,56 +37,68 @@ In their study of students' experiences learning to program, \citet{Bruce:2003} 
 \subsection{Constructivism} % (fold)
 \label{sub:constructivism}
 
-Constructivism is a theory of knowledge that focuses on the active role of the learner in constructing their own understanding. Dating back to \citet{Piaget:1950} constructivism exists in several forms: cognitive, individual, post-modern, radical and social constructivism \cite{Phillips:1995,Steffe:1995}. Each of these forms of constructivism has various implications for teaching and learning.
+Constructivism is a theory of knowledge that focuses on the active role of the learner in constructing their own understanding. Dating back to \citet{Piaget:1950} constructivism exists in several forms: cognitive, individual, post-modern, radical and social constructivism \cite{Phillips:1995,Steffe:1995}. Each of these forms of constructivism has various implications for teaching and learning. 
+
+To discuss constructivism it is important to contrast it with objectivism, an alternative philosophical paradigm, with constructivism and objectivism often being seen at two extreme ends of a continuum. Objectivism is characterised by the presence of external meaning, or knowledge, and education is therefore a task for the learner to come to know that which is real \cite{Jonassen:1991,Vrasidas:2000}. Effective education can be realised through standardisation, and productivity improved through the mechanisms of management, as in business and industry \cite{Tyler:1969,Vrasidas:2000}. In contrast, constructivism is characterised by knowledge being internal to the learner, a human construction that is an interpretation of the external world \cite{Jonassen:1991,Vrasidas:2000}. Constructive teaching theories relate to guiding learners, helping them to adopt viable models of reality. Effective education can be realised by creating an environment that gives students control over their learning \cite{Vrasidas:2000}. These differences are illustrated in \fref{fig:const_obj}.
+
+\begin{figure}[htpb]
+	\centering 
+	\includegraphics[width=\columnwidth]{ConstructivismObjectivism}
+	\caption{Illustration of the continuum from constructivism to objectivism}
+	\label{fig:const_obj}
+\end{figure}
+
+When education is guided by objectivism the instruction becomes the task of efficiently transferring knowledge into the learner's head. Material and tests can be standardised using processes from business and industry to gain productivity improvements and ensure the largest number of students are provided with access to the knowledge \cite{Tyler:1969,Vrasidas:2000}. Learning is just a matter of getting students to correctly conceptualise and categorise things, and the relationships between them \cite{Lakoff:1987}. It follows, therefore, that assessment is a matter of measuring the students behaviour against expectations. A focus on factual details is central to this extreme of the continuum. 
+
+With constructivism, education is seen as creating a learning environment in which students will be exposed to situations that will enable their construction of knowledge \cite{Jonassen:1991,Vrasidas:2000}. Given that the student is constructing their own knowledge, context is important and prior experience will shape what students learn \cite{Jonassen:1991a}. The goal is therefore to guide students in the construction of their knowledge, and to try to help them construct viable and meaningful conceptual structures \cite{Jonassen:1991,Vrasidas:2000}. Assessment, in constructivist thinking, is divergent as each student will bring their own ``reality'', and objectives therefore become less important and possibly irrelevant \cite{Jonassen:1992}. 
+
+In relation to studies on effective teaching, constructivist learning theories, with their student centred focus, appear to map well to features of productive learning environments. \citet{Martin:2000} reported a study of twenty six university teaching staff, how they intended to represent a topic for their students and how they subsequently delivered the topic. Their results indicated that where staff conceived of the topic as `knowledge as given', they adopted teacher-focused information transmission forms of delivery consistent with objectivist theories. Given the findings discussed in \snref{sub:approaches_to_learning}, these strategies may result in students perceiving memorisation and recall as the emphasis, and therefore adopt surface approaches to learning. Where the university staff viewed the object of study as related to conceptual change, a more student-focused approach was taken, which is more consistent with constructivist thinking. When this approach was adopted, learning tended to focus on higher cognitive levels, with a broader focus on the discipline, practice or life long learning. 
+
+% in programming
+
+Constructivism has been adapted for the teaching of introductory programming by a number of different authors. Early work on applying constructive learning theories to teaching computer science, reported by \citet{BenAri:1998,BenAri:2001}, reported on additional challenges of application constructivism due to the nature of computing. Beginner student in computer science have no \emph{effective model} of a computer, instead beginning their study with a limited model akin to a ``giant brain''. These inadequate models, and associated misconceptions, are likely to be exposed through interactions with the computer with possible ``psychological grief'' begin experienced as these students work toward viable model. To address these issues, Ben-Ari suggested the explicit teaching of models of the computer, as discussed by \citet{DuBoulay:1986}. 
+
+\citet{VanGorp:2001} provided a range of constructivist techniques suitable for teaching introductory programming, with the view of the constructivist classroom as a problem-solving environment. The work recommended students be provided authentic, though simplified, problems to help intrinsically motivate students. That meaningful activities be designed to enable students in the construction of their own knowledge, and that they collaborate with their peers to aid with the knowledge construction process. Suggested activities included
+
+\begin{itemize}[noitemsep,nolistsep]
+	\item \emph{Code walkthroughs} where students walk through existing code to predict computer behaviour
+	\item \emph{Code writing} where students produce small programs, small programs or pseudocode may be provided as \emph{scaffolding} for more complex tasks, 
+	\item Location and correction of issues, both logical and syntactic, in the form of \emph{code debugging} activities
+	\item Greater interactivity was recommended for lectures, with students then being given time to \emph{reconstruct lecture note} as a summarising activity. 
+\end{itemize}
+ 
+
+The work of \citet{Thramboulidis:2003,Thramboulidis:2003a,Thramboulidis:2003b}, described a shift to an objects, design, first approach to introductory programming using constructivist learning theories. This utilised students understanding of the real world in the production of object oriented simulations of this in their computer programs. This made informal use of use-cases, class and object interaction diagrams. In this environment students found the unit extremely challenging, though the pass-fail ratio improved considerably over the period of the study.
 
 
+Constructivism has also been applied to teaching computer graphics, with mixed results. \citet{Taxen:2004} reported on a case study where they had applied constructive learning theories to teaching 3D graphics. The strategy applied in this work related to \emph{discovery learning} \cite{Duffy:1996} where teaching staff refrain from making explicit instruction, and instead provided a series of activities to help student discover the relevant knowledge themselves. The discussion and conclusions of \citet{Taxen:2004} indicated that students had felt the learning environment was too challenging, and they did not have sufficient background knowledge. In reflection, the exam had contributed to a disconnect between the teaching approach and the assessment approach, with the exam, in effect, encouraging students to adopt surface approaches that had been actively discouraged in the learning.
 
-In designing teaching and learning contexts, educators use some form of theory of teaching and learning to guide their decision making.
-
-theory of teaching and learning
-
-
-
-\cite{Biggs:1996c}
-
-\emph{objectivist} 
-
-\cite{Vrasidas:2000} obj vs const
-
-\emph{constructivism} and \emph{phenomenography}
-
-
-\cite{Duffy:1996} 
-
-
-
-
-\cite{Montessori:1946}
-
-
-In his original paper on constructive alignment \citet{Biggs:1996c} adopted constructivism as a framework to help guide decision making in all facets of teaching and learning. Constructivism was chosen over phenomenography 
-
-practical concerns
-
-
-For this work we are interested in adapting \emph{constructive learning theories}
-
-In proposing constructive alignment, 
-
-
-Engage with and expand experience \cite{Dewey:1960} exploration, thinking and reflection
+\citet{Wulf:2005} reported a constructivist based pedagogy for teaching introductory programming and information technology that was accessible to a wider range of students. This work recommended a range of active learning tasks, collaborative group based instruction, and the use of cognitive apprenticeships in creating a more student-centred learning environment for computer science units.
 
 % subsection constructivism (end)
 
 \subsection{Aligned Curriculum} % (fold)
 \label{sub:aligned_curriculum}
 
-The second pillar of constructive alignment is \emph{aligned curriculum}. The impact of aligning teaching and learning activities and assessment tasks was highlighted by \citet{Cohen:1987}. In discussing instructional alignment, \citet{Cohen:1987} reported students received significantly better results when the teaching was aligned to the assessment than with non-aligned instruction. In proposing constructive alignment \citet{Biggs:1996c} aligned teaching and learning activities and assessment tasks to intended learning outcomes, weaving a ``web of consistency'' to optimise the likelihood of students \emph{engaging appropriately} with learning activities \cite{Biggs:1999}. 
+\citet{Tyler:1969} defined curriculum alignment as occurring when material learnt in earlier years is built upon and supported in later years. Tyler's aligned model consisted of four major steps (1) identifying objectives, (2) choosing appropriate learning experiences, (3) organising these experiences so as to maximise learning, and (4) evaluating the result learning. These four steps were always aligned, with objectives matching experiences and assessment tasks. The work of \cite{Ramsden:1992} indicates, that this alignment can be achieved as long assessment matches the objectives, as from the students perspective the curriculum is always defined by the assessment.
+
+Benefits of aligned curriculum can also be related to the work on approaches to learning. One of the identified requirements for positive learning environments, discussed above, was the clear communication of expectation. In an aligned curriculum the teaching and learning activities match the assessment tasks, and help provide the clarity of intention required to encourage students to engage in deep approaches to learning.
+
+The impact of aligning teaching and learning activities and assessment tasks was highlighted by \citet{Cohen:1987}. In discussing instructional alignment, \citet{Cohen:1987} reported students received significantly better results when the teaching was aligned to the assessment than with non-aligned instruction. This is in line with expectations if an aligned curriculum is likely to help engage students appropriately with the learning tasks.
 
 % subsection aligned_curriculum (end)
 
 \subsection{The Model of Constructive Alignment} % (fold)
 \label{sub:the_model_of_constructive_alignment}
+
+
+
+In his original paper on constructive alignment \citet{Biggs:1996c} adopted constructivism as a framework to help guide decision making in all facets of teaching and learning. Constructivism was chosen over phenomenography 
+
+The second pillar of constructive alignment is \emph{aligned curriculum}.
+
+In proposing constructive alignment \citet{Biggs:1996c} aligned teaching and learning activities and assessment tasks to intended learning outcomes, weaving a ``web of consistency'' to optimise the likelihood of students \emph{engaging appropriately} with learning activities \cite{Biggs:1999}.
+
 
 The model of constructive alignment, as illustrated in \fref{fig:Houghton}, consists of the following blocks \cite{Houghton:2004}:
 \begin{itemize}[noitemsep,nolistsep]
@@ -809,6 +818,8 @@ While the approaches taken can be argued to be applications of ``Constructive Al
 \label{sec:constructive_alignment_in_introductory_programming}
 
 Group activities Pair Programming
+
+Gaspar:2012
 
 % section constructive_alignment_in_introductory_programming (end)
 
