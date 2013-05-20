@@ -4,20 +4,14 @@
 
 % \tref{tbl:cadata} lists the 
 
-\newcommand{\unit}{\begin{sideways}\textbf{Unit~ }\end{sideways}}
-\newcommand{\degree}{\begin{sideways}\textbf{Degree~ }\end{sideways}}
+%\ug	&	\pg	&	\delivery	&	\location	&	\sfs	&	\res	&	\work	&	\OL_interact	&	\interview_focus	&	\reflect	&	\pos_oc	&	\pos_sat	&	\pos_eng	&	\pos_oth	&	\neg_staffwl	&	\neg_stud_wl	&	\neg_other	&	\no_eval	&	\interact_lect	&	\grp_wk	&	\pbl_case	&	\lec	&	\cls	&	\othr	&	\exam	&	\tests	&	\assign	&	\grpup_ass	&	\partic	&	\port	&	\ref_jour	&	\staff_only	&	\little_details	&	\matrix_al	
 
-% \newcommand{\workshop}{\begin{sideways}\textbf{Workshop~ }\end{sideways}}
-% \newcommand{\conference}{\begin{sideways}\textbf{Conference~ }\end{sideways}}
-% \newcommand{\journal}{\begin{sideways}\textbf{Journal~ }\end{sideways}}
-\newcommand{\publication}{\begin{sideways}\textbf{Publication~ }\end{sideways}}
+\newcommand{\paper}{\begin{sideways}\textbf{Paper~ }\end{sideways}}
+% \newcommand{\year}{\begin{sideways}\textbf{Year~ }\end{sideways}}
+% \newcommand{\field}{\begin{sideways}\textbf{Field~ }\end{sideways}}
+\newcommand{\field}{\begin{sideways}\textbf{Field~ }\end{sideways}}
 
-\newcommand{\level}{\begin{sideways}\textbf{Unit/Degree}\end{sideways}}
-
-\newcommand{\survey}{\begin{sideways}\textbf{Questionnaire~ }\end{sideways}}
-\newcommand{\results}{\begin{sideways}\textbf{Student Results~ }\end{sideways}}
-\newcommand{\actionres}{\begin{sideways}\textbf{Action Research~ }\end{sideways}}
-\newcommand{\interview}{\begin{sideways}\textbf{Interview~ }\end{sideways}}
+\newcommand{\level}{\begin{sideways}\textbf{Level~ }\end{sideways}}
 
 \newcommand{\lecture}{\begin{sideways}\textbf{Lectures~ }\end{sideways}}
 \newcommand{\pbl}{\begin{sideways}\textbf{Problem-based~ }\end{sideways}}
@@ -34,123 +28,211 @@
 \newcommand{\staff}{\begin{sideways}\textbf{Staff~ }\end{sideways}}
 \newcommand{\student}{\begin{sideways}\textbf{Student~ }\end{sideways}}
 
-\newcommand{\participants}{\begin{sideways}\textbf{Participants~ }\end{sideways}}
+
+
+\newcommand{\sft}{\begin{sideways}\textbf{SFT~ }\end{sideways}} 		% Student Feedback on Teaching
+\newcommand{\res}{\begin{sideways}\textbf{Results~ }\end{sideways}} 	% Results
+\newcommand{\wrk}{\begin{sideways}\textbf{Work~ }\end{sideways}} 		% Student work
+\newcommand{\oli}{\begin{sideways}\textbf{Online Activity~ }\end{sideways}} % Online Interaction
+\newcommand{\ivf}{\begin{sideways}\textbf{IV/FG}\end{sideways}} 		% Interview or Focus Group
+\newcommand{\rft}{\begin{sideways}\textbf{RFT}\end{sideways}} 			% Reflections on Teaching
+
+\newcommand{\poc}{\begin{sideways}\textbf{Outcomes~ }\end{sideways}}			%
+\newcommand{\pst}{\begin{sideways}\textbf{Satisfaction~ }\end{sideways}}			%
+\newcommand{\peg}{\begin{sideways}\textbf{Engagement~ }\end{sideways}}			%
+\newcommand{\pot}{\begin{sideways}\textbf{Other}\end{sideways}}			%
+\newcommand{\nst}{\begin{sideways}\textbf{Staff Workload~ }\end{sideways}}			%
+\newcommand{\nsd}{\begin{sideways}\textbf{Stud. Workload~ }\end{sideways}}			%
+\newcommand{\nor}{\begin{sideways}\textbf{Other}\end{sideways}}			%
+\newcommand{\noe}{\begin{sideways}\textbf{No Evaluation}\end{sideways}}			%
+
 
 %projects, reports in assignments
 
 \clearpage
-\pagestyle{empty}
-\begin{landscape}
 
 \begin{center}
 \footnotesize
 \renewcommand{\arraystretch}{1.3}
-\begin{longtable}{|l|c||c||c|c|c|c||c||c|c|c|c|c||c|c|c|c|c||c|c|}
+
+\begin{longtable}{|l|l|l|l|l|}
 \caption{Paper summary details from structured literature review on applications of Constructive Alignment.}\label{tbl:cadata}\\
 \hline
-\multirow{2}{*}{\textbf{Author (Year)}} & 
-& % \multicolumn{2}{|c||}{\textbf{Level}} & 
-& % \multicolumn{3}{|c||}{\textbf{Publication}} & 
-\multicolumn{4}{|c||}{\textbf{Evaluation}} & 
-& % \multirow{2}{*}{\participants} & 
-\multicolumn{5}{|c||}{\textbf{T\&L Activities}} & 
-\multicolumn{5}{|c||}{\textbf{Assessment}} & 
-\multicolumn{2}{|c|}{\textbf{Aligned by}} \\ \cline{4-7} \cline{9-20}
+\textbf{Author (Year)} & 
+\textbf{Field} & 
+\textbf{Level} &
+\textbf{Delivery} &
+\textbf{Location} \\
+\hline
 
- & \level & %\unit & \degree & 
- \publication & %\workshop & \conference & \journal &
- \survey & \results & \actionres & \interview &
- \participants & 
- \lecture & \class & \group & \pbl & \other & 
- \exam & \tests & \assignment & \groupwk & \portfolio &
- \staff & \student \\
+% & % \multicolumn{3}{|c||}{\textbf{Publication}} & 
+% \multicolumn{4}{|c||}{\textbf{Evaluation}} & 
+% & % \multirow{2}{*}{\participants} & 
+% \multicolumn{5}{|c||}{\textbf{T\&L Activities}} & 
+% \multicolumn{5}{|c||}{\textbf{Assessment}} & 
+% \multicolumn{2}{|c|}{\textbf{Aligned by}} \\ \cline{4-7} \cline{9-20}
+
+%  % & \level & %\unit & \degree & 
+%  % \publication & %\workshop & \conference & \journal &
+%  % \survey & \results & \actionres & \interview &
+%  % \participants & 
+%  % \lecture & \class & \group & \pbl & \other & 
+%  % \exam & \tests & \assignment & \groupwk & \portfolio &
+%  % \staff & \student \\
 
 \hline
 \endfirsthead
-\multicolumn{20}{c}%
+\multicolumn{5}{c}%
 {\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
 \hline
-\multirow{2}{*}{\textbf{Author (Year)}} & 
- & % \multicolumn{2}{|c||}{\textbf{Level}} & 
- & % \multicolumn{3}{|c||}{\textbf{Publication}} & 
-\multicolumn{4}{|c||}{\textbf{Evaluation}} & 
-& % \multirow{2}{*}{\participants} & 
-\multicolumn{5}{|c||}{\textbf{T\&L Activities}} & 
-\multicolumn{5}{|c||}{\textbf{Assessment}} & 
-\multicolumn{2}{|c|}{\textbf{Aligned by}} \\ \cline{4-7} \cline{9-20}
+\textbf{Author (Year)} & 
+\textbf{Field} & 
+\textbf{Level} &
+\textbf{Delivery} &
+\textbf{Location} \\
+\hline
 
- & \level & %\unit & \degree & 
- \publication & % \workshop & \conference & \journal &
- \survey & \results & \actionres & \interview &
- \participants & 
- \lecture & \class & \group & \pbl & \other & 
- \exam & \tests & \assignment & \groupwk & \portfolio &
- \staff & \student \\
+
+% \multicolumn{20}{c}%
+% {\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+% \hline
+% \multirow{2}{*}{\textbf{Author (Year)}} & 
+%  & % \multicolumn{2}{|c||}{\textbf{Level}} & 
+%  & % \multicolumn{3}{|c||}{\textbf{Publication}} & 
+% \multicolumn{4}{|c||}{\textbf{Evaluation}} & 
+% & % \multirow{2}{*}{\participants} & 
+% \multicolumn{5}{|c||}{\textbf{T\&L Activities}} & 
+% \multicolumn{5}{|c||}{\textbf{Assessment}} & 
+% \multicolumn{2}{|c|}{\textbf{Aligned by}} \\ \cline{4-7} \cline{9-20}
+
+ % & \level & %\unit & \degree & 
+ % \publication & % \workshop & \conference & \journal &
+ % \survey & \results & \actionres & \interview &
+ % \participants & 
+ % \lecture & \class & \group & \pbl & \other & 
+ % \exam & \tests & \assignment & \groupwk & \portfolio &
+ % \staff & \student \\
 
 \hline
 \endhead
-\hline \multicolumn{20}{r}{\textit{Continued on next page}} \\
+\hline \multicolumn{5}{r}{\textit{Continued on next page}} \\
 \endfoot
 \hline
 \endlastfoot
-\footnotesize \citet{Tang:1999} & % Author
-Unit & Conf & \checkmark & &  & & \footnotesize 48 & \checkmark & & \checkmark & \checkmark & \checkmark & \checkmark & & & \checkmark & \checkmark & \checkmark & \checkmark \\ 
-\citet{hoddinott2000biggs} \\
-\citet{Davey:2002} \\
-\citet{hagemeierteaching} \\
-\citet{talay2003online} \\
-\citet{darwin2004vocational} \\
-\citet{Lin:2004} \\
-\citet{shepherd2005weaving} \\
-\citet{warren2005teaching} \\
-\citet{yip2005web} \\
-\citet{Jervis:2005} \\
-\citet{ladyschewsky2010aligning} \\
-\citet{cobham2006constructive} \\
-\citet{hendersonenriching} \\
-\citet{brown2006looking} \\
-\citet{Israel:2007} \\
-\citet{jones2007wiki} \\
-\citet{Vogel:2007} \\
-\citet{sonley2007information} \\
-\citet{brabrand:2008} \\
-\citet{Treleaven:2008} \\
-\citet{Morton:2008} \\
-\citet{Raman:2008} \\
-\citet{raeburn2009blended} \\
-\citet{Kuhn:2009} \\
-\citet{Hill:2009} \\
-\citet{Qiao:2009} \\
-\citet{scott2009promoting} \\
-\citet{Ferreira:2009} \\
-\citet{Schaefer:2009} \\
-\citet{Morris:2009} \\
-\citet{Thota:2010} \\
-\citet{hartfield2010reinforcing} \\
-\citet{jeppson2010implementing} \\
-\citet{rossextending} \\
-\citet{Teater:2010} \\
-\citet{Shoufan:2010:CRP:1789934.1789937} \\
-\citet{Hill:2010} \\
-\citet{andrews2011aligning} \\
-\citet{donnisonre} \\
-\citet{terrell2011using} \\
-\citet{Szili:2011} \\
-\citet{Broman:2011} \\
-\citet{Wang:2012} \\
-\citet{hedgesconstructive} \\
-\citet{Larkin:2012} \\
-\citet{Kenney:2012} \\
-\citet{Habel:2012} \\
-\citet{Joseph201252} \\
-\citet{Stewart:2012} \\
-\citet{Vanfretti:2011} \\
-\citet{Pardede:2012} \\
-\citet{Marlies:2012} \\
+%\paper	&	\year	&	\field	&	\year	&	\ug	&	\pg	&	\delivery	&	\location	&	\sfs	&	\res	&	\work	&	\OL_interact	&	\interview_focus	&	\reflect	&	\pos_oc	&	\pos_sat	&	\pos_eng	&	\pos_oth	&	\neg_staffwl	&	\neg_stud_wl	&	\neg_other	&	\no_eval	&	\interact_lect	&	\grp_wk	&	\pbl_case	&	\lec	&	\cls	&	\othr	&	\exam	&	\tests	&	\assign	&	\grpup_ass	&	\partic	&	\port	&	\ref_jour	&	\staff_only	&	\little_details	&	\matrix_al	\\
+\citet{Tang:1999}	&	HEAL	&	UG (Yr 3)	&	F2F	&	Hong Kong	\\
+\citet{hoddinott2000biggs}	&	SCI	&	UG (Yr 3) and PG	&	OL	&	Canada	\\
+\citet{Davey:2002}	&	HEAL	&	UG (Yr 3)	&	F2F	&	New Zealand	\\
+\citet{talay2003online}	&	EDU	&	UG \& PG	&	F2F \& OL	&	Australia	\\
+\citet{Lin:2004}	&	SOC	&	UG (Yr 3)	&	F2F	&	United Kingdom	\\
+\citet{warren2005teaching}	&	IT	&	UG (Yr 2)	&	F2F	&	New Zealand	\\
+\citet{shepherd2005weaving}	&	MC	&	UG (Yr 2)	&	F2F	&	Australia	\\
+\citet{yip2005web}	&	IT	&	UG \& PG	&	F2F	&	Hong Kong	\\
+\citet{hendersonenriching}	&	MC	&	UG (Yr 1)	&	F2F	&	Australia	\\
+\citet{brown2006looking}	&	AERS	&	UG \& PG	&	OL	&	United Kingdom	\\
+\citet{Israel:2007}	&	SOC	&	UG (Yr 3)	&	F2F	&	South Africa	\\
+\citet{Vogel:2007}	&	MC	&	UG \& PG	&	F2F	&	Hong Kong	\\
+\citet{jones2007wiki}	&	SOC	&	UG (Yr 3)	&	F2F \& OL	&	Australia	\\
+\citet{Brabrand:2008}	&	IT	&	UG \& PG	&	F2F	&	Europe	\\
+\citet{Treleaven:2008}	&	MC	&	PG	&	F2F	&	Australia	\\
+\citet{Morton:2008}	&	SOC	&	UG (Yr 2)	&	F2F	&	United Kingdom	\\
+\citet{Raman:2008}	&	AERS	&	UG (Yr 3)	&	F2F	&	Australia	\\
+\citet{Kuhn:2009}	&	MC	&	UG (Yr 1)	&	F2F	&	Australia	\\
+\citet{raeburn2009blended}	&	HEAL	&	UG \& PG	&	OL	&	Australia	\\
+\citet{Hill:2009}	&	IT	&	UG (Yr 3)	&	F2F	&	United Kingdom	\\
+\citet{scott2009promoting}	&	AB	&	UG (Yr 1)	&	F2F \& OL	&	Europe	\\
+\citet{Schaefer:2009}	&	ENG	&	UG \& PG	&	F2F	&	America	\\
+\citet{Qiao:2009}	&	EDU	&	Not Specified	&	F2F	&	China	\\
+\citet{Thota:2010}	&	IT	&	UG (Yr 1)	&	F2F	&	China	\\
+\citet{Teater:2010}	&	SOC	&	UG (Yr 2)	&	F2F	&	United Kingdom	\\
+\citet{hartfield2010reinforcing}	&	SCI	&	UG (Yr 3)	&	F2F	&	Australia	\\
+\citet{rossextending}	&	MC	&	UG (Yr 3)	&	F2F	&	Australia	\\
+\citet{Shoufan:2010:CRP:1789934.1789937}	&	IT	&	UG \& PG	&	F2F	&	Europe	\\
+\citet{Szili:2011}	&	AERS	&	UG (Yr 1)	&	F2F	&	Australia	\\
+\citet{andrews2011aligning}	&	IT	&	UG (Yr 3)	&	F2F	&	United Kingdom	\\
+\citet{terrell2011using}	&	SOC	&	PG	&	OL	&	Australia	\\
+\citet{donnisonre}	&	EDU	&	UG (Yr 1)	&	F2F	&	Australia	\\
+\citet{Joseph201252}	&	HEAL	&	UG (Yr 3)	&	F2F	&	United Kingdom	\\
+\citet{Pardede:2012}	&	IT	&	Not Specified	&	F2F	&	Australia	\\
+\citet{Kenney:2012}	&	MC	&	UG (Yr 2)	&	F2F	&	Australia	\\
+\citet{hedgesconstructive}	&	MC	&	UG (Yr 1)	&	F2F	&	New Zealand	\\
+\citet{Vanfretti:2011}	&	ENG	&	UG \& PG	&	F2F	&	Europe	\\
+\citet{Marlies:2012}	&	ENG	&	PG	&	F2F	&	Europe	\\
+\end{longtable}
+
+
+\begin{longtable}{|l|cccccc|cccc|ccc|c|}
+\caption{Paper summary details from structured literature review on applications of Constructive Alignment.}\label{tbl:cadata}\\
+\hline
+~  &
+\multicolumn{6}{c|}{\textbf{Evaluation Source}} &
+\multicolumn{4}{c|}{\textbf{+'ve Effects}} &
+\multicolumn{3}{c|}{\textbf{-'ve Effects}} &
+~
+\\ \cline{2-14} 
+
+\textbf{Author (Year)} & \sft & \res & \wrk & \oli & \ivf & \rft & 
+\poc	&	\pst	&	\peg	&	\pot	&	\nst	&	\nsd	&	\nor	&	\noe\\
+\hline
+\endfirsthead
+\multicolumn{15}{c}%
+{\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+\hline
+~  &
+\multicolumn{6}{c|}{\textbf{Evaluation Source}} &
+\multicolumn{4}{c|}{\textbf{+'ve Effects}} &
+\multicolumn{3}{c|}{\textbf{-'ve Effects}} &
+~
+\\ \cline{2-14} 
+
+\textbf{Author (Year)} & \sft & \res & \wrk & \oli & \ivf & \rft & 
+\poc	&	\pst	&	\peg	&	\pot	&	\nst	&	\nsd	&	\nor	&	\noe\\
+\hline
+\endhead
+\hline \multicolumn{15}{r}{\textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+%\paper	&	\year	&	\field	&	\year	&	\ug	&	\pg	&	\delivery	&	\location	&	\sfs	&	\res	&	\work	&	\OL_interact	&	\interview_focus	&	\reflect	&	\pos_oc	&	\pos_sat	&	\pos_eng	&	\pos_oth	&	\neg_staffwl	&	\neg_stud_wl	&	\neg_other	&	\no_eval	&	\interact_lect	&	\grp_wk	&	\pbl_case	&	\lec	&	\cls	&	\othr	&	\exam	&	\tests	&	\assign	&	\grpup_ass	&	\partic	&	\port	&	\ref_jour	&	\staff_only	&	\little_details	&	\matrix_al	\\
+\citet{Tang:1999}	&	\checkmark	&	~	&	~	&	~	&	~	&	~	&	~	&	~	&	~	&	~	&	~	&	~	&	\checkmark	&	~	\\
+\citet{hoddinott2000biggs}	&	\checkmark	&	~	&	~	&	~	&	~	&	~	&	\checkmark	&	~	&	~	&	~	&	~	&	\checkmark	&	~	&	~	\\
+\citet{Davey:2002}	&	\checkmark	&	~	&	~	&	~	&	~	&	~	&	~	&	\checkmark	&	\checkmark	&	~	&	~	&	~	&	~	&	~	\\
+\citet{talay2003online}	&	\checkmark	&	~	&	~	&	\checkmark	&	~	&	~	&	~	&	\checkmark	&	~	&	~	&	~	&	~	&	~	&	~	\\
+\citet{Lin:2004}	&	\checkmark	&	~	&	\checkmark	&	~	&	~	&	~	&	~	&	~	&	\checkmark	&	~	&	~	&	~	&	\checkmark	&	~	\\
+\citet{warren2005teaching}	&	\checkmark	&	\checkmark	&	~	&	~	&	~	&	~	&	\checkmark	&	\checkmark	&	~	&	~	&	\checkmark	&	\checkmark	&	~	&	~	\\
+\citet{shepherd2005weaving}	&	\checkmark	&	\checkmark	&	~	&	~	&	~	&	~	&	~	&	\checkmark	&	\checkmark	&	~	&	~	&	~	&	~	&	~	\\
+\citet{yip2005web}	&	~	&	~	&	~	&	~	&	~	&	~	&	~	&	~	&	~	&	~	&	~	&	~	&	~	&	\checkmark	\\
+\citet{hendersonenriching}	&	~	&	\checkmark	&	~	&	~	&	\checkmark	&	~	&	~	&	~	&	\checkmark	&	~	&	~	&	~	&	~	&	~	\\
+\citet{brown2006looking}	&	~	&	~	&	\checkmark	&	~	&	~	&	~	&	\checkmark	&	~	&	~	&	~	&	~	&	~	&	~	&	~	\\
+\citet{Israel:2007}	&	\checkmark	&	\checkmark	&	~	&	~	&	~	&	~	&	\checkmark	&	\checkmark	&	~	&	~	&	\checkmark	&	\checkmark	&	~	&	~	\\
+\citet{Vogel:2007}	&	\checkmark	&	\checkmark	&	~	&	~	&	\checkmark	&	~	&	~	&	~	&	~	&	\checkmark	&	~	&	~	&	~	&	~	\\
+\citet{jones2007wiki}	&	~	&	~	&	~	&	~	&	~	&	~	&	~	&	~	&	~	&	~	&	~	&	~	&	~	&	\checkmark	\\
+\citet{Brabrand:2008}	&	\checkmark	&	~	&	~	&	~	&	~	&	~	&	~	&	\checkmark	&	~	&	~	&	~	&	~	&	~	&	~	\\
+\citet{Treleaven:2008}	&	\checkmark	&	~	&	\checkmark	&	~	&	~	&	\checkmark	&	\checkmark	&	~	&	~	&	~	&	~	&	~	&	~	&	~	\\
+\citet{Morton:2008}	&	\checkmark	&	~	&	~	&	~	&	~	&	~	&	~	&	~	&	~	&	\checkmark	&	~	&	~	&	~	&	~	\\
+\citet{Raman:2008}	&	~	&	~	&	~	&	~	&	~	&	~	&	~	&	~	&	~	&	~	&	~	&	~	&	~	&	\checkmark	\\
+\citet{Kuhn:2009}	&	\checkmark	&	\checkmark	&	~	&	~	&	~	&	~	&	~	&	\checkmark	&	~	&	~	&	~	&	~	&	~	&	~	\\
+\citet{raeburn2009blended}	&	\checkmark	&	~	&	~	&	\checkmark	&	~	&	~	&	\checkmark	&	\checkmark	&	\checkmark	&	~	&	~	&	~	&	~	&	~	\\
+\citet{Hill:2009}	&	\checkmark	&	\checkmark	&	~	&	~	&	~	&	~	&	\checkmark	&	~	&	\checkmark	&	\checkmark	&	~	&	~	&	~	&	~	\\
+\citet{scott2009promoting}	&	\checkmark	&	~	&	~	&	~	&	\checkmark	&	\checkmark	&	\checkmark	&	\checkmark	&	~	&	\checkmark	&	~	&	~	&	~	&	~	\\
+\citet{Schaefer:2009}	&	~	&	~	&	\checkmark	&	~	&	~	&	~	&	~	&	~	&	~	&	\checkmark	&	~	&	~	&	~	&	~	\\
+\citet{Qiao:2009}	&	\checkmark	&	~	&	~	&	~	&	\checkmark	&	~	&	\checkmark	&	~	&	~	&	~	&	~	&	~	&	~	&	~	\\
+\citet{Thota:2010}	&	\checkmark	&	~	&	~	&	~	&	\checkmark	&	~	&	\checkmark	&	~	&	~	&	~	&	~	&	~	&	~	&	~	\\
+\citet{Teater:2010}	&	\checkmark	&	~	&	~	&	~	&	~	&	~	&	\checkmark	&	\checkmark	&	~	&	~	&	~	&	~	&	~	&	~	\\
+\citet{hartfield2010reinforcing}	&	\checkmark	&	\checkmark	&	\checkmark	&	~	&	\checkmark	&	~	&	\checkmark	&	\checkmark	&	~	&	~	&	~	&	~	&	~	&	~	\\
+\citet{rossextending}	&	\checkmark	&	\checkmark	&	\checkmark	&	~	&	~	&	\checkmark	&	~	&	\checkmark	&	~	&	~	&	~	&	~	&	~	&	~	\\
+\citet{Shoufan:2010:CRP:1789934.1789937}	&	\checkmark	&	\checkmark	&	~	&	~	&	~	&	~	&	\checkmark	&	\checkmark	&	~	&	~	&	~	&	~	&	~	&	~	\\
+\citet{Szili:2011}	&	\checkmark	&	~	&	\checkmark	&	~	&	~	&	~	&	\checkmark	&	\checkmark	&	\checkmark	&	~	&	~	&	~	&	~	&	~	\\
+\citet{andrews2011aligning}	&	~	&	\checkmark	&	\checkmark	&	~	&	~	&	~	&	\checkmark	&	~	&	~	&	~	&	~	&	~	&	~	&	~	\\
+\citet{terrell2011using}	&	~	&	~	&	\checkmark	&	~	&	~	&	~	&	\checkmark	&	\checkmark	&	\checkmark	&	~	&	~	&	\checkmark	&	~	&	~	\\
+\citet{donnisonre}	&	~	&	~	&	~	&	~	&	~	&	~	&	~	&	~	&	~	&	~	&	~	&	~	&	~	&	\checkmark	\\
+\citet{Joseph201252}	&	\checkmark	&	~	&	\checkmark	&	~	&	\checkmark	&	~	&	\checkmark	&	~	&	~	&	~	&	~	&	~	&	~	&	~	\\
+\citet{Pardede:2012}	&	\checkmark	&	\checkmark	&	~	&	~	&	~	&	~	&	\checkmark	&	~	&	~	&	~	&	~	&	\checkmark	&	~	&	~	\\
+\citet{Kenney:2012}	&	\checkmark	&	~	&	~	&	~	&	~	&	~	&	~	&	\checkmark	&	\checkmark	&	~	&	~	&	~	&	~	&	~	\\
+\citet{hedgesconstructive}	&	~	&	\checkmark	&	~	&	\checkmark	&	~	&	~	&	~	&	\checkmark	&	~	&	~	&	~	&	~	&	~	&	~	\\
+\citet{Vanfretti:2011}	&	~	&	~	&	~	&	~	&	\checkmark	&	~	&	~	&	~	&	~	&	\checkmark	&	~	&	~	&	~	&	~	\\
+\citet{Marlies:2012}	&	~	&	~	&	~	&	~	&	~	&	\checkmark	&	\checkmark	&	~	&	~	&	~	&	~	&	~	&	~	&	~	\\
 \end{longtable}
 \end{center}
-\end{landscape}
-
-\pagestyle{fancy}
 
 % chapter constructive_alignment_literature_survey_data (end)
