@@ -19,13 +19,13 @@ Reflective practice played an important part in the formation of these principle
 % JG - I wondered about expanding this to give a bit more overview about what is in each main section??
 % AC - Done
 
-The chapter first outlines the principles related to \emph{how} we aim to teach introductory programming, in \sref{sub:principles_for_how_the_environment_should_operate}. These principles relate to the core principles of constructive alignment, described in \cref{cha:background}, but also aim to more tightly integrate constructivist theories, with their strongly student-centred focus. Following this, \sref{sec:principles_to_guide_what_we_should_cover} presents the principles related to \emph{what} we aim to teach, specifically covering details on what we aim to focus on in teaching introductory programming. The full set of principles is this summarised in \sref{sec:summary_of_guiding_principles}.
+The chapter first outlines the principles related to \emph{how} we aim to teach introductory programming, in \sref{sub:how_principles}. These principles relate to the core principles of constructive alignment, described in \cref{cha:background}, but also aim to more tightly integrate constructivist theories, with their strongly student-centred focus. Following this, \sref{sec:principles_to_guide_what_we_should_cover} presents the principles related to \emph{what} we aim to teach, specifically covering details on what we aim to focus on in teaching introductory programming. The full set of principles is this summarised in \sref{sec:summary_of_guiding_principles}.
 
 \clearpage
 
 
-\section{Princiles to guide HOW we should teach} % (fold)
-\label{sub:principles_for_how_the_environment_should_operate}
+\section{Principles to guide HOW we should teach} % (fold)
+\label{sub:how_principles}
 
 Interventions that impact on the learning environment, also referred to as the teaching or academic environment, have been shown to have the potential to positively influence student learning outcomes \cite{Trigwell:1991}. Learning environments have also been found to influence students' approach to learning \cite{Entwistle:1990,Entwistle:1991,Kember:2007} and perceptions of teaching environments have been shown to directly, and indirectly, influence learning outcomes \cite{Meyer:1990,Lizzio:2002}. The aim of these first principles is therefore to create a positive learning environment for students; one that is demanding of students but supports and rewards their efforts to understand the concepts required of the curriculum. 
 
@@ -220,7 +220,7 @@ With limited resources, primarily time, a classic depth-vs-breadth trade off als
 
 %
 % JG - are there other studies supporting this that can be cited??
-%
+% AC - added some details from Biggs and Brabrand - mostly related, but general theme has changed...
 
 The SOLO Taxonomy \cite{Biggs:1982} provides several levels that can then be used in defining appropriate intended learning outcomes, as described in \citet{Biggs:1996c} and further elaborated upon in \citet{Biggs:2007}. These have been found to be effective means of communicating intended learning outcomes across a range of fields and units \cite{Brabrand:2007,Brabrand:2009}. Biggs recommends that university level degrees should aim for relational levels of understanding, indicating that in many regards a focus on depth is more appropriate than a shallow understanding across a wider range of topics.
 
@@ -464,65 +464,72 @@ This section presented nine principles to guide decisions that together should p
 \section{Principles to guide what we should teach} % (fold)
 \label{sec:principles_to_guide_what_we_should_cover}
 
-Principles specific to teaching introductory programming are presented in the following list. While the general principles helped shape the overall teaching and learning environment, these principles helped shape specifics in the curriculum, activities, and assessment tasks.
-\begin{itemize}[noitemsep,nolistsep]
-	\item Set the strategy, and structure learning, around a programming paradigm. (\Pref{itm:paradigm})
-	\item Focus on programming concepts \emph{over} language syntax. (\Pref{itm:concepts})
-	\item Use programming languages as they were designed to be used. (\Pref{itm:authentic})
-	% \item Program code is not, by itself, a suitable means of measuring learning outcomes.
-\end{itemize}
+Principles specific to teaching introductory programming are presented in the following list. While the general principles, presented in \sref{sub:how_principles}, helped shape the overall teaching and learning environment, these principles helped shape specifics in the curriculum, activities, and assessment tasks.
 
+\begin{description}[noitemsep,nolistsep]
+	\item [\Pref{itm:paradigm}]: Set the strategy, and structure learning, around a programming paradigm.
+	\item [\Pref{itm:concepts}]: Focus on programming concepts \emph{over} language syntax.
+	\item [\Pref{itm:authentic}]: Use programming languages as they were designed to be used.
+	% \item Program code is not, by itself, a suitable means of measuring learning outcomes.
+\end{description}
 
 %
 % JG - I suggest summarise the items from the subsections briefly here
-%
+% AC - done
 
+\pref{itm:paradigm} is an implication of \pref{itm:agile}, the need to be agile and willing to change, which proposed guiding the development and delivery of the unit by an overall strategy. This strategy will guide decisions on the topics to be included as well as the approach to delivering these topics. In terms of introductory programming, a key part of this strategy will be the choice of programming paradigm. Choosing this will help determine appropriate intended learning outcomes, and will guide the creation and delivery of teaching and learning activities and resources. Changing paradigm would require significant changes to teaching and learning activities, and resources, and so once chosen it will have a lasting impact.
+
+Whichever paradigm is chosen, the constructive learning theories, encompassed in \pref{itm:construct}, indicate that the focus of the delivery should be on guiding students, rather than trying to transfer the knowledge related to programming. This implies a focus on the underlying concepts, as these are fundamentally more important than details of the language syntax. This idea is further supported by \pref{itm:focus}, with the goal of focusing on the most important aspects. This intention is captured in \pref{itm:concepts}, with the aim of using concepts as the central focus for unit delivery and assessment.
+
+Lastly, \pref{itm:authentic} indicates that we should aim to use programming languages in the way they were intended to be used. The goal here is to ensure we are always guiding students in appropriate ways of using programming languages, and designing programs. Good programming practices should be used throughout the unit, ensuring that there is consistency as students attempt to construct their knowledge of this challenging topic.
 
 Each of these principles is expanded upon in the following sections, and linked to associated research.
 
 
-\subsection{Set the strategy and structure learning around programming a paradigm} % (fold)
+\subsection{Set the strategy, and structure learning, around a programming paradigm} % (fold)
 \label{ssub:strategy_around_paradigm}
 
-The programming paradigm chosen for introductory programming can have a large impact on the way the unit is taught and, therefore, the unit's intended learning outcomes. To endeavour that the foundations of a unit do not need to change, a programming paradigm, such as the procedural, functional or object oriented paradigm, needs to be chosen.This will then form the core of the overall strategy for the unit.
+Programming paradigms define fundamental programming styles and abstractions, and therefore have a profound impact upon the structure and outcomes of introductory programming units. In designing a new introductory programming unit, a programming paradigm -- such as the procedural, functional or object oriented paradigm -- needs to be chosen. This can then form the core of the overall strategy for a unit, and guide the development of its intended learning outcomes, teaching and learning activities and resources.
 
-Which programming paradigm should be taught first is a popular topic in computing education research. The following list indicates the range of approaches from imperative-first to objects-first approaches.
+Which programming paradigm should be taught first is a popular, sometimes emotive, topic in computing education research. The following list indicates the range of approaches from imperative-first to objects-first approaches.
 \begin{itemize}[noitemsep,nolistsep]
 	\item Imperative programming first such as with \citet{Koffman:1988a}.
 	\item \citet{Cooper:2003} suggest a course working with graphics prior to introductory programming to help students with problem solving skills.
-	\item \citet{Felleisen:2004} described a approaching to teaching introductory programming using the functional paradigm and the Scheme programming language.
+	\item \citet{Felleisen:2004} described an approach to teaching introductory programming using the functional paradigm (using the Scheme programming language).
 	\item \citet{Howe:2004} presented a components-first approach.
 	\item \citet{Bennedsen:2004} argued for the use of a model-first approach using the object oriented programming paradigm.
 \end{itemize}
 
- With the predominant role of objects in industry, a common trend has been to move from imperative-first approaches to objects-first approaches. This approach has ``failed'' according to \citet{Astrachan:2005} and \citet{Reges:2006}. While \citet{Ehlert:2009} reported no significant difference between approaches using objects-first and objects-later, their later work \cite{Ehlert:2010} indicated the objects-later approach had a greater comfort level for students. \citet{Robins:2003} include the imperative-first and objects-first approaches as one of their four themes from the literature on learning and teaching introductory programming. \citet{Lister:2006a} provide an in depth look at the research perspectives on the topic of objects-first, but in general there is no consensus on which approach should be taken.
+With the predominant role of object oriented programming in industry, a common trend has been for academic institutes to move from imperative-first approaches to objects-first approaches. 
 
-The design of the introductory programming units developed in this research work there was a need to choose which \emph{x}-first approach will be used. The main decision seemed to be between the imperative-first, objects-first or functional-first approaches. Whichever approach is taken, the choices guide which concepts are covered in the unit and the order in which these can be tackled.
+In their discussion on learning and teaching of programming, \citet{Robins:2003} summarise a range of research on both imperative-first and objects-first approaches to teaching introductory programming, and indicate that there is not likely to be one ``best'' approach. \citet{Lister:2006a} provided an in depth look at the research perspectives on the topic of objects-first, but in general there is no consensus on which approach should be taken. The objects-first approach has ``failed'' according to \citet{Astrachan:2005} and \citet{Reges:2006}, who report on shifting back to a procedural paradigm after having taught objects-first for a number of years. While \citet{Ehlert:2009} reported no significant difference between approaches using objects-first and objects-later, their later work \cite{Ehlert:2010} indicated the objects-later approach had a greater comfort level for students. 
+
+During the design of the introductory programming units developed in this research work there was a need to choose which \emph{x}-first approach to use. The common decision appears to be between the imperative-first, objects-first or functional-first approaches. Whichever approach is taken, the choice guides which concepts are covered in the unit and the order in which these can be tackled.
 
 % subsection set_the_strategy_and_structure_learning_around_programming_a_paradigm (end)
 
 \subsection{Focus on programming concepts} % (fold)
 \label{sub:focus_on_programming_concepts}
 
-There are various views of programming in the literature. On perspective views programming from a mathematical basis \cite{Denning:1989,Dijkstra:1989,Hoare:1969}, others see it as an exercise in problem solving \cite{Palumbo:1990}, modelling concepts \cite{Bennedsen:2004}, though most textbooks approach the topic through language syntax and features \cite{Robins:2003}. In this work we avoided the standard textbook approach, and instead we focused on programming concepts.
+There are various views of programming in the literature. One perspective views programming from a \emph{mathematical basis} \cite{Denning:1989,Dijkstra:1989,Hoare:1969}, others see it as an \emph{exercise in problem solving} \cite{Palumbo:1990}, or as \emph{modelling concepts} \cite{Bennedsen:2004}. Interestingly, most textbooks approach the topic through language syntax and features \cite{Robins:2003}. In this work we avoided the predominant standard textbook approach, and instead focused on \emph{programming concepts}.
 
-A similar idea was expressed in \citet{Goldman:2004} as a \emph{concept based} approach. The work introduced students to a number of ``big ideas'' related to software development using the JPie interactive programming environment. Our approach differs in that we focus on the ``small ideas'' that programs are build upon. In this way we build depth across these ideas rather than breadth, in line with our general principles.
+A similar idea was expressed in \citet{Goldman:2004} as a \emph{concept based} approach. Their work introduced students to a number of ``big ideas'' related to software development using the JPie interactive programming environment. Our approach differs in that we focused on the ``small ideas'' that programs are build upon. In this way we build depth across these ideas and focus on the core programming abstractions, in line with our general principles (\pref{itm:focus}).
 
-Topics such as variables, procedures, control flow, etcetera are each approached as a concept. This is similar to the model-based approach of \citet{Bennedsen:2004}, but applied to procedural programming concepts. By focusing on concepts we aim to provide students with reasons why the various programming features should be used, when different abstractions should be used, and help students develop means of understanding these abstract ideas. This concept based approach can be applied to procedural programming concepts, object oriented programming concepts, and other programming paradigms.
+Topics such as variables, procedures, control flow, etcetera are each approached as a concept. This is similar to the model-based approach of \citet{Bennedsen:2004}, but applied to procedural programming concepts. By focusing on concepts we aim to provide students with reasons why the various programming features should be used, when different abstractions should be used, and help students develop a means of understanding abstract ideas. This concept-based approach can be applied to procedural programming concepts, object oriented programming concepts, and other programming paradigms.
 
-Winslow's comparison study of expert and novice programmers \cite{Winslow:1996} indicated that expert programmers tend to ``abstract from a particular language to the general concept''. By focusing on the concepts first we hope to instil similar expert-like ideas in the students. Students are encouraged to create \emph{conceptual programs}, which can then be mapped to code using the programming language syntax rules. Focusing first on the concepts should encourage a depth of understanding, with students going beyond surface learning of the syntax used and thinking conceptually about what they are trying to achieve.
+Winslow's comparative study of expert and novice programmers \cite{Winslow:1996} indicated that expert programmers tend to ``abstract from a particular language to the general concept''. By focusing on the concepts first we hope to instil similar expert-like ideas in students. Students are encouraged to create \emph{conceptual programs}, which can then be mapped to code using the programming language syntax rules. Focusing first on concepts should encourage a depth of understanding, with students going beyond surface learning of the syntax used and thinking conceptually about what they are trying to achieve.
 
-Programming concepts are tightly interrelated, and yet there is a need to provide a sequence of activities that can be introduced to students without overloading them initially. In designing these activities we aimed to ensure that concepts could be introduced to students in such a way as to reduce the amount of ``magic'' to a minimum. Limiting the cases where students had to do something without being able to reason why with the concepts covered so far.
+Programming concepts are tightly interrelated, and yet there is a need to provide a sequence of activities that can be introduced to students without overloading them initially. In designing these activities we aimed to ensure that concepts could be introduced to students in such a way as to reduce the amount of ``magic'' to a minimum. That is, limiting the cases where students have to do something without being able to reason why with the concepts they understand.
 
-The aim of this is to enable students to explore language features. At each stage in the process students should have sufficient concepts to be able to understand the programs they are asked to create. To extend students further they can be asked to experiment with features, using the concepts covered to create programs they are interested in. Ideally this would enhance student motivation, and ensure they spend sufficient time on the task.
+The aim of this concept-based approach is to enable students to explore language features. At each stage in the process students should have sufficient concepts to be able to understand the programs they are asked to create. To extend students further, they can be asked to experiment with features using the concepts covered to create programs they are personally interested in. Ideally this would enhance student motivation, and ensure they spend sufficient time on the task.
 
 The focus on programming concepts means there is a need to: %also in supporting chapter
 \begin{itemize}[noitemsep,nolistsep]
-	\item Introduce programming concepts incrementally;
-	\item Provide students with time to put concepts into practice;
-	\item See syntax as a means to an end, not an end in itself;
-	\item Avoid using language features before concepts that can explain their use; and
-	\item Map concepts to code using programming language grammars.
+	\item introduce programming concepts incrementally;
+	\item provide students with time to put concepts into practice;
+	\item see syntax as a means to an end, not an end in itself;
+	\item avoid using language features before concepts that can explain their use; and
+	\item map concepts to code using programming language grammars.
 \end{itemize} 
 
 % section principles_to_guide_what_we_should_cover (end)
@@ -530,9 +537,9 @@ The focus on programming concepts means there is a need to: %also in supporting 
 \subsection{Use programming languages as they were designed to be used} % (fold)
 \label{ssub:use_programming_languages_as_they_were_designed_to_be_used}
 
-While we agree with the ``back to basics'' approach of \citet{Reges:2006}, we want to emphasise using programming languages in the way they were designed to be used. Our emphasis on programming concepts has deliberately relegated language to a secondary role, and one that can be changed by learning new syntax rules. Given this, changing between languages is less problematic, and therefore we should not use a language for its industry relevance. Rather, language choice should be based on the programming concepts it supports, its available across computing platforms, and the level of support it offers novices.
+While we agree with the ``back to basics'' approach of \citet{Reges:2006}, we want to emphasise using programming languages in the way they were designed to be used. Our emphasis on programming concepts has deliberately relegated language to a secondary role, and one that can be changed by learning new syntax rules. Given this, changing between languages should be less problematic, and therefore we should not use a language simply for its industry relevance as has been done by many institutions. Rather, language choice should be based on the programming concepts it supports, its availability across computing platforms, and the level of support it offers novices.
 
-Programming language choice for introductory programming is as popular in the Computing Education Research literature as the choice of programming paradigm. The following list covers a select number of well-cited papers on which programming language to use in teaching introductory programming, ordered by year it shows the shift from procedural languages to object oriented languages.
+Programming language choice for introductory programming is as popular a topic in the Computing Education Research literature as the choice of programming paradigm. The following list covers a select number of well-cited papers on the topic of which programming language to use in teaching introductory programming. It is ordered by year, and shows the general shift from procedural languages to object oriented languages.
 
 %
 % JG - I suggest rethink the use of this long list approach
@@ -541,10 +548,10 @@ Programming language choice for introductory programming is as popular in the Co
 
 
 \begin{itemize}[noitemsep,nolistsep]
-	\item \citet{Koffman:1988} argued for Modula-2 over Pascal, PL/1 and Ada, 
+	\item \citet{Koffman:1988} argued for Modula-2 over Pascal, PL/1 and Ada.
 	\item \citet{Mody:1991} argued against C, and C++ for its lack of coherence, simplicity, understandability and implementability. 
 
-	\item \citet{Roberts:1993} discusses Stanford's shift from Pascal to C, addressing common issues with C by providing libraries to encapsulate complex features, emphasising procedural and modular abstractions, and focusing on the discipline of software engineering.
+	\item \citet{Roberts:1993} discuss Stanford's shift from Pascal to C, addressing common issues with C by providing libraries to encapsulate complex features, emphasising procedural and modular abstractions, and focusing on the discipline of software engineering.
 
 	\item \citet{Brilliant:1996} discussed programming paradigm and language selection for introductory programming. They concluded that there was no clear advantage to starting with either procedural programming, object-oriented programming, or functional programming paradigms. In terms of language they discussed moving from Pascal to Ada, C, C++, or Scheme.
 
@@ -562,16 +569,25 @@ Programming language choice for introductory programming is as popular in the Co
 
 	\item \citet{Mannila:2006a} provided a set of criteria for comparing language features for introductory programming. The study then compared several languages, with Eiffel, Java and Python achieving the highest scores.
 
-	\item \citet{Pendergast:2006} provided a reflection on teaching introductory programming with Java over a number of years, highlighting some of the issues encountered and mechanisms to avoid these.
+	\item \citet{Pendergast:2006} provided a reflection on teaching introductory programming with Java over a number of years, highlighting some of the issues encountered and suggesting mechanisms to avoid them.
 
 	\item \citet{Maloney:2010} described the Scratch programming environment, a visual programming language designed primarily for students aged between 8 and 16.
 
 	\item \citet{Anik:2011} used the Analytic Network Process methodology to help guide the decision of which language should be used first. The relative weightings given to the various aspects resulted in Java being ranked above the other languages.
 \end{itemize}
 
-Interestingly, underlying many of these papers is the idea that switching language is difficult. For example, \citet{Brilliant:1996} indicated that teaching multiple languages increases the overhead necessary to cover language details and peculiarities. By having a focus on programming concepts over language syntax this work aimed to tackle this problem from a different angle. In our previous teaching we noticed that students tended to focus on or ``cling'' to syntax. Shifting language was a major effort as it was syntax they had learnt. Students felt they were ``Java programmers'' or ``C/C++ programmers''; they did not see that they were learning something far more important, they were not learning a specific language, they were learning to program. 
+Interestingly, underlying many of these papers is the idea that switching language is difficult. For example, \citet{Brilliant:1996} indicated that teaching multiple languages increases the overhead necessary to cover language details and peculiarities. While true, the relative proportion and disruption of this depends upon your perspective as illustrated in \fref{fig:lang_focus}. When the focus is on using a language to achieve a task, switching language is highly disruptive as students have focused on learning the language itself. If the focus can be brought to the associated concepts, the perceived change is smaller, as the focus has been on underlying concepts that will apply in the new language. In this case the change is actually supportive of the focus, helping students to more clearly see the underlying concepts.
 
-This focus also becomes evident when you examine the title of many introductory programming units. Introductory programming unit titles like ``Introduction to Programming with C'' and ``Software Development in Java'' give the impression that the language is important, raising its role from supportive to central in the unit.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{LanguageFocus}
+	\caption{When the focus is on the language, changing it changes a large portion of what has been covered and the change is seen as disruptive. When the focus is on the concepts, changing the language is now seen as supporting the focus on the underlying concepts.}
+	\label{fig:lang_focus}
+\end{figure}
+
+By having a focus on programming concepts over language syntax this work aimed to tackle this problem from a different angle. In our previous teaching we noticed that many students tended to focus on, if not ``cling'' to, a particular syntax. Shifting language was a major effort as it was syntax they had learnt. Students felt they were ``Java programmers'' or ``C/C++ programmers''; they did not see that they were learning something far more important; they were not learning a specific language, they were learning to program. 
+
+This focus also becomes evident when you examine the title of many introductory programming units. Introductory programming unit titles like ``Introduction to Programming with C'' and ``Software Development in Java'' give the impression that the language is very important, raising its role from supportive to central in the unit.
 
 %
 % JG - again, perhaps "was" -> "is guided by" - I assume OTHERS could chose diff langs but still fulfil the principles??
@@ -580,29 +596,29 @@ This focus also becomes evident when you examine the title of many introductory 
 % 
 
 
-Choosing a language for the \emph{concept-based} approach to introductory programming was guided by the following principles:
+Choosing a language for a \emph{concept-based} approach to introductory programming should be guided by the following principles, stated in a manner similar to the agile manifesto \cite{Beck:2001}. We value\ldots
 \begin{itemize}[nolistsep,noitemsep]
 	\item \textbf{Focus on programming concepts} \emph{over} language syntax.
 	%Remember we are not teaching a language, we are teaching students to program.
-	\item \textbf{Teach students to learn the language} \emph{over} teaching the language explicitly.
+	\item \textbf{Teach students how to learn the language} \emph{over} teaching the language explicitly.
 	%Do not teach the language explicitly, teach students to learn languages themselves.
-	\item \textbf{Value languages that support the concepts to be learnt} \emph{over} the languages that are the current industry trend.
+	\item \textbf{Value languages that clearly support the concepts to be learnt} \emph{over} the languages that are the current industry trend.
 	%Choose a language, or languages, that support the concepts that need to be covered.
-	\item \textbf{Use languages that support multiple operating systems} \emph{over} those tied tightly to a single platform. 
+	\item \textbf{Use languages that support multiple platforms (operating systems)} \emph{over} those tied tightly to a single platform. 
 	%Ensure support for multiple operating systems, enabling students to use their preferred platform.
-	\item \textbf{See multiple languages as an important part of the learning} \emph{over} focusing on a single language.
+	\item \textbf{See multiple languages as an important part of learning} \emph{over} focusing on a single language.
 	%See multiple languages as an important part of the learning, not an unnecessary overhead.
 	\begin{itemize}
 		\item Use multiple languages to encourage students to focus on concepts over programming language syntax.
 		\item Expose students to language differences enabling them to see different strengths and weaknesses. 
-		\item Encourage students to see that they are learning to program, not learning one programming language.
-		\item Foster the attitude that language is a choice, students should not feel constrained to one language and should be open to possibilities other languages offer.
+		\item Encourage students to see that they are \emph{learning to program}, not learning \emph{a programming language}.
+		\item Foster the attitude that language is a choice -- students should not feel constrained to one language and should be open to possibilities other languages offer.
 	\end{itemize}
 \end{itemize}
 
-As with the Agile Manifesto, we agree that there is value in the items on the right, but we value the items on the left more.
+As with the Agile Manifesto, we agree that there is value in the items on the \emph{right}, but we value the items on the \emph{left} more.
 
-One aspect that is different from other work is the importance of the use of the language in industry. If the concept based approach is successful students will be able to quickly develop skills in industry relevant languages in later units. The first units can focus on using languages that best meet educational requirements, while later units can cover language specific details and peculiarities briefly knowing students have an understanding of underlying concepts and the ability to learning new languages themselves. 
+A key aspect in this work that is different from other published work is the \textbf{deprecated} importance of the use of the language in industry. If a concept-based approach is successful, students will be able to quickly acquire skills in industry relevant languages in later units. Early programming units can focus on using languages that best meet educational requirements, while later units can cover language specific details and peculiarities concisely knowing students have an understanding of underlying concepts and the ability to learning new languages themselves. 
 
 % \cite{Koffman:1988,Roberts:1993,Brilliant:1996}
 % Arguments against Pascal 
@@ -619,7 +635,7 @@ One aspect that is different from other work is the importance of the use of the
 \subsection{Summary} % (fold)
 \label{ssub:summary_of_principles_for_what_to_teach}
 
-This section proposed the use of a \emph{concept-based} approach to teaching introductory programming. This approach focuses on teaching programming concepts directly, with use of the programming language grammars to help students map concepts to code. The aim of this approach is to help students focus on the concepts, while providing them with tools they can use to learn any relevant programming language. The expected outcome of this approach is that programming language choice is much less important than which programming paradigm choice. 
+This section proposed the use of a \emph{concept-based} approach to teaching introductory programming. This approach focuses on teaching programming concepts directly, with use of the programming language grammars to help students map concepts to code. The aim of this approach is to help students focus on concepts, while providing them with tools they can use to learn any relevant programming language. The expected outcome of this approach is that programming language choice is much less important than which programming paradigm choice. 
 
 % subsection summary_of_principles_for_what_to_teach (end)
 
@@ -627,7 +643,7 @@ This section proposed the use of a \emph{concept-based} approach to teaching int
 \section{Summary of Guiding Principles} % (fold)
 \label{sec:summary_of_guiding_principles}
 
-This chapter outlined twelve principles related to both \emph{how} and \emph{what} we aim to teach in our constructively aligned introductory programming.
+This chapter outlined twelve principles related to both \emph{how} and \emph{what} we aim to teach in our constructively aligned introductory programming units.
 \begin{itemize}[noitemsep,nolistsep]
 	\item Nine principles describe \emph{how} the teaching and learning environment should operate:
 	\begin{enumerate}[noitemsep,nolistsep]
@@ -643,14 +659,14 @@ This chapter outlined twelve principles related to both \emph{how} and \emph{wha
 	\end{enumerate}
 	\item Three principles help guide \emph{what} we aim to teach:
 	\begin{enumerate}[start=10,noitemsep,nolistsep]
-		\item \label{itm:paradigm} Set the strategy and structure learning around a programming paradigm.
+		\item \label{itm:paradigm} Set the strategy, and structure learning, around a programming paradigm.
 		\item \label{itm:concepts} Focus on programming concepts, not language syntax.
 		\item \label{itm:authentic} Use programming languages as they were designed to be used.
 		% \item Program code is not, by itself, a suitable means of measuring learning outcomes.
 	\end{enumerate}
 \end{itemize}
 
-\cref{cha:approach} will outline a model for constructively aligned introductory programming units. The model presented was created through the application of these principles, and the model's ability to embody these principles is discussed.
+\cref{cha:approach} will outline a model for constructively aligned introductory programming units. The model was created through the application of these principles, and the model's ability to embody these principles is discussed.
 
 % section summary_of_guiding_principles (end)
 
