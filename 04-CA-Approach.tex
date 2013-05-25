@@ -5,50 +5,84 @@
 
 \graphicspath{{Figures/CAApproach/}}
 
-\cref{cha:guiding_principles} outlined nine principles for guiding \emph{how} to teach introductory programming, and three principles for \emph{what} should be taught. This chapter proposes a model for applying constructive alignment for teaching introductory programming.
+\cref{cha:guiding_principles} outlined twelve principles, nine for guiding \emph{how} to create a student-centred learning environment, and three for guiding decisions on \emph{what} should be taught in introductory programming. This chapter proposes a model for applying constructive alignment for teaching introductory programming that is in agreement with the twelve principles.
+
+\sref{sec:overall_strategy} describes an application of the principles in defining the overall strategy for teaching introductory programming, outlining the assessment approach used and the approach taken to deliver this material in a student centred manner. This section argues for the user of portfolio assessment, and provides some guidelines for designing and delivering lecture and tutorial classes. Following this, the general model for constructive alignment is presented in \sref{sec:model}, which describes the overall model, the processes within it, and means for addressing plagiarism. The chapter concludes with a brief summary in \sref{sec:ca_summary}.
 
 \section{Overall Strategy} % (fold)
 \label{sec:overall_strategy}
 
-One of the overarching principles from \cref{cha:guiding_principles} is the requirement to be agile and willing to change (\pref{itm:agile}). In discussing this principle, \sref{ssub:be_agile_and_willing_to_change} outlines that teaching and learning resources need to be guided by an overall strategy. This strategy informs, and is shaped by, the assessment approach and approach to the unit content.
-
-This section first outlines the assessment approach, and then presents the approach this work took to delivering unit content. The decisions on which assessment approach was informed by the principles related to \emph{how} the teaching and learning environment should operate, while the approach to unit content is informed by the principles related to \emph{what} should be covered.
+One of the overarching principles from \cref{cha:guiding_principles} is the requirement to be agile and willing to change (\pref{itm:agile}). In discussing this principle, \sref{ssub:be_agile_and_willing_to_change} outlined that teaching and learning resources need to be guided by an overall strategy. This overall strategy informs, and is shaped by, the assessment approach and approach to the unit content, both of which are expanded upon here. 
 
 \subsection{Assessment Approach} % (fold)
 \label{sub:assessment_approach}
 
-Assessment plays an important role in defining what students learn. \citet{Rowntree:1977} indicated the central role of assessment procedures in understanding any education system. This is supported by \citet{Ramsden:2003}, who stated that ``from our students' point of view, assessment always defines the actual curriculum'', and further supported by \citet{Biggs:2007} who indicated that ``students learn what they \emph{thing} they will be tested on''. In presenting their conditions for effective assessment, \citet{Gibbs:2004} discussed the dominant influence of assessment in defining what students focus on, indicating that students are able to distinguish between what assessment requires them to pay attention to and what is likely to result in effective learning. So the selection of an assessment approach will have a significant impact on the overall strategy for both students and staff. 
+Assessment plays an important role in defining what students learn. \citet{Rowntree:1977} indicated the central role of assessment procedures in understanding any education system. This is supported by \citet{Ramsden:2003}, who stated that ``from our students' point of view, assessment always defines the actual curriculum'', and further supported by \citet{Biggs:2007} who indicated that ``students learn what they \emph{think} they will be tested on.'' In presenting their conditions for effective assessment, \citet{Gibbs:2004} discussed the dominant influence of assessment in defining what students focus on, indicating that students are able to distinguish between what assessment requires them to pay attention to, and what is likely to result in effective learning. So the selection of an assessment approach will have a significant impact on the overall strategy for both students and staff. 
 
-Traditionally introductory programming was taught using a number of assignments and a final examination. This approach, while commonly used, is not in keeping with several of our guiding principles. The use of summative assessment during the semester goes against \pref{itm:formative} with its goal of assessing outcomes. The use of assignments to motivate students is also contrary to \pref{itm:theory_y}, with marks being used for motivation in either a hard or soft form of Theory X strategy. These principles required us to examine other forms of assessment.
+Consider a traditional introductory programming, taught using a number of assignments and a final examination. This approach, while commonly used, is not in keeping with several of our guiding principles, as outlined in the following list. 
 
-One strategy to address this would be to consider abandoning coursework assignments, delay final summative assessment to an examination worth 100\% of the student's grade. While this would address \pref{itm:formative}, such a heavy weight examination is very much a hard Theory X approach. The value of coursework assignments was strongly argued for in \citet{Gibbs:2004}. This work provided several strong arguments for coursework assignments, including the following:
+\begin{enumerate}[noitemsep,nolistsep]
+	\item This approach to assessment is teacher-centred, and does not easily incorporate aspects from constructive learning theory, as discussed in \cref{cha:background}.  As a result, some adjustments are required in order to address \pref{itm:construct}.
+	\item The teacher-centred nature of the assessment also excludes students from the alignment process, \pref{itm:align}, with staff performing the alignment of assessment tasks with intended learning outcomes resulting in additional opportunities for misalignment, as discussed in \cref{cha:background}. 
+	\item Similarly, the use of summative assessment during the semester goes against \pref{itm:formative} with its goal of assessing outcomes, and using frequent formative feedback to aid student learning.
+	\item The use of assignments marks to motivate students is also contrary to \pref{itm:theory_y}, with marks being used for motivation in either a hard or soft form of Theory X strategy.
+	\item Marked assignments also indicate a finality, with marks being lost or gained when the assignment is assessed. These results are typically final, and therefore provide no incentive for student to reflect on their approach to learning, and to ensure they have more fully understood concepts before proceeding. Alternate assessment strategies, with a greater emphasis on formative feedback, could better encapsulate the ideals of reflective practice, and thereby better meet \pref{itm:reflect}.
+\end{enumerate}
+
+As a result, the principles from \cref{cha:guiding_principles} requires us to consider other forms of assessment.
+  
+%
+% this is commonly done e.g. in German universities - and sometimes exams
+%  are delayed to a later YEAR (let alone end of unit)...
+%
+
+One strategy to address this would be to abandon coursework assignments, delaying final summative assessment to an examination worth 100\% of the student's grade. While this would address \pref{itm:formative}, such a heavy weight examination is very much a hard Theory X approach. Also, the value of coursework assignments has been strongly argued for as in \citet{Gibbs:2004}. Their work provided several strong arguments for coursework assignments, including the following:
 \begin{itemize}[noitemsep,nolistsep]
-	\item Students attain better results from coursework than examinations, referring to their Gibbs' earlier work that indicated a strong positive correlation between proportion of coursework and average marks.
-	\item Students prefer coursework assignments over examinations. A position that is supported by \citet{Kniveton:1996} who stated that students prefer coursework assignments to exams as assignments assessed a better range of their abilities and enabled them to organise their time to a greater extent.
+	\item Units that include coursework assignments, in addition to an exam, resulted in higher average marks than compared with units that included no coursework assignments \cite{Chansarkar:1987}.
+	\item Students prefer coursework assignments over examinations. A position that is also supported by \citet{Kniveton:1996} who stated that students prefer coursework assignments to exams as assignments assessed a better range of their abilities and enabled them to organise their time to a greater extent.
+	\item Students attain better results from coursework than examinations. \citet{Gibbs:1997} indicated a strong positive correlation between the proportion of coursework assignments and average marks. Though, \citet{James:2004} indicated that individual students do not consistently perform better, or worse, on any one form of assessment.
 	\item Coursework assignments are at least as valid a form of assessment as examinations:
-	\begin{itemize}
-		\item Exams are a poor predictor of future performance.
-		\item Coursework assignments are a better predictor of long term learning than exam results \cite{Conway:1992}. This supports the idea that students adopt surface approaches to preparing for exams \citet{Marton:1976a}. 
-		\item The quality of learning is higher in assignment-based units, when compared to exam-based units.
+	\begin{itemize}[noitemsep,nolistsep]
+	% 
+	% Do you have reference to support this statement: 
+	% AC: yes :)
+		\item Exams are a poor predictor of future performance \cite{Baird:1985,Gibbs:2004}.
+		\item Coursework assignments are a better predictor of long term learning than exam results \cite{Conway:1992}. This supports the idea that students adopt surface approaches to preparing for exams \citet{Marton:1976a, Tang:1999}. 
+		%
+		% Ditto  - reference(s) to support this needed here ->
+		%
+		\item The quality of learning is deeper in assignment-based units, when compared to exam-based units \cite{Tynjala:1998,Gibbs:2004}.
 	\end{itemize}
 \end{itemize}
 
-The challenge, therefore, is to define an assessment approach that enables students to construct their knowledge, uses coursework assignments in a formative manner, and enables 100\% of the students grade to be determined after the end of the teaching period.
+The challenge, therefore, is to define an assessment approach that enables students to construct their knowledge, uses coursework assignments in a formative manner, and enables 100\% of each student's grade to be determined after the end of the teaching period, with a strong alignment to unit intended learning outcomes.
 
+\clearpage
 \subsubsection{Portfolio Assessment} % (fold)
 \label{sub:portfolio_assessment}
 
-In proposing Constructive Alignment, \citet{Biggs:1996c} advocated strongly for the use of an assessment portfolio, and indicated that the principles of constructive alignment had evolved with the decision to use portfolio assessment. This work was extended in \cite{Biggs:1997} which outlined suggestions for implementing portfolio assessment and a generalised model for instruction design. Further advice and details of the generalised model were presented in \citet{Biggs:2007} text on quality learning at university.
+In proposing Constructive Alignment, \citet{Biggs:1996c} advocated strongly for the use of an assessment portfolio, and indicated that the principles of constructive alignment had evolved with the decision to use portfolio assessment. This work was extended in his later work, presented in \cite{Biggs:1997}, which outlined suggestions for implementing portfolio assessment and a generalised model for instruction design. Further advice and details of the generalised model were presented in \citet{Biggs:2007} book on quality learning at university.
 
-Assessment involves three components, all of which are typically under the control of the teacher \cite{Biggs:1997}. These include \emph{setting criteria}, \emph{selecting evidence} and \emph{making a judgement}. With the assessment portfolio the students take control of at least the selection of evidence. The portfolio is then a collection of work that the student puts forward for assessment against the unit's intended learning outcomes.
+Assessment involves three components, all of which are typically under the control of the teacher \cite{Biggs:1997}. These include \emph{setting criteria}, \emph{selecting evidence} and \emph{making a judgement}. With the assessment portfolio the students take control of \emph{at least} the selection of evidence, as illustrated in \fref{fig:select_evidence}. The portfolio is then a collection of work that the student puts forward for assessment against the unit's intended learning outcomes, which helps avoid the teacher-selected \emph{sampling} effect of exams.
 
-\citet{Smith:2001,Smith:2003} identified four different kinds of portfolios evident in the research literature: dossier, reflective, training and personal development. These reflected the combination of two factors: the purpose of the portfolio as either for selection/promotion or learning, and whether the portfolio is self-directed or mandated. The details of these are described in the following list, and shown in \fref{fig:portfolio_types}.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{SelectEvidence}
+	\caption{With portfolio assessment the student is responsible for, at least, the selection of evidence in the assessment process.}
+	\label{fig:select_evidence}
+\end{figure}
+
+%
+% Could note that this approach has been used in Architecture and DEsign areas for many years??
+% 
+
+\citet{Smith:2001,Smith:2003} identified four different kinds of portfolios evident in the research literature: \emph{dossier}, \emph{reflective}, \emph{training} and \emph{personal development}. These reflect the combination of two identified factors: (a) the purpose of the portfolio as either for selection/promotion or learning, and (b) whether the portfolio is self-directed or mandated. The details of these are described in the following list, and shown in \fref{fig:portfolio_types}.
 
 \begin{description}[noitemsep,nolistsep]
-	\item[Dossier] is a portfolio for the purpose of selection or promotion that contains a mandated collection of work to demonstrate achievement. (selection/promotion, mandated)
-	\item[Reflective] portfolios contain a self selected collection of work that demonstrates growth or accomplishment for the purpose of admission or promotion. The portfolio is accompanied by a self-appraisal, with the justification for the selection of pieces being as important as the evidence itself. (selection/promotion, self-directed)
-	\item[Training] portfolios are a mandated collection of work performed in a learning context. The portfolio has a fixed format, and contains representative work from the student demonstrating acquired skills, knowledge and competencies. (learning, mandated)
-	\item[Personal development] portfolios are a self selected collection of work, and reflective account of personal growth over an extended period. (learning, self-directed)
+	\item[Dossier] [selection/promotion, mandated] is a portfolio for the purpose of selection or promotion that contains a mandated collection of work to demonstrate achievement. 
+	\item[Reflective] portfolios [selection/promotion, self-directed] contain a self selected collection of work that demonstrates growth or accomplishment for the purpose of admission or promotion. The portfolio is accompanied by a self-appraisal, with the justification for the selection of pieces being as important as the evidence itself.
+	\item[Training] portfolios [learning, mandated] are a mandated collection of work performed in a learning context. The portfolio has a fixed format, and contains representative work from the student demonstrating acquired skills, knowledge and competencies.
+	\item[Personal development] portfolios [learning, self-directed] are a self-selected collection of work, and reflective account of personal growth over an extended period.
 \end{description}
 
 \begin{figure}[htbp]
@@ -60,81 +94,177 @@ Assessment involves three components, all of which are typically under the contr
 
 Biggs' use of an \emph{assessment portfolio} clearly fits with the \emph{Training} portfolio classification, being a mandated part of the unit assessment for the purpose of evaluating learning outcomes. In the study of a small group of professionals, \citet{Smith:2001} found the training portfolio to be highly rated. Their findings indicated that students found the training portfolio confusing initially, but that once they had understood its function and rational they liked the approach, were easily able to construct their portfolio, and felt it was a fair way to assess their learning.
 
-\citet{Tang:1999} provides further evidence of the value of portfolio assessment. In evaluating how students approach study, \citet{Tang:1999} found that students tended to have a narrow, surface approach to studying for tests. These same students were found to adopt wider, more cognitively challenging, approaches when preparing for a portfolio assessment. 
+\citet{Tang:1999} provides further evidence of the value of portfolio assessment. In evaluating how students approach study, they found that students tended to have a narrow, surface approach to studying for tests. These same students were found to adopt wider, more cognitively challenging, approaches when preparing for a portfolio assessment. 
 
-Portfolio assessment enables the shift from Theory X ``sage on the stage'' views to a Theory Y ``guide by the side'' view. The traditional approach of setting assignments and exams in which educators test student ability becomes inverted with portfolio assessment. With portfolio assessment it is the students responsibility to demonstrate how they have met the unit's intended learning outcomes. This frees educators to help students and to guide them in the preparation of their evidence. We are now working side by side with the students, helping them to achieve the intended learning outcomes.
+Portfolios have been used to before to assess introductory programming. \cite{Plimmer:2000} reported the successful use of portfolio assessment in an introductory programming unit in which the portfolio contributed between 25\% and 60\% of the students' final grades. Programming portfolios were also discussed by \cite{Jones:2010}, where students submitted a number of portfolio assignments during the semester. These two approaches represent interesting applications of portfolio assessment, but do not use the portfolio as a means of performing a holistic assessment of the students ability to meet the intended learning outcomes, as is proposed in this work.
 
-Portfolio assessment appears to align well with all nine ``\emph{how}'' principles listed in \cref{cha:guiding_principles}. 
+
+%
+%  Reference if these are quotes?
+%  AC: our statement
+
+We argue that when used as a holistic assessment of student performances, portfolio assessment enables a shift from a Theory X ``sage on the stage'' view, to a Theory Y ``guide by the side'' view of education. The traditional approach of setting assignments and exams, in which educators test student ability, becomes inverted with portfolio assessment. Details of the assessment are no longer hidden, as is the case with exams, but is shared with students as the goal they need to achieve. Using portfolio assessment, the emphasis is on the students, and it is their responsibility to demonstrate how they have met a unit's intended learning outcomes. This frees educators to help students and to guide them in the preparation of their evidence. As illustrated in \fref{fig:sage_guide}, we are now working side by side with the students, helping them to achieve the unit's intended learning outcomes. 
+
+\begin{figure}[hb]
+	\centering
+	\includegraphics[width=0.90\textwidth]{SageGuide}
+	\caption{Portfolio assessment helps enable the view of teaching staff as acting as a ``guide by the side'', rather than a ``sage of the stage''}
+	\label{fig:sage_guide}
+\end{figure}
+
+%
+% This is GOOD!!
+%
+\clearpage
+Portfolio assessment aligns well with all nine ``\emph{how}'' principles listed in \cref{cha:guiding_principles}. 
 \begin{itemize}[noitemsep,nolistsep]
 	\item The portfolio consists of a collection of work the student feels demonstrates the depth of their knowledge. (\Pref{itm:construct})
 	\item Assessment criteria for the portfolio can be aligned with the unit's intended learning outcomes. (\Pref{itm:align})
 	\item The portfolio can be used as the sole form of summative assessment, with students being able to take advantage of formative feedback throughout the teaching period. (\Pref{itm:formative})
-	\item A focus on depth will ensure the portfolio requires students to engage high cognitive levels, requiring them to explain, justify and reflect. (\Pref{itm:depth})
+	\item A clear focus, and use of verbs from the relevant levels of the SOLO taxonomy, will ensure the portfolio requires students to engage appropriate cognitive levels, requiring them to explain, justify and reflect in cases where a depth of understanding is required. (\Pref{itm:focus})
 	\item By communicating high expectations, students will strive to create high quality evidence for their portfolios. (\Pref{itm:expectations})
-	\item Students will develop evidence for their portfolio from day 1, everything they do could be of potential value. This will require active support from teaching staff. (\Pref{itm:support})
-	\item Without marks for motivation, an entirely portfolio assessed unit empowers students in the learning process, and must trust that they are able to effectively manage their own learning. (\Pref{itm:theory_y})
-	\item Portfolio assessment, with frequent formative feedback, is very much akin to agile software development processes. In addition, student portfolios will provide a wealth of evidence to help guide change. (\Pref{itm:agile})
-	\item Incorporating a reflective component in the portfolio will encourage students to engage in reflective practice. (\Pref{itm:reflect})
+	\item Students are able to develop evidence for their portfolio from day one; everything they do could be of value. This will require active support from teaching staff. (\Pref{itm:support})
+	\item Without marks for motivation, an entirely portfolio assessed unit empowers students in the learning process, and they must be trusted that they are able to effectively manage their own learning. (\Pref{itm:theory_y})
+	\item Portfolio assessment, with frequent formative feedback, is very much akin to agile software development processes. In addition, student portfolios provide a wealth of evidence for educators to guide change. (\Pref{itm:agile})
+	\item Incorporating a reflective component in the portfolio encourages students to engage in reflective practice. (\Pref{itm:reflect})
 \end{itemize}
 
-Given its role in the formation of constructive alignment and its clear alignment with the principles, the approach to constructively aligned introductory programming presented in this chapter uses portfolio assessment.
+Given its role in the formation of constructive alignment, and its clear alignment with the principles from \cref{cha:guiding_principles}, the approach to constructively aligned introductory programming presented in this chapter uses portfolio assessment.
 
-A number of papers have discussed portfolio assessment for introductory programming units. \cite{Plimmer:2000} reported the successful use of portfolio assessment in an introductory programming unit in which the portfolio contributed between 25\% and 60\% of the students' final grades. Programming portfolios were also discussed by \cite{Jones:2010}, where students submitted a number of portfolio assignments during the semester. In both cases the portfolio was a collection of programs that were marked and contributed to a final grade, rather than being used as a holistic assessment of the student's ability to meet the intended learning outcomes, as is the case with portfolio assessment in our approach to constructive alignment. 
-
+%
+% Question - maybe need to answer here, later in this chapter or in discussion chapter:
+%
+% MUST such an approach use portfolio???  i.e. could adopting the principles
+% be applied to project or mixed-mode assessment???
+% AC: discussion - we tried several variations ... and we feel it does need to be like this
+% 
 
 % subsection portfolio_assessment (end)
 % subsection assessment_approach (end)
 
+\clearpage
 \subsection{Content Approach} % (fold)
 \label{sub:content_approach}
 
-The second aspect of the overall strategy is to define an approach for selecting unit content. \sref{sec:principles_to_guide_what_we_should_cover} presented a number of principles related to what should be taught in introductory programming, with \pref{itm:paradigm} indicating that the overall strategy needs to be defined around a programming paradigm. This section addresses the question of which programming paradigms were selected for introductory programming in this work.
+The second aspect of the overall strategy is to define an approach for selecting unit content, with \pref{itm:paradigm} indicating that the overall strategy needs to be defined around a programming paradigm. Rather than focusing on the specific question of which programming paradigm, objects-first or objects-later, was chosen in this work, this section will demonstrate how the principles from \cref{cha:guiding_principles} guide the design and delivery of teaching and learning activities. These guidelines apply equally to both approaches, and a range of other teaching and learning contexts. The specifics of the chosen paradigm for the example implementations is presented in \sref{sec:paradigm_choice} of \cref{cha:example_impl}.
 
-Prior to conducting this research we have experienced introductory programming using both imperative-first and objects-first approaches. Our view mirrors those of \citet{Rist:1996} who reported on plans and cognitive schemas, the fundamental units of program design. In relating plans to objects, \citet{Rist:1996} indicated that objects were not different, they were more, as objects require additional overhead related to defining object\footnote{Object structures are typically defined using classes or similar mechanisms in languages such as Java} structures. Given this, units that take an objects-first approach will still need to have a significant focus on procedural aspects, as indicated by \citet{Robins:2003}. This reasoning was echoed in the ``back to basics'' approach from \citet{Reges:2006}.
+A range of teaching and learning activities are appropriate for helping students develop an understanding of introductory programming. In the following sections we illustrate how the principles from \cref{cha:guiding_principles} can be used to focus lecture away from knowledge transmission, and provide structured learning in laboratory sessions.
 
-\pref{itm:depth} indicates that in this work we aim to build a depth of knowledge, over breadth of coverage. If, as \citet{Rist:1996} claimed, objects are ``more'' then our principles indicate that an objects-later approach should be taken. This is further supported by the 2013 Computer Science Curricula \cite{CSC2013}, which listed primarily imperative programming concepts in its section on Software Development Fundamentals.
+\subsubsection{Focused Lecture Slides} % (fold)
+\label{ssub:lecture_slides}
 
-An objects-later approach also matches the concept-based approach outlined in \cref{cha:guiding_principles}. \pref{itm:concepts} indicates a focus on programming concepts, which are built on top of previously covered concepts to enable students to explore the language, and programming in general. By starting with imperative programming the unit can start with fundamental concepts, and work up to the concept of objects.
+\pref{itm:concepts} and \pref{itm:authentic} proposed a concept-based approach to teaching introductory programming content. These principles, along with \pref{itm:focus}, guided the choice to use the ``Beyond Bullet Points'' style of presentation for lectures \cite{Atkinson:2007}. This approach draws upon the work of Richard Mayer (see \citet{Mayer:2005}), and structures presentations using a storyboard that guides the audience toward a stated ``solution''. An example of the storyboard template, outlining a presentation on arrays, is shown in \fref{fig:bbp}. This story guided the audience to the solution ``Use arrays to store multiple values in a single variable.''
 
-\citet{Reges:2006} back to basics approach taught imperative programming concepts using the Java programming language. Java is an object oriented programming language, and so in effect this approach taught students how \emph{not} to use Java. While we will adopt the imperative programming focus, \pref{itm:authentic} indicates that we must select a programming language that was designed for this purpose. The language choice is discussed in \cref{cha:example_impl}.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{bbp}
+	\caption{Example usage of the storyboard template, developed by \citet{Atkinson:2007} and available from \url{http://beyondbulletpoints.com}, that outlines the stages in a Beyond Bullet Points presentation.}
+	\label{fig:bbp}
+\end{figure}
 
-While objects would not appear in the first programming unit, their importance in students' education remained a focus. Rather than seeing programming as being delivered in a single stand alone unit, we designed a sequence of two units that worked closely together. The first covered structured procedural programming, focusing on aspects such as control flow. The second focused on object oriented programming, which can then use a model driven approach similar to the one reported in \citet{Bennedsen:2004} but without having to cover procedural programming aspects such as control flow.
-
-Given its focus on fundamentals, an objects-later approach was used in the curriculum presented in this work. This aligns well with the principles in \cref{cha:guiding_principles} with its focus on depth over breadth, and its ability to match the proposed concept-based approach to introductory programming. Object oriented programming was then the content of a second programming unit. The alignment of these two units to the \emph{what} principles from \cref{cha:guiding_principles} is outlined in the following list.
-\begin{enumerate}[noitemsep,nolistsep]
-	\item The first programming unit, introductory programming, aligned with the principles in the following way:
-	\begin{itemize}[noitemsep,nolistsep]
-		\item Content selection was guided by the structured procedural programming paradigm.
-		\item Focus will be on fundamental programming concepts, which included functions and procedures, variables, control flow, parameter passing, etcetera.
-		\item The chosen programming language, or languages, must have been designed for procedural programming.
-	\end{itemize}
-	\item The second programming unit, object oriented programming, aligned with the principles in the following way:
-	\begin{itemize}[noitemsep,nolistsep]
-		\item Content selection was guided by the object oriented programming paradigm.
-		\item Focus will be on object oriented programming concepts including abstraction, encapsulation, inheritance and polymorphism, etcetera.
-		\item The chosen programming language, or languages, must have been designed for object oriented programming.
-	\end{itemize}
+The first five slides, termed Act 1, that set up the ``story'', telling the audience why they are there and centring them as the main character in the story. This helps motivate discussion, and focused teaching staff on clearly communicating the motivation behind the topic. The first five slides contain the following details:
+\begin{enumerate}[label=Slide \arabic*:,labelwidth=*,align=left,noitemsep,nolistsep]
+	\item \textbf{The setting}, sets the \emph{context}, positing the story at a relevant place within the content of the unit.
+	\item \textbf{The protagonist} indicates the story is about the students, they are the focus not the teaching staff.
+	\item Indicates \textbf{the imbalance}, stating a current problem, challenge or opportunity that motivates the need to find a solution.
+	\item Juxtaposing the imbalance, \textbf{the balance} presents the goal, the situation in which the problem or challenge has been addressed, or the opportunity has been realised.
+	\item Presents our \textbf{solution}, indicating how students (the protagonist) can get from the current \emph{imbalance} to the desired \emph{balance}.
 \end{enumerate}
 
+Slides contain a full sentence, written in an active voice. Ideally the slide text is accompanied by iconic visuals that set a theme or metaphor for the presentation. The time and resources necessary to prepare slides in this manner is, however, contrary to \pref{itm:agile}, being agile and willing to change these teaching and learning activities. If significant effort is spent developing slides in this way it is likely to increase resistance to change if adjustments to the topics message are desired. Instead, we suggest a minimalist approach with slides clearly showing the sentence text and using images to help communicate concepts central to the topic, as can be seen in the example slides shown in \fref{fig:lecture}.
+
+For a fifteen minute presentation, the body of the presentation contained three main points, supported by three sub-points. Each addressed a ``why'' or ``how'' point, and supported the main solution. Once again these required a single short sentence in an active voice. The composition of these slides usually drew upon visuals created as part of the teaching and learning resources for the unit.
+
+The last five slides conclude the presentation, reminding students of the overall solution and the new balance it brings about. These slides contain the following details:
+\begin{enumerate}[noitemsep,nolistsep]
+	\item The first slide in the conclusion was the \emph{turning point}. This is a question that asks a question of the students, indicating the presentation has turned to the conclusion. In effect it asks them if the concepts presented have shown them how to address the imbalance from the introduction.
+	\item Next the \emph{crisis} slide restates the balance and imbalance, reminding the students of where the presentation started and where it was aiming to go.
+	\item This then leads nicely to a restating of the \emph{solution}. This is an exact duplicate of the solution from the introduction, but now the student have been though the ``story'' and it should have more meaning.
+	\item The \emph{climax} brings all of the pieces of the story together in summary and give the teaching staff a final opportunity to motivate students to study the topic further themselves.
+	\item The final slide is the \emph{resolution}, and indicates the end of the presentation.
+\end{enumerate}
+
+Many of these guidelines from the Beyond Bullet Points approach were applied in the development of the lecture slides for the units discussed in \cref{cha:example_impl}. This included the general structure of the storyboard, though in some cases the three points were stretched to four but not beyond. The body of the presentations did include some information on ``what'' can be used, rather than purely focusing on ``how'' and ``why''. The use of active sentences, and visual communication, free from lists of bullet points, were also applied.
+
+By adhering to these ideas, as much as possible, lecture presentations focus on the most important aspects for each topic, in keeping to \pref{itm:focus}. The presentation style also encourages a focus on concepts, \pref{itm:concepts}, and little (if any) syntax would be used in the slides themselves. Instead, slides should focus on visual representations to communicate programming concepts, leaving the lower level details to be communicated via other means, as is discussed in \cref{cha:supporting}.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{Lecture}
+	\caption{Sample slides from the lecture created from the template shown in \fref{fig:bbp}. Act 1 and 3 use minimalist sentences, with visual representations of programming concepts being used to communicate the important concepts.}
+	\label{fig:lecture}
+\end{figure}
+
+% subsubsection lectures (end)
+
+\subsubsection{Interactive Lecture Demonstrations} % (fold)
+\label{ssub:interactive_lecture_demonstrations}
+
+Delivering one short, fifteen minute, presentation for each week's topic leaves a significant portion of a two hour lecture for other purposes. This time can be used to demonstrate the application of the concepts, providing students with a first experience of how these concepts can be used to create working programs. Similar approaches have been found to be an effective means of engaging students by \citet{Gaspar:2007} and \citet{Rubin:2013}.
+
+The interactive sessions involve writing programs from scratch, guiding students through the whole software development process. This involves questioning students about what we should do, and which concepts we needed to apply. Program's are developed together with the students, enabling discussion as they evolve. This enables a focus on the thought processes behind program creation, taking students through the decisions that need to be made in crafting the design of the program being creating.
+
+One important strategy we applied in these interactive coding sessions was for staff to become selectively forgetful, typically forgetting the syntax related to the current concept, for example. In this way, staff had to make use of the resources available to the students to \emph{find} the necessary details. For example, when focusing on how to declare variables this could be achieved by saying ``We want to create a variable here, but I can not remember the syntax. Where could I look to find the syntax for this?'' This triggers a discussion, and enables staff to demonstrate how to locate the associated resources, and lookup the relevant sections. Switching back to the code would be another point to ``forget'' the syntax, ``So what do I type first?''. The aim of this is to demonstrate to the students how these resources could be used to learn the language's syntax. In essence, providing an example of how to solve problems.
+
+Depending on the topic, lectures typically follow one of two formats. Either the presentation was delivered in its entirety and was followed by the interactive session, or the interactive session was interwoven with the presentation itself. These two strategies can be applied at different times throughout the teaching period, depending on the topic. 
+
+Topics in the first part of a unit are likely to have the interactive sessions interwoven with presentations. At this stage each of the concepts was totally new to the students. Presentations focused entirely on concepts is likely to make the topic very abstract. By interweaving live coding demonstration with presentations we aim to address student apprehension about how concepts are realised in practice.
+
+Later topics, which reinforce earlier concepts, are likely to benefit from progressing more quickly through the slides and using a longer interactive demonstration. This would have the benefit of allowing a wider range of concepts to be demonstrated in a single session.
+
+The use of interactive lecture demonstrations helps embed a number of principles. These sessions help provide students with a demonstration of applying unit concepts, aiding them in the construction of their own knowledge \pref{itm:construct}. Guiding students through the use of supporting resources helps keep the focus on the most important concepts, supporting both \pref{itm:focus} and \pref{itm:concepts}, while also helping students to know how to use the resources available to them \pref{itm:support}.
+
+% subsubsection interactive_lecture_demonstrations (end)
 
 
+\subsubsection{Laboratory Sessions} % (fold)
+\label{ssub:laboratory_sessions}
+
+Laboratory sessions provide an opportunity for students to try applying the concepts covered in the lecture classes themselves. To help structure these sessions we organised these tasks into three groups: 
+
+\begin{description}[noitemsep,nolistsep]
+	\item [Laboratory tasks] were designed to be a guided exercise that was to be completed in class, providing detailed instructions on how to approach the problems presented.
+	\item [Core tasks] had to be completed and submitted for feedback, helping students to develop pieces they can include in their portfolios.
+	\item [Extension tasks] provided students with optional exercises they could use to extend themselves, requiring greater levels of independence and a better understanding of the concepts.
+\end{description}
+
+Tutors guide students through each week's laboratory tasks. These tasks were designed to give students their first hands-on experience with each week's concepts. Laboratory notes provided detailed step-by-step instructions to enable students to work through these on their own if they wanted, or need, to. At the end of the laboratory exercises students should be sufficiently prepared to undertake the core tasks.
+
+Students then apply their understanding of each weeks concepts to complete the core tasks. It is important that these tasks ask the students to perform actions related to the unit's intended learning outcomes, as these tasks will help them create evidence they can include in their portfolios. For example, this could include tasks such as creating one, or more, small programs, or performing code reading exercises that ask students to hand execute programs and explain the program's behaviour, or identify issues in the presented code. 
+
+Core tasks also form an integrated part of the formative feedback process. Once these tasks are completed students submit this work for feedback. Staff can then assess the work, and provide guidance on identified issues, and highlight possible misconceptions. If the work has issues, it can then be returned to the student with instructions on what needs to be corrected. Students can then work to address these issues, and associated misconceptions, and resubmit the work at a later stage. Where the task has been performed to a sufficient standard it can be signed off as complete, indicating that the student appears to have understood the associated concepts.
+
+Extension tasks provide students with extra activities they can perform each week to demonstrate a deeper understanding of the associated concepts. These tasks are typically loosely defined, requiring students to explore the concepts in a more independent manner. A range of challenging tasks can be provided to support different student interests, and to provide students with ideas for activities that are likely to help them create pieces that will demonstrate valuable learning in their portfolios.
+
+Laboratory sessions are highly student-centred, so organising these sessions in this way helps to address many of the principles from \cref{cha:guiding_principles}.  
+
+\begin{itemize}[noitemsep,nolistsep]
+	\item Activities help students develop their knowledge of the concepts being covered, in response to \pref{itm:construct}. 
+	\item Staff help ensure that these tasks relate to the unit's intended learning outcomes, \pref{itm:align}, ensuring students will be able to demonstrate how they have met these outcomes when they submit their portfolios.
+	\item Core tasks are used to provide students with formative feedback in line with \pref{itm:formative}.
+	\item Students are able to focus on the most important aspect for them at their current stage of development, \pref{itm:focus}. Laboratory tasks focus on getting students started, core tasks focus on problems that demonstrate passable knowledge, while extension tasks can support the demonstration of more advanced levels of understanding. 
+	\item The formative process, with changes to core tasks being required before they are signed off, helps to clearly communicate the high standard expected of students, \pref{itm:expectations}. This is further supported by the list of extension tasks provided each week. These communicate the extra tasks the students \emph{should} be completing to demonstrate a deeper understanding of the concepts.
+	\item \pref{itm:support} is reinforced by the different levels of the tasks, each providing support for students at different stages of capability. Options in the extension tasks also help to support a range of student interests.
+	\item Using this approach students take a greater responsibility for their own learning, a prerequisite for the Theory Y approach from \pref{itm:theory_y}
+\end{itemize}
+
+% subsubsection laboratory_sessions (end)
 % subsection content_approach (end)
 
 \subsection{Summary} % (fold)
 \label{sub:summary}
 
-The overall strategy is defined by two approaches: the assessment approach, and the approach to content selection. Decisions related to these two approach were guided by the principles from \cref{cha:guiding_principles}, and resulted in the selection of a \textbf{portfolio assessment} approach to units that are taught using an \textbf{objects-later} approach to content selection. \fref{fig:overall_strategy} shows an updated version of \fref{fig:strategy}, showing the selected approaches discussed in this section. The next section describes the model for constructively aligned introductory programming that developed from this overall strategy.
+The overall strategy is defined by two approaches: the assessment approach, and the approach to content selection. Decisions related to these two approach were guided by the principles from \cref{cha:guiding_principles}, and resulted in the selection of a \textbf{portfolio assessment} approach to units that are taught using a range of student-centred teaching and learning activities. \fref{fig:overall_strategy} shows an updated version of \fref{fig:strategy}, showing the selected approaches discussed in this section. The next section describes the model for constructively aligned introductory programming that developed from this overall strategy.
 
-\begin{figure}[p]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=\textwidth]{OverallStrategy}
-	\caption{An updated version of \fref{fig:strategy} showing the selected assessment approach, and the programming paradigms that will form the approach for selecting content.}
+	\caption{An updated version of \fref{fig:strategy} showing the selected assessment approach, and the interactive teaching and learning activities.}
 	\label{fig:overall_strategy}
 \end{figure}
 
 % subsection summary (end)
 % section overall_strategy (end)
-
 \clearpage
 \section{Constructively Aligned Introductory Programming} % (fold)
 \label{sec:model}
@@ -188,11 +318,11 @@ In addition to these sources we included the guiding principles and overall stra
 	\label{fig:defining_ilos}
 \end{figure}
 
-\citet{Biggs:2007} provided a number of recommendations for the development of intended learning outcomes. They indicated that it was appropriate for a unit to have between four and six intended learning outcomes, expressed at suitably high cognitive levels. Adopting this approach enables the focus on depth over breadth, \pref{itm:depth} from \cref{cha:guiding_principles}. A small number of intended learning outcomes keep the focus clear for students.
+\citet{Biggs:2007} provided a number of recommendations for the development of intended learning outcomes. They indicated that it was appropriate for a unit to have between four and six intended learning outcomes, expressed at suitably high cognitive levels. Adopting this approach enables the clear focus on what is important for the unit, and encourages depth over breadth, \pref{itm:focus} from \cref{cha:guiding_principles}. A small number of intended learning outcomes keep the focus clear for students.
 
 % removed SOLO details from here...
 
-The SOLO Taxonomy proposed by \citet{Biggs:1982} provides a framework for ensuring intended learning outcomes aim for suitably high cognitive levels. Each of the identified cognitive levels has an associated list of verbs likely to elicit that level of activity. \tref{tbl:solo_verbs} lists verbs associated with the various levels of the SOLO taxonomy. These verbs can be used when defining the unit's intended learning outcomes. Biggs suggests that intended learning outcomes for university level units should aim for at least the multistructural level, with many units aiming for understanding at the relational level. In a review of science curricula in Danish universities, \citet{Brabrand:2009} argued that the SOLO taxonomy provided a good tool for competency with a range of areas showing progressing in terms of SOLO verbs from undergraduate to graduate education.
+As discussed in \cref{cha:background}, the SOLO Taxonomy proposed by \citet{Biggs:1982} provides a framework for ensuring intended learning outcomes aim for suitably high cognitive levels. Each of the identified cognitive levels has an associated list of verbs likely to elicit that level of activity. \tref{tbl:solo_verbs} lists selected verbs associated with the various levels of the SOLO taxonomy. These verbs can be used when defining the unit's intended learning outcomes. Biggs suggests that intended learning outcomes for university level units should aim for at least the multistructural level, with many units aiming for understanding at the relational level. In a review of science curricula in Danish universities, \citet{Brabrand:2009} argued that the SOLO taxonomy provided a good tool for specifying competency with a range of areas showing progressing depth in terms of SOLO verbs from undergraduate to graduate education.
 
 \begin{table}
 	\renewcommand{\arraystretch}{1.6}
@@ -212,6 +342,19 @@ The SOLO Taxonomy proposed by \citet{Biggs:1982} provides a framework for ensuri
 
 \clearpage
 We developed the following principles which can be used to guide the formation of the intended learning outcomes for portfolio assessed programming units:
+
+%
+%Can these "principles" be linked back to the Ch 3 ones??
+% 
+%
+% I wonder about the use of "principle" in the context of both chapters?
+% I wonder if the following (and in the following sections this chapter) could
+% be renamed as something else e.g. guidelines?
+%
+% Do you need/want to number these e.g.LO-1, LO-2 for "Learning Outcome guidelines"
+% to refer to from Ch5 ??? 
+%
+
 \begin{itemize}[noitemsep,nolistsep]
   \item Express outcomes using verbs at an appropriate level of understanding with reference to the SOLO taxonomy.
   \item Cover both the required \emph{conceptual knowledge}, and \emph{programming competencies}.
@@ -220,6 +363,9 @@ We developed the following principles which can be used to guide the formation o
   \item Outcomes need to be \emph{general} to facilitate assessment of diverse portfolios, and \emph{sufficient} to ensure that differing degrees of proficiency and understanding can be assessed.
   \item There needs to be \emph{flexibility} to enable students to choose a range of means when addressing outcomes.
 \end{itemize}
+
+
+
 
 % subsection processes_within_the_model (end)
 \subsubsection{Constructing Assessment Criteria} % (fold)
@@ -246,6 +392,10 @@ The following list presents the assessment criteria developed in this work. The 
 \end{description}
 
 The following principles were used to guide the definition and communication of the assessment criteria:
+
+%
+%Can these "principles" be linked back to the Ch 3 ones??
+% 
 
 \begin{itemize}[noitemsep,nolistsep]
   \item Communicate assessment criteria using \emph{simple terms} (as suggested for the outcomes).
@@ -279,6 +429,10 @@ The teaching and learning activities aim to elicit appropriate behaviour from st
 Teaching and learning resources, on the other hand, provide students with the details they will require to successfully complete these activities. These resources will have longer lasting value, and can change less frequently than the teaching and learning activities. 
 
 Central to this approach is the idea of focusing each aspect of the teaching and learning environment to best benefit the construction of student knowledge. Teaching and learning resources provide details, and extra attention and effort are required in their development with the benefit of being able to be used in a range of contexts. Examples of resources include textual and visual illustrations, video podcasts showing example usage, online tools, and supportive software. Some of these resources can then be used in the creation of the lecture slides, but the lectures focus on providing cognitive guidance, directing students through the most important aspects with the details to be discovered later when students make use of the provided resources.
+
+%
+%Can these "principles" be linked back to the Ch 3 ones??
+% 
 
 The following principles were used to guide this process:
 \begin{itemize}[noitemsep,nolistsep]
@@ -335,6 +489,10 @@ Requiring students to resubmit work ensures that no topic is half done. This foc
 
 The following principles were developed and used to guide the planning and delivery of teaching and learning activities:
 
+%
+%Can these "principles" be linked back to the Ch 3 ones??
+% 
+
 \begin{itemize}
   \item Provide opportunities through activity design to actively engage students -- \emph{it is what the student does that counts}.  
   \item Relate all activities to the objectives, providing students with opportunities to create evidence for their portfolio.
@@ -367,6 +525,11 @@ In preparing the portfolio, students must demonstrate that they have met all of 
 The submission process differs based upon the grade students are aiming for in their portfolios. Students aiming for a pass or credit grade submit their portfolio by a set date in the examination period. These portfolios contain primarily work set out in the teaching and learning activities, and will have been checked already by teaching staff throughout the teaching period as part of the formative feedback process. Students aiming for Distinction or High Distinction are required to present their portfolio at an interview. In this interview students outline their custom work, and discuss how this relates to the unit's intended learning outcomes. The interviews are informal and encourage students to elaborate on what they have achieved.
 
 Based on our experience we suggest the following principles be used to guide the creation and assessment activities of portfolios:
+
+%
+%Can these "principles" be linked back to the Ch 3 ones??
+% 
+
 \begin{itemize}[noitemsep,nolistsep]
   \item Encourage unique, diverse, concise, and strongly aligned evidence.
   \item Motivate students to include evidence of learning from formative experience.
@@ -408,7 +571,13 @@ Through a combination of weekly formative feedback, hurdle tests and interviews 
 % subsection addressing_plagiarism (end)
 
 \section{Summary} % (fold)
-\label{sec:summary}
+\label{sec:ca_summary}
+
+
+%
+% Overall very good - as noted, need to better link the "principles" in Ch4 to Ch3 ones?
+% And perhaps rename /number these as  "guidelines"  that can refer back to in Ch 5???
+%
 
 This chapter has outlined an overall strategy for teaching introductory programming with portfolio assessment based on an objects-later approach. Using the principles from \cref{cha:guiding_principles}, a model for the development of constructively aligned units was presented. \cref{cha:example_impl} continues this work by demonstrating the application of this model in the creation and delivery of two introductory programming units.
 
