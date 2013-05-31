@@ -153,7 +153,7 @@ A range of teaching and learning activities are appropriate for helping students
 \subsubsection{Focused Lecture Slides} % (fold)
 \label{ssub:lecture_slides}
 
-\pref{itm:concepts} and \pref{itm:authentic} proposed a concept-based approach to teaching introductory programming content. These principles, along with \pref{itm:focus}, guided the choice to use the ``Beyond Bullet Points'' style of presentation for lectures \cite{Atkinson:2007}. This approach draws upon the work of Richard Mayer (see \citet{Mayer:2005}), and structures presentations using a storyboard that guides the audience toward a stated ``solution''. An example of the storyboard template, outlining a presentation on arrays, is shown in \fref{fig:bbp}. This story guided the audience to the solution ``Use arrays to store multiple values in a single variable.''
+\pref{itm:concepts} and \pref{itm:authentic} proposed a concept-based approach to teaching introductory programming content. These principles, along with \pref{itm:focus}, guided the choice to use the ``Beyond Bullet Points'' style of presentation for lectures \cite{Atkinson:2007}. This approach draws upon the work of Richard Mayer (see \citet{Mayer:2005}), and structures presentations using a storyboard that guides the audience toward a stated ``solution''. Using this structure helps to enable a shift in focus, from presentations as providing information to presentations as providing cognitive guidance, where the aim of the presentation is to guide the audience to build appropriate knowledge. An example of the storyboard template, outlining a presentation on arrays, is shown in \fref{fig:bbp}. This story guided the audience to the solution ``Use arrays to store multiple values in a single variable.''
 
 \begin{figure}[htbp]
 	\centering
@@ -186,7 +186,15 @@ The last five slides conclude the presentation, reminding students of the overal
 
 Many of these guidelines from the Beyond Bullet Points approach were applied in the development of the lecture slides for the units discussed in \cref{cha:example_impl}. This included the general structure of the storyboard, though in some cases the three points were stretched to four but not beyond. The body of the presentations did include some information on ``what'' can be used, rather than purely focusing on ``how'' and ``why''. The use of active sentences, and visual communication, free from lists of bullet points, were also applied.
 
-By adhering to these ideas, as much as possible, lecture presentations focus on the most important aspects for each topic, in keeping to \pref{itm:focus}. The presentation style also encourages a focus on concepts, \pref{itm:concepts}, and little (if any) syntax would be used in the slides themselves. Instead, slides should focus on visual representations to communicate programming concepts, leaving the lower level details to be communicated via other means, as is discussed in \cref{cha:supporting}.
+Focusing lecture slides in this manner helps to address the following principles from \cref{cha:guiding_principles}:
+
+\begin{itemize}[noitemsep,nolistsep]
+	\item Presentations aim to provide cognitive guidance, supporting students construction of knowledge. (\Pref{itm:construct})
+ 	\item Completing the story board requires a focus on the most important aspects for each topic. Where this focus is appropriately targeted, this also helps support alignment with intended learning outcomes. (\Pref{itm:align} and \Pref{itm:focus})
+ 	\item Shifting details from presentation to other resources requires a trust in students willingness to learn, supporting the need for a Theory Y attitude to motivation. (\Pref{itm:theory_y})
+ 	\item Using visuals for communicating core concepts, and minimalist themes for scaffolding slides, helps ensure presentations can be changed to respond to student needs. (\Pref{itm:agile})
+ 	\item The presentation style encourages a focus on concepts as little (if any) syntax would be used in the slides themselves. Instead, slides focus on visual representations to communicate programming concepts, leaving lower level details to be communicated via other means, as is discussed in \cref{cha:supporting}. (\Pref{itm:concepts})
+ \end{itemize} 
 
 \begin{figure}[htbp]
 	\centering
@@ -197,6 +205,7 @@ By adhering to these ideas, as much as possible, lecture presentations focus on 
 
 % subsubsection lectures (end)
 
+\clearpage
 \subsubsection{Interactive Lecture Demonstrations} % (fold)
 \label{ssub:interactive_lecture_demonstrations}
 
@@ -212,11 +221,20 @@ Topics in the first part of a unit are likely to have the interactive sessions i
 
 Later topics, which reinforce earlier concepts, are likely to benefit from progressing more quickly through the slides and using a longer interactive demonstration. This would have the benefit of allowing a wider range of concepts to be demonstrated in a single session.
 
-The use of interactive lecture demonstrations helps embed a number of principles. These sessions help provide students with a demonstration of applying unit concepts, aiding them in the construction of their own knowledge \pref{itm:construct}. Guiding students through the use of supporting resources helps keep the focus on the most important concepts, supporting both \pref{itm:focus} and \pref{itm:concepts}, while also helping students to know how to use the resources available to them \pref{itm:support}.
+The use of interactive lecture demonstrations helps to address the following principles from \cref{cha:guiding_principles}:
+
+\begin{itemize}[noitemsep,nolistsep]
+	\item These sessions help provide students with a demonstration of applying unit concepts, aiding them in the construction of their own knowledge. (\Pref{itm:construct})
+	\item In introductory programming, many of the intended learning outcomes relate to applying programming concepts to the development of small programs. These demonstrations are, therefore, directly aligned with activities we expect students to be able to demonstrate by the end of the unit.  (\Pref{itm:align})
+	\item Guiding students through the use of supporting resources helps keep the focus on the most important concepts, while also helping students learn how to use available resources. (\Pref{itm:focus}, \Pref{itm:support} and \Pref{itm:concepts}).
+	\item Demonstrations also provide an opportunity to illustrate good programming practice, and to show students examples of programs they are expected to be able to create. (\Pref{itm:expectations})
+	\item Incorporating student input into the live demonstrations helps to motivate students, and requires a willingness to adapt to student requirements and needs. (\Pref{itm:theory_y} and \Pref{itm:agile})
+\end{itemize}
+
 
 % subsubsection interactive_lecture_demonstrations (end)
 
-
+\clearpage
 \subsubsection{Laboratory Sessions} % (fold)
 \label{ssub:laboratory_sessions}
 
@@ -239,26 +257,27 @@ Extension tasks provide students with extra activities they can perform each wee
 Laboratory sessions are highly student-centred, so organising these sessions in this way helps to address many of the principles from \cref{cha:guiding_principles}.  
 
 \begin{itemize}[noitemsep,nolistsep]
-	\item Activities help students develop their knowledge of the concepts being covered, in response to \pref{itm:construct}. 
-	\item Staff help ensure that these tasks relate to the unit's intended learning outcomes, \pref{itm:align}, ensuring students will be able to demonstrate how they have met these outcomes when they submit their portfolios.
-	\item Core tasks are used to provide students with formative feedback in line with \pref{itm:formative}.
-	\item Students are able to focus on the most important aspect for them at their current stage of development, \pref{itm:focus}. Laboratory tasks focus on getting students started, core tasks focus on problems that demonstrate passable knowledge, while extension tasks can support the demonstration of more advanced levels of understanding. 
-	\item The formative process, with changes to core tasks being required before they are signed off, helps to clearly communicate the high standard expected of students, \pref{itm:expectations}. This is further supported by the list of extension tasks provided each week. These communicate the extra tasks the students \emph{should} be completing to demonstrate a deeper understanding of the concepts.
-	\item \pref{itm:support} is reinforced by the different levels of the tasks, each providing support for students at different stages of capability. Options in the extension tasks also help to support a range of student interests.
-	\item Using this approach students take a greater responsibility for their own learning, a prerequisite for the Theory Y approach from \pref{itm:theory_y}
+	\item Activities help students develop their knowledge of the concepts being covered. (\Pref{itm:construct}) 
+	\item Staff help ensure that these tasks relate to the unit's intended learning outcomes, ensuring students will be able to demonstrate how they have met these outcomes when they submit their portfolios. (\Pref{itm:align})
+	\item Core tasks are used to provide students with formative feedback during the semester. (\Pref{itm:formative})
+	\item Students are able to focus on the most important aspect for them at their current stage of development. Laboratory tasks focus on getting students started, core tasks focus on problems that demonstrate passable knowledge, while extension tasks can support the demonstration of more advanced levels of understanding. (\Pref{itm:focus})
+	\item The formative process, with changes to core tasks being required before they are signed off, helps to clearly communicate the high standard expected of students. This is further supported by the list of extension tasks provided each week. These communicate the extra tasks the students \emph{should} be completing to demonstrate a deeper understanding of the concepts. (\Pref{itm:expectations})
+	\item The different laboratory task levels each provide support for students at different stages of capability, while options in the extension tasks also help to support a range of student interests. (\Pref{itm:support})
+	\item Using this approach students take a greater responsibility for their own learning. (\Pref{itm:theory_y})
 \end{itemize}
 
 % subsubsection laboratory_sessions (end)
 % subsection content_approach (end)
 
+\clearpage
 \subsection{Summary} % (fold)
 \label{sub:summary}
 
 The overall strategy is defined by two approaches: the assessment approach, and the approach to content selection. Decisions related to these two approach were guided by the principles from \cref{cha:guiding_principles}, and resulted in the selection of a \textbf{portfolio assessment} approach to units that are taught using a range of student-centred teaching and learning activities. \fref{fig:overall_strategy} shows an updated version of \fref{fig:strategy}, showing the selected approaches discussed in this section. The next section describes the model for constructive alignment that developed from this overall strategy.
 
-\begin{figure}[htbp]
+\begin{figure}[hb]
 	\centering
-	\includegraphics[width=0.9\textwidth]{OverallStrategy}
+	\includegraphics[width=0.8\textwidth]{OverallStrategy}
 	\caption{An updated version of \fref{fig:strategy} showing the selected assessment approach, and the interactive teaching and learning activities.}
 	\label{fig:overall_strategy}
 \end{figure}
@@ -313,20 +332,20 @@ Development of unit outcomes has a variety of input sources. \citet{Thota:2010} 
 
 In defining the intended learning outcomes for an introductory programming unit using constructive alignment with portfolio assessment we suggest drawing upon these sources, as well as the guiding principles from \cref{cha:guiding_principles}, overall strategy, resourcing factors, and accreditation requirements as shown in \fref{fig:defining_ilos}. Resourcing factors provide additional constraints on what intended learning outcomes can include. Factors such as staffing, availability of texts, required tools, and others all need to be considered to ensure that students will be able to engage in activities associated with demonstrating the expected outcomes. Accreditation standards, such as the Australian Qualifications Framework \cite{AQF:2013}, require intended learning outcomes to demonstrate certain levels of achievement in order for degree programmes to gain recognition and funding. As these units will form an important part of programme objectives, these requirements must also be considered. 
 
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.65\textwidth]{DefiningILOs}
-	\caption{Factors that influence the defining of a unit's intended learning outcomes, and the construction of assessment criteria. These activities are undertaken by teaching staff prior to the start of the teaching period, see (a) from \fref{fig:process_overview}. }
-	\label{fig:defining_ilos}
-\end{figure}
-
 \citet{Biggs:2007} provided a number of recommendations for the development of intended learning outcomes. They indicated that it was appropriate for a unit to have between four and six intended learning outcomes, expressed at suitably high cognitive levels. Adopting this approach enables the clear focus on what is important for the unit, and encourages depth over breadth, \pref{itm:focus} from \cref{cha:guiding_principles}. A small number of intended learning outcomes keep the focus clear for students.
 
 % removed SOLO details from here...
 
 As discussed in \cref{cha:background}, the SOLO Taxonomy proposed by \citet{Biggs:1982} provides a framework for ensuring intended learning outcomes aim for suitably high cognitive levels. Each of the identified cognitive levels has an associated list of verbs likely to elicit that level of activity. \tref{tbl:solo_verbs} lists selected verbs associated with the various levels of the SOLO taxonomy. These verbs can be used when defining the unit's intended learning outcomes. Biggs suggests that intended learning outcomes for university level units should aim for at least the multistructural level, with many units aiming for understanding at the relational level. In a review of science curricula in Danish universities, \citet{Brabrand:2009} argued that the SOLO taxonomy provided a good tool for specifying competency with a range of areas showing progressing depth in terms of SOLO verbs from undergraduate to graduate education.
 
-\begin{table}[bp]
+\begin{figure}[p]
+	\centering
+	\includegraphics[width=0.55\textwidth]{DefiningILOs}
+	\caption{Factors that influence the defining of a unit's intended learning outcomes, and the construction of assessment criteria. These activities are undertaken by teaching staff prior to the start of the teaching period, see (a) from \fref{fig:process_overview}. }
+	\label{fig:defining_ilos}
+\end{figure}
+
+\begin{table}[p]
 	\renewcommand{\arraystretch}{1.6}
 	\centering
 
@@ -343,15 +362,16 @@ As discussed in \cref{cha:background}, the SOLO Taxonomy proposed by \citet{Bigg
     \end{tabular}
 \end{table}
 
-We developed the following guidelines that can be used to inform the formation of the intended learning outcomes for portfolio assessed programming units:
+We developed the following guidelines that can be used to inform the formation of the intended learning outcomes for portfolio assessed programming units.
 
 %
-%Can these "principles" be linked back to the Ch 3 ones??
+% Can these "principles" be linked back to the Ch 3 ones??
 % 
 %
 % I wonder about the use of "principle" in the context of both chapters?
 % I wonder if the following (and in the following sections this chapter) could
 % be renamed as something else e.g. guidelines?
+% AC: renamed to guidelines
 %
 % Do you need/want to number these e.g.LO-1, LO-2 for "Learning Outcome guidelines"
 % to refer to from Ch5 ??? 
@@ -366,6 +386,21 @@ We developed the following guidelines that can be used to inform the formation o
   \item There needs to be \emph{flexibility} to enable students to choose a range of means when addressing outcomes.
 \end{itemize}
 
+Developing intended learning outcomes in this way helps to address the following principles from \cref{cha:guiding_principles}:
+\begin{itemize}[noitemsep,nolistsep]
+	\item Stated outcomes become the goal students work toward throughout the teaching period. Ensuring these are expressed using appropriate verbs from the SOLO taxonomy ensures they are likely to engage appropriate cognitive levels. (\Pref{itm:construct} and \Pref{itm:align})
+	% \item (\Pref{itm:formative})
+	\item Keeping the list of objectives short help ensure they are focused on the concepts related to the unit. (\Pref{itm:focus} and \Pref{itm:concepts})
+	\item Using verbs from the relational level of the SOLO taxonomy helps communicate staff expectations. (\Pref{itm:expectations})
+	\item Ensuring flexibility and clarity helps support a wider range of student interests and capabilities. (\Pref{itm:support})
+	% \item (\Pref{itm:theory_y})
+	% \item (\Pref{itm:agile})
+	% \item (\Pref{itm:reflect})
+	% \item (\Pref{itm:paradigm})
+	% \item (\Pref{itm:authentic})
+\end{itemize}
+
+
 
 
 
@@ -375,7 +410,7 @@ We developed the following guidelines that can be used to inform the formation o
 
 Assessment criteria are developed alongside the definition of intended learning outcomes. The intended learning outcomes state what students need to demonstrate by the end of the unit, but these outcomes can be achieved to different standards. It is the role of the assessment criteria to state the required level of achievement students must demonstrate in order to be awarded various grade outcomes. This means that at the end of the teaching period students' portfolios can be assessed against the developed assessment criteria, but also that the assessment criteria can be used to guide the teaching and learning activities during delivery. Providing assessment criteria in the unit outline creates a simplified learning contract \cite{Stephenson:1993}, in which students know ``up front'' what is required to achieve the different grades. 
 
-\pref{itm:formative} indicates that assessment should judge outcomes.To provide this holistic judgement the final summative assessment is \emph{criterion-referenced}, as suggested by \citet{Biggs:1997}. The criteria must, therefore, provide a means for teaching staff to assess submitted portfolios while also providing students with guidance they can use during the delivery and in the construction of their portfolios. Ensuring that the assessment criteria are stated clearly also helps ease students transition to this new form of assessment \cite{Smith:2001}.
+\pref{itm:formative} indicates that assessment should judge outcomes. To provide this holistic judgement the final summative assessment is \emph{criterion-referenced}, as suggested by \citet{Biggs:1997}. The criteria must, therefore, provide a means for teaching staff to assess submitted portfolios while also providing students with guidance they can use during the delivery and in the construction of their portfolios. Ensuring that the assessment criteria are stated clearly also helps ease students transition to this new form of assessment \cite{Smith:2001}.
 
 There is some contention regarding the specification of assessment criteria for assessing portfolios. For example, some consider that by overly specifying criteria students are limited in what can be included (see \citet{Driessen:2005} and \citet{Tigelaar:2007}). However, \citet{Smith:2001} indicated that clearly communicating portfolio requirements helped ease students transition to this new, possibly unfamiliar, assessment approach. This is further supported by \citet{Allan:1996}, who argued that clear communication of intended learning outcomes and assessment criteria enabled students to focus on developing knowledge required to succeed in a unit, and by \citet{Thorpe:2000} who noted that students found it easier to reflect on their learning if they were able to apply criteria defined by teaching staff.
 
@@ -391,6 +426,8 @@ The following list presents the assessment criteria developed in this work. The 
 	\item[Distinction] demonstrates Credit level requirements and the ability to \emph{apply} unit concepts to the creation of work of the students own invention. This demonstrates at least a relational level of understanding of the unit overall.
 	\item[High Distinction] demonstrates all Distinction level requirements and the ability to \emph{research} a topic related to the unit. This still requires only a relational level of understanding, but provides opportunities and encouragement for students to explore beyond the current knowledge and work toward that extended abstract level of understanding.
 \end{description}
+
+\clearpage 
 
 The following guidelines were used to inform the definition and communication of the assessment criteria:
 
@@ -410,9 +447,25 @@ The following guidelines were used to inform the definition and communication of
   \item Clearly \emph{map assessment criteria} to grade outcomes, ensuring students and staff have a shared understanding of how a portfolio relates to final grades.
 \end{itemize}
 
+Constructing the assessment criteria using these guidelines helps to address the following principles from \cref{cha:guiding_principles}:
+
+\begin{itemize}[noitemsep,nolistsep]
+	\item Requiring progressively higher levels of understanding for each grade classification help promote deep learning, and indicates staff expectations in terms of required levels of demonstration. (\Pref{itm:construct} and \Pref{itm:expectations})
+	\item Assessment criteria align to unit outcomes, with higher grades requiring students to demonstrate an understanding of the relationships between the intended learning outcomes and their associated concepts. (\Pref{itm:align} and \Pref{itm:concepts})
+	\item Grades are awarded using criterion referenced assessment, assessing students' learning outcomes. (\Pref{itm:formative})
+	\item Specific criteria help focus students on the most important aspects, with higher grades requiring demonstration of deeper learning. (\Pref{itm:focus})
+	\item The use of simple terms help support a wide range of student language capabilities. (\Pref{itm:support})
+	\item Students can take responsibility for their learning, being able to aspire to achieve a given grade, and being able to apply their own imagination and interests in applying concepts to achieve higher grades. (\Pref{itm:theory_y})
+	\item Evidence from student submissions provide a source of evidence for change, and can be reflected upon at the end of each teaching period to inform future changes. (\Pref{itm:agile} and \Pref{itm:reflect})
+	% \item (\Pref{itm:paradigm})
+	% \item (\Pref{itm:authentic})
+\end{itemize}
+
+
 
 % section a_constructively_aligned_model_for_introductory_programming (end)
 
+\clearpage
 \subsubsection{Develop Teaching and Learning Activities and Resources} % (fold)
 \label{ssub:develop_teaching_and_learning_activities_and_resources}
 
@@ -420,7 +473,7 @@ Having defined the intended learning outcome, and assessment criteria, teaching 
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.8\textwidth]{DevelopTLAR}
+	\includegraphics[width=0.6\textwidth]{DevelopTLAR}
 	\caption{Development of teaching and learning activities and resources uses details from the unit outline to create/select appropriate resources and activities to ensure students engage appropriate activities during the teaching period.}
 	\label{fig:develop_tlar}
 \end{figure}
@@ -455,6 +508,23 @@ The following guidelines were used to inform this process:
 	\end{itemize}
 \end{itemize}
 
+Material developed using these guidelines address the following principles from \cref{cha:guiding_principles}:
+
+\begin{itemize}[noitemsep,nolistsep]
+	\item Aligning activities to intended learning outcomes ensures students develop appropriate knowledge related to the units concepts. (\Pref{itm:construct}, \Pref{itm:align}, and \Pref{itm:concepts})
+	% \item (\Pref{itm:formative})
+	\item Focusing these activities on appropriate cognitive levels helps direct student attention, and communicate staff expectations. (\Pref{itm:focus} and \Pref{itm:expectations})
+	% \item (\Pref{itm:support})
+	% \item (\Pref{itm:theory_y})
+	\item Separating activities from resources helps enable activities to change. (\Pref{itm:agile})
+	% \item (\Pref{itm:reflect})
+	% \item (\Pref{itm:paradigm})
+	% \item (\Pref{itm:authentic})
+\end{itemize}
+
+See \sref{sub:delivery_approach} for some example activities developed using these guidelines.
+
+
 % subsubsection develop_teaching_and_learning_activities_and_resources (end)
 
 \subsubsection{Iteratively Deliver Unit and Provide Feedback} % (fold)
@@ -466,11 +536,10 @@ Existing work on constructive approaches to teaching introductory programming pr
 
 \begin{figure}[p]
 	\centering
-	\includegraphics[width=0.9\textwidth]{DeliverUnit}
+	\includegraphics[width=0.8\textwidth]{DeliverUnit}
 	\caption{Iterative nature of the unit delivery process}
 	\label{fig:deliver_unit}
 \end{figure}
-
 
 \fref{fig:deliver_unit} illustrates the iterative delivery process at the heart of the model presented. The process centres on the students construction of knowledge, which draws up the teaching and learning activities and resources. This active process of learning generates pieces of work that the student submits for formative feedback. The teaching staff evaluate the evidence presented, trying to identify issues with the students current mental models, and provide formative feedback to the student. This feedback helps inform the student of their progress, and provides them with tasks they can act up thereby ensuring we close the loop.
 
@@ -497,13 +566,25 @@ Requiring students to resubmit work ensures that no topic is half done. This foc
 The following guidelines were developed and used to inform the planning and delivery of teaching and learning activities:
 
 %
-%Can these "principles" be linked back to the Ch 3 ones??
+% Can these "principles" be linked back to the Ch 3 ones??
 % 
 
 \begin{itemize}[noitemsep,nolistsep]
   \item Provide opportunities through activity design to actively engage students -- \emph{it is what the student does that counts}.  
   \item Relate all activities to the objectives, providing students with opportunities to create evidence for their portfolio.
   \item Use ungraded formative feedback to aid knowledge construction, with preference for small, frequent guidance.
+\end{itemize}
+
+Adopting these guidelines in the delivery of a unit will help address the following principles from \cref{cha:guiding_principles}:
+
+\begin{itemize}[noitemsep,nolistsep]
+	\item Frequent formative feedback aids students' construction of knowledge, and helps ensure learning aligns with unit outcomes and concepts. (\Pref{itm:construct}, \Pref{itm:align}, \Pref{itm:formative} and \Pref{itm:concepts})
+	\item Feedback can focus on the most important aspects, ensuring it is relevant to each student and their current level of understanding. (\Pref{itm:focus} and \Pref{itm:agile})
+	\item Requiring work to be completed to a good standard helps reinforce staff expectations, and supports students by encouraging reflection and deep approaches to learning. (\Pref{itm:expectations}, \Pref{itm:support}, and \Pref{itm:reflect})
+	\item Using formative feedback, without the marks associated with summative assessment, requires a Theory Y attitude to student motivation. (\Pref{itm:theory_y})
+	% \item (\Pref{itm:paradigm})
+	% \item (\Pref{itm:concepts})
+	% \item (\Pref{itm:authentic})
 \end{itemize}
 
 % subsubsection deliver_unit (end)
@@ -531,10 +612,11 @@ In preparing the portfolio, students must demonstrate that they have met all of 
 
 The submission process differs based upon the grade students are aiming for in their portfolios. Students aiming for a Pass or Credit grade submit their portfolio by a set date in the examination period. These portfolios contain primarily work set out in the teaching and learning activities (``core'' tasks), and will have been checked already by teaching staff throughout the teaching period as part of the formative feedback process. Students aiming for Distinction or High Distinction are required to present their portfolio at an interview. In this interview students outline their custom work, and discuss how this relates to the unit's intended learning outcomes. The interviews are conducted in an open, relaxed, and friendly manner, and students are encouraged to elaborate on what they have achieved.
 
-Based on our experience we suggest the following guidelines be used to guide the creation and assessment activities of portfolios:
+\clearpage
+Based on our experience we suggest the following guidelines be used to inform the creation and assessment of portfolios:
 
 %
-%Can these "principles" be linked back to the Ch 3 ones??
+% Can these "principles" be linked back to the Ch 3 ones??
 % 
 
 \begin{itemize}[noitemsep,nolistsep]
@@ -545,8 +627,25 @@ Based on our experience we suggest the following guidelines be used to guide the
   \item Use an interview, or hurdle test(s), to check for minimal pass criteria in an invigilated manner. Where tests are used they need only distinguish between Pass and Fail, and do not need to address higher grades. 
 \end{itemize}
 
+Applying these guidelines to the creation and assessment of portfolios helps address the following principles from \cref{cha:guiding_principles}:
+
+\begin{itemize}[noitemsep,nolistsep]
+	\item Students are actively encouraged to include pieces that demonstrate their learning.  (\Pref{itm:construct})
+	\item Pieces included in the portfolio must align with the unit's intended learning outcomes. (\Pref{itm:align})
+	\item Feedback from the formative feedback process can be acted upon by students, with improved versions of earlier work being included as pieces in their final portfolios. (\Pref{itm:formative})
+	% \item (\Pref{itm:focus})
+	\item In writing the Learning Summary Report, students need to address the assessment criteria that capture staff expectations for each grade outcome. (\Pref{itm:expectations} and \Pref{itm:theory_y})
+	% \item (\Pref{itm:agile})
+	\item Students are encouraged to reflect on their learning experience, and to document these reflections in the Learning Summary Report. (\Pref{itm:reflect})
+	% \item (\Pref{itm:paradigm})
+	% \item (\Pref{itm:concepts})
+	% \item (\Pref{itm:authentic})
+\end{itemize}
+
+
 % subsubsection construction_submission_and_assessment_of_portfolios (end)
 
+\clearpage
 \subsection{Addressing Plagiarism} % (fold)
 \label{sub:addressing_plagiarism}
 
