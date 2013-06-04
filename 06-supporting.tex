@@ -19,56 +19,57 @@ Resources described in this chapter include tools to support both \emph{how}, an
 % \subsection{Background} % (fold)
 % \label{sub:doubtfire_background}
 
-Formative feedback, \pref{itm:formative}, plays an important role in shaping the teaching and learning environment for the units implemented using the model presented in \cref{cha:approach}. This change helps support the focus on students active construction of their own knowledge, \pref{itm:construct}, but provides an additional challenge as students no longer have marks to guide their behaviour. To help address this challenge, an online task tracking system, named ``Doubtfire'', was developed. 
+Formative feedback, \pref{itm:formative}, plays an important role in shaping the teaching and learning environment for the units implemented using the model presented in \cref{cha:approach}. The emphasis on iterative feedback helps support the focus on students active construction of their own knowledge, \pref{itm:construct}, but provides an additional challenge as students no longer have marks to influence their behaviour. To help address this challenge an online task tracking system, named ``Doubtfire'', was developed. 
 
-Doubtfire allowed each student to track their progress against the weekly assessment tasks using a ``burn down chart'' as shown in \fref{fig:example_chart}, a technique adapted from the Scrum agile software development process \cite{Schwaber:2002}. The charts show the cumulative amount of work remaining week by week, which decreases as work is complete, or burns down over time.
+Doubtfire allows each student to track their progress against weekly assessment tasks using a ``burn down chart'' as shown in \fref{fig:example_chart}. The technique was adapted from the Scrum agile software development process \cite{Schwaber:2002}. Each charts show the cumulative amount of work remaining for a student week-by-week, which decreases as work is complete, or ``burns down'' over time.
 
 \begin{figure}[thb]
   \centering
-  \includegraphics[width=0.9\textwidth]{ExampleChart}
-  \caption{An example burn down chart showing progress against weekly tasks.}
+  \includegraphics[width=0.8\textwidth]{ExampleChart}
+  \caption{An example burn down chart showing progress against weekly tasks}
   \label{fig:example_chart}
 \end{figure}
 
-Agile software development methods \cite{Beck:2001} embrace change \cite{Beck:2000} by allowing for adaptive, periodic adjustment of activities. The basis for this adaptation in Scrum is \emph{empirical} information; a consistent measure of the work remaining (``backlog''), and a measure of the rate work is being completed by the team (``velocity'').
+Agile software development methods \cite{Beck:2001} embrace change \cite{Beck:2000} by specifically allowing for adaptive and periodic adjustment of activities. The basis for such adaptation in Scrum is \emph{empirical} information; a consistent measure of the work remaining (``backlog''), and a measure of the rate work is being completed by the team (``velocity'').
 
-The purpose of a Scrum ``burn down chart'' is to allow stakeholders to consider, in an empirical manner, the velocity of the team with respect to the current backlog. This chart acts as a ``information radiator'' \cite{Cockburn:2002} for the team, providing details on either release or ``Sprint'' iteration schedules. Since quality of work should not be compromised, the requirements (backlog) of work can be adjusted in order to meet the required schedule and cost~\cite{Sutherland:2007}.
+The purpose of a burn down chart is to allow stakeholders to consider the velocity of the team with respect to the current backlog. This chart acts as a ``information radiator'' \cite{Cockburn:2002} for the team, providing details on either release or ``Sprint'' iteration schedules. Since quality of work should not be compromised, the requirements (backlog) of work can be adjusted in order to meet the required schedule and cost~\cite{Sutherland:2007}.
 
-In adapting burn down charts as a tool for supporting students engagement with formative assessment tasks, the assessment tasks become the ``backlog''. Students are then able to see the number of tasks remaining, and use their current ``velocity'' to determine if their progress is sufficient to complete the unit on time.
+In adapting burn down charts as a tool for supporting students engagement with formative assessment tasks, the assessment tasks become the ``backlog''. Students are then able to see the number of tasks remaining, and use their current ``velocity'' to determine if their progress is sufficient to complete the unit on time. The core tasks represent the minimal set of activities that students should complete by the end of the unit, but additional tasks -- such as the extension tasks, custom project, and research report -- can be acquired if their velocity permits.
 
 % subsection background (end)
 
 \subsection{Requirements} % (fold)
 \label{sub:doubtfire_requirements}
 
-The central requirement for the Doubtfire tool was to provide students with visual feedback on their progress using burn down charts. The burn down charts provide students with a visual representation of the tasks they need to complete over the teaching period, and show the number of tasks, their scheduled due date, and estimated task effort. Students should be able to use the tool to assess their progress throughout the teaching period, and to determine whether they need to increase their rate of progress (velocity) and, if so, commit more time to the unit or take greater advantage of resources available to them. 
+The central requirement for the Doubtfire tool was to provide students with feedback on their progress using burn down charts. These charts provide students with a visual representation of the tasks they need to complete, the number of tasks, the scheduled task due dates, and estimated effort. Students should be able to use the tool to assess their progress, and to determine whether they need to increase their rate of progress (velocity). If so, they can commit more time or take greater advantage of the support resources available. 
 
-It was also seen that the scrum-style marking of tasks as completed could be extended to allow students to indicate if they were working on, or having trouble with, particular tasks. This requirement aimed to increase student engagement with the tool, and improve likelihood that they would make active use of it throughout the teaching period.
+It was noted that the scrum-style Boolean marking of tasks as completed could be extended to allow students to indicate if they were working on, or having trouble with, particular tasks. This requirement aimed to increase student engagement with the tool, and improve likelihood that students would make active use of the tool throughout the teaching period.
 
-To account for task heterogeneity, staff needed to be able to set a specific \emph{weight} for each task. This weight represents the estimated effort students needed to expend to satisfactorily complete the task. Rather than specifying task weight in terms of hours, this was done in a more abstract unit. One popular approach with agile software development projects is to assign tasks ``\emph{t-shirt size}'' weights \cite{Peixoto:2010}. Using this approach tasks have their weight set to a common t-shirt size: \emph{extra small}, \emph{small}, \emph{medium}, \emph{large}, \emph{extra large} etcetera. The t-shirt sizes are then allocated weights, with each increment in size doubling the associated weight: extra small had a weight of one, small a weight of two, medium four, etcetera.
+To account for task heterogeneity, staff needed to be able to set a specific \emph{weight} for each task. This weight represents the estimated effort students needed to expend to satisfactorily complete the task, based on staff opinion and historical data. Rather than specifying task weight in terms of hours, this was done in a more abstract unit. One popular approach within agile software development is to assign tasks ``\emph{t-shirt size}'' weights \cite{Peixoto:2010}. Using this approach, task weight is set to a common t-shirt size: \emph{extra small}, \emph{small}, \emph{medium}, \emph{large}, \emph{extra large} etcetera. The t-shirt sizes are then allocated weights, with each increment in size doubling the associated weight: \emph{extra small} had a weight of one, \emph{small} a weight of two, \emph{medium} four, etcetera.
 
-Task weights needed to be incorporated into the burn down chart, with each chart showing the cumulative number of \emph{task-points} remaining. Using task-points in the burn down charts enables the chart to visually show weeks where more, or less, effort is likely to be required.
+Task weights needed to be incorporated into the burn down chart, with each chart showing the cumulative number of \emph{task-points} remaining. Using task-points in the burn down chart enables it to visually show weeks where more, or less, effort is likely to be required.
 
-Progress also needed to be projected to indicate an expected completion date. This projection can be calculated from the average number of task-points the student completes each week.  For example, if six task-points were completed in one week, based on the velocity, a thirty-six task-point project is expected to be completed in six weeks. Each student's projected completion should be recalculated as tasks and weeks progress. 
+Progress also needed to be projected to indicate an expected completion date. This projection can be calculated from the average number of task-points the student completes each week.  For example, if six task-points were completed in one week, based on the velocity, a thirty-six task-point project is expected to be completed in six weeks. Each student's projected completion should be recalculated as time progresses. 
 
-As an interactive system, Doubtfire had a number of requirements to ensure that it could be best utilised by all targeted users. The following requirements were identified:
+As an interactive system, Doubtfire had a number of requirements to ensure that it could be best utilised by all targeted users. Our aim was to create a tool that was simple and appealing for students to use and was easily accessible from a range of devices and locations. Students not should feel that interaction with the tool is difficult or additional ``work''. The following requirements were identified:
+
 \begin{itemize}[noitemsep,nolistsep]
-  \item \textbf{Online}: students needed to be able to easily access the tool both in and out of scheduled class times. It was decided to make Doubtfire an online tool, thereby making it accessible from virtually anywhere. It also simplifies the development progress with only web platforms needing to be supported, and avoids the need for students to install client software.
-  \item \textbf{Easy to use}: the tool need to be simple enough to use, so the usability of the tools must provide as small a barrier as possible to student adoption.
-  \item \textbf{Mobile friendly}: students should be able to quickly check, and update, their progress from a range of devices. Ensuring that Doubtfire can be easily accessed via a mobile device will encourage students to access the tool even when they are away from their computers. 
-  \item \textbf{Aesthetically pleasing user interface}: to encourage adoption of the tool among students, a visually appealing user interface is ideal.
+  \item \textbf{Online}: Students needed to be able to easily access the tool both in and out of scheduled class times. It was decided to make Doubtfire an online tool, thereby making it accessible from virtually anywhere. It also simplified the development progress with only web platforms needing to be supported, and avoided the need for students to install client software.
+  \item \textbf{Easy to use}: The tool needed to be simple to use; with good usability to reduce barriers for student adoption.
+  \item \textbf{Mobile friendly}: Staff and students needed to be able to quickly check, and update, their progress from a range of devices. It was thought that by ensuring Doubtfire could be easily accessed via a mobile device it would encourage students to access the tool even when they were away from desktop computers. 
+  \item \textbf{Aesthetically pleasing user interface}: To encourage adoption of the tool among students, a visually appealing user interface was desirable.
 \end{itemize}
-Simply, our aim was to create a tool that was simple and appealing for students to use and was easily accessible from a range of devices and locations. Students not should feel that interaction with the tool is work.
 
-In addition to students, Doubtfire also addressed needs of teaching staff. Tutors were responsible for managing classes, and therefore needed to be able to respond to student actions in the tool. Convenors had overall responsibility for the unit, and needed to be able to observe the performance of the student cohort and perform simple administrative actions. All teaching staff benefited from the requirements already listed. Most importantly, the mobile nature allowed tutors to easily check and update students' progress during scheduled classes.
+
+Doubtfire also needed to addressed the requirements of teaching staff. Tutors are responsible for managing classes, and therefore need to be able to respond to student actions. Convenors have overall responsibility for the unit, and need to be able to observe the performance of the student cohort and perform simple administrative actions. All teaching staff benefited from the requirements listed. Importantly, the mobile nature allows tutors to easily check and update students' progress during scheduled classes.
 
 \medskip
 
-In terms of the development and deployment of the tool, a number of software qualities are desirable. These include:
+In terms of the development and deployment of the tool, a number of software qualities were desirable, including:
 \begin{itemize}[noitemsep,nolistsep]
-  \item \textbf{Supports the teaching environment}: the tool plays a supportive role, and should therefore fit inside the teaching environment; it should not be necessary to fit the teaching environment around the tool.
-  \item \textbf{Quick to develop and extend}: it should be easy to produce features and adapt the tool to ensure it remains relevant to the students.
-  \item \textbf{Controllable}: the schema that defines the way tutors and students interact over tasks must be easy to alter to allow for adaptation if assessment criteria change.
+  \item \textbf{Supporting the teaching environment}: The tool should play a supportive role, and should therefore fit inside the teaching environment; it should not be necessary to fit the teaching environment around the tool.
+  \item \textbf{Quick to develop and extend}: It should be easy to add new features to the tool, and adapt existing features, to ensure it remains relevant.
+  \item \textbf{Controllable}: The schema that defines the way tutors and students interact over tasks must be easy to alter to allow for adaptation if assessment criteria change.
 \end{itemize}
 
 % It is valuable to add features that track student behaviour in the tool to:
@@ -91,7 +92,7 @@ In terms of the development and deployment of the tool, a number of software qua
 \subsubsection{User Roles} % (fold)
 \label{sub:user_roles}
 
-The three user groups in Doubtfire were Convenor, Tutor and Student. Each of these groups had access to a different set of features as described in \tref{tab:user_features}. Convenor and Tutor roles were provided to support teaching staff, with the students having a separate role. 
+The three user groups in Doubtfire are Convenor, Tutor and Student. Each of these groups has access to a different set of features, as described in \tref{tab:user_features}. Convenor and Tutor roles support teaching staff, with the students having a separate role. 
 
 % This is what can do with the tool
 \begin{table}[htbp]
@@ -100,67 +101,67 @@ The three user groups in Doubtfire were Convenor, Tutor and Student. Each of the
   \caption{Available features for each user group in Doubtfire}
   \label{tab:user_features}
   \begin{tabular}{c|p{0.9\textwidth}}
-    Role & \multicolumn{1}{c}{Features} \\ \hline\hline
-    \multirow{5}{*}{\begin{sideways}\parbox{14mm}{Convenor}\end{sideways}}
-    & - \textbf{Unit Administration}: including the ability to enrol students and create tasks. \\
-    & - \textbf{Monitor Student Progress}: view distribution of students by progress indicators. \\
-    & - \textbf{Monitor Task Progress}: view progress distribution for each of the unit's tasks. \\
-    & - \textbf{Examine Student Progress}: view the list of tasks and their associated status by student. \\
-    & - \textbf{Update Task Status}: mark student work as complete. \\ 
+    Role & \multicolumn{1}{l}{Features} \\ \hline\hline
+    \multirow{5}{*}{\begin{sideways}\parbox{35mm}{Convenor}\end{sideways}}
+    & \textbf{Unit Administration}: Includes the ability to enrol students and create tasks. \\
+    & \textbf{Monitor Student Progress}: View distribution of students by progress indicators. See \fref{fig:dashboard}. \\
+    & \textbf{Monitor Task Progress}: View progress distribution for each unit's tasks. See \fref{fig:task_chart_view}. \\
+    & \textbf{Examine Student Progress}: View students list with tasks and associated statuses. See \fref{fig:tutor_view}. \\
+    & \textbf{Update Task Status}: Mark student work as complete. \\ 
     & \\
     \hline\hline
-    \multirow{2}{*}{\begin{sideways}\parbox{10mm}{Tutor}\end{sideways}}
-    & - \textbf{Examine Student Progress}: view the list of tasks and their associated status by student. \\
-    & - \textbf{Update Task Status}: mark student work as complete. \\ 
+    \multirow{2}{*}{\begin{sideways}\parbox{15mm}{Tutor}\end{sideways}}
+    & \textbf{Examine Student Progress}: View students list with tasks and associated statuses. See \fref{fig:tutor_view}. \\
+    & \textbf{Update Task Status}: Mark student work as complete. \\ 
     & \\
     \hline\hline
-    \multirow{3}{*}{\begin{sideways}\parbox{11mm}{Student}\end{sideways}}
-    & - \textbf{Update Task Status}: mark student work as complete. \\ 
-    & - \textbf{Monitor Progress}: view progress on task completion using a burn down chart showing Target, Actual and Projected completion. \\
+    \multirow{3}{*}{\begin{sideways}\parbox{15mm}{Student}\end{sideways}}
+    & \textbf{Update Task Status}: Mark student work as complete. See \fref{fig:task_list}. \\ 
+    & \textbf{Monitor Progress}: View progress on task completion using a burn down chart showing Target, Actual and Projected completion. \\
     & \\
   \end{tabular}
 \end{table}
 
-Unit convenors are responsible for the overall delivery and management of the unit. To support this role, Doubtfire provided these users with the tools to set up unit tasks and enrol students. A dashboard provided Convenors with an overview of student progress, and enabled quick access to views of student progress by task, and to individual students via their scheduled class. \fref{fig:dashboard} shows an example overview of students progress for a single unit from the Convenor Dashboard. While, \fref{fig:task_chart_view} shows an example chart that visualises the distribution of student status for each task. In addition to these tasks, Convenors also had the ability to perform the same actions as Tutors.
+Unit convenors are responsible for the overall delivery and management of the unit. To support this role, Doubtfire provides convenors with tools to set up tasks and enrol students. A dashboard provides an overview of student progress, and enables quick access to views of student progress by task, and to individual students via scheduled classes. \fref{fig:dashboard} shows an example convenor dashboard overview of students progress within a unit. \fref{fig:task_chart_view} shows an example chart that visualises the distribution of student status for each task. In addition to these tasks, Convenors also have the ability to perform the same actions as Tutors.
 
 \begin{figure}[thbp]
   \centering
   \includegraphics[width=0.8\textwidth]{Dashboard}%
-  \caption{Overview of progress by unit from the Convenor Dashboard.}%
+  \caption{Overview of progress by unit from the Convenor Dashboard showing indicators of student progress}%
   \label{fig:dashboard}%
 \end{figure}
 
 \begin{figure}[thbp]
   \centering
   \includegraphics[width=0.8\textwidth]{TaskChart}%
-  \caption{Convenor view showing distribution of student status by task}%
+  \caption{Convenor view showing distribution of student status by task, bars can be stacked as shown or grouped by task status.}%
   \label{fig:task_chart_view}%
 \end{figure}
 
-Tutors are responsible for conducting the tutorial classes, and providing formative feedback for the students in these classes. To support this role, Doubtfire provided tutors with a class list view showing student progress. From the class list, tutors could drill down to view individual students and their burn down charts, and provided a convenient means of updating task status. 
+Tutors are responsible for conducting the tutorial classes, and providing formative feedback to the students. To support this role, Doubtfire provides tutors with a class-list view showing student progress. From the class list, tutors can drill down to view individual students and their burn down charts. It also provides a convenient means for tutors to update the status of student tasks. 
 
-\fref{fig:tutor_view} shows an example of the class list used by Tutors. The class list shows the students in the tutors class, their names and id numbers have been obscured in \fref{fig:tutor_view}, with each task being represented by a coloured rectangle indicating the current status of the task for that student. Tutors are able to update the status of a student's tasks directly from the class list.
-
-\begin{figure*}[thbp]
-  \centering
-  \includegraphics[width=0.8\textwidth]{TutorView}
-  \caption{Tutors viewed class groups and could adjust task states}
-  \label{fig:tutor_view}
-\end{figure*}
-
-\fref{fig:home_page} shows an example of the dashboard provided to students. Each student was provided with a dashboard showing their progress for the units they were enrolled in. Students could view their burn down chart and task statuses by selecting units from their dashboard. When viewing a unit, students could update the status of their tasks as shown in \fref{fig:task_list}.
-
-\begin{figure*}[thbp]
-  \centering
-  \includegraphics[width=0.8\textwidth]{HomePage}%
-  \caption{Student home page in Doubtfire, showing progress on all enrolled projects}%
-  \label{fig:home_page}
-\end{figure*}
+\fref{fig:tutor_view} shows an example of the class list used by Tutors to view student details and update task statuses. Each task is represented by a coloured rectangle that indicates the task's current status for that student. Tutors are able to update the status of a student's tasks directly from the class list by selecting the task, and updating it from a list of possible options, also shown in \fref{fig:tutor_view}.
 
 \begin{figure}[thbp]
   \centering
-  \includegraphics[width=0.6\textwidth]{StudentTasks}
-  \caption{The Tasks list enabled students to view and change task status}
+  \includegraphics[width=0.8\textwidth]{TutorView}
+  \caption{Tutor view of class group, and adjustment of task status. Student names and id numbers have been obscured.}
+  \label{fig:tutor_view}
+\end{figure}
+
+\fref{fig:home_page} shows an example of the dashboard provided to students, which showing their progress for the units they are enrolled in. For each unit, students can view their burn down chart and each task's status. Students can update the status of a task by selecting it in the task last, and choosing a new status as shown in \fref{fig:task_list}.
+
+\begin{figure}[thbp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{HomePage}%
+  \caption{Student dashboard in Doubtfire showing personal progress for each enrolled unit using the tool}%
+  \label{fig:home_page}
+\end{figure}
+
+\begin{figure}[thbp]
+  \centering
+  \includegraphics[width=0.5\textwidth]{StudentTasks}
+  \caption{The ``Tasks'' list enables students to view and change task status}
   \label{fig:task_list}
 \end{figure}
 

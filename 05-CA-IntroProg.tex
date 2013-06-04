@@ -22,21 +22,49 @@ In describing \pref{itm:agile}, \sref{ssub:be_agile_and_willing_to_change} of \c
 % to do short review here??
 % AC: reviewed in Chapter 3
 
-Prior to conducting this research we have experienced introductory programming using both imperative-first and objects-first approaches. Our view mirrors those of \citet{Rist:1996} who reported on plans and cognitive schemas, the fundamental units of program design. In relating plans to objects, \citet{Rist:1996} indicated that objects were not different, they were more, as objects require additional overhead related to defining object\footnote{Object structures are typically defined using classes or similar mechanisms in languages such as Java} structures. Given this, units that take an objects-first approach will still need to have a significant focus on procedural aspects, as indicated by \citet{Robins:2003}, a reasoning that was also echoed in the ``back to basics'' approach of \citet{Reges:2006}.
+Prior to conducting this research we have experienced introductory programming using both imperative-first and objects-first approaches. Our view mirrors those of \citet{Rist:1996} who reported on plans and cognitive schemas, the fundamental units of program design. In relating plans to objects, \citet{Rist:1996} indicated that objects were not different, they were more, as objects require additional overhead related to defining object\footnote{Object structures are typically defined using classes or similar mechanisms in languages such as Java} structures. Given this, units that take an objects-first approach will still need to have a significant focus on procedural aspects, as indicated by \citet{Robins:2003}, a reasoning that was also echoed in the ``back to basics'' approach of \citet{Reges:2006}. \tref{tbl:oo_proc_concepts} lists the main concepts programming concepts related to procedural and object oriented programming to illustrate this point. Conceptually objects represent a combination of structured data and associated functionality, so from this perspective objects build upon procedural programming concepts.
+
+\begin{table}
+	\centering
+	\caption{Illustration of the programming concepts related to procedural and object oriented programming}
+	\label{tbl:oo_proc_concepts}
+	\footnotesize
+    \begin{tabular}{m{8cm}| >{\centering\arraybackslash}m{1.8cm} | >{\centering\arraybackslash}m{1.8cm} l }
+    \textbf{Concept}                                                             & \textbf{Procedural Programming} & \textbf{Object Oriented Progamming} \\
+    \hline
+    Calling procedures to perform actions                                        & \checkmark             & \checkmark                  \\
+    Variables to store values                                                    & \checkmark             & \checkmark                  \\
+    Parameters to pass values to procedural abstractions                         & \checkmark             & \checkmark                  \\
+    Functions to calculate values                                                & \checkmark             & \checkmark                  \\
+    Code as a sequence of action statements                                      & \checkmark             & \checkmark                  \\
+    Selecting using if and case statements                                       & \checkmark             & \checkmark                  \\
+    Repetition using for, while, and repeat loops                                & \checkmark             & \checkmark                  \\
+    Arrays to store multiple values                                              & \checkmark             & \checkmark                  \\
+    Iteration over array contents to process data                                & \checkmark             & \checkmark                  \\
+    Structures to record multiple field values in a variable                     & \checkmark             & \checkmark                  \\
+    Pointers to refer to other values                                            & \checkmark             & \checkmark                  \\
+    Classes to combine templates for object creation                             & ~                      & \checkmark                  \\
+    Methods called upon objects                                                  & ~                      & \checkmark                  \\
+    Inheritance of behaviour from parent classes                                 & ~                      & \checkmark                  \\
+    Abstract class members														 & ~                      & \checkmark                  \\
+    Pure abstract interface definitions                                          & ~                      & \checkmark                  \\
+    Subtype polymorphism                                                         & ~                      & \checkmark                  \\
+    \end{tabular}
+\end{table}
 
 As a result, an objects-later approach was taken with the units reported in this work. However, we believe that the model discussed in \cref{cha:approach} would also be appropriate for units developed using an objects-first approach.
 
 In covering structured procedural programming, the focus will be on procedural programming concepts such as control flow, functions and procedures, parameter passing, and data modelling using structures and records. Maintaining a clear focus on these concepts will help address \pref{itm:focus} and \pref{itm:concepts} from \cref{cha:guiding_principles}.
 
-\citet{Reges:2006} back to basics approach also aimed to teach imperative programming concepts, which they did using the Java programming language. However, Java is an object oriented programming language and so, in effect, this approach taught students how \emph{not} to use Java. While we will adopt the imperative programming focus, \pref{itm:authentic} indicates that we must select a programming language that was designed for this purpose. The discussion of which language was used for the example units will be presented in the following sections.
+\citet{Reges:2006} back to basics approach also aimed to teach imperative programming concepts, which they did using the Java programming language. However, Java is an object oriented programming language and so, in effect, this approach taught students how \emph{not} to use Java. While we have adopted the imperative programming focus, \pref{itm:authentic} indicates that we must select a programming language that was designed for this purpose. The discussion of which language was used for the example units will be presented in the following sections.
 
 %
 % You can cite your own paper (TALE? ACE?) describing development of the units :-)
 % AC: not really discussed in either :(
 
-While objects did not appear in the first programming unit, their importance in students' education remained a focus. Rather than seeing programming as being delivered in a single stand alone unit, we designed a sequence of two units that worked closely together. The first covered structured procedural programming, focusing on aspects such as control flow. The second focused on object oriented programming, which can then use a model driven approach similar to the one reported in \citet{Bennedsen:2004} but without having to cover procedural programming aspects.
+While objects did not appear in the first programming unit, their importance in students' education remained a focus. Rather than seeing programming as being delivered in a single stand-alone unit, we designed a sequence of two units that worked closely together. The first covered structured procedural programming, focusing on aspects such as control flow. The second focused on object oriented programming, which can then use a model driven approach similar to the one reported in \citet{Bennedsen:2004}, but without having to cover procedural programming aspects.
 
-\begin{figure}[ht]
+\begin{figure}[htp]
 	\centering
 	\includegraphics[width=0.77\textwidth]{OverallStrategy}
 	\caption{An updated version of \fref{fig:strategy} showing the programming paradigms that will form the approach for selecting content}
@@ -48,16 +76,16 @@ While objects did not appear in the first programming unit, their importance in 
 
 The objects-later approach taken by these example units aligns well with the principles from \cref{cha:guiding_principles}, providing a clear focus that supported a concept-based approach to introductory programming. Concepts related to object oriented programming were then the focus of the second programming unit. The alignment of these two units to the \emph{what} principles from \cref{cha:guiding_principles} is outlined in the following list.
 \begin{enumerate}[noitemsep,nolistsep]
-	\item The first programming unit, introductory programming discussed in \sref{sec:introductory_programming}, aligned with the principles in the following way:
+	\item The first programming unit, introductory programming discussed in \sref{sec:introductory_programming}, is aligned with the principles in the following way:
 	\begin{itemize}[noitemsep,nolistsep]
 		\item Content selection was guided by the structured procedural programming paradigm.
-		\item Focus will be on fundamental programming concepts, which included functions and procedures, variables, control flow, parameter passing, and related concepts.
+		\item Focus is on fundamental programming concepts, which include functions and procedures, variables, control flow, parameter passing, and related concepts.
 		\item The chosen programming language, or languages, must have been designed for procedural programming.
 	\end{itemize}
-	\item The second programming unit, object oriented programming discussed in \sref{sec:object_oriented_programming}, aligned with the principles in the following way:
+	\item The second programming unit, object oriented programming discussed in \sref{sec:object_oriented_programming}, aligns with the principles in the following way:
 	\begin{itemize}[noitemsep,nolistsep]
 		\item Content selection was guided by the object oriented programming paradigm.
-		\item Focus will be on object oriented programming concepts including abstraction, encapsulation, inheritance, and polymorphism.
+		\item Focus is on object oriented programming concepts including abstraction, encapsulation, inheritance, and polymorphism.
 		\item The chosen programming language, or languages, must have been designed for object oriented programming.
 	\end{itemize}
 \end{enumerate}
