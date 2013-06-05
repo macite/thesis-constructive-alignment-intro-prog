@@ -106,12 +106,12 @@ The three user groups in Doubtfire are Convenor, Tutor and Student. Each of thes
     & \textbf{Unit Administration}: Includes the ability to enrol students and create tasks. \\
     & \textbf{Monitor Student Progress}: View distribution of students by progress indicators. See \fref{fig:dashboard}. \\
     & \textbf{Monitor Task Progress}: View progress distribution for each unit's tasks. See \fref{fig:task_chart_view}. \\
-    & \textbf{Examine Student Progress}: View students list with tasks and associated statuses. See \fref{fig:tutor_view}. \\
+    & \textbf{Examine Student Progress}: View student list showing status for each task. See \fref{fig:tutor_view}. \\
     & \textbf{Update Task Status}: Mark student work as complete. \\ 
     & \\
     \hline\hline
     \multirow{2}{*}{\begin{sideways}\parbox{15mm}{Tutor}\end{sideways}}
-    & \textbf{Examine Student Progress}: View students list with tasks and associated statuses. See \fref{fig:tutor_view}. \\
+    & \textbf{Examine Student Progress}: View student list showing status for each task. See \fref{fig:tutor_view}. \\
     & \textbf{Update Task Status}: Mark student work as complete. \\ 
     & \\
     \hline\hline
@@ -140,7 +140,7 @@ Unit convenors are responsible for the overall delivery and management of the un
 
 Tutors are responsible for conducting the tutorial classes, and providing formative feedback to the students. To support this role, Doubtfire provides tutors with a class-list view showing student progress. From the class list, tutors can drill down to view individual students and their burn down charts. It also provides a convenient means for tutors to update the status of student tasks. 
 
-\fref{fig:tutor_view} shows an example of the class list used by Tutors to view student details and update task statuses. Each task is represented by a coloured rectangle that indicates the task's current status for that student. Tutors are able to update the status of a student's tasks directly from the class list by selecting the task, and updating it from a list of possible options, also shown in \fref{fig:tutor_view}.
+\fref{fig:tutor_view} shows an example of the class list used by Tutors to view student details and update task status. Each task is represented by a coloured rectangle that indicates the task's current status for that student. Tutors are able to update the status of a student's tasks directly from the class list by selecting the task, and updating it from a list of possible options, also shown in \fref{fig:tutor_view}.
 
 \begin{figure}[thbp]
   \centering
@@ -149,7 +149,7 @@ Tutors are responsible for conducting the tutorial classes, and providing format
   \label{fig:tutor_view}
 \end{figure}
 
-\fref{fig:home_page} shows an example of the dashboard provided to students, which showing their progress for the units they are enrolled in. For each unit, students can view their burn down chart and each task's status. Students can update the status of a task by selecting it in the task last, and choosing a new status as shown in \fref{fig:task_list}.
+\fref{fig:home_page} shows an example of the dashboard provided to students, which shows their progress for the units they are enrolled in. For each unit, students can view their burn down chart and each task's status. Students can update the status of a task by selecting it in the task last, and choosing a new status as shown in \fref{fig:task_list}.
 
 \begin{figure}[thbp]
   \centering
@@ -165,11 +165,11 @@ Tutors are responsible for conducting the tutorial classes, and providing format
   \label{fig:task_list}
 \end{figure}
 
-Student progress could be viewed as a burn down chart that consisted of three lines, as shown in \fref{fig:example_chart}. The lines indicated:
+Student progress can be viewed as a burn down chart consisting of three lines, shown in \fref{fig:example_chart}. The lines indicate:
 \begin{itemize}[noitemsep,nolistsep]
-  \item \textbf{Actual Completion}: showed the number of task-points signed off for the student by week.
-  \item \textbf{Target Completion}: showed the recommended schedule from the task due dates set by the convenor.
-  \item \textbf{Projected Completion}: indicated the current velocity, which was then projected to indicate an expected end date if current velocity was maintained.
+  \item \textbf{Actual Completion}: Shows the number of task-points signed off for the student by week.
+  \item \textbf{Target Completion}: Shows the recommended schedule from the task due dates set by the convenor.
+  \item \textbf{Projected Completion}: Indicates the current velocity, which is then projected to indicate an expected end date if current velocity is maintained.
 \end{itemize}
 
 % subsection user_roles (end)
@@ -177,16 +177,16 @@ Student progress could be viewed as a burn down chart that consisted of three li
 \subsubsection{Task Processes} % (fold)
 \label{sub:task_processes}
 
-Tasks in the Doubtfire system could have one of a number of statuses, with different users being responsible for updating task statuses at various times during unit delivery. The main statuses and the transitions between these is shown in \fref{fig:basic_process_chart} as a UML State Chart. 
+Tasks in the Doubtfire system have one of a number of states, with different users being responsible for updating task status at various stages during unit delivery. The main states and the transitions between these is shown in \fref{fig:basic_process_chart} as a UML State Chart \cite{OMG:2011}, with additional annotations to indicate user roles reponsible for performing the highlighted transitions. 
 
 \begin{figure}[thbp]
   \centering
   \includegraphics[width=0.7\textwidth]{BasicProcessStateChart}
-  \caption{UML state chart showing task states and transitions.}
+  \caption{UML state chart showing task states and transitions, and Tutor or Student roles associated with performing these transitions.}
   \label{fig:basic_process_chart}
 \end{figure}
 
-Initially all tasks are set to the \emph{Not Started} status. When students begin work on the task they are encouraged to update its status to \emph{Progressing}, and when it is ready for assessment to the \emph{Ready to Mark} status. Once tutors receive the work, they examine the work and provide the student with formative feedback. After having discussed the task with the student, the tutor updates the status by either returning it to a \emph{Progressing} status if the task needs to be fixed, or signing the task off as \emph{Complete}.
+Initially all tasks are set to the \emph{Not Started} status. When students begin work on the task they are encouraged to update its status to \emph{Progressing}, and when it is ready for assessment to the \emph{Ready to Mark} status. Once tutors receive the work, they examine the work and provide the student with formative feedback. After having discussed the task with the student, the tutor updates the status by either returning it to a \emph{Progressing} state if the task needs to be fixed, or updating the task as \emph{Complete}.
 
 The \emph{Progressing} status was divided into a number of sub-states for the purpose of providing students with finer-grained feedback. 
 
@@ -195,7 +195,7 @@ Students were able to set the status of a task to \emph{Working on It} or \emph{
 \begin{figure}[thbp]
   \centering
   \includegraphics[width=\textwidth]{DetailedStepsInProgress}
-  \caption{UML state chart showing the detailed states within the Progressing superstate.}
+  \caption{UML state chart showing the detailed states within the Progressing state}
   \label{fig:detailed_states}
 \end{figure}
 
@@ -204,117 +204,132 @@ Students were able to set the status of a task to \emph{Working on It} or \emph{
 \subsection{Use of Doubtfire} % (fold)
 \label{sub:use_of_doubtfire}
 
-While \cref{cha:evaluation} provides a more in-depth discussion of the use of Doubtfire, this section will briefly comment on how it was used in the delivery of both the introductory programming and object oriented programming units. In both cases the teaching and learning activities from \cref{cha:example_impl} were used as the tasks to be completed, and teaching staff assigned each a weighting to represent its relative size.
+While \cref{cha:evaluation} provides a more in-depth discussion of the use of Doubtfire, this section briefly comments on how it was used in the delivery of the introductory programming and object oriented programming units. In both cases the teaching and learning activities from \cref{cha:example_impl} were used as the tasks to be completed, and teaching staff assigned each a t-shirt style weighting to represent its relative size.
 
-The effectiveness of the tool, for students, depended on their engagement with the unit. The more capable students made active use of Doubtfire, and responded quickly to addressing issues and closing gaps in their knowledge. Students who struggled to complete the weekly tasks generally made poor use of the tool at the start of the teaching period, but engaged actively later in the semester. While some, more disengaged, students avoided use of the system and attempted to establish progress on their own terms. 
+The effectiveness of the tool for students depended on their engagement with the unit. Capable students made active use of Doubtfire, and responded quickly to addressing issues and closing gaps in their knowledge. Students who struggled to complete the weekly tasks generally made poor use of the tool at the start of the teaching period, but engaged actively later in the semester. While some, characteristically disengaged, students avoided use of the system and attempted to establish progress in their own way.
 
-For teaching staff, the Doubtfire tool provided useful information on how students were engaging with the formative process. It was easy to see which students were doing well, to identify those who were falling behind, and those who were not engaging with the unit at all. This information was used to prompt students, encouraging those who were doing well and suggesting appropriate resources for those who were falling behind.
+For teaching staff, the Doubtfire tool provided useful information on how students were engaging with the formative process. It was easy to see which students were doing well, to identify those who were falling behind, and those who were not engaging with the unit at all. This information was used to prompt students, encourage those who were doing well and suggest appropriate resources for those who were struggling or falling behind.
 
 \subsection{Summary} % (fold)
 \label{sub:doubtfire_summary}
 
-The strong use of formative feedback in the model provides a challenge as students cannot be motivated by marks during the teaching period. This could lead to students allocating insufficient time to complete the unit's tasks, allowing them to fall behind in the unit.
+The strong use of formative feedback in the model provides a challenge as students cannot be motivated to work by the fear of losing marks during the teaching period. This can lead to students allocating insufficient time to complete learning activities, resulting in them falling behind in the unit.
 
-Doubtfire helped to address this concern through the use of burn down charts that visually represented the amount of work students had remaining in the unit. By using this tool staff and students were able to monitor progress throughout the teaching period.
+Doubtfire was designed to address these concerns through the use of agile development burn down charts that visually represented the amount of work students had remaining in the unit. By using this tool staff and students were able to monitor progress throughout the teaching period.
 
 % subsection summary (end)
 
 % section doubtfire_using_burndown_charts_to_support_formative_feedback (end)
-
+\clearpage
 \section{Programming Text to Support Concept-Based Approach} % (fold)
 \label{sec:arcana}
 
-Concepts were central to \emph{what} we aimed to teach. \pref{itm:concepts} indicates that we should aim to focus on concepts over language syntax. In addressing this principle the programming units from \cref{cha:example_impl} had little, if any, coverage of syntax in the lectures, leaving these details instead to teaching and learning resources. While concepts are important, syntax details are need to enable students to turn these concepts into working code.
+Concepts are central to \emph{what} we aim to teach. \pref{itm:concepts} indicates that we should aim to focus on concepts over language syntax. In addressing this principle the programming units from \cref{cha:example_impl} had little, if any, coverage of syntax in lectures, leaving these details instead to teaching and learning resources for students to use. These resources will then provide the syntax details students need to turn these concepts into working code.
 
-One of the central ideas of ``Beyond Bullet Points'' is to fully document the notes attached to a presentation's slides \cite{Atkinson:2007}. In effect, the details are moved from the slide itself to the slides' notes, which can then be printed as an informative handout. In our approach this worked against \pref{itm:agile}, and would have resulted in significant effort being expended on the creation of each week's presentation, thereby adding resistance to change if they were found to be ineffective.Instead of documenting these notes in the presentations themselves, they were written up in a separate resource which became the ``\emph{Programming Arcana}'' \cite{Cain:2013arcana}.
+One of the central ideas of ``Beyond Bullet Points'' is to fully document a presentation using the notes attached to a presentation's slides \cite{Atkinson:2007}. In effect, details are moved from a slide itself to the slides' notes area, which can then be printed as an informative handout. While documenting slides in this manner can provide students with the required details, it does mix the purpose of the presentation's slides as a means of guiding student thoughts and providing detailed information.
 
-Documenting the language details in a separate text also helped to address another issue raised as a result of choosing Pascal as one of the programming languages. Pascal is not currently a popular language with text book writers, and while the Free Pascal Language Reference Guide \cite{FPC:2013lang} provides details of the language it is not designed for beginners.
+From our experience using this approach to develop lecture slides for a range of units, this has a number of drawbacks in relation to the principles from \cref{cha:guiding_principles}. The dual purpose of the presentation works against maintaining a clear focus as stated in \pref{itm:focus}, in many cases the details may be better presented in a different order to the presentation slides, and visa versa. Similarly, the need for detailed notes for each slide works against \pref{itm:agile}, being agile and willing to change. The creation of the detailed notes results in significant effort being expended on the creation of each week's presentation, and thereby adds resistance to change if the presentation is found to be ineffective. 
+
+Instead of documenting these notes in the presentations themselves, they were written up in a separate resource which became the ``\emph{Programming Arcana}'' \cite{Cain:2013arcana}. The title, cover image (see \fref{fig:front_cover_final}), and layout were designed around a magic theme in the aim of engaging students, they are becoming wizards of the modern era, capable to making the computer do amazing things.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.4\textwidth]{front_cover_final}
+  \caption{Front cover of the Programming Arcana, which used a magic theme to engage students as they worked towards becoming wizards with the computer}
+  \label{fig:front_cover_final}
+\end{figure}
+
+Documenting language details in a separate text from the presentations also helped to address another issue raised as a result of choosing Pascal as one of the programming languages. Pascal is not currently a popular language with institutions or text book writers, and while the Free Pascal Language Reference Guide \cite{FPC:2013lang} provides details of the language it is not designed for beginners but experienced programmers. By providing our own text it was possible to maintain the concept-based ideas throughout all teaching and learning resources and activities, while also providing details on the Pascal and C languages, along with suitable programming examples.
 
 
 \subsection{Chapter Sequence} % (fold)
 \label{ssub:chapter_sequence}
 
-Chapters in the Programming Arcana were designed to align with the main concept topics from the introductory programming unit. This meant that the text needed to embody the concepts-first approach, \pref{itm:concepts} discussed in \cref{cha:guiding_principles}. To best support this, each chapter needed to focus on providing a coherent set of concepts that built upon concepts presented earlier in the text. The following list illustrates how the programming concepts are presented in the Programming Arcana. This is followed by a discussion of how well the text was able to embody the concept first approach.
+Chapters in the Programming Arcana are designed to align with the main concept topics from the introductory programming unit. This means that the text embodies the concept-based approach, with each chapter providing a coherent set of concepts that builds upon concepts presented earlier in the text. The following list details each chapter and the programming concepts that are presented in the Programming Arcana. This is followed by a discussion of how well the text was able to support the concept-based approach.
 
 \begin{enumerate}[noitemsep,nolistsep]
-  \item \textbf{Building Programs}: introduced students to the tools they required, and showed them a basic program they could compile to check the tools were working. The concepts in this chapter included: 
+  \item \textbf{Building Programs}: Introduces students to the tools they require, and shows them a basic, ``Hello World'', program they can compile to check that their tools are working.
   \begin{itemize}[noitemsep,nolistsep]
-    \item \textbf{Programs} were introduced as a sequence of instructions that get the computer to perform actions.
-    \item \textbf{Machine and Assembly code} provided some context as to why compilers are necessary. Machine code was presented as the computers natural language, and Assembly as a first step toward making this code more human-friendly.
-    \item \textbf{Source code and compilers} introduced the ideas of third generation languages, and the need for a compiler to convert this code to machine code.
-    \item The \textbf{Terminal} was introduced as a means of running programs, and the steps for using the compiler were presented. This section also introduced the \textbf{BASH} shell, along with commands to navigate through the file system. 
-    \item The final concept outlined the code for a \textbf{Hello World} program in C and Pascal, together with the steps needed to compile and run this program. 
+    \item \textbf{Programs} are introduced as a sequence of instructions that get the computer to perform actions.
+    \item \textbf{Machine and Assembly code} provides some context as to why compilers are necessary. Machine code is presented as the computer's natural language, and Assembly code as a first step toward making this code more human-friendly.
+    \item \textbf{Source code and compilers} are introduced with the idea of third generation languages, and the need for a compiler to convert source code to machine code.
+    \item The \textbf{Terminal} is introduced as a means of running programs, and the steps for using the compiler are presented. This section also introduces the \textbf{Bash} shell, along with commands to navigate through the file system. 
+    \item The final concept outlines the code for a \textbf{Hello World} program in C and Pascal, together with the steps needed to compile and run this program. 
   \end{itemize}
-  \item \textbf{Program Creation}: described how code could be written to create a \emph{Program}.
+  \item \textbf{Program Creation}: describes how code can be written to create a \emph{Program}.
   \begin{itemize}[noitemsep,nolistsep]
-    \item This introduced the idea that a \textbf{Program} could be created in code, and that it had a name and a list of instructions for the computer to perform.
-    \item \textbf{Procedures} were introduced as a named group of instructions that performed a task. These instructions could be run using a \textbf{Procedure Call}.
-    \item The idea that procedures could be distributed in a \textbf{Library} was introduced.
-    \item Programming language terminology was also introduced, include \textbf{Statements} as the technical term for commands, \textbf{Expressions} for calculated values, \textbf{Types} to describe different kinds of data, and \textbf{Identifiers} as the names for artefacts such as the programs created and the procedures called. 
-    \item \textbf{Comments} were also discussed as a means of documenting code.
+    \item Introduces the idea that a \textbf{Program} can be created in code, and that it has a name and a list of instructions for the computer to perform.
+    \item \textbf{Procedures} are introduced as a named group of instructions that performed a task. These instructions can be run using a \textbf{Procedure Call}.
+    \item The idea that procedures can be distributed in a \textbf{Library} was discussed.
+    \item Programming language terminology is also introduced, including \textbf{Statements} as the technical term for commands, \textbf{Expressions} for calculated values, \textbf{Types} to describe different kinds of data, and \textbf{Identifiers} as the names for artefacts such as the programs created and the procedures called. 
+    \item \textbf{Comments} are discussed as a means of documenting code.
   \end{itemize}
-  \item \textbf{Procedure Declaration}: introduced the idea that you can create your own procedures to encapsulate the steps of a task. 
+  \item \textbf{Procedure Declaration}: Introduces the idea that you can create your own procedures to encapsulate the steps of a task. 
   \begin{itemize}[noitemsep,nolistsep]
-     \item \textbf{Procedure declaration} described how procedures could be created as a sequence of instructions that are run when the procedure is called.
-     \item The concept of a \textbf{Program} was extended to indicate that a program's code could include procedure declarations.
+     \item \textbf{Procedure declaration} describes how procedures can be created as a sequence of instructions that are run when the procedure is called.
+     \item The concept of a \textbf{Program} is extended to indicate that a program's code can include procedure declarations.
    \end{itemize} 
-  \item \textbf{Storing and Using Data}: made programs more dynamic with variables and constants to store data, and functions to calculate values.
+  \item \textbf{Storing and Using Data}: Makes programs more dynamic using variables and constants to store data, and functions to calculate values.
   \begin{itemize}[noitemsep,nolistsep]
-    \item \textbf{Variables} were introduced as a means of storing data that changed within the code, while \textbf{Constants} were introduced as a means of storing data that does not change. 
-    \item The \textbf{assignment statement} was introduced as the means of storing a value in the variable, and the concept of an \textbf{expression} was updated to indicate it could read the value from the variable.
-    \item Programming terminology related to the location of a variable was introduced, with \textbf{local variables} being declared within a procedure, \textbf{global variables} within the program, and \textbf{parameters} as a means of enabling data to be passed to a procedure.
-    \item The different parameter passing options were presented, with \textbf{pass-by-value} indicating that the value of the expression in the procedure call was passed, while with \textbf{pass-by-reference} the parameter needs to be passed a \emph{variable} to which it will refer.
-    \item Creating \textbf{Functions} to calculate values was also introduced, along with updating expressions to indicate the use of \textbf{function calls}.
-    \item To realise these concepts, the previous \textbf{statement}, \textbf{program} and \textbf{procedure declaration} concepts were updated.
+    \item \textbf{Variables} are introduced as a means of storing data that changes within the code, while \textbf{Constants} are introduced as a means of storing data that does not change. 
+    \item The \textbf{assignment statement} is introduced as the means of storing a value in the variable, and the concept of an \textbf{expression} is updated to indicate it can read a value from the variable.
+    \item Programming terminology related to the location of a variable is introduced; \textbf{local variables} are declared within a procedure, \textbf{global variables} within a program, and \textbf{parameters} are a means of enabling data to be passed to a procedure.
+    \item The different parameter passing options are presented, with \textbf{pass-by-value} indicating that the value of the expression in the procedure call was passed, while with \textbf{pass-by-reference} the parameter needs to be passed a \emph{variable} to which it will refer.
+    \item Creating \textbf{Functions} to calculate values is also introduced, along with updating what an expressions is to include the use of \textbf{function calls}.
+    \item To realise these concepts, the previous \textbf{statement}, \textbf{program} and \textbf{procedure declaration} concepts are updated.
   \end{itemize}
-  \item \textbf{Control Flow}: introduced the structured programming principles, along with the control flow mechanisms of selection and repetition.
+  \item \textbf{Control Flow}: Introduces structured programming principles, along with the control flow mechanisms of selection and repetition.
   \begin{itemize}[noitemsep,nolistsep]
-    \item \textbf{Boolean data} was discussed as a means of directing the control flow statements. This included the use of \textbf{comparisons} to calculate boolean values, as well as the \textbf{logical operators} (\emph{and}, \emph{or}, and \emph{not}).
-    \item Selection was described in terms of \textbf{branching}, this included the ideas of \textbf{if statements} and \textbf{case statements}.
-    \item \textbf{Looping} introduced \textbf{pre-test loops} that repeated code zero or more times, and \textbf{post-test loops} that repeated code one or more times. 
-    \item Other control flow statements were covered in the section on \textbf{jumping}. This included \textbf{break} to jump out of a loop, \textbf{continue} to jump to the end of a loop, \textbf{exit/return} to jump out of a function or procedure, and \textbf{goto}.
+    \item \textbf{Boolean data} is discussed as a means of directing the control flow statements. This includes the use of \textbf{comparisons} to calculate boolean values, as well as the \textbf{logical operators} (\emph{and}, \emph{or}, and \emph{not}).
+    \item Selection is described in terms of \textbf{branching}, including the ideas of \textbf{if statements} and \textbf{case statements}.
+    \item \textbf{Looping} introduces \textbf{pre-test loops} that repeated code zero or more times, and \textbf{post-test loops} that repeated code one or more times. 
+    \item Other control flow statements are covered in the section on \textbf{jumping}. This includes \textbf{break} to jump out of a loop, \textbf{continue} to jump to the end of a loop, \textbf{exit/return} to jump out of a function or procedure, and the infamous \textbf{goto} statement.
     \item Finally, the idea of grouping statements in a \textbf{compound statement} was presented, and explained in terms of providing a sequence of statements within the control flow statements.
   \end{itemize}
-  \item \textbf{Managing Multiple Values}: presented the use of arrays.
+  \item \textbf{Managing Multiple Values}: Presents the use of arrays to make it easier to work with a large amount of data.
   \begin{itemize}[noitemsep,nolistsep]
-    \item \textbf{Arrays} were presented as a means of managing a number of values in a single variable. \textbf{String} was discussed as an example of an array students had already been working with.
-    \item The importance of \textbf{pass-by-reference} was reintroduced.
-    \item \textbf{For loops} were introduced as a convenient means of looping over the elements of an array. 
-    \item The \textbf{Assignment statement} and \textbf{Expression} concepts were updated to indicate how arrays could be used.
+    \item \textbf{Arrays} are shown as a means of managing a number of values in a single variable. \textbf{String} is discussed as an example of an array students have already been working with.
+    \item The importance of \textbf{pass-by-reference} is reinforced.
+    \item \textbf{For loops} are introduced as a convenient means of looping over the elements of an array. 
+    \item The \textbf{Assignment statement} and \textbf{Expression} concepts are updated to indicate how arrays can be used.
   \end{itemize}
-  \item \textbf{Custom Data Types}: described how developers can create types to help them organise the data in their programs, much as functions and procedures helped to organise functionality.
+  \item \textbf{Custom Data Types}: Describes how developers can create types to help them organise the data in their programs, much as functions and procedures helped to organise functionality.
   \begin{itemize}[noitemsep,nolistsep]
-    \item \textbf{Types} were described again, in more detail to provide context. 
-    \item \textbf{Type declaration} was discussed along with \textbf{records/structs}, \textbf{enumerated types} and \textbf{unions}. This required an update to the concept of what a \textbf{Program} can contain.
-    \item The \textbf{Assignment statement} and \textbf{Expression} concepts were updated to indicate how the various custom types could be used.
+    \item \textbf{Types} are described again in more detail to provide context. 
+    \item \textbf{Type declaration} is discussed along with \textbf{records/structs}, \textbf{enumerated types} and \textbf{unions}, as well as what a \textbf{Program} can contain.
+    \item The \textbf{Assignment statement} and \textbf{Expression} concepts are updated to indicate how the various custom types can be used.
   \end{itemize}
-  \item \textbf{Dynamic Memory Allocation}: extended programs beyond the confines of the stack, allowing the allocation of data on the heap.
+  \item \textbf{Dynamic Memory Allocation}: Extends programs beyond the confines of the stack, allowing the allocation of data on the heap.
   \begin{itemize}[noitemsep,nolistsep]
-    \item The \textbf{Stack} and \textbf{Heap} were discussed. This highlighted the need for values on the stack to have a known size, requiring another ``space'' for allocating data when its size is not known at compile time.
-    \item \textbf{Pointers} were introduced as a means of referring to space allocated on the Heap.
-    \item The need for specific actions to \textbf{allocate memory}, and to \textbf{free} that allocation were also presented.
-    \item Common \textbf{issues with pointers} were also discussed, indicating why they are likely to occur and how to address these issues. This included \textbf{access violations}, \textbf{memory leaks} and \textbf{accessing released memory}. 
+    \item The \textbf{Stack} and \textbf{Heap} are discussed. This highlights the need for values on the stack to have a known size, requiring another ``space'' for allocating data when its size is not known at compile time.
+    \item \textbf{Pointers} are introduced as a means of referring to space allocated on the Heap.
+    \item The need for specific actions to \textbf{allocate memory}, and to \textbf{free} that allocation are presented.
+    \item Common \textbf{issues with pointers} are discussed, including why they are likely to occur and how to address these issues. This includes \textbf{access violations}, \textbf{memory leaks} and \textbf{accessing released memory}. 
   \end{itemize}
-  \item \textbf{Input and Output}: described how to save and load data from file.
+  \item \textbf{Input and Output}: Describes how to save and load data from file.
   \begin{itemize}[noitemsep,nolistsep]
-    \item The concept of \textbf{persisting data} discussed the idea of a process and its memory being freed after the program terminates. This lead to details on saving data from the program's memory onto persistent storage.
-    \item \textbf{Files} and text and binary \textbf{file formats} were discussed. 
-    \item \textbf{Interacting with Files} described the typical input and output operations you are likely to perform on a file.
-    \item \textbf{Other output devices} related the concepts presented to terminal input/output and the idea that the same concepts applied to sending data across a network connection.
+    \item The concept of \textbf{persisting data} is discussed along with the idea of a process and its memory being freed after a program terminates. This leads to details on saving data from the program's memory onto persistent storage.
+    \item \textbf{Files} and text and binary \textbf{file formats} are discussed. 
+    \item \textbf{Interacting with Files} describes typical input and output operations you likely to perform on files.
+    \item \textbf{Other output devices} relates the concepts presented to terminal input/output and the idea that the same concepts apply to sending data across a network connection.
   \end{itemize}
 \end{enumerate}
 
-In proposing \pref{itm:concepts}, with its focus on programming concepts, \cref{cha:guiding_principles} outlined the requirement that we needed to ``Introduce programming concepts incrementally''. The Programming Arcana provides an example of how the details of the programming language can be presented in such a way as to ensure most topics are presented incrementally, with each topic building upon the previously presented topics. 
+In proposing \pref{itm:concepts}, with its focus on programming concepts, \cref{cha:guiding_principles} outlined the requirement ``Introduce programming concepts incrementally''. The Programming Arcana provides an example of how the details of a programming language can be presented in such a way as to ensure most topics are presented incrementally, with each topic building upon the previously presented topics. 
 
-There were two cases where concepts could not be suitably explained within the overall context presented in a chapter. Other than these two cases, all other chapters were able to explain all concepts in terms of the presented, or previously presented, concepts.
+There were two cases where concepts could not be suitably explained within the overall context presented in a chapter, which are listed here.
+
 \begin{itemize}[noitemsep,nolistsep]
-  \item In Chapter 1, of the Programming Arcana, a program was given to enable students to compile something before they understood what it represented. However, the main focus of the chapter was the tools being presented and not the program's code. 
-  \item Chapters 2 and 3 of the Programming Arcana passed values to procedures before topics related to how data can be stored in a program. The idea that data can be passed to a procedure was covered, but not how that data was received.
+  \item In Chapter 1 the code for a working program was given to enable students to compile something before they understood what it represented. However, the main focus of the chapter was the tools being presented and not the specific details of the program's code, and so this does not directly contradict the underlying principle. 
+  \item Chapters 2 and 3 makes use of values passed to procedures before topics related to \emph{how} data can be stored in a program. The idea that data can be passed to a procedure is covered, but not how that data was received.
 \end{itemize}
 
-In general, mapping the concepts to syntax was simpler for the Pascal programming language. The main challenges with the C language\footnote{The C code was compiled with a C++ compiler to add support for function and procedure overloading, and pass-by-reference.} were the standard input and output functions, \texttt{printf} and \texttt{scanf} and associated details such as format strings and pointers, and the need to understand arrays before working with strings. This meant that early topics were reduced to using string literals and limiting variables to working with numeric values. In this way the one example could be mapped to both C and Pascal. 
+Other than these two cases, all other chapters were able to explain all concepts in terms of the presented, or previously presented, concepts.
 
-The use of Pascal in the first part of the unit meant that teaching and learning activities could take advantage of Pascal's more convenient support for strings and terminal input and output. For example, consider a program that asked the user to enter their name and then echoes back a welcome message. In C this requires an understanding of variables, format string syntax, arrays, pointers, and how arrays are automatically passed by references where other types are not. In Pascal the same program only requires an understanding of variables and pass-by-reference.
+
+When comparing the suitability of the C and Pascal languages for supporting the concept-based approach it was noted that, in general, mapping the concepts to syntax was simpler for the Pascal programming language, with the C\footnote{The C code was compiled with a C++ compiler to add support for function and procedure overloading, and pass-by-reference.} language providing a number of challenges. C's standard input and output functions, \texttt{printf} and \texttt{scanf}, provided a range of challenges related associated with the use of format strings and pointers. The format string provides an additional syntax to learn, and results in a range of runtime errors where the types indicated in the format string do not match the types of the associated variables or expressions. The need to pass explicit pointers to scanf also required a brief description of pointers in early material. Other challenges related to the need to understand arrays before working with strings. This means that early topics need to avoid strings, or are reduced to using string literals and limiting variables to working with numeric values. In this way one example can be mapped to both C and Pascal languages. 
+
+In relation to the use of the text in supporting the unit delivery, many of the issues with C can be avoided due to the use of Pascal in the first part of the unit. This enables the teaching and learning activities to take advantage of Pascal's more convenient support for strings and terminal input and output. For example, consider a program that asked the user to enter their name and then echoes back a welcome message. In C this requires an understanding of variables, format string syntax, arrays, pointers, and how arrays are automatically passed by references where other types are not. In Pascal the same program only requires an understanding of variables and pass-by-reference.
 
 % \begin{itemize}[noitemsep,nolistsep]
 %   \item Introduce programming concepts incrementally;
@@ -326,19 +341,19 @@ The use of Pascal in the first part of the unit meant that teaching and learning
 
 
 % subsubsection chapter_sequence (end)
-
+\clearpage
 \subsection{Chapter Layout} % (fold)
 \label{ssub:chapter_layout}
 
-Each chapter of the Programming Arcana had a similar sequence to its sections. This aimed to promote a consistent approach to studying each of the topics. In keeping with \pref{itm:concepts}, the concepts were presented as the focus of each chapter. % The was followed with examples of how to apply the concepts, and then the language syntax for C and Pascal. Following this a section was dedicated to tracing the execution of the concepts in a conceptual machine, akin to the notional machine discussed by \citet{DuBoulay:1986}. Each chapter then concluded with examples and exercises.
+Each chapter of the Programming Arcana has a similar sequence to its sections, with the intention of reducing cognitive overhead and promoting a consistent approach to studying each of the topic. In keeping with \pref{itm:concepts}, the concepts were presented as the focus of each chapter.
 
 \begin{enumerate}[noitemsep,nolistsep]
-  \item \textbf{Concepts}: each chapter started with a list of related concepts.
-  \item \textbf{Applying the Concepts}: following the concepts was an example of applying those concepts in an abstract sense, using pseudocode and flowcharts to illustrate how the concepts could be applied.
-  \item \textbf{Syntax in C and Pascal}: details of how to code the concepts were first presented in C, with the following section detailing the syntax for Pascal.
-  \item \textbf{Understanding the Concepts}: traced the execution of the pseudocode on a conceptual machine, with the aim of showing students how the concepts are realised at run time. 
-  \item \textbf{Examples}: listed a number of examples, each presented in pseudocode then in C and Pascal code.
-  \item \textbf{Exercises}: a sequence of exercises students could use to develop their understanding of the topic.
+  \item \textbf{Concepts}: Each chapter starts with a list of related concepts, each of which is described at a relevant level of detail for that chapter.
+  \item \textbf{Applying the Concepts}: An example of how to apply the chapter's concepts is then discussed, using pseudocode and flowcharts to illustrate how the concepts can be applied.
+  \item \textbf{Syntax in C and Pascal}: Details related to the syntax needed to realise these concepts in code are first presented for the C programming language, and then for the Pascal language.
+  \item \textbf{Understanding the Concepts}: Traces the execution of the pseudocode on a conceptual machine, with the aim of showing students how the concepts are realised at run time. 
+  \item \textbf{Examples}: A number of examples are given to further demonstrate the application of the chapter's concepts, each is presented in pseudocode and then in C and Pascal code.
+  \item \textbf{Exercises}: Provides a sequence of exercises students can use to develop their understanding of the topic.
 \end{enumerate}
 
 Details of the sections related to presenting the concepts follow. This outlines how the Programming Arcana implemented the concept-based approach, and reinforce the focus on concepts over syntax throughout the material presented. 
@@ -347,68 +362,76 @@ Details of the sections related to presenting the concepts follow. This outlines
 \subsubsection{Concepts} % (fold)
 \label{par:concepts}
 
-Each chapter started with a section that provided details of the concepts being presented. This section started with a brief overview that described how all of the concepts are related. This was followed by subsections that covered the details of each concept, with a textual description, visual concept map, and a series of notes with important details related to the topic. At the end of the concept section an overall concept map was included that visually showed the relationship between the concepts covered. 
+Each chapter starts with a section that provides details of the concepts being presented. This section starts with a brief overview that described how all of the concepts are related, which is followed by subsections that cover the details of each concept. Concepts are presented using a textual description, visual concept map, and a series of notes with important details related to the topic. At the end of the concept section an overall concept map is included to visually show the relationships between the concepts covered. 
 
-\fref{fig:arcana_concepts} shows an example of the concept of branching from chapter 5 of the Programming Arcana. The diagrams were deliberately drawn using irregular shapes to indicate these were a conceptualisation, rather than an exact representation of the associated concepts.
+\fref{fig:arcana_concepts} shows an example of the concept of branching from Chapter 5 of the Programming Arcana. The diagrams were deliberately drawn using irregular, rough looking, shapes to indicate these were a conceptualisation, rather than an exact representation of the associated concepts.
 
-One of the design goals was to fit each concept on a single page. This goal aimed to help support students active construction of their knowledge, \pref{itm:construct}. Aiming to keep each topic to a single page ensured that we focused on the most important details, and where topics expanded over multiple pages the details were examined to ensure we had not included any unnecessary details.
+One of the design goals was to fit each concept on a single page. This goal aimed to help support a student's active construction of knowledge, \pref{itm:construct}. Aiming to keep each topic to a single page ensured that we focused (\pref{itm:focus}) on the most important details, and where topics expanded over multiple pages the details were examined to ensure we had not included any unnecessary details.
 
-\begin{figure}[hb]
+\begin{figure}[h]
   \centering
-  \includegraphics[width=0.7\textwidth]{ArcanaConcepts}
-  \caption{Example concept pages from the Programming Arcana.}
+  \includegraphics[width=0.95\textwidth]{ArcanaConcepts}
+  \caption{Example concept pages from Chapter 5 of the Programming Arcana, showing the use of visual concept maps to help explain concepts. }
   \label{fig:arcana_concepts}
 \end{figure}
 
 % paragraph concepts (end)
-
+\clearpage
 \subsubsection{Applying the Concepts} % (fold)
 \label{par:applying_the_concepts_}
 
-After the concepts were presented, the next section outlined how these concepts could work together to create an example program. This section always started with a specification of a program that was to be created. This was then followed by a discussion of how a the program could be designed using the concepts covered to that point in the text. The description of the design included pseudocode, flow charts, sequence diagrams and structure charts, and the section concluded with a complete design for specified program. \fref{fig:arcana_applying} shows an example of some pages related to applying control flow concepts.
+After the concepts are presented, the next section outlines how these concepts can work together to create an example program. This section always starts with a specification of a program to be created. This is then followed by a discussion of how a the program can be designed using the concepts covered to that point in the text. The description of the design includes pseudocode, flow charts, sequence diagrams and structure charts, and the section concludes with a complete design for the specified program. \fref{fig:arcana_applying} shows an example of designing a ``Guess that Number'' game that demonstrates the application of control flow concepts.
 
-Explanatory text accompanied the design, and highlighted how the concepts covered contributed to the end result. This discussion also presented a way of approaching problems using the concepts to introduce students to the idea of designing their own programs.
-
-\begin{figure}[hb]
+\begin{figure}[h]
   \centering
-  \includegraphics[width=0.7\textwidth]{ArcanaApplying}
-  \caption{Example pages related to applying the concepts from the Programming Arcana.}
+  \includegraphics[width=0.95\textwidth]{ArcanaApplying}
+  \caption{Example pages related to applying the concepts from the Programming Arcana}
   \label{fig:arcana_applying}
 \end{figure}
 
-% paragraph applying_the_concepts_ (end)
+In each chapter explanatory text accompanies the design, and highlights how the concepts covered contribute to the end result. This discussion also presents a way of approaching problems using the concepts to introduce students to the ideas they can use in approaching the design of their own programs.
 
+% paragraph applying_the_concepts_ (end)
+\clearpage
 \subsubsection{Syntax} % (fold)
 \label{par:syntax}
 
-Having covered the concepts, and how they can be used to create a conceptual program, the next two sections dealt with realising these concepts in C and Pascal code. The syntax sections of the Programming Arcana started with an implementation of the program designed in the section on applying the concepts, which was followed by the grammar to implement the various concepts discussed. An example of pages from this section is shown in \fref{fig:arcana_syntax}.
-
-As with the concepts, the aim was to explain each aspect of the syntax in a single page. This page started with a textual description of the syntax, which was followed by a graphical representation of the grammar and then one or two examples of its implementation in code. The grammar and examples presented focused on best representing the concepts, in many cases only presenting a suitable subset of what was possible with the programming language. 
+Having covered concepts, and how they can be used to create a conceptual program, the next two sections deal with realising these concepts using the C and Pascal programming languages. The syntax sections of the Programming Arcana start with an implementation of the program designed in the section on applying the concepts, which is followed by the grammar to implement the various concepts discussed. An example of pages from this section is shown in \fref{fig:arcana_syntax}.
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.7\textwidth]{ArcanaSyntax}
-  \caption{Example pages from the Programming Arcana showing C and Pascal syntax and examples.}
+  \includegraphics[width=0.95\textwidth]{ArcanaSyntax}
+  \caption{Example pages from the Programming Arcana showing C and Pascal syntax and examples}
   \label{fig:arcana_syntax}
 \end{figure}
 
+As with concepts, the aim of the syntax section is to explain each aspect of the syntax in a single page. Each page in this section starts with a textual description of the syntax, which is followed by a graphical representation of the grammar using railroad diagrams and one or two examples of its implementation in code. The grammar and examples presented focus on best representing the concepts, in many cases only presenting a small subset of what is possible with the programming language. 
+
 % paragraph syntax (end)
 
-\subsubsection{Understanding the Concepts:} % (fold)
+\subsubsection{Understanding the Concepts} % (fold)
 \label{par:understanding_the_concepts_}
 
-% paragraph understanding_the_concepts_ (end)
+Programming has been likened to understanding how to control a notional machine \cite{DuBoulay:1986}. The notional machine represents an ideal computer in which the programming constructs being taught are realised. To help students realise the goal of controlling this machine, the next section of each chapter in the Programming Arcana provided a series of illustrations that try to communicate the state and behaviour of the notional machine being presented, when executing the example program developed in earlier sections. \fref{fig:notional_machine} shows an example of the notional machine from the Programming Arcana, the machine contains a persistent storage device, central processing unit (CPU), terminal for input and output, and memory that is divided into sections for global values, stack, instructions, and heap -- in later chapters. 
 
-Programming has been likened to understanding how to control a notional machine \cite{DuBoulay:1986}. The notional machine represents an ideal computer in which the programming constructs being taught are realised. To help students realise the goal of controlling this machine, the next section of each chapter in the Programming Arcana provided a series of illustrations that tried to communicate the state and behaviour of the notional machine being presented. 
-
-\fref{fig:arcana_understanding} shows some examples from the chapter on control flow. The illustration of the notional machine focuses on memory, and the instruction the computer is executing. Each instruction in the code is executed and explained on a single page.
-
-\begin{figure}[h]
+\begin{figure}[p]
   \centering
-  \includegraphics[width=0.8\textwidth]{ArcanaUnderstand}
-  \caption{Examples of pages on how the concepts worked at a conceptual level in the machine from the Programming Arcana.}
+  \includegraphics[width=0.8\textwidth]{NotionalMachine}
+  \caption{Example of the visualisation of the notional machine used in the Programming Arcana}
+  \label{fig:notional_machine}
+\end{figure}
+
+
+\fref{fig:arcana_understanding} shows some examples from the chapter on control flow. The illustration of the notional machine focuses on memory, and the instruction the computer is executing. Instructions from the pseudocode are executed, one by one, with each instruction being explained on a single page. The state of the machine is discussed after each instruction, with each page including a short description of what is occurring, a visualisation of the notional machine, related notes on the steps taken by the machine, and any language specific notes. Annotations were added to the visualisation of the notional machine to help link the comments to changes in the machine's state.
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=0.95\textwidth]{ArcanaUnderstand}
+  \caption{Examples pages from the Programming Arcana illustrating how the concepts worked to instruct the notional machine}
   \label{fig:arcana_understanding}
 \end{figure}
+
+% paragraph understanding_the_concepts_ (end)
 
 \clearpage
 
@@ -428,28 +451,35 @@ Programming has been likened to understanding how to control a notional machine 
 
 Another aim in constructing the Programming Arcana was to provide students with descriptions of the programming language grammar. This could be achieved using a textual representation of the programming language grammar with the Backus Naur Form (BNF) \cite{Backus:1959} or the Extended Backus Naur Form (EBNF) \cite{Wirth:1977}. Instead, it was decided to use the ``Railroad diagrams'' described by \citet{Braz:1990}. These provide a more visual means of presenting the grammar, which was intended to be benefit people reading these diagrams for the purpose of writing programs.
 
-To help automate the creation of the ninety syntax diagrams present in the programming arcana, a language translator was developed to convert grammars expressed textually into a graphical railroad diagram that could be included in the text and lecture slides. 
+To help automate the creation of the ninety syntax diagrams present in the Programming Arcana, a language translator was developed to convert grammars expressed textually into the graphical railroad diagram notation that could be included in the text and lecture slides. 
 
-Originally, grammars expressed in BNF used recursion to implement the repetition of elements in the language. In proposing EBNF, \cite{Wirth:1977} included an iteration construct that reduced the heavy use of recursion for expressing simple repetition of elements in the language. To simplify the generation of railroad diagrams, EBNF was extended further to cater for repeated patterns that included a separator. In BNF and EBNF this can be achieved using recursion, whereas in the railroad diagram the separator should be placed on the returning arrow that implemented the loop. The syntax diagram in \fref{syn:paramlist} illustrates these two approaches. 
+Originally, grammars expressed in BNF used recursion to implement the repetition of elements in the language. In proposing EBNF, \cite{Wirth:1977} included an iteration construct that reduced the heavy use of recursion for expressing simple repetition of elements in the language. The EBNF extension of BNF caters for simple repetitions, but reverts to recursion in many cases.
 
-\syntax{syn:paramlist}{Examples of the declaration of a parameter list with recursion and without.}{paramlist}
+To simplify the generation of the railroad diagrams, an adapted for of EBNF was used. The adaptation further simplified repeated patterns that included a separator, a common feature of programming language syntax and one that requires the use recursion to express in BNF and EBNF. For example \lref{lst:param_list} shows the EBNF definition of the syntax for a parameter list where parameters are separated by commas, and the equivalent railroad diagram -- which does not use recursion -- is shown in \fref{syn:paramlist}. 
 
-To cater for the more flexible representation in the railroad diagrams, an extended version of EBNF was used. This extension added the ability to indicate a separator for repetitions, and to indicate if the repetition occurred at least once. The grammar for this extended version of EBNF is shown in its own form in \fref{lst:eebnf}, and as a railroad diagram in \fref{syn:eebnf}.
+\ebnfsection{lst:param_list}{EBNF}{EBNF representation of a parameter list that separates multiple parameters with commas}{\ebnfcode{syntax/paramlist.ebnf}}
 
-\ebnfsection{lst:eebnf}{Extended EBNF grammar in Extended EBNF}{\ebnfcode{syntax/eebnf.ebnf}}
+\syntax{syn:paramlist}{Equivalent railroad diagram for the grammar shown in \lref{lst:param_list}}{paramlist}
+
+\clearpage
+To cater for the more flexible representation in the railroad diagrams, additional features were added to EBNF to indicate the separator for repetitions, and to indicate if the repetition occurred at least once. The grammar for this extended version of EBNF is shown in its own form in \fref{lst:eebnf}, and as a railroad diagram in \fref{syn:eebnf}.
+
+\ebnfsection{lst:eebnf}{Adapted EBNF}{Adapted EBNF grammar, with additional data related to repetitions and separator characters.}{\ebnfcode{syntax/eebnf.ebnf}}
 
 \syntax{syn:eebnf}{Syntax for grammar used in language diagram generation.}{eebnf}
 
-The \texttt{+ | *} after the repetition indicates either that the grammar had to be repeated one or more times (\texttt{+}) or zero or more times (\texttt{*}). The optional group following this indicated the presence of a separator, between each repetition of the grammar in the language. For example, the parameter list from \fref{syn:paramlist} could be coded as ``\texttt{param list = \{parameter\}+(",");}''.
+The \texttt{( + | * )} group included as part of the repetition indicates if the grammar must be repeated at least one or more times (\texttt{+}) or can appear zero or more times (\texttt{*}). The optional group following this, \texttt{[ "(", terminal, ")" ]}, indicates the presence of a separator that will appear between each repetition of the grammar in the language. For example, the parameter list from \fref{syn:paramlist} can be code as shown in \lref{lst:param_list2}.
 
-This grammar was used to create all of the railroad diagrams for the Programming Arcana, and enabled syntax to be quickly expressed and documented for both C and Pascal.
+\ebnfsection{lst:param_list2}{Adapted EBNF}{Adapted version of the EBNF grammar for the parameter list shown in \lref{lst:param_list}, indicating that the parameter must appear at least once and repetitions are separated by a comma.}{\ebnfcode{syntax/paramlist2.ebnf}}
+
+This grammar was used to encode all of the language details for the railroad diagrams in the Programming Arcana. This data was then interpreted by a script and appropriate visual representations were output to include in the text. This enabled the syntax to be quickly expressed and documented for both C and Pascal.
 
 % subsubsection railroad_diagrams (end)
-
+\clearpage
 \subsection{Embodying the Concept-Based Approach} % (fold)
 \label{ssub:arcana_summary}
 
-The Programming Arcana demonstrates how the concept-based approach can be embedded down to the syntax level. The text provided students with details programming concepts, how they apply to code design, the associated syntax, and details on how they worked within the notional machine. A range of learning styles were supported through the presentation of the syntax and concepts using both images and text. Overall, the Programming Arcana supported the concept-based approach to teaching introductory programming by embodying its principles, providing students with resources on the concepts, their application, syntax and operations. 
+The Programming Arcana textbook demonstrates how the concept-based approach of the model can be embedded down to the syntax level. The text provides students with the details related to programming concepts, how they apply to program design, the associated syntax, and details on how they work within a notional machine. A range of learning styles are supported through the presentation of the syntax and concepts using both images and text. Overall, the Programming Arcana supported the concept-based approach to teaching introductory programming by embodying its principles, providing students with details on the concepts, their application, syntax and operations. 
 
 % subsubsection summary (end)
 
@@ -459,21 +489,21 @@ The Programming Arcana demonstrates how the concept-based approach can be embedd
 \section{Video Podcasts to Support the Programming Text} % (fold)
 \label{sec:vodcasts}
 
-Text books are able to provide concepts and language syntax using static text and images. To provide students with an alternative medium, a number of video podcast series were created and made available to students via iTunesU. Three series were created in total, and each took a different approach on what should be presented. The first series, ``Object Oriented Programming'', covered the object oriented principles and focused on communicating the concepts with little coverage of language syntax. ``Learning Programming with SwinGame'' was the second series created, and focused on communicating Pascal syntax. The third series, ``Introductory Programming'', focused on a combination of the two, presenting the concepts and the syntax together.
+Text books are limited to providing concepts and language syntax using static text and images. To provide students with an alternative medium, a number of video podcast series were created and made available to students via iTunesU. Three series were created in total, and each took a different approach to what should be presented. The first series, ``Object Oriented Programming'', covers object oriented programming principles and focused on communicating these concepts with little coverage of language syntax. ``Learning Programming with SwinGame'' was the second series created, and focuses on communicating Pascal syntax. The third series, ``Introductory Programming'', focuses on a combination of the two, presenting the concepts and the syntax together. Each of these series is discussed in the following subsections.
 
 \subsection{Object Oriented Programming} % (fold)
 \label{sub:object_oriented_programming}
 
-The Object Oriented Programming series contained nineteen video podcasts. This series aimed to enable a classroom ``flip'', with students expected to watch these \emph{before} coming to class.Each podcast focused on communicating the concepts associated with one topics from the unit, with only a small number of episodes presenting language specific material for the C\#, Java and Objective-C programming languages. Episodes lasted between six and thirty six minutes.
+The Object Oriented Programming series contains nineteen video podcasts. This series aimed to enable a classroom ``flip'', with students expected to watch these \emph{before} coming to class. Each podcast focuses on communicating concepts associated with one topics from the unit, with only a small number of episodes presenting language specific material for the C\#, Java and Objective-C programming languages. Episodes lasted between six and thirty six minutes.
 
 % subsection object_oriented_programming (end)
 
 \subsection{Learning Programming with SwinGame} % (fold)
 \label{sub:learning_programming_with_swingame}
 
-Episodes in this series each focused on a certain aspect of the Pascal programming language syntax. The goal of this series was to create a number of short videos, with each one covering one piece of the language syntax. Each episode started with the syntax diagram showing the language grammar, and making use of the resources created for the Programming Arcana. A simple example was then presented using command line input and output. This was then followed by a more interactive example using the game development library, which is discussed in \sref{sec:swingame}.
+Episodes in this series each focus on a certain aspect of the Pascal programming language. The goal of this series is to provide a number of short videos, with each one covering one piece of the language syntax. Each episode starts with the syntax diagram showing the language grammar in a railroad diagram, making use of the resources created for the Programming Arcana. The syntax is then explored using a simple example with command line input and output. This is then followed by a more interactive example using the game development library discussed in \sref{sec:swingame}.
 
-A total of twenty six episodes was created for this series. These were divided into three levels: introductory, intermediate and advanced language concepts. \fref{fig:podcasts} shows the titles of each episodes, and the intended sequence students would follow. Episodes in this series lasted between two and fifteen minutes.
+A total of twenty six episodes were created for this series. These are divided into three levels: introductory, intermediate and advanced language concepts. \fref{fig:podcasts} shows the titles of each episodes, and the intended sequence students would follow. Episodes in this series last between two and fifteen minutes.
 
 \begin{figure}[thb]
   \centering
@@ -487,14 +517,14 @@ A total of twenty six episodes was created for this series. These were divided i
 \subsection{Introductory Programming} % (fold)
 \label{sub:introductory_programming}
 
-Introductory Programming was the last series created, and contained seven episodes that were aligned with the first seven chapters of the Programming Arcana. Each video podcast presented concepts using a number of slides, taken from associated lectures, and included programming demonstrations in the C and C++ languages. The goal for this series was to provide students with a summary of the concepts from each lecture. Episodes lasted between seventeen and thirty eight minutes.
+Introductory Programming was the last series created, and contains seven episodes that are aligned with the first seven chapters of the Programming Arcana. Each video podcast presents concepts using a number of slides, taken from associated lectures, and includes programming demonstrations in the C and C++ languages. The goal for this series was to provide students with a summary of the concepts from each lecture. Episodes lasted between seventeen and thirty eight minutes.
 
 % subsection introductory_programming (end)
 
 \subsection{Supporting Multiple Modes of Learning} % (fold)
 \label{sub:supporting_multiple_modes_of_learning}
 
-All three podcast series have been used to support students learning in the example units discussed in \cref{cha:example_impl}. The podcasts provided students with an alternative medium for approaching the concepts and syntax that was included in the Programming Arcana, with the expectation that students would be able to use both resources to support the construction of their knowledge.
+All three podcast series were used to support students learning in the example units discussed in \cref{cha:example_impl}. The podcasts provided students with an alternative medium for approaching the concepts and syntax that was included in the Programming Arcana, with the expectation that students would be able to use both resources to support the construction of their knowledge.
 
 % subsection supporting_multiple_modes_of_learning (end)
 
@@ -507,9 +537,9 @@ All three podcast series have been used to support students learning in the exam
 
 With the procedures first approach to teaching introductory programming, students are introduced to calling and creating procedures before being introduced to other programming concepts. This approach promotes a focus on \textbf{sequence} in these early tasks, with students creating procedures to group together a sequence of procedure calls that perform a certain task. 
 
-The challenge with this approach, as identified by \citet{Pattis:1993}, is finding meaningful tasks for students to perform. SwinGame was created to help address this issue, and to provide students with resources that would enable them to create more engaging programs.
+The challenge with this approach, as identified by \citet{Pattis:1993}, is finding meaningful tasks for students to perform. SwinGame was created to help address this issue, and to provides students with resources that enables them to create more engaging programs.
 
-SwinGame is a game development library designed to support the teaching of introductory programming. Commercial game development tools focus on productivity, removing control from the programmer in order to improve productivity and avoid boilerplate code. The goals of SwinGame focus on enabling students to explore programming concepts, while at the same time creating programs that are fun and engaging. 
+SwinGame is a game development library designed to support the teaching of introductory programming. Commercial game development tools focus on performance and productivity, removing control from the programmer in order to improve both and to avoid boilerplate code. In contrast, the goals of SwinGame focus on enabling students to explore programming concepts, while at the same time creating programs that are fun and engaging. 
 
 The goals of SwinGame are to:
 \begin{itemize}[noitemsep, nolistsep]
@@ -525,7 +555,7 @@ The goals of SwinGame are to:
 \subsection{Supporting Early Exercises and Lecture Demonstrations} % (fold)
 \label{sub:supporting_early_exercises}
 
-SwinGame was used to support the early exercises in the teaching and learning activities for the introductory programming unit described in \cref{cha:example_impl}. For example, procedures were introduced in Week 1 where students developed a small program that drew a house, the resulting code from this exercise is shown in \lref{lst:house_drawing}. This task aimed to focus students on concepts related to procedure declarations, procedure calls and instruction sequence. Sequence was explored by adjusting the order of the instructions in the program, and examining the results on the images drawn. The core exercises in Week 1 then built on this, having students complete a program that used images and sound effects to deliver a joke, the starting code for which is shown in \lref{lst:joke}. Screen-shots of the resulting programs are shown in \fref{fig:week1_progs}.
+SwinGame was used to support the early exercises in the teaching and learning activities for the introductory programming unit described in \cref{cha:example_impl}. For example, procedures were introduced in Week 1 where students developed a small program that drew a house, the resulting code from this exercise is shown in \lref{lst:house_drawing}. This task aims to focus students attention on concepts related to procedure declarations, procedure calls and instruction sequence. Sequence was explored by adjusting the order of the instructions in the program, and examining the results on the images drawn. Core exercises in Week 1 then built on this, having students complete a program that used images and sound effects to deliver a joke, the starting code for which is shown in \lref{lst:joke}. Screen-shots of the resulting programs are shown in \fref{fig:week1_progs}.
 
 \passection{lst:house_drawing}{The Pascal code for the House Drawing laboratory exercise from the introductory programming unit. In this program students explored concepts related to procedures and sequence.}{\pascode{Figures/Supporting/HouseDrawing.pas}}
 
@@ -540,20 +570,20 @@ SwinGame was used to support the early exercises in the teaching and learning ac
 
 With the students in full control of their programs, any form of user interaction required students to implement their own event handling loop. This provided a convenient motivation for control flow mechanisms in Week 3 of introductory programming. By this point, students could create parametrised procedures to draw shapes, but program duration was always set by the length of the delay coded into the sequence. By introducing \textbf{repetition} it became possible to keep a window open \emph{until} the user asked for it to close. With \textbf{selection} user actions could then be responded to, updating values in variables that changed how things were drawn on the screen.
 
-The visual nature of the games developed with SwinGame helped create a more engaging atmosphere in the lectures. By creating visual programs, the lecture demonstration code could be designed and implemented \emph{with} the students. For example, in Week 3 of the introductory programming unit the lecture demonstration created a small program where the user could move a light around the screen and turn it on and off. The code in \lref{lst:lights} shows a part of the code developed in this lecture. The program was created iteratively, involving the students at each stage.
+The visual nature of the games developed with SwinGame help create a more engaging atmosphere in lectures. By creating visual programs, the lecture demonstration code can be designed and implemented \emph{with} the students. For example, in Week 3 of the introductory programming unit the lecture demonstration created a small program where the user could move a light around the screen and turn it on and off. The code in \lref{lst:lights} shows a part of the code developed in this lecture. The program was created iteratively, involving the students at each stage, as outlined in the following list.
 
 \begin{enumerate}[noitemsep, nolistsep]
   \item Initially the program was developed using concepts from previous week, with the code implementing the \texttt{DrawLight} procedure. At this stage a call to \texttt{Delay} was used to keep the program open for a short period.
   \item The first problem was highlighted by explaining how the program worked, while it was running. Half way through the explanation the program ended, leading to the question ``How can we keep the program open until we want it to close?''. Via various prompts the event loop was described, and coded as the repeat loop in main. Counting out a period longer than the previous delay highlighted that the new code had solved the old problem, and the class discussed what was actually happening behind the scenes to enable this. Closing the window demonstrated the ending of the repeat loop.
   \item The next problem was to make the program more interactive: ``Wouldn't it be good to be able to turn the light on and off?''. This lead to a discussion of what needed to \emph{vary} in the program, and the addition of the \texttt{lightIsOn} variable in \texttt{Main}. This was set to false when the program started, and its state was flipped (on to off, and visa versa) in the repeat loop.
-  \item Running the program had an \emph{interesting} effect, as the light flickered between its two states. Questions started with ``Do we always want to change the state of the light?'', and eventually lead to ``So, you only want to change the state of the light \textbf{if} the user has typed the space bar?'' and its follow on ``How can we achieve this in our code?''. After reviewing selection, and the syntax for the if statement, the assignment statement that changed the lights state was put within an if statement. The program was executed and the results discussed.
-  \item Other features added in a similar style, each focusing on the application of the concepts to solve a problem or to introduce a new feature.  
+  \item Running the program had an \emph{interesting} effect, as the light flickered between its two states. Questions started with ``Do we always want to change the state of the light?'', and eventually lead to ``So, you only want to change the state of the light \textbf{if} the user has typed the space bar?'' and follow on to ``How can we achieve this in our code?''. After reviewing selection, and the syntax for the if statement, the assignment statement that changed the lights state was put within an if statement. The program was executed and the results discussed.
 \end{enumerate}
 
+Other features were added in a similar style, each focusing on the application of the concepts to solve a problem or to introduce a new feature.  
 
 \passection{lst:lights}{The final code from the lecture example developed with students in the Week 3 lecture of the introductory programming unit. The program shows a light bulb image that can be turned on and off with the mouse and space bar, and moved around the screen using arrow keys.}{\pascode{Figures/Supporting/Lights.pas}}
 
-Each week's lecture demonstrations followed a similar sequence of events. SwinGame enabled these interactive through its requirement for explicit control, and its support for multimedia resources. In later weeks lecture demonstrations involved the development, and weekly expansion of a small game. These games were proposed by students, with appropriate guidance. Students supplied images and sound effects, suggested features, discussed implementation strategies and were engaged in the iterative implementation of these games. \fref{fig:games} shows screen-shots of two games developed in the lectures, the code of which was then shared with the students.
+Each week's lecture demonstrations followed a similar sequence of events. SwinGame enabled these interactive through its requirement for explicit control, and its support for multimedia resources. In later weeks lecture demonstrations involved the development, and weekly expansion of a small game. The functionality and theme of these games were proposed by students, with appropriate guidance, helping to ensure students remain engaged with the learning activities. Students supplied images and sound effects, suggested features, discussed implementation strategies and were engaged in the iterative implementation of these games. \fref{fig:games} shows screen-shots of two games developed in the lectures, the code of which was then shared with the students.
 
 \begin{figure}[thbp]
   \centering
@@ -567,9 +597,9 @@ Each week's lecture demonstrations followed a similar sequence of events. SwinGa
 \subsection{Supporting Custom Projects} % (fold)
 \label{sub:supporting_custom_projects}
 
-As well as supporting the delivery of lecture material, SwinGame provided students with a wide range of capabilities they could use in the creation of their \emph{custom projects}. To be eligible for at least a Distinction grade, students needed to demonstrate they could apply the concepts from the unit to the development of a program of their own design. While there was no requirement for students to use SwinGame, most chose to create a game using SwinGame.
+As well as supporting the delivery of lecture material, SwinGame provided students with a wide range of capabilities they could use in the creation of their \emph{custom projects}. To be eligible for at least a Distinction grade, students needed to demonstrate they could apply the concepts from the unit to the development of a program of their own design. While there was no requirement for students to use the library, most chose to create a game using SwinGame.
 
-To help support this, the SwinGame functionality was documented on the SwinGame website (\url{http://swingame.com}), as shown in \fref{fig:website}. The website was created to list the SwinGame functions and procedures, and additional documentation was added for some of the more common tasks. The site also provided a means of distributing the SwinGame library to a wider audience.
+To help support this, the SwinGame functionality was documented on a website (\url{http://swingame.com}), as shown in \fref{fig:website}. The website was created to list the SwinGame functions and procedures, and additional documentation was added for some of the more common tasks. The site also provided a means of distributing the SwinGame library to a wider audience.  
 
 \begin{figure}[thbp]
   \centering
@@ -592,7 +622,7 @@ SwinGame was developed through the collaboration of both staff and students over
 
 With the introductory programming unit using two programming languages, and object oriented programming using four, SwinGame was required to be accessible from a range of programming languages. This included both procedural and object oriented programming languages. To achieve this goal a number of tools were created to simplify the process of creating programming language specific version of SwinGame.
 
-SwinGame's core logic is implemented via a number of modules, one for each aspect of the SwinGame functionality. These modules can be accessed via language specific wrappers as shown in \fref{fig:swingame_arch}. Each wrapper mimic the SwinGame logic, and act as adapters that perform any required transformation of data between the program's runtime environment and the native SwinGame library, which is accessed via the SwinGame Library Interface. This interface consolidates all of the SwinGame functionality and exposes it as a native library, it also acts as an adapter that converts SwinGame types to, and from, appropriate native representations that can be exchanged across the native interface. 
+SwinGame's core logic is implemented via a number of modules, one for each aspect of the SwinGame functionality. These modules can be accessed via language specific wrappers as shown in \fref{fig:swingame_arch}. Each wrapper mirrors the SwinGame functionality, and acts as an adapter that performs any required transformation of data between the program's runtime environment and the native SwinGame library, which is accessed via the SwinGame Library Interface. This interface consolidates all of the SwinGame functionality and exposes it as a native library, it also acts as an adapter that converts SwinGame types to, and from, appropriate native representations that can be exchanged across the native interface. 
 
 \begin{figure}[thbp]
   \centering
@@ -601,7 +631,7 @@ SwinGame's core logic is implemented via a number of modules, one for each aspec
   \label{fig:swingame_arch}
 \end{figure}
 
-To ease the creation of the language specific wrappers a translator was created that read the source code for the SwinGame core logic and output the SwinGame Library Interface, a number of matching language specific wrappers, and the programmer documentation for the SwinGame website as shown in \fref{fig:swingame_trans}. This ensured consistency between the wrapper, SwinGame Library Interface and the documentation while allowing the development of SwinGame to focus on enhancing the core logic.
+To ease the creation of the language specific wrappers a translator was created that reads the source code of the SwinGame core logic and outputs the SwinGame Library Interface, a number of matching language specific wrappers, and the programmer documentation for the SwinGame website, as shown in \fref{fig:swingame_trans}. This ensures consistency between the wrapper, SwinGame Library Interface and the documentation, while allowing the development of SwinGame to focus on enhancing the core logic.
 
 \begin{figure}[thbp]
   \centering
@@ -610,9 +640,9 @@ To ease the creation of the language specific wrappers a translator was created 
   \label{fig:swingame_trans}
 \end{figure}
 
-SwinGame's language translation scripts requires additional information to enable the construction of the various artefacts. It was decided to store this additional information using attributes in comments in the code for the core logic. These special comments started with \texttt{///} and contained documentation as well as other attributes. These attributes were marked using the \texttt{@} symbol followed by a attribute identifier and a number of values. Two example functions from the SwinGame core logic are shown in \fref{lst:audio}, and \tref{tbl:attributes} provides details of the attributes shown.
+SwinGame's language translation scripts requires additional information to enable the construction of the various artefacts. It was decided to store these additional details using attributes in comments in the code of the core logic. These special comments started with \texttt{///} and contained documentation as well as other information needed to assist with the translation. These attributes were marked using the \texttt{@} symbol followed by a attribute identifier and a number of values. Two example functions from the SwinGame core logic are shown in \fref{lst:audio}, and \tref{tbl:attributes} provides details of the attributes shown.
 
-\passection{lst:audio}{Example of markup language used to annotate SwinGame core logic to enable generation of language specific wrappers.}{\pascode{Figures/Supporting/Audio.pas}}
+\passection{lst:audio}{Example of markup language used to annotate SwinGame core logic to enable generation of language specific wrappers}{\pascode{Figures/Supporting/Audio.pas}}
 
 \begin{table}[hbp]
     \footnotesize
@@ -634,13 +664,11 @@ SwinGame's language translation scripts requires additional information to enabl
     \end{tabular}
 \end{table}
 
-The \texttt{@lib} parameter determines if the function or procedure is added to the SwinGame Library Interface. When the function or procedure is not to be added, an alternative call is provided. The generated wrapper code is then adjusted to call the appropriate version. The code in \fref{lst:audio} indicates that \texttt{LoadSoundEffect} should be included directly in the interface, whereas this version of the \texttt{PlaySoundEffect} procedure calls \texttt{PlaySoundEffectA} and passes in default values for some parameters.
+The \texttt{@lib} parameter determines if the function or procedure is added to the SwinGame Library Interface. When the function or procedure is not to be added, an alternative call is provided. The generated wrapper code is then adjusted to call the appropriate function. The code in \fref{lst:audio} indicates that \texttt{LoadSoundEffect} should be included directly in the interface, whereas this version of the \texttt{PlaySoundEffect} procedure calls \texttt{PlaySoundEffectA} and passes in default values for some parameters.
 
-All SwinGame resources are accessible via pointers, enabling the language translation scripts to create object oriented abstractions, when this is appropriate for the wrapper's programming language. \fref{fig:swingame_wrapper_output} shows illustrates that main components created by the translator. 
+All SwinGame resources are accessible via pointers, enabling the language translation scripts to create object oriented abstractions when this is appropriate for the wrapper's programming language. \fref{fig:swingame_wrapper_output} illustrates the main components created by the translator. 
 
-Each function and procedure in the core logic is capable of creating two methods in these object oriented language wrappers. The first method is created as a static\footnote{Static in this context is meant to indicate that the method is associated with the class, rather than instances of the class.} member of a class that mirrors the module from the core logic. 
-
-A second method can then be associated with a resource class. The specific class is indicated by the \texttt{@class} attribute. These classes contain a field to track the resource's pointer, and so the method will have one fewer parameters. When this method is called it calls the appropriate method on the wrapper class and passes in the value from the field along with any other parameter values passed to the method.
+Each function and procedure in the core logic is capable of creating two methods in the object oriented language wrappers. The first method is created as a static\footnote{Static in this context is meant to indicate that the method is associated with the class, rather than instances of the class.} member of a class that mirrors the module from the core logic. The second method can then be associated with a matching resource class, as an instance member. The specific class is indicated by the \texttt{@class} attribute. These classes contain a field to track the resource's pointer, and so the method will have one fewer parameters. When these methods are called, they calls the matching method static method and pass in the value from the pointer field along with any other parameter values passed to the method.
 
 \begin{figure}[thbp]
   \centering
@@ -649,15 +677,15 @@ A second method can then be associated with a resource class. The specific class
   \label{fig:swingame_wrapper_output}
 \end{figure}
 
-The Objective C syntax required special attention. For example, the procedure PlaySoundEffect shown in \fref{lst:audio} could be called using \texttt{[Audio playSoundEffect:effect looped:3]}. The signature to match this required the parameters to be embedded within the method's name. This was achieved by added \texttt{@sn} and \texttt{@csn} attributes that allow the developer to specify a format string into which the parameter signatures will be injected.
+The Objective C syntax required special attention, as method signatures do not separated name from parameters. For example, the procedure PlaySoundEffect shown in \fref{lst:audio} could be called using \texttt{[Audio playSoundEffect:effect looped:3]}. The signature to match this required the parameters to be embedded within the method's name. This was achieved by adding \texttt{@sn} and \texttt{@csn} attributes that allow the developer to specify a format string into which the parameter signatures are injected.
 
-By supporting both procedural and object oriented programming languages, SwinGame was able to be used in both the introductory programming and object oriented programming units. In introductory programming students worked with SwinGame from Week 1, and explored its use from both the Pascal and C programming languages. In the object oriented programming unit, SwinGame provided a familiar framework for students to work with at the start of the teaching period. As the period progressed, students were transitioned away from using SwinGame to encourage them to explore other commercially available libraries by the end of the unit.
+By supporting both procedural and object oriented programming languages, SwinGame was able to be used in both the introductory programming and object oriented programming units. In introductory programming students worked with SwinGame from Week 1, and explored its use from both the Pascal and C programming languages. In the object oriented programming unit, SwinGame provided a familiar framework for students to work with at the start of the teaching period. As the teaching period progressed, students were transitioned away from using SwinGame to encourage them to explore other commercially available libraries by the end of the unit.
 
 % subsection supporting_multiple_languages (end)
 \subsection{Supporting What We Teach} % (fold)
 \label{sub:supporting_what_we_teach}
 
-SwinGame performed a central role in supporting \emph{what} we taught, as illustrated in \fref{fig:what_we_teach}. SwinGame helped to enable the interactive lectures, and to provided the tools necessary to create engaging examples in the Programming Arcana and the video podcasts. It also provided a consistent library for students as they moved between programming languages.
+SwinGame performed a central role in supporting \emph{what} we taught, as illustrated in \fref{fig:what_we_teach}. SwinGame helped enable interactive lectures, and provided the tools necessary to create engaging examples in the Programming Arcana and the video podcasts. It also provided a consistent library for students to use as they moved between programming languages, and programming units.
 
 \begin{figure}[thb]
   \centering
