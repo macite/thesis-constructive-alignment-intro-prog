@@ -5,24 +5,24 @@
 
 \graphicspath{{Figures/CAIntroProg/}}
 
-\cref{cha:approach} proposed an model for delivering introductory programming units based upon the principles from \cref{cha:guiding_principles}. The proposed model uses portfolio assessment, with a concept-based delivery that focuses on the students active construction of knowledge. This chapter provides example implementations of this model, demonstrating how the principles from \cref{cha:guiding_principles} and the model from \cref{cha:approach} can be realised in a programming curriculum.
+\cref{cha:approach} proposed a model for delivering introductory programming units based upon the principles from \cref{cha:guiding_principles}. The proposed model uses portfolio assessment, with a concept-based delivery that focuses on the students active construction of knowledge. This chapter provides example implementations of this model, demonstrating how the principles from \cref{cha:guiding_principles} and the model from \cref{cha:approach} can be realised in a programming curriculum.
 
-\sref{sec:paradigm_choice} provides the final piece of the overall strategy for delivering introductory programming, describing the choice of programming paradigm for the first programming units. The following two sections, \sref{sec:introductory_programming} and \sref{sec:object_oriented_programming}, then describe two programming units implemented using the model from \cref{cha:approach}. For each of these units the subsections are ordered to follow the processes from \cref{cha:approach}. First we outline the definition of the intended learning outcomes and the construction of the assessment criteria. This is followed by examples of various teaching and learning activities and resources developed and delivered as part of this curriculum. Finally each section concludes with an overview of how student portfolios were assessed.
+\sref{sec:paradigm_choice} provides the final piece of the overall strategy for delivering introductory programming, describing the choice of programming paradigm for the first programming units. The following two sections, \sref{sec:introductory_programming} and \sref{sec:object_oriented_programming}, then describe two programming units implemented using the model from \cref{cha:approach}. For each of these exemplar programming units the subsections are ordered to follow the processes from \cref{cha:approach}. First we outline the definition of the intended learning outcomes and the construction of the assessment criteria. This is followed by examples of various teaching and learning activities and resources developed and delivered as part of this curriculum. Finally each section concludes with an overview of how student portfolios were assessed.
 
 \clearpage
 \section{Paradigm Choice} % (fold)
 \label{sec:paradigm_choice}
 
-In describing \pref{itm:agile}, \sref{ssub:be_agile_and_willing_to_change} of \cref{cha:guiding_principles} outlined a overall strategy that could be used to guide the development of the units. This strategy included the separation of material for teaching and learning activities from more detail focused resources, but also included defining an overall strategy to guide the development of this material. Within the overall strategy were the requirement to make decisions related to assessment and delivery approach that were subsequently discussed in \sref{sec:overall_strategy} of \cref{cha:approach}, leaving only decisions related to choosing an approach to selecting content to be discussed.
+In describing \pref{itm:agile}, \sref{ssub:be_agile_and_willing_to_change} of \cref{cha:guiding_principles} outlined a overall strategy that could be used to guide the development of the units. This strategy included the separation of material for teaching and learning activities from more detail focused resources, but also included defining an overall strategy to guide the development of this material. Within the overall strategy was the requirement to make decisions related to assessment and delivery approach that were subsequently discussed in \sref{sec:overall_strategy} of \cref{cha:approach}, leaving only decisions related to choosing an approach to selecting content to be discussed.
 
-\pref{itm:paradigm} from \cref{cha:guiding_principles} indicated that, with programming, the choice of which content to include is heavily influenced by programming paradigm. As discussed in \sref{ssub:strategy_around_paradigm}, a number of programming paradigms could be used to teach introductory programming. This section addresses the question of which programming paradigms were selected for the introductory programming units in this work.
+\pref{itm:paradigm} from \cref{cha:guiding_principles} indicated that, with programming, the choice of which content to include is heavily influenced by programming paradigm. As discussed in \sref{ssub:strategy_around_paradigm}, a number of programming paradigms could be used to teach introductory programming. This section addresses the question of which programming paradigms were selected, and why, for the two introductory programming unit examples in this chapter.
 
 %
 %  There is lots of work on objects vs not objects - do you review in Chapter 2?  Else need
 % to do short review here??
 % AC: reviewed in Chapter 3
 
-Prior to conducting this research we have experienced introductory programming using both imperative-first and objects-first approaches. Our view mirrors those of \citet{Rist:1996} who reported on plans and cognitive schemas, the fundamental units of program design. In relating plans to objects, \citet{Rist:1996} indicated that objects were not different, they were more, as objects require additional overhead related to defining object\footnote{Object structures are typically defined using classes or similar mechanisms in languages such as Java} structures. Given this, units that take an objects-first approach will still need to have a significant focus on procedural aspects, as indicated by \citet{Robins:2003}, a reasoning that was also echoed in the ``back to basics'' approach of \citet{Reges:2006}. \tref{tbl:oo_proc_concepts} lists the main concepts programming concepts related to procedural and object oriented programming to illustrate this point. Conceptually objects represent a combination of structured data and associated functionality, so from this perspective objects build upon procedural programming concepts.
+Prior to conducting this research we have had experience with teaching introductory programming using both imperative-first and objects-first approaches. Our view mirrors those of \citet{Rist:1996} who reported on plans and cognitive schemas, the fundamental units of program design. In relating plans to objects, \citet{Rist:1996} indicated that objects were not different, they were more, as objects require additional overhead related to defining object\footnote{Object structures are typically defined using classes or similar mechanisms in languages such as Java} structures. Given this, units that take an objects-first approach will still need to have a significant focus on procedural aspects, as indicated by \citet{Robins:2003}, a reasoning that was also echoed in the ``back to basics'' approach of \citet{Reges:2006}. \tref{tbl:oo_proc_concepts} lists the main concepts programming concepts related to procedural and object oriented programming to illustrate this point. Conceptually objects represent a combination of structured data and associated functionality, so from this perspective objects build upon procedural programming concepts.
 
 \begin{table}
 	\centering
@@ -52,11 +52,11 @@ Prior to conducting this research we have experienced introductory programming u
     \end{tabular}
 \end{table}
 
-As a result, an objects-later approach was taken with the units reported in this work. However, we believe that the model discussed in \cref{cha:approach} would also be appropriate for units developed using an objects-first approach.
+As a result, an objects-later approach was taken with the units reported in this work. However, we believe that the model discussed in \cref{cha:approach} would also be appropriate for units developed using an objects-first approach -- see \cref{cha:discussion} for further discussion on this point.
 
-In covering structured procedural programming, the focus will be on procedural programming concepts such as control flow, functions and procedures, parameter passing, and data modelling using structures and records. Maintaining a clear focus on these concepts will help address \pref{itm:focus} and \pref{itm:concepts} from \cref{cha:guiding_principles}.
+In covering structured procedural programming, the focus was on procedural programming concepts such as control flow, functions and procedures, parameter passing, and data modelling using structures and records. Maintaining a clear focus on these concepts helps to address \pref{itm:focus} and \pref{itm:concepts} from \cref{cha:guiding_principles}.
 
-\citet{Reges:2006} back to basics approach also aimed to teach imperative programming concepts, which they did using the Java programming language. However, Java is an object oriented programming language and so, in effect, this approach taught students how \emph{not} to use Java. While we have adopted the imperative programming focus, \pref{itm:authentic} indicates that we must select a programming language that was designed for this purpose. The discussion of which language was used for the example units will be presented in the following sections.
+\citet{Reges:2006} back to basics approach also aimed to teach imperative programming concepts, which they did using the Java programming language. However, Java is an object oriented programming language and so, in effect, this approach taught students how \emph{not} to use Java. While we have adopted the imperative programming focus, \pref{itm:authentic} indicates that we must select a programming language that was designed for this purpose. The discussion of which language was used for the example units is presented in the following sections.
 
 %
 % You can cite your own paper (TALE? ACE?) describing development of the units :-)
@@ -71,7 +71,7 @@ While objects did not appear in the first programming unit, their importance in 
 	\label{fig:final_overall_strategy}
 \end{figure}
 
-\fref{fig:final_overall_strategy} shows the final overall strategy for the example units presented in this work. Structured procedural programming principles will be used to inform the creation of the intended learning outcomes for the introductory programming unit. These outcomes will then become prerequisite knowledge for the object oriented programming unit, which will focus on object oriented programming principles. Both units will use portfolio assessment, and focus on active student centred approaches to introducing students to unit content.
+\fref{fig:final_overall_strategy} shows the final overall strategy for the example units presented in this thesis. Structured procedural programming principles were used to inform the creation of the intended learning outcomes for the introductory programming unit. These outcomes then become prerequisite knowledge for the object oriented programming unit, which focused on object oriented programming principles. Both units used portfolio assessment, and focused on active student centred approaches to introducing students to unit content.
 
 
 The objects-later approach taken by these example units aligns well with the principles from \cref{cha:guiding_principles}, providing a clear focus that supported a concept-based approach to introductory programming. Concepts related to object oriented programming were then the focus of the second programming unit. The alignment of these two units to the \emph{what} principles from \cref{cha:guiding_principles} is outlined in the following list.
@@ -97,7 +97,7 @@ The objects-later approach taken by these example units aligns well with the pri
 \subsection{Aims for Introductory Programming} % (fold)
 \label{ssub:intro:aims}
 
-The aim of the introductory programming unit was to introduce students to programming and software development fundamentals. While focusing on developing depth in this area, the holistic nature of the portfolio assessment approach meant that programming was placed in the context of software development in general. As a result, this unit also touched on a number of areas not traditionally associated with introductory programming.
+The aim of the introductory programming unit was to introduce students to programming and software development fundamentals. While the focus was on developing depth in this area, the holistic nature of the portfolio assessment approach meant that programming was placed in the context of software development in general. As a result, this unit also touched on a number of areas not traditionally associated with introductory programming such as professional ethics and communication skills.
 
 % The following sections outline the definition of the intended learning outcomes, the construction of the assessment criteria and the development of the teaching and learning resources for the introductory programming unit.
 
@@ -256,6 +256,8 @@ The Association for Computing Machinery (ACM) and IEEE Computer Society 2013 Com
 
 All of the factors listed above, and those from \cref{cha:approach}, guided the definition of the intended learning outcomes for the introductory programming unit. Given the wide range of skills and knowledge mentioned, the challenge was to ensure that this could be expressed in a small number of intended learning outcomes. This task was assisted by the use of the SOLO taxonomy, and recognising that the SOLO level of each outcome indicated that earlier levels must already have been achieved.
 
+Each outcome aimed to engage students in activities likely to help them achieve a \emph{relational} level of understanding. The verbs \emph{analyse}, \emph{apply}, \emph{construct}, \emph{implement}, \emph{interpret} and \emph{use} represent activities in which students need to use cognitive activities at the relational level of understanding. The multistructural \emph{describe} verb and the unistructural \emph{locate} verb are also used, but as a supporting activity for a higher level verb, such as with \emph{describe} and \emph{relate}.
+
 The final statement of the intended learning outcomes for the introductory programming unit are listed below, with the verbs from the SOLO taxonomy indicated in bold.
 \begin{enumerate}[noitemsep,nolistsep]
 	\item \textbf{Apply} code reading and debugging techniques to \textbf{analyse}, \textbf{interpret}, and \textbf{describe} the purpose of program code, and \textbf{locate} within this code errors in syntax, logic, and/or good practice.
@@ -266,16 +268,14 @@ The final statement of the intended learning outcomes for the introductory progr
 
 Introductory programming used a procedures-first approach, and focused on the structured programming principles of organising code using \emph{sequence}, \emph{selection} and \emph{repetition}. Students learnt to use functional and modular decomposition to break problems down, and implement solutions using functions and procedures. Data was managed using arrays and custom data types. Pointers and memory management were introduced. Various forms of parameter passing were covered, including pass-by-value and pass-by-reference. Weaved through this was an iterative development process, a focus on writing clear and legible code, and other good programming practices. In addition to writing code, students learnt to read code for the debugging purposes, and to demonstrate their ability to interpret other peoples code.
 
-Each outcome aims to engage students in activities that will help them achieve a \emph{relational} level of understanding. The verbs \emph{analyse}, \emph{apply}, \emph{construct}, \emph{implement}, \emph{interpret} and \emph{use} represent activities in which students will need to use cognitive activities that will help them achieve a relational level of understanding. The multistructural \emph{describe} verb and the unistructural \emph{locate} verb are also used, but as a supporting activity for a higher level verb, such as with \emph{describe} and \emph{relate}.
-
-Other factors, not directly stated as intended learning outcomes, incorporated in the unit as a means of addressing wider graduate attributes, or as beneficial outcomes not directly assessed in determining the final student outcomes. This included professional communication, software engineering methods and graphics and visualisation.
+Other factors, not directly stated as intended learning outcomes, were incorporated in the unit as a means of addressing wider graduate attributes, or as beneficial outcomes not directly assessed in determining the final student outcomes. This included professional communication, software engineering methods and graphics and visualisation.
 
 \paragraph{Professional Communication} % (fold)
 \label{par:professional_communication}
 
 Traditionally, many programming units have focused on assessing code outcomes, assuming that if students could produce code, they understood it. Others, such as \citet{Lister:2004}, extended this to include small code reading and tracing tasks in order to expand on the assessment of student's understanding of code. 
 
-With our introductory programming unit this is taken further, with the students needing to write about the associated principles and to describe code. This expanded assessment had the dual benefit of engaging higher levels of cognitive activity, while also helping students to develop their professional communication skills.
+With the example introductory programming unit this is taken further, with the students needing to write about the associated principles and to describe code. This expanded assessment had the dual benefit of engaging higher levels of cognitive activity, while also helping students to develop their professional communication skills.
 
 Each of the intended learning outcomes requires students to communicate their understanding. For example, in meeting the first outcome students needed to demonstrate the ability to interpret supplied code, and to communicate its purpose and any issues in logic or the application of recommended good practice. While not a direct focus of the assessment, communication skills play an enabling role in achieving this, and students were provided with support and encouragement in developing their communication skills alongside their technical skills.
 
@@ -295,28 +295,28 @@ Together, both of these aspects were related to the more general concept of \emp
 \paragraph{Graphics and Visualisation} % (fold)
 \label{par:graphics_and_visualisation}
 
-Identifying appropriate applications for student to develop is a common problem with teaching introductory programming. In teaching introductory programming it was decided to focus on having students program small computer games. The research literature related to the use of games indicates that this is popular with students, and helps motivate them to spend time on the task, as reported in the following work.
+Identifying appropriate applications for student to develop is a common problem with teaching introductory programming. In teaching introductory programming it was decided to focus on having students program small computer games. The research literature related to the use of games indicates that this is popular with students \cite{Bayliss:2006}, and helps motivate them to spend time on the task \cite{Feldgen:2004,Rajaravivarma:2005,Cliburn:2006}, as well as supporting development of student understanding of programming concepts \cite{Roberts:1995,Leutenegger:2007}.
 
-\begin{itemize}[noitemsep,nolistsep]
-	\item \citet{Roberts:1995} used a graphical library in teaching introductory programming and reported that it enhanced student interest and reinforced essential programming concepts.
+% \begin{itemize}[noitemsep,nolistsep]
+% 	\item \citet{Roberts:1995} used a graphical library in teaching introductory programming and reported that it enhanced student interest and reinforced essential programming concepts.
 
-	\item \citet{Feldgen:2004} reported their highest class attendance for the unit after shifting to using games, with improvements in pass rates and student retention.
+% 	\item \citet{Feldgen:2004} reported their highest class attendance for the unit after shifting to using games, with improvements in pass rates and student retention.
 
-	\item The greenfoot environment, introduced in \citet{Kulling:2005}, was created to help introduce high school students to object oriented programming.
+% 	\item The greenfoot environment, introduced in \citet{Kulling:2005}, was created to help introduce high school students to object oriented programming.
 
-	\item \cite{Rajaravivarma:2005} used text-based and numeric games as a domain for introductory programming and indicated the approach created a ``passion to want to do more.''
+% 	\item \cite{Rajaravivarma:2005} used text-based and numeric games as a domain for introductory programming and indicated the approach created a ``passion to want to do more.''
 
-	\item \citet{Bayliss:2006} discussed the use of games in a summer distance unit introducing students to programming and concepts in computer science. The work reported that a large percentage of students enjoyed learning introductory programming concepts in the context of games.
+% 	\item \citet{Bayliss:2006} discussed the use of games in a summer distance unit introducing students to programming and concepts in computer science. The work reported that a large percentage of students enjoyed learning introductory programming concepts in the context of games.
 
-	\item Results from \citet{Cliburn:2006} suggested that for a large majority of students games had provided psychological motivation and had increased unit enjoyment.
+% 	\item Results from \citet{Cliburn:2006} suggested that for a large majority of students games had provided psychological motivation and had increased unit enjoyment.
 
-	\item \citet{Leutenegger:2007} reported that games had improved student understanding of all basic topics examined.
+% 	\item \citet{Leutenegger:2007} reported that games had improved student understanding of all basic topics examined.
 
-	\item \citet{Sung:2009} provided some guidelines on incorporating games into introductory programming. This indicated a need to ensure tools are freely available, that core concepts need to remain the focus, and that games should aim to be gender and expertise neutral.
+% 	\item \citet{Sung:2009} provided some guidelines on incorporating games into introductory programming. This indicated a need to ensure tools are freely available, that core concepts need to remain the focus, and that games should aim to be gender and expertise neutral.
 
-	\item \citet{Sung:2011} introduced a number of game-themed programming assignments to help other teaching staff make the transition to game based introductory programming.
+% 	\item \citet{Sung:2011} introduced a number of game-themed programming assignments to help other teaching staff make the transition to game based introductory programming.
 
-\end{itemize}
+% \end{itemize}
 
 The use of games as a context for software development requires students to gain some familiarity with fundamental concepts related to graphics and animation. The interactive nature of games also introduces students to the concept of programming in response to user input events and real-time signals.
 
@@ -327,7 +327,7 @@ The use of games as a context for software development requires students to gain
 
 The construction of the assessment criteria happened alongside the definition of the intended learning outcomes. The goal, as stated in \cref{cha:approach}, was to create clearly distinct grades where each required students to demonstrate a deeper understanding of programming concepts and software development practices. 
 
-\fref{fig:assessment_criteria} shows the assessment criteria for the introductory programming unit. To receive a \emph{Pass} or \emph{Credit} grade, students completed set exercises, which were signed off through student interaction with staff. \emph{Distinction} required the implementation of a program of the student's own creation, while \emph{High Distinction} required a small research project.
+\fref{fig:assessment_criteria} shows the assessment criteria developed for the introductory programming unit. To receive a \emph{Pass} or \emph{Credit} grade, students completed set exercises, which were signed off through student interaction with staff. \emph{Distinction} required the implementation of a program of the student's own creation, while \emph{High Distinction} required a small research project.
 
 \begin{figure}[htbp]
 	\centering
@@ -356,7 +356,9 @@ The \emph{Credit} grade required students to meet all Pass requirements, and to 
 \subsection{Developing Teaching and Learning Activities} % (fold)
 \label{sub:intro_developing_teaching_and_learning_activities}
 
-Allocated classes for the thirteen week introductory programming unit included a two hour lecture, and a two hour laboratory class each week. All classes were designed with the goal of actively engaging students, as discussed in \sref{sub:delivery_approach}. A typical lecture included a short presentation using ``Beyond Bullet Points'' style lecture slides \cite{Atkinson:2007}, an interactive programming demonstration and group activities. In the laboratory sessions, students were involved in code reading activities, guided programming tasks and practical hands-on exercises.
+
+
+Allocated classes for this thirteen week introductory programming unit included a two hour lecture, and a two hour laboratory class each week. All classes were designed with the goal of actively engaging students, as discussed in \sref{sub:delivery_approach}. A typical lecture included a short presentation using ``Beyond Bullet Points'' style lecture slides \cite{Atkinson:2007}, an interactive programming demonstration and group activities. In the laboratory sessions, students were involved in code reading activities, guided programming tasks and practical hands-on exercises.
 
 The teaching period consisted of thirteen weeks, twelve of which were teaching weeks, and a single week semester break. Topics for the twelve lectures are shown in the following list. In weeks one to six students explored these concepts using a modern version of the Pascal programming language \cite{Wirth:1971,FPC:2011}. In week 7 students were introduced to the C programming language \cite{Ritchie:1978}, which was used for the remainder of the semester. 
 
@@ -705,7 +707,7 @@ The assessment criteria from the introductory programming unit were used. These 
 \subsection{Developing Teaching and Learning Activities} % (fold)
 \label{sub:oop_developing_teaching_and_learning_activities}
 
-The Beyond Bullet Point approach to delivering unit concepts was applied to the presentations in this unit in the same manner it had been applied to the introductory programming unit. The remaining lecture time, however, was used to carry out roleplays (see \cite(Borstler:2005)) rather than demonstrate the implementation of these concepts in code.
+The Beyond Bullet Point approach to delivering unit concepts was applied to the presentations in this unit in the same manner it had been applied to the introductory programming unit. The remaining lecture time, however, was used to carry out roleplays (see \cite{Borstler:2005}) rather than demonstrate the implementation of these concepts in code.
 
 Object oriented programming centres on the concepts of objects interacting to achieve system goals. The unit followed the lead of introductory programming in relegating language to a secondary role. Given that the introductory programming unit had taught students to learn syntax on their own, this unit required them to take further responsibility for learning the language and applying the concepts themselves.
 
