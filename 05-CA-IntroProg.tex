@@ -254,7 +254,7 @@ The Association for Computing Machinery (ACM) and IEEE Computer Society 2013 Com
 \subsubsection{Intended Learning Outcomes} % (fold)
 \label{ssub:intro_intended_learning_outcomes}
 
-All of the factors listed above, and the factors and guidelines from \sref{sub:defining_intended_learning_outcomes} of \cref{cha:approach}, guided the definition of the intended learning outcomes for the introductory programming unit. The following list shows how the guidelines for defining intended learning outcomes were used in the development of the introductory programming unit.
+All of the factors listed above, and the factors and guidelines stated in \sref{sub:defining_intended_learning_outcomes} of \cref{cha:approach}, guided the definition of the intended learning outcomes for the introductory programming unit. The following list shows how the guidelines for defining intended learning outcomes were used in the development of the introductory programming unit.
 
 \begin{itemize}[noitemsep,nolistsep]
 	\item Verbs were selected from appropriate levels of the SOLO taxonomy. (\loref{lo-solo}) 
@@ -383,14 +383,13 @@ As indicated in \sref{sub:constructing_assessment_criteria}, the use of these as
 
 \begin{itemize}[noitemsep,nolistsep]
 	\item Criteria for Credit, Distinction, and High Distinction grades required progressively higher levels of understanding which promoted deep learning, and communicated high staff expectations. (\Pref{itm:construct} and \Pref{itm:expectations})
-	\item Each grade required students to demonstrate understanding across all outcomes. (\Pref{itm:align})
-	\item The criteria determined each student's final grade, delaying all summative assessment until the end of the unit. (\Pref{itm:formative})
-	\item Different levels in the assessment criteria focused on addressing the most important aspects for students to focus on, while they are working on completing tasks for that grade outcome. (\Pref{itm:focus})
+	\item Students needed to demonstrate understanding across all outcomes. (\Pref{itm:align})
+	\item The criteria determined each student's final grade, delaying all summative assessment until the end of the unit and encouraging students integrate feedback they received. (\Pref{itm:formative} and \Pref{itm:agile})
+	\item Different levels in the assessment criteria focused on addressing the most important aspects for students to focus on. (\Pref{itm:focus})
 	\item As with the learning outcomes, the use of simple terms helped support a wide range of student language capabilities. (\Pref{itm:support})
 	\item Clearly distinct requirements helped students take responsibility for their learning, allowing them to aim to meet certain grade criteria. (\Pref{itm:theory_y})
 	\item Students reflected on their learning in preparing their portfolios. (\Pref{itm:reflect})
-	% \item (\Pref{itm:paradigm})
-	% \item (\Pref{itm:authentic})
+	\item Students needed to demonstrate appropriate use of procedural programming concepts, and programming languages. (\Pref{itm:paradigm}, \Pref{itm:concepts} and \Pref{itm:authentic})
 \end{itemize}
 
 % subsection constructing_assessment_criteria (end)
@@ -485,9 +484,11 @@ By following the guidelines from \sref{ssub:develop_teaching_and_learning_activi
 \begin{itemize}[noitemsep,nolistsep]
 	\item Activities aimed to actively engaged students in tasks likely to engage the required cognitive levels. (\Pref{itm:construct})
 	\item Staff planned activities they believed would enable the students to demonstrate they had met the unit's intended learning outcomes. (\Pref{itm:align}) 
+	\item Activities supported the use of weekly formative feedback, providing tasks over which staff and students could have meaningful dialogue. (\Pref{itm:formative} and \Pref{itm:theory_y})
 	\item Activities focused on concepts, providing students with a range of opportunities to develop pieces that would demonstrate they had gained the required knowledge. (\Pref{itm:focus}, \Pref{itm:support} and \Pref{itm:concepts})
 	\item Core and extension tasks helped to communicate staff expectations. (\Pref{itm:expectations})
 	\item Leaving language details to be covered in teaching and learning resources helped to ensure activities could change in response to student needs. (\Pref{itm:agile})
+	\item Activities ensured students implemented a range of procedural programs, making use of programming languages in ways in which they were intended. (\Pref{itm:paradigm} and \Pref{itm:authentic})
 \end{itemize}
 
 \clearpage
@@ -666,18 +667,18 @@ Whenever discussing introductory programming it is always interesting to note ho
 	\centering
 	\caption{Comparison of programming languages for the introductory programming unit.}
  	\label{tbl:language_comparison}
-
+ 	\small
     \begin{tabular}{l|c|c|c|c|c|c}
     ~                                   & C   & C++ & C\#     & Java & Pascal & Python \\ \hline
-    Explicit Variables                  & Yes & Yes & Yes     & Yes  & Yes    & ~      \\
-    Strongly Typed                      & ~   & ~   & Yes     & Yes  & Yes    & Yes    \\
-    Functions and procedures            & Yes & Yes & Partial & ~    & Yes    & Yes    \\
-    Parameter passing options & ~   & Yes & Yes     & ~    & Yes    & ~     \\
-    Data abstractions     & Yes & Yes & Yes     & Yes  & Yes    & Yes    \\
-    Records and enumerations  & Yes & Yes & Yes     & ~    & Yes    & ~      \\
-    Pointers                            & Yes & Yes & Partial & ~    & Yes    & ~      \\
-    Explicit memory management & Yes & Yes & ~ & ~    & Yes    & ~      \\
-    Used by staff     & Yes & Yes & Yes     & Yes  & Yes    & Yes    \\
+    Explicit Variables                  & \checkmark & \checkmark & \checkmark     & \checkmark  & \checkmark    & ~      \\
+    Strongly Typed                      & ~   & ~   & \checkmark     & \checkmark  & \checkmark    & \checkmark    \\
+    Functions and procedures            & \checkmark & \checkmark & Partial & ~    & \checkmark    & \checkmark    \\
+    Parameter passing options & ~   & \checkmark & \checkmark     & ~    & \checkmark    & ~     \\
+    Data abstractions     & \checkmark & \checkmark & \checkmark     & \checkmark  & \checkmark    & \checkmark    \\
+    Records and enumerations  & \checkmark & \checkmark & \checkmark     & ~    & \checkmark    & ~      \\
+    Pointers                            & \checkmark & \checkmark & Partial & ~    & \checkmark    & ~      \\
+    Explicit memory management & \checkmark & \checkmark & ~ & ~    & \checkmark    & ~      \\
+    Used by staff     & \checkmark & \checkmark & \checkmark     & \checkmark  & \checkmark    & \checkmark    \\
     \end{tabular}
 \end{table}
 
@@ -789,54 +790,100 @@ In the next section another application of the model is presented in discussing 
 \section{Object Oriented Programming} % (fold)
 \label{sec:object_oriented_programming}
 
+
+
 \subsection{Aims for Object Oriented Programming} % (fold)
 \label{sub:aims_for_object_oriented_programming}
 
-The second programming unit in the sequence was designed to take students who had completed the introductory programming unit and introduce them to the object oriented programming paradigm. This provides a second example of the implementation of the model from \cref{cha:approach}. As much of the application is similar to the introductory programming unit presented in \sref{sub:introductory_programming}, this section briefly discusses differences in the approach taken.
+Object oriented programming was the second programming unit in the sequence of programming units described in \sref{sec:paradigm_choice}. Having completed the introductory programming unit, many students went on enrol in the object oriented programming unit, which introduced them to the object oriented programming paradigm. 
 
-As with the introductory programming unit, the following subsections outline the definition of the intended learning outcomes, construction of the assessment criteria, development of the teaching and learning activities, delivery of the unit, and finally details on the assessment of the students' portfolios.
+The design of the object oriented programming unit followed the model outlined in \sref{sec:model} in a similar way to the introductory programming unit presented in \sref{sec:introductory_programming}. To help illustrate the general applicability of the model, this section briefly describes the steps taken and discusses how these differ from the approach taken with the introductory programming unit. The following subsections outline the processes from the model described in \sref{sec:model}, including the definition of the intended learning outcomes, construction of the assessment criteria, development of the teaching and learning activities, delivery of the unit, and portfolio assessment.
 
 % subsection aims_for_object_oriented_programming (end)
 
 \subsection{Defining Intended Learning Outcomes} % (fold)
 \label{sub:oop_defining_intended_learning_outcomes}
 
+Defining the object oriented programming unit's intended learning outcomes followed the same process as outlined for the introductory programming unit in \sref{sec:intro:intended_learning_outcomes}. The process was influenced by similar factors, and used the guidelines stated in \sref{sub:defining_intended_learning_outcomes}. The main difference between the object oriented programming unit and the introductory programming unit was the underlying programming paradigm. 
+
+\pref{itm:paradigm} indicates that the strategy for delivering the unit should be founded on the programming paradigm being taught. The introductory programming unit covered procedural programming concepts, with the plan that the object oriented programming unit shift students to the object oriented programming paradigm, a shift that can be challenging for student \cite{Manns:1993,Sheetz:1997,White:2005}. In recognition of these challenges, the unit's intended learning outcomes focused on enabling students to make this shift in thinking.
+
+To facilitate the paradigm shift the unit focused on the core principles underlying the object oriented programming paradigm: abstraction, encapsulation, inheritance, and polymorphism. Students learnt to use these principles to design and implement object oriented programs. In addition to the core principles, students learnt to use an integrated development environment (IDE), and unit testing tools such as JUnit \cite{JUnit}. Object oriented thinking and design were also central to the unit, with designs being communicated using Unified Modelling Language (UML) \cite{OMG:2011} class diagrams and sequence diagrams. While design patterns and heuristics provided students with a means of evaluating the quality of their designs.
+
 The intended learning outcomes for the object oriented programming unit were:
-\begin{enumerate}[noitemsep,nolistsep]
+\begin{guidelines}{ILO}
 	\item \textbf{Explain} the principles of the object oriented programming paradigm specifically including abstraction, encapsulation, inheritance and polymorphism, and \textbf{explain} how these principles are used to create object oriented programs.
 	\item \textbf{Design}, \textbf{develop}, \textbf{test}, and \textbf{debug} object oriented programs, using an integrated development environment.
 	\item \textbf{Select} and \textbf{use} appropriate collection classes, from the language's class library, to manage collections of multiple objects.
 	\item \textbf{Construct} appropriate diagrams and textual descriptions to \textbf{communicate} the static structure and dynamic behaviour of an object oriented solution.
 	\item \textbf{Apply} accepted good practices related to the \textbf{construction} of object oriented programs.
-\end{enumerate}
+\end{guidelines}
 
-Students learnt about the core principles of the object oriented programming paradigm, and how these can be used to create programs. They developed programs using an integrated development environment (IDE), which included the use of unit testing tools such as JUnit \cite{JUnit}. Students were introduced to communicating object oriented designs using the Unified Modelling Language \cite{OMG:2011} with both class diagrams and sequence diagrams being used. Design patterns and heuristics were used to provide students with a means of evaluating the quality of their designs. As with the introductory programming unit, students used a iterative development process. 
+The following list shows how the guidelines for defining intended learning outcomes, stated in \sref{sub:defining_intended_learning_outcomes}, were used in the development of the object oriented programming unit.
+
+\begin{itemize}[noitemsep,nolistsep]
+	\item Verbs from the relational levels of the SOLO taxonomy were used to set appropriate levels of understanding. (\loref{lo-solo}) 
+	\item Outcomes aimed to cover both an understanding of object oriented programming concepts and applied programming skills. (\loref{lo-know-prog})
+	\item Simple terms were used to help ensure students were able to understand each outcome. (\loref{lo-simple-terms})
+	\item Five outcomes were included, keeping the focus on a few key aspects. (\loref{lo-minimal})
+	\item Outcomes were expressed in a general sense, enabling them to be met in a variety of ways and assessed at a range of levels of achievement. (\loref{lo-general} and \loref{lo-flex})
+\end{itemize}
+
+These guidelines helped with the formation of the intended learning outcomes for the object oriented programming unit, as they had introductory programming unit. The same general approach was taken, with differences in outcomes relating to the various unit focuses.
 
 % subsection defining_intended_learning_outcomes (end)
 
 \subsection{Constructing Assessment Criteria} % (fold)
 \label{sub:oop_constructing_assessment_criteria}
 
-The assessment criteria from the introductory programming unit were used. These did not need adjustment as each grade was described in a topic neutral manner. For example, for a Distinction students needed to ``demonstrate the \emph{application} of the unit's concepts to the creation of a program of their own design.'' This statement works equally well for object oriented programming paradigm as it did for procedural programming paradigm, and it could also work for other technical software engineering units.
+The general nature of the assessment criteria from the introductory programming unit enabled these same criteria to be used for the object oriented programming unit. These did not need adjustment as each grade was described in a topic neutral manner. For example, for a Distinction students needed to ``demonstrate the \emph{application} of the unit's concepts to the creation of a program of their own design.'' This statement worked equally well for the object oriented programming unit as it did for the introductory programming unit. 
+
+In essence, the assessment criteria described in \sref{sub:intro_constructing_assessment_criteria} aimed to ensure students had reached a relational level of understanding in order to achieve a Distinction or higher grade, and as a result the assessment criteria are likely to work for other technical software engineering units. Removing all topic specific details from these criteria results in criteria that could form the basis for a wide range of university units, as outlined in the following list.
+
+\begin{description}[noitemsep,nolistsep]
+	\item[Pass] is awarded to students who have done no more than meet the unit's minimum standards, as checked in weekly work or hurdle tests. 
+	\item[Credit] is awarded to students who have demonstrated an integrated understanding of unit concepts, but have not demonstrated they can \emph{apply} the concepts to the creation of a piece of work of their own creation.
+	\item[Distinction] is awarded to students who have demonstrated an integrated understanding of unit concepts, \textbf{and} have demonstrated they can \emph{apply} the concepts to the creation of a piece of work of their own creation.
+	\item[High Distinction]  is awarded to students who have met the Distinction criteria and go beyond the scope of the unit in some way, such as through conducting a small research project.
+\end{description}
+
+The following list outlines how these general assessment criteria relate to the principles stated in \cref{cha:guiding_principles}.
+
+\begin{itemize}[noitemsep,nolistsep]
+	\item Students are encouraged to meet all intended learning outcomes, and to develop a relational level of understanding to achieve higher grades. (\Pref{itm:construct} and \Pref{itm:align})
+	\item If portfolios determine all of a student's final grade then all summative assessment is delayed until the end of the unit. (\Pref{itm:formative})
+	\item Student attention is focused on achievable steps at each level of the assessment criteria. (\Pref{itm:focus})
+	\item Criteria for Distinction and High Distinction grades help communicate high staff expectations. (\Pref{itm:expectations})
+	\item Simple terms help support a wide range of student language capabilities, helping to ensure students will understand what is required of them. (\Pref{itm:support})
+	\item Use of clearly distinct requirements allow students to aim to meet certain grade criteria based on their personal interests and motivation. (\Pref{itm:theory_y})
+	\item Frequent formative feedback encourages students to reflect on their learning and integrate feedback they receive. (\Pref{itm:agile} and \Pref{itm:reflect})
+	\item Students needed to demonstrate appropriate application of concepts associated with the unit. (\Pref{itm:paradigm}, \Pref{itm:concepts} and \Pref{itm:authentic} in the case of introductory programming units)
+\end{itemize}
 
 % subsection constructing_assessment_criteria (end)
 
 \subsection{Developing Teaching and Learning Activities} % (fold)
 \label{sub:oop_developing_teaching_and_learning_activities}
 
-The Beyond Bullet Point approach to delivering unit concepts was applied to the presentations in this unit in the same manner it had been applied to the introductory programming unit. The remaining lecture time, however, was used to carry out roleplays (see \cite{Borstler:2005}) rather than demonstrate the implementation of these concepts in code.
+Teaching and learning activities in the object oriented programming unit did differ from those in the introductory programming unit due to the altered focus of the unit. \sref{sec:paradigm_choice} outlined the programming concepts shared between procedural and object oriented programming, as illustrated in \tref{tbl:oo_proc_concepts}. This shows that object oriented programs and procedural programs share many features, and therefore many low level details do not need to be elaborated upon as students should be familiar with these concepts from the introductory programming unit. 
 
-Object oriented programming centres on the concepts of objects interacting to achieve system goals. The unit followed the lead of introductory programming in relegating language to a secondary role. Given that the introductory programming unit had taught students to learn syntax on their own, this unit required them to take further responsibility for learning the language and applying the concepts themselves.
+Object oriented programming involves constructing programs that consist of a number of interrelated object, with each object interacting with other objects to help achieve system goals. The thinking involved in designing object oriented programs, therefore, differs significantly from structured procedural programming. While the focus on the introductory programming unit had been on the internal implementation details of functions and procedure, the object oriented programming unit focused on modelling objects and designing object interactions. This required a different approach to unit teaching and learning activities.
 
-Students were eased into this process, with the laboratory classes in the first week including both laboratory tasks and core tasks. After this point, however, each weeks laboratory class only contained core tasks. Laboratory classes consisted of group discussions, and enabled teaching staff to provide more in-depth feedback on student progress.
+As with the introductory programming unit, the guidelines stated in \sref{ssub:develop_teaching_and_learning_activities_and_resources} helped to shape the teaching and learning activities used. The activities aimed to actively engage students (\tlaref{itm:tla_active}), align with unit outcomes (\tlaref{itm:tla_align}), and provide guidance (\tlaref{itm:tla_focus}). These guidelines resulted in the use of the Beyond Bullet Points approach to presentations and object role-plays in lecture sessions, and the development of a number of case studies in laboratory classes.
 
-As the object oriented paradigm is best suited to developing larger solutions, the unit was divided into the development of a number of case studies. The two case studies were used to help students in both the first and second half of the unit, resulting in students developing four programs of reasonable size and complexity. In each half of the unit, one of the case studies was provided with extensive guidance. This replaced the laboratory tasks from introductory programming, but was not directly walked through in class. The second case study required the application of the same principles, but with less guidance. UML diagrams were provided to explain the design of the case study, with each iteration building a relevant part of the overall program. As the iterations progressed the details of the design were reduced, with students being required to design and implement the later iterations.
+Lectures were developed using the Beyond Bullet Points approach to ensure the focus was on concepts (\tlaref{itm:tla_focus} supporting \Pref{itm:focus} and \Pref{itm:concepts}). The short lecture presentations provided opportunities to engage students in more interactive activities in scheduled lecture times (\tlaref{itm:tla_active} supporting \Pref{itm:construct}). Where the introductory programming had made use of interactive code demonstrations, the object oriented programming used role-plays to focus students on object interactions, rather than language syntax (\Pref{itm:concepts}). In these role-plays students take on the role of objects in a program and send each other messages, simulating the objects students would later create in their code. Similar use of object role-plays was reported by \citet{Borstler:2005}, who found that they were beneficial in helping students understand object oriented concepts and thinking. 
+
+The nature of object oriented paradigm means that it is best suited to developing larger solutions than those used in the introductory programming unit. The use of the object oriented programming principles, specifically inheritance and polymorphism, require a certain amount of infrastructure to see how these dramatically influence the way programs are designed. To help students engage with these principles, and to encourage students to develop greater learning independence, laboratory classes were adjusted to focus on a smaller number of programming problems that were larger than problems addressed in the introductory programming unit. 
+
+A total of four programming ``case studies'' were used in the object oriented programming unit, two in the first half of the unit and a further two in the second half of the unit. In each half of the unit, one case study was designed to include significant guidance, and replaced the laboratory tasks from introductory programming. The second case study required the application of the same principles, but with less guidance. UML diagrams were provided to explain the design of each case study, with iterations building relevant parts of the overall program. As the iterations progressed the details of the design were reduced, with students being required to design and implement the later iterations. 
+
+Case studies supported students active role in the development of their knowledge and ensured students made appropriate use of the associated concepts (\tlaref{itm:tla_active} and \tlaref{itm:tla_focus} supporting \Pref{itm:construct}, \Pref{itm:paradigm}, \Pref{itm:concepts}, and \Pref{itm:authentic}). As with the introductory programming unit, the alignment was performed by both staff and students. Staff planned for the case studies to align with the unit's intended learning outcomes, and students related their individual learning to the outcomes in the preparation of their portfolios (\tlaref{itm:tla_align} supporting \Pref{itm:construct}, \Pref{itm:align} and \Pref{itm:concepts}).
 
 The case study from the first half of the unit developed students ability to implement basic object oriented features. \fref{fig:monopoly} shows an example UML class diagram from the last iteration of this first case. In addition to learning the required aspects of the programming language, the case study introduced students to the Model View Controller (MVC) pattern. In core tasks students developed a command line interface to the program, with extension tasks adding a second graphical interface and thereby demonstrating the benefit of the MVC approach.
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.9\textwidth]{Monopoly}
+	\includegraphics[width=\textwidth]{Monopoly}
 	\caption{An example UML class diagram from the case studies in the object oriented programming unit demonstrating the relative complexity of the programs used to help students understand object oriented design issues}
 	\label{fig:monopoly}
 \end{figure}
