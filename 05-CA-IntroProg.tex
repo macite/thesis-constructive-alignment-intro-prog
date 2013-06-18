@@ -459,9 +459,9 @@ To provide students with an opportunity to demonstrate their understanding, each
 
 \begin{table}[b]
 	\centering
-	\caption{Alignment matrix showing staff planned alignment of weekly topics to the introductory programming unit's intended learning outcomes}
+	\caption{Alignment matrix showing staff-planned alignment of weekly topics to the introductory programming unit's intended learning outcomes. Student descriptions of the topic alignment differed based on their individual learning.}
 	\label{tbl:intro_prog_matrix}
-	\small
+	\footnotesize
 	\begin{tabular}{l|cccc}
 		\textbf{Topic} 								& \textbf{ILO-1} & \textbf{ILO-2} & \textbf{ILO-3} & \textbf{ILO4} \\ \hline
 		Programs, Procedure, Compiling and Syntax 	& \checkmark & \checkmark & \checkmark & \checkmark \\ 
@@ -862,7 +862,7 @@ The following list outlines how these general assessment criteria relate to the 
 
 % subsection constructing_assessment_criteria (end)
 
-\subsection{Developing Teaching and Learning Activities} % (fold)
+\subsection{Developing Teaching and Learning Activities, and Delivering the Unit} % (fold)
 \label{sub:oop_developing_teaching_and_learning_activities}
 
 Teaching and learning activities in the object oriented programming unit did differ from those in the introductory programming unit due to the altered focus of the unit. \sref{sec:paradigm_choice} outlined the programming concepts shared between procedural and object oriented programming, as illustrated in \tref{tbl:oo_proc_concepts}. This shows that object oriented programs and procedural programs share many features, and therefore many low level details do not need to be elaborated upon as students should be familiar with these concepts from the introductory programming unit. 
@@ -873,48 +873,128 @@ As with the introductory programming unit, the guidelines stated in \sref{ssub:d
 
 Lectures were developed using the Beyond Bullet Points approach to ensure the focus was on concepts (\tlaref{itm:tla_focus} supporting \Pref{itm:focus} and \Pref{itm:concepts}). The short lecture presentations provided opportunities to engage students in more interactive activities in scheduled lecture times (\tlaref{itm:tla_active} supporting \Pref{itm:construct}). Where the introductory programming had made use of interactive code demonstrations, the object oriented programming used role-plays to focus students on object interactions, rather than language syntax (\Pref{itm:concepts}). In these role-plays students take on the role of objects in a program and send each other messages, simulating the objects students would later create in their code. Similar use of object role-plays was reported by \citet{Borstler:2005}, who found that they were beneficial in helping students understand object oriented concepts and thinking. 
 
-The nature of object oriented paradigm means that it is best suited to developing larger solutions than those used in the introductory programming unit. The use of the object oriented programming principles, specifically inheritance and polymorphism, require a certain amount of infrastructure to see how these dramatically influence the way programs are designed. To help students engage with these principles, and to encourage students to develop greater learning independence, laboratory classes were adjusted to focus on a smaller number of programming problems that were larger than problems addressed in the introductory programming unit. 
-
-A total of four programming ``case studies'' were used in the object oriented programming unit, two in the first half of the unit and a further two in the second half of the unit. In each half of the unit, one case study was designed to include significant guidance, and replaced the laboratory tasks from introductory programming. The second case study required the application of the same principles, but with less guidance. UML diagrams were provided to explain the design of each case study, with iterations building relevant parts of the overall program. As the iterations progressed the details of the design were reduced, with students being required to design and implement the later iterations. 
+The nature of object oriented paradigm means that it is best suited to developing larger solutions than those used in the introductory programming unit. The use of the object oriented programming principles, specifically inheritance and polymorphism, require a certain amount of infrastructure to see how these dramatically influence the way programs are designed. To help students engage with these principles, and to encourage students to develop greater learning independence, laboratory classes were adjusted to focus on a smaller number of programming problems that were larger than problems addressed in the introductory programming unit. These decisions were guided primarily by the chosen paradigm (\Pref{itm:paradigm}) and the need to ensure programs students create are an appropriate use of the chosen languages (\Pref{itm:authentic}).
+ 
+A total of four programming ``case studies'' were used in the object oriented programming unit, two in the first half of the unit and a further two in the second half of the unit. One case study in each half of the teaching period was designed with significant guidance for students, and replaced the laboratory tasks that had been used in the introductory programming unit. The second case study required the application of the same principles, but with less guidance helping students to apply the concepts being learnt (\Pref{itm:construct}). UML diagrams were provided to explain the design of each case study, with iterations building relevant parts of the overall program. As the iterations progressed the details of the design were reduced, with students being required to design and implement the later iterations. 
 
 Case studies supported students active role in the development of their knowledge and ensured students made appropriate use of the associated concepts (\tlaref{itm:tla_active} and \tlaref{itm:tla_focus} supporting \Pref{itm:construct}, \Pref{itm:paradigm}, \Pref{itm:concepts}, and \Pref{itm:authentic}). As with the introductory programming unit, the alignment was performed by both staff and students. Staff planned for the case studies to align with the unit's intended learning outcomes, and students related their individual learning to the outcomes in the preparation of their portfolios (\tlaref{itm:tla_align} supporting \Pref{itm:construct}, \Pref{itm:align} and \Pref{itm:concepts}).
 
-The case study from the first half of the unit developed students ability to implement basic object oriented features. \fref{fig:monopoly} shows an example UML class diagram from the last iteration of this first case. In addition to learning the required aspects of the programming language, the case study introduced students to the Model View Controller (MVC) pattern. In core tasks students developed a command line interface to the program, with extension tasks adding a second graphical interface and thereby demonstrating the benefit of the MVC approach.
+\clearpage
 
-\begin{figure}[htbp]
+In terms of alignment (\Pref{itm:align}) teaching staff planned for each case study to align with all of the intended learning outcomes, as shown in \tref{tbl:oop_matrix}. The following list indicates how the staff planned for each of the intended learning outcomes to relate to the case studies. Students were also required to indicate how they felt the pieces they had included in their portfolios aligned to the unit's intended learning outcomes, as was done in the introductory programming unit. 
+\begin{itemize}[noitemsep,nolistsep]
+	\item Students understanding of object oriented principles (ILO-1) was central to each case study, with students encouraged to reflect on how these principles were realised in the designs they implemented. 
+	\item Each case study involved aspects of design, development, testing, and debugging (ILO-2) with students building functional programs. 
+	\item The programs developed required students to use a range of classes from the languages' class libraries, including a variety of collection classes.
+	\item Students needed to read as well as develop UML class and sequence diagrams in various parts of the case studies.
+	\item Designs for the case studies demonstrated accepted good practice, and the iterative formative feedback process ensured students followed these, and associated, practices in their design and implementation tasks. Later case studies also introduced students to design patterns including the Composite and Command patterns \cite{Gamma:2001}.
+\end{itemize}
+
+\begin{table}[b]
 	\centering
-	\includegraphics[width=\textwidth]{Monopoly}
-	\caption{An example UML class diagram from the case studies in the object oriented programming unit demonstrating the relative complexity of the programs used to help students understand object oriented design issues}
+	\caption{Alignment matrix showing staff-planned alignment of case studies to the object oriented programming unit's intended learning outcomes. As with the introductory programming unit, student descriptions of the case study alignment differed based on their individual learning.}
+	\label{tbl:oop_matrix}
+	% \small
+	\begin{tabular}{l|ccccc}
+		\textbf{Topic} 								& \textbf{ILO-1} & \textbf{ILO-2} & \textbf{ILO-3} & \textbf{ILO4} & \textbf{ILO5} \\ \hline
+		\emph{First Half} & & & & & \\
+		~Case Study 1 - Drawing Program & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark \\
+		~Case Study 2 - Monopoly & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark \\
+		\hline
+		\emph{Second Half} & & & & & \\
+		~Case Study 3 - RPN Calculator & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark \\
+		~Case Study 4 - Text-based Adventure & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark \\
+	\end{tabular}
+\end{table}
+
+Core, and laboratory, tasks in the weekly work had students develop central object roles in the various case studies. These tasks were extended with optional extension tasks which were required in order to fully complete the programs described in the case studies. This helped communicate high expectations (\Pref{itm:expectations}) with all students being exposed to the full set of requirements and being encouraged to complete more than just the core tasks. As an example, \fref{fig:monopoly} shows a UML class diagram from the core tasks for the fourth iteration of the Monopoly case study, which focused on inheritance and polymorphism. Extension tasks associated with this iteration had students implement a ``Jail Tile'' and a ``Go To Jail Action''.
+
+% In addition to learning the required aspects of the programming language, the case study introduced students to the Model View Controller (MVC) pattern. In core tasks students developed a command line interface to the program, with extension tasks adding a second graphical interface and thereby demonstrating the benefit of the MVC approach.
+
+\begin{figure}[p]
+	\centering
+	\includegraphics[width=\textwidth]{Monopoly1}
+	\caption{An example UML class diagram from the Monopoly case study in the object oriented programming unit. }
 	\label{fig:monopoly}
 \end{figure}
 
-In the second half of the unit students took greater responsibility for the design of the program. The case study had students develop a text-based adventure game, which enabled the use of the Composite and Command patterns \cite{Gamma:2001}. This program was developed over a number of iterations, with each having students implement a range of unit tests to check object functionality. As with the design aspects, the specification of the unit tests reduced over time with students taking full responsibility for designing the unit tests by the end of the case study.
+Using such large case studies as the basis for the weekly tasks also helped to encourage students to think in terms of objects. Each case study started with an overall description of the final program, but built up the number of abstractions used each iteration to encourage this focus on object roles, responsibilities, and collaborations \cite{Wirfs:2003}.
+
+% \begin{figure}[p]
+% 	\centering
+% 	\includegraphics[width=\textwidth]{Monopoly}
+% 	\caption{An example UML class diagram from the case studies in the object oriented programming unit demonstrating the relative complexity of the programs used to help students understand object oriented design issues}
+% 	\label{fig:monopoly}
+% \end{figure}
+
+% As with the design aspects, the specification of the unit tests reduced over time with students taking full responsibility for designing the unit tests by the end of the case study.
+
+Unit delivery followed the same iterative process as described for the introductory programming unit. Lectures were used to guide student activity, case studies had students apply concepts, weekly formative feedback assisted with student progress, and students incorporated feedback to improve their work and understanding. The following list outlines the similarities between the teaching and learning activities in the two programming units.
+
+\begin{itemize}[noitemsep,nolistsep]
+	\item Lectures focused on concepts, with role-plays taking the place of interactive coding demonstrations.
+	\item Case studies formed the basis of the weekly laboratory, core, and optional tasks.
+
+	\item Weekly tasks were submitted for formative feedback, and students were encouraged to incorporate the feedback they received.
+	\item Staff discussed progress with each students weekly, and their work was signed off as complete after necessary feedback had been incorporated.
+	\item The Programming Help Desk was available to support students outside of scheduled class times.
+	\item Students were encouraged to use online discussion boards, with questions being monitored and answered by teaching staff and fellow students.
+	\item A glossary was used alongside the case studies as a means for students to explain the concepts learnt.
+\end{itemize}
+
+The following list outlines how the object oriented programming unit's teaching and learning activities and delivery met all of the principles stated in \cref{cha:guiding_principles}.
+\begin{itemize}[noitemsep,nolistsep]
+	\item Case studies and lectures were designed to actively engage students in the construction of their own knowledge, providing guidance rather than aiming to transfer knowledge to students. (\Pref{itm:construct})
+	\item Staff planned for lecture topics and case studies to align with the unit's intended learning outcomes, and students reflected on how these activities had aligned from their perspective. (\Pref{itm:align})
+	\item Weekly tasks did not carry any weight in the final assessment, with learning outcomes being assessed from evidence included in student portfolios. (\Pref{itm:formative})
+	\item Lectures focused on providing guidance, case studies on applying concepts, and support structures on providing assistance outside of scheduled class times. (\Pref{itm:focus})
+	\item Case studies, with the associated core and extension tasks, helped communicate high staff expectations. (\Pref{itm:expectations})
+	\item Students were actively supported during and outside of scheduled class times. (\Pref{itm:support})
+	\item Students were trusted to manage their own learning, with no marks being associated with weekly work to ensure it remained focused on developing student understanding. (\Pref{itm:theory_y})
+	\item Students and staff were encouraged to reflect on teaching and learning activities; students in terms of what they had learnt, and staff in terms of how well the activities had helped students understand the concepts. Staff reflections were used to alter subsequent delivery of the unit, while student were encouraged to incorporate reflections in the learning process. (\Pref{itm:agile} and \Pref{itm:reflect})
+	\item Concepts related to the object oriented programming paradigm were central to all aspects of the unit. (\Pref{itm:paradigm} and \Pref{itm:concepts})
+	\item Students developed object oriented programs using programming languages in ways in which they are intended to be used. (\Pref{itm:authentic})
+\end{itemize}
+
 
 \subsubsection{Choosing an Object Oriented Programming Language} % (fold)
 \label{ssub:choosing_an_object_oriented_programming_language}
 
-The choice of language was guided by the following criteria:
+Another interesting aspect of the object oriented programming unit was the decision to allow students to choose which programming language they would use in the unit. By allowing students to choose their language, teaching staff were forced to discuss details at a conceptual level, making the unit clearly about object oriented programming and not the details of one specific language. 
 
-\begin{itemize}[noitemsep,nolistsep]
-	\item Required a contemporary integrated development environment.
-	\item Must support the object oriented programming paradigm.
-	\item Must have unit testing tools.
-\end{itemize}
+While a wide variety of languages could be used in this unit, students were only provided with a choice between four programming languages: C\#, C++, Java and Objective-C. Each of these languages had a C-style syntax, helping ease students into the new syntax. C\#, Java and Objective-C had similar support for object oriented programming principles, with C++ being sufficient but requiring some extra attention to syntax to achieve the same outcomes. C\#, C++ and Java are statically typed, while Objective-C is dynamically typed. All had support from modern integrated development environments, and unit testing tools also required by the unit's intended learning outcomes.
 
-Multiple languages were considered and four languages were selected: C\#, C++, Java and Objective-C. Each of these languages had a C-style syntax, helping ease students into the new paradigm. C\#, Java and Objective-C had similar support for object oriented programming principles, with C++ being sufficient but requiring some extra attention to syntax to achieve the same outcomes. C\#, C++ and Java are statically typed, while Objective-C is dynamically typed. All had support from modern integrated development environments, and unit testing tools.
+Using multiple languages forced lectures, and laboratory class discussions, to focus on concepts (\Pref{itm:concepts}), while empowering students to choose a language they saw as relevant to their future careers (\Pref{itm:theory_y}). At the same time, the use of multiple languages enabled deeper exploration of concepts through the examination of how different languages implement object oriented features. For example, the difference between static and dynamic typing were discussed in lectures, and demonstrated to show different views on these concepts impact on program design. Similarly, different approaches to memory management were also discussed including manual memory management, reference counting, and garbage collection. In each case, these discussions focused on the general concepts and highlighted the various strengths and weaknesses of the various language implementations, providing a much richer learning experience than would have been possible with a single language.  
 
-Unlike introductory programming, in object oriented programming students selected one language and used this throughout the unit. This forced lectures to focus more clearly on concepts, while allowing students to focus on a language they saw as relevant to their future careers. At the same time, this also allowed deeper understanding through the examination of how different languages had implemented object oriented programming features. For example, the difference between static and dynamic typing were discussed in lectures, and demonstrated to show different views on these concepts. Different approaches to memory management were also discussed; manual memory management was discussed in relation to C++, reference counting for Objective-C, and garbage collection for C\# and Java. In each case, these discussions focused on the general concepts and highlighted the various strengths and weaknesses of the various language implementations.
+% The choice of language was guided by the following criteria:
+% \begin{itemize}[noitemsep,nolistsep]
+% 	\item Required a contemporary integrated development environment.
+% 	\item Must support the object oriented programming paradigm.
+% 	\item Must have unit testing tools.
+% \end{itemize}
+
+% Unlike introductory programming, in object oriented programming students selected one language and used this throughout the unit. 
 
 Once again, the different languages helped strengthen the overall approach. This unit focused on object oriented programming, not on the specifics of a single language. The aim was not for students to develop a depth in \emph{one} programming language, but to learn the principles that underlie \emph{all} object oriented programming languages. Using multiple languages concurrently helped draw attention to this, and beneficially forced teaching staff to communicate at the concept level. 
 
 % subsubsection choosing_an_object_oriented_programming_language (end)
-
 % subsection developing_teaching_and_learning_activities (end)
 
 \subsection{Assessing Student Portfolios} % (fold)
 \label{sub:oop_assessing_student_portfolios}
 
 As the assessment criteria were the same, the process of assessing student portfolios was the same as outlined for introductory programming. To pass, students had to satisfactorily complete two hurdle tests and demonstrate sufficient progress with the four case studies. Credit required a glossary that clearly documented the object oriented programming principles, and how they applied to programs the student had created. Distinction required a custom project that demonstrated the application of the object oriented programming principles, while High Distinction involved a research report. As with the introductory programming unit, students aiming for distinction and high distinction were interviewed as part of the assessment process.
+
+Given the process was the same for assessing the object oriented programming unit, as it had been for the introductory programming unit, it too was able to embody all of the principles stated in \cref{cha:guiding_principles}.
+\begin{itemize}[noitemsep,nolistsep]
+	\item Portfolios were assessed to determine how well students understood object oriented programming concepts. (\Pref{itm:construct})
+	\item Students needed to demonstrate how their work aligned with \emph{all} of the unit's intended learning outcomes. (\Pref{itm:align})
+	\item Delivery involved an iterative process centred around formative feedback that supported student learning. (\Pref{itm:formative}, \Pref{itm:support} and \Pref{itm:theory_y})
+	\item Object oriented programming principles and concepts were central to the entire process, including both delivery and assessment. (\Pref{itm:focus}, \Pref{itm:paradigm} and \Pref{itm:concepts})
+	\item Case studies and assessment criteria aimed to clearly communicate high expectations. (\Pref{itm:expectations})
+	\item Staff and students were involved in reflective practice, reflecting on past learning experiences to improve outcomes.  (\Pref{itm:agile} and \Pref{itm:reflect})
+	\item Students developed a range of object oriented programs, demonstrating appropriate use of the languages they were expressed in.  (\Pref{itm:authentic})
+\end{itemize}
 
 % subsection assessing_student_portfolios (end)
 
@@ -925,8 +1005,16 @@ As the assessment criteria were the same, the process of assessing student portf
 
 % subsection object_oriented_programming_in_summary (end)
 
+\subsection{Comparison with the Introductory Programming Unit} % (fold)
+\label{sub:comparison_with_the_introductory_programming_unit}
+
+
+
+% subsection comparison_with_the_introductory_programming_unit (end)
+
 % subsection object_oriented_programming (end)
 
+\clearpage
 \section{Summary} % (fold)
 \label{sec:ca_intro_summary}
 
