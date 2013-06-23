@@ -3,15 +3,12 @@
 \chapter{Discussion} % (fold)
 \label{cha:discussion}
 
+\cref{cha:guiding_principles} presented twelve principles that extend the core principle of constructive alignment to help create a student-centred learning environment centred around constructive learning theories. These principles were then used to guide the creation of the model of constructive alignment for introductory programming presented in \cref{cha:approach}. Chapters \ref{cha:example_impl} and \ref{cha:supporting} provided details of two example units implemented using this approach, and the supporting resources used to assist students in constructing appropriate knowledge. With \cref{cha:evaluation} providing an analysis of the evolution of the approach and assessment criteria, through iterative action research, and evaluations of issues students faced and the use of the Doubtfire tool for tracking student progress. 
 
-Chapters \ref{cha:guiding_principles} to \ref{cha:evaluation} have presented twelve principles, and their application in the creation and evaluation of a student centred teaching and learning environment based upon \citet{Biggs:1996c} work on constructive alignment. This chapter starts with a reflection
+This chapter discusses the overall experience of developing and delivering units using this approach. \sref{sec:general_applicability_of_constructive_alignment} provides support for Biggs' claim that for the general applicability of constructive alignment, providing some illustrations of how other units could be implemented using the approach from \cref{cha:approach}. 
 
-
-\section{Reflection on Findings and Experience} % (fold)
-\label{sec:reflection_on_findings_and_experience}
-
-\subsection{General Applicability of Constructive Alignment} % (fold)
-\label{sub:general_applicability_of_constructive_alignment}
+\section{General Applicability of Constructive Alignment} % (fold)
+\label{sec:general_applicability_of_constructive_alignment}
 
 Biggs' original proposal of constructive alignment concluded with the following question:
 
@@ -19,7 +16,7 @@ Biggs' original proposal of constructive alignment concluded with the following 
 	``Can the principle of constructive alignment be generalised from the context of in-service teacher education?'' \citet{Biggs:1996c}
 \end{quote}
 
-The work in this thesis indicates that the same student-centred teaching and learning environment can be achieved through the application of the principles outlined in \cref{cha:guiding_principles}. These principles underpin the approach to constructive alignment described in \cref{cha:approach}, which together with the principles guided the design, development, and delivery of the units described in \cref{cha:example_impl}. The results? A supportive, student-centred, teaching and learning environment in which, to use the words of \citet{Biggs:2007} (p.51), students consistently ``\emph{stun}'' teaching staff by the ``\emph{rich and exciting}'' work they demonstrate in their portfolios.
+The work in this thesis indicates that the same student-centred teaching and learning environment can be achieved through the application of the principles outlined in \cref{cha:guiding_principles}. These principles underpin the approach to constructive alignment described in \cref{cha:approach} which, together with the principles, guided the design, development, and delivery of the units described in \cref{cha:example_impl}. The results? A supportive, student-centred, teaching and learning environment in which, to use the words of \citet{Biggs:2007} (p.51), students consistently ``\emph{stun}'' teaching staff by the ``\emph{rich and exciting}'' work they demonstrate in their portfolios.
 
 As outlined in \cite{Biggs:1996c}, the model of constructive alignment makes intuitive sense, and comes together as a whole when:
 \begin{enumerate}[noitemsep,nolistsep]
@@ -31,17 +28,23 @@ As outlined in \cite{Biggs:1996c}, the model of constructive alignment makes int
 
 \cref{cha:approach} demonstrated how the guiding principles described in \cref{cha:guiding_principles} can be applied to create an approach to teaching introductory programming that encapsulated all of these aspects. The processes described started with the clear expression of intended learning outcomes, with the development of assessment criteria providing the required performance objectives required for different grade outcomes. The development of teaching and learning activities aimed to provide students with tasks likely to engage them in activities that will enable them to construct appropriate understandings, and produce evidence they can include to demonstrate their newly gained knowledge. This evidence could then be collected together and presented in student portfolios as a means of demonstrating how the stated objects had been met.
 
-Therefore, the approach presented in \cref{cha:approach}, along with the example implementation discussed in Chapters \ref{cha:example_impl} to \ref{cha:evaluation}, support Biggs' claim that constructive alignment can be generalised to a range of educational contexts. 
+Therefore, the approach presented in \cref{cha:approach}, along with the example implementation discussed in Chapters \ref{cha:example_impl} to \ref{cha:evaluation}, provide additional support for Biggs' claim that constructive alignment can be generalised to a range of educational contexts. 
 
-% subsection general_applicability_of_constructive_alignement (end)
+The general applicability of constructive alignment gives rise to the question: Can the approach presented in \cref{cha:approach} be used beyond the context of introductory programming? We believe so. In fact this approach has been used to implement a range of technical units, each with similar positive results, as outlined in the following list.
 
-\subsection{Beyond Introductory Programming} % (fold)
-\label{sub:beyond_introductory_programming}
+\begin{itemize}[noitemsep,nolistsep]
+	\item Artificial Intelligence for Game used intended learning outcomes related to the use of Artificial Intelligence in creating immersive gaming experiences. Student portfolios included a number of programs to demonstrate various techniques, with higher grades demonstrating the application of learnt concepts in the development of a program of the students own invention.
+	\item Concurrent Programming covered the use and implementation of concurrency control mechanisms such as semaphores, barriers, and channels. Portfolios included implementations of these utilities, along with programs demonstrating solutions to classic synchronisation problems.   
+	\item Enterprise Software Development involved the use of a range of software tools to implement larger, multi-tier, solutions to business scenarios. Portfolios included demonstrations of various technologies, architectural designs, and technical demonstrations of core components of these designs.
+	\item Games Programming introduced concepts related to game design, and the implementation of game engine concepts. Portfolios included demonstrations of various programming techniques and optimisations related to game development, with students implementing game prototypes for higher grades.
+	\item Mobile Software Development explored the implementation of software for mobile devices, and associated usability issues. Students applied concepts they learnt in the creation of their own programs for higher grades.
+\end{itemize}
 
-Can the approach presented in \cref{cha:approach} be used beyond the context of introductory programming?
+In each case the units involved incorporated the principles from \cref{cha:guiding_principles}, with the central role of programming paradigms (\Pref{itm:paradigm}) in the development of introductory programming units being adjusted to focus on key aspects relevant for each unit. The use of portfolio assessment in each case meant that similar, in many cases identical, assessment criteria were able to be used.
 
+While all of these units are technical in nature, we believe the approach can also be applied to non-technical units. The large majority of processes described in \cref{cha:approach}, and their associated guidelines, are applicable for both technical and non-technical units. Assessment criteria is where this is likely to differ. Programming units involve a significant focus on functioning knowledge, involving the practical application of concepts learnt to problem solving and the creation of computer software. The resulting assessment criteria then promote the use of this functioning knowledge in a creative context, and the submission of the resulting artefacts to be eligible for high grades. Where a unit primarily focuses on declarative knowledge such assessment criteria will not be applicable. In these contexts alternative assessment criteria would be required, with the aim of students demonstrating relational levels of understanding in some creative context enabling students to explore aspects of the unit they find most interesting. For example, a unit may require students to undertake wider reading and present their findings to the class or in an extended literature review.
 
-The use of the approach from \cref{cha:approach} would be particularly well suited to assess learning outcomes for units that include significant use of group work, such as with team-based final year capstone projects. In these unit students work as part of a team, with obvious challenges in assessing the learning outcomes from individual students as final work products are a team effort. Using the approach from \cref{cha:approach} it would be possible to create a learning environment for these units in which:
+The use of the approach from \cref{cha:approach} would also be particularly well suited to assess learning outcomes for units that include significant use of group work, such as with team-based final year capstone projects. In these unit students work as part of a team, with obvious challenges in assessing the learning outcomes from individual students as final work products are a team effort. Using the approach from \cref{cha:approach} it would be possible to create a learning environment for these units in which:
 \begin{itemize}[noitemsep,nolistsep]
 	\item Intended learning outcomes capture the required technical and teamwork skills and understandings students needed to demonstrate to successfully complete the unit.
 	\item Assessment criteria indicate how these outcomes needs to be demonstrated in order to achieve different grade outcomes.
@@ -49,12 +52,44 @@ The use of the approach from \cref{cha:approach} would be particularly well suit
 	\item Each students collects evidence that they have met all of the intended learning outcomes, aligns their evidence in a Learning Summary Report, and presents this for assessment.
 \end{itemize}
 
-In this way, each student's grade would reflect how well they, as individuals, had met the intended learning outcomes. Creating such a scheme would require the embodiment of all principles stated in \cref{cha:guiding_principles}, particularly the need to trust and empower students in their learning (\Pref{itm:theory_y}). 
+In this way, each student's grade would reflect how well they, as individuals, had met the intended learning outcomes. Creating such a scheme would require the embodiment of all principles stated in \cref{cha:guiding_principles}, particularly the need to trust and empower students in their learning (\Pref{itm:theory_y}).
 
-% subsection beyond_introductory_programming (end)
+One place where we differ from the recommendations of \citet{Biggs:2007} is in the use of portfolios for larger class sizes. Incorporating frequent formative feedback, tracked by the online Doubtfire tool, made it possible to use portfolio assessment with classes in excess of 300 students (323 students completed the introductory programming units in iteration 8). The frequent formative feedback meant that student work submitted in their portfolios had \emph{already} been checked, possibly multiple times, and if completed successfully this had been indicated in the Doubtfire tool. As a result, the majority of student work did not need to be re-checked in their final portfolios, and grades could be quickly determined. Reflections from teaching staff indicate that the resulting process enabled student portfolios to be assessed in significantly less time than it took to assess the previously used exams -- which consisted of multiple choice, short answer, and coding questions. Given this, and ongoing improvements through reflective practice, it is also believed that the use of portfolio assessment could scale to significantly larger class sizes.
+
+% subsection general_applicability_of_constructive_alignement (end)
 
 
+\clearpage
+\section{Approach in Relation to Previous Work} % (fold)
+\label{sec:approach_in_relation_to_previous_work}
 
+Previous work on applying constructive alignment, as reported in the structured literature review from \cref{cha:background}, has predominantly seen the application of constructive alignment as simply the task of staff aligning teaching and learning activities with the unit's intended learning outcomes. This differs vastly from the view of constructive alignment presented in this thesis, where constructive alignment is seen as a much greater shift in educators understanding and approach to teaching and learning, one that is centred upon the principles outlined in \cref{cha:guiding_principles}. When constructive alignment is seen in this way, the resulting teaching and learning environment \emph{must} shift from a teaching-centred to student-centred focus, with all aspects working together to guide and support students in the construction of their own knowledge.
+
+This change in conception requires an adjustment to fundamentally held notions of effective education and its assessment. The continued use of arbitrarily weighted assignments and exams is ineffective in communicating the focus on learning and understanding. Restrictive assessment practices, the result of largely Theory-X dominated views of motivation, limit student opportunities, confining them to pre-set bounds defined as effective learning by teaching staff. By trusting and empowering students through the use of open assessment practices, guided by a Theory-Y view of motivation, these artificial constraints disappear and students are free to use their imagination and creativity. The results, as originally reported by \citet{Biggs:2007} and supported by our experiences outlined in \cref{cha:evaluation}, are portfolios that are truly amazing. 
+
+Prior to adopting the approach outlined in \cref{cha:approach}, teaching staff often felt that assessment was a negative experience. Marking assignments and exams identified, often for the first time, a large range of student misconceptions. The illusion that lectures had been effective in transferring knowledge to students disappeared, but too late to effect learning outcomes. Misalignment between the arbitrary weighting of assignments and exams often resulted in cases where teaching staff felt there was a mismatch between what students had demonstrated and their final results. The measurement of where students had got to against our pre-set notion of where they should get to, often resulted in disappointment.
+
+All of this changed with the shift in approach, with assessment becoming a positive and rewarding experience for teaching staff. Use of frequent formative feedback meant that students misconceptions were addressed often, allowing teaching staff to direct students and guide them to better understand unit concepts. ``Assessments'' were no longer final, so students were encouraged and rewarded for incorporating feedback they received, with each student receiving individual feedback based upon their current level of understanding. Assessment criteria provided a means for teaching staff to set expectations, while still providing opportunities for students to pursue their own interests and use their imagination and creativity. Portfolios then became an opportunity for students to show off what they had learnt. Where students had achieved Distinction and High Distinction results, these portfolios often went well beyond staff expectations making assessment a rewarding experience for teaching staff as students demonstrated just how much they had been able to achieve.
+
+It is hard not to draw parallels with software development life-cycles. Traditional assessment approaches, based upon assignments and exam, can be likened to the Waterfall approach. Teaching and learning activities are delivered in sequence, with little feedback from students. In contrast, the iterative process outlined in \cref{cha:approach} is more akin to Agile software development processes. Students and staff interact frequently, with staff providing guidance at each step of the process. 
+
+When the application of the principles from \cref{cha:guiding_principles} are used to  
+
+Given that, from a student's perspective, the curriculum is defined by its assessment \cite{Ramsden:1992} the inclusion of students in this alignment process is likely to lead to improvements in outcomes if staff are open and willing to change.
+
+
+% section approach_in_relation_to_previous_work (end)
+
+\section{Approach and Principles in Review} % (fold)
+\label{sec:approach_and_principles_in_review}
+
+Could you do it differently?
+
+Which principles could be left out? Are they all critical?
+
+No frequent formative feedback = heavy workload to assess portfolios (a little each week, or lots at the end) little each week as added benefits of improved learning, lots at the end ???
+
+% section approach_and_principles_in_review (end)
 
 
 \subsection{Learning from Agile Software Development Practices} % (fold)
@@ -80,24 +115,36 @@ In this way, each student's grade would reflect how well they, as individuals, h
 
 
 % section reflection_on_findings_and_experience (end)
-
+\clearpage
 \section{Challenges for Wider Adoption} % (fold)
 \label{sec:challenges_for_wider_adoption}
 
-\subsection{It is easier to be a ``Sage on the stage'' than it is to be a ``Guide by the side''} % (fold)
+\subsection{It is easier to be a ``Sage on the stage'' than a ``Guide by the side''} % (fold)
 \label{sub:adopting_constructive_learning_theories}
 
-A shift from a primarily objectivist view of education, with educators as the ``sage on the stage'', to one centred on constructive learning theories, where educators are a ``guide by the side'', requires a significant conceptual change. Educators need to move away from delivering material with the goal of ``knowledge transfer'', and consider how activities are likely to assist students with the construction of their own knowledge. It is no longer what educator ``say'', as it is what students do that \emph{really} counts.
+A shift from a primarily objectivist view of education, with educators as the ``sage on the stage'', to one centred on constructive learning theories, where educators are a ``guide by the side'', requires a significant conceptual change. Educators need to move away from delivering material with the goal of ``knowledge transfer'', and consider how activities are likely to assist students with the construction of their own knowledge. This requires a conceptual change, and moves the focus from a teacher-centred environment to a student-centred environment where it is what the students do that \emph{really} counts.
 
-Knowledge transfer is simple: get a number of people in a room and tell them what they need to know. Guiding students in the construction of their own knowledge seems like a much greater challenge. Accepting the students central role in constructing their own knowledge, means rethinking old strategies, and looking for new ways to engage students with the material.
+This change is particularly challenging. Knowledge transfer is simple: get a number of people in a room and tell them what they need to know. Guiding students in the construction of their own knowledge seems like a much greater challenge. Accepting the students central role in constructing their own knowledge, means rethinking old strategies, and looking for new ways to engage students with the material. 
 
-This shift in emphasis also requires extra time and attention. Delivering a lecture, and leaving students to do the hard work of trying to understand what was communicated, requires less work than when teaching staff aim to actively support students in developing their understanding.  
+Moving from teacher-centred teaching and learning activities, to activities that aim to actively engage students requires a trust in student motivation, as teaching staff relinquish some control over these activities. With teacher-centred activities, such as lectures, teaching staff have complete control of the material. Teaching staff determine the content, pace, and method of delivery. As more student-centred activities are adopted there is a need to incorporate greater input from students, and as a result some level of control is lost. 
 
+
+There is also a greater need for staff to be experts in the areas they teach,
+
+With knowledge transmission, well scripted lectures can be delivered by teaching staff with a range of abilities -- as long as they can understand the intention of the person who created the slides. Notes on the slides become reminders of ``what to say'', lowering the need for expert teaching staff who understand the concepts and can 
+
+understand students understanding - diagnose root cause of misunderstanding 
+
+and address misconception
+
+This shift in emphasis also requires extra time and attention. Delivering a lecture, and leaving students to do the hard work of trying to understand what was communicated, requires less effort than when teaching staff aim to actively support students in developing their understanding. These additional efforts require recognition by administrators in appropriate allocations of staff workloads, if quality learning is a real goal of higher education.
+
+Once a change in view
 
 Mistakes, or omissions, become a case for  
 
 
- ``I told them...'' so if they then fail to include 
+ 
 
  The ``sage'' is in control, whereas a ``guide'' must at least stick with the students.
 
@@ -107,8 +154,12 @@ Mistakes, or omissions, become a case for
 
 The teacher is in control.
 
+When knowledge transfer is the focus, it becomes easy to lay the blame for learning failures on the students. The knowledge was ``delivered'' to them, so it is their fault if they didn't understand it. When education is more as providing guidance to students, then 
 
-When knowledge transfer is the focus, it becomes easy to lay the blame the students for learning failures. The knowledge was ``delivered'' to them, so it is their fault if they didn't understand it.  
+Teaching staff can to  ``I told them...'' so if they then fail to include 
+
+
+
 
 
 % subsection releasing_control_of_assessment (end)
@@ -127,6 +178,8 @@ Paradigm shift in OOP
 
 \section{Formative and Summative Assessment} % (fold)
 \label{sec:formative_and_summative_assessment}
+
+Mixed assessment
 
 % section formative_and_summative_assessment (end)
 
@@ -212,7 +265,12 @@ Separation of activities and resources? - successfull
 \section{Future Work} % (fold)
 \label{sec:future_work}
 
-structured Literature review - interesting to note referencing in the field
+Structured Literature review - interesting to note referencing in the field
+
+Formally evaluate the time taken
+
+Compare the reliability of assessment
+
 
 % section future_work (end)
 
