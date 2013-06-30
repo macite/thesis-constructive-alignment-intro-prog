@@ -1,4 +1,4 @@
-/*.aux
+*.aux
 /*.bbl
 /*.log
 /*.maf
@@ -12,4 +12,4 @@
 /*.fdb*
 /*.sublime-workspace
 /*.fls
-/*.DS_Store
+.DS_Store
