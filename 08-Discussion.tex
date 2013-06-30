@@ -9,50 +9,6 @@
 
 This chapter discusses the overall experience of developing and delivering units using this approach. \sref{sec:general_applicability_of_constructive_alignment} provides support for Biggs' claim that for the general applicability of constructive alignment, providing some illustrations of how other units could be implemented using the approach from \cref{cha:approach}. 
 
-% 4: Risk Assessment of Approach
-
-% How does the approach address risks related to "Surface Learning and Plagiarism" (subsection 1) and "Staff and Student Workloads" (subsection 2).
-
-% 5: Challenges for Wider Adoption
-
-% What is likely to limit wider adoption of this approach? Discuss what we believe is the reason why people will resist this.
-% - Required change in view of education (shift to predominant constructivist view)
-% - Perceived release of control
-% - Perceived workload issues
-% - Required Expertise
-% - Misunderstanding required changes  (see section related to removing principles)
-
-% 6: Overall Outcomes
-
-% Is it all worth it?
-% What changes have been observed?
-
-% - Supportive environment focused on learning
-% - Students are empowered to engage their creativity and imagination
-% - Widening of perspective - support students in a wider range of activities
-% - Supporting a wider range of capabilities
-% -- No upper bound on what can be learnt (and given credit for)
-% -- While still catering for 
-% - Encourages interaction between staff and students -- interviews give you access to the best students (and gets them talking to us)
-
-% 7: Other Points of Interest
-
-% Some smaller points of discussion:
-% - Use of Pascal to remove focus from syntax (support existing work)
-% - Objects First / Objects Later and the Paradigm Shift
-% - Failing Students and Student Motivation (link to Guzdial work on non-majors)
-% - Success of Resources -- short/specific had longer life, separation of resources useful
-
-% 8: Future Work
-
-% - Application to non-technical units and beyond tertiary institutes
-% - Find out why people do resist this, and ways to help educators transition.
-% - With wider adoption perform comparison between approaches (traditional/CA portfolio)
-% - Deeper analysis of portfolio contents
-% - Redo McCracken study -- can they program at the end of this?
-
-
-
 \section{General Applicability of Constructive Alignment} % (fold)
 \label{sec:general_applicability_of_constructive_alignment}
 
@@ -108,7 +64,7 @@ Reflections from teaching staff indicate that the resulting process enabled stud
 
 
 \clearpage
-\section{Approach in Relation to Previous Work} % (fold)
+\section{Approach in Relation to Previous Work on Constructive Alignment} % (fold)
 \label{sec:approach_in_relation_to_previous_work}
 
 Previous work on applying constructive alignment, as reported in the structured literature review from \cref{cha:background}, has predominantly seen the application of constructive alignment as simply the task of staff aligning teaching and learning activities with the unit's intended learning outcomes. This differs vastly from the view of constructive alignment presented in this thesis, where constructive alignment is seen as a much greater shift in educators understanding and approach to teaching and learning, one that is centred upon the principles outlined in \cref{cha:guiding_principles}. When constructive alignment is seen in this way, the resulting teaching and learning environment \emph{must} shift from a teaching-centred to a student-centred focus, with all aspects working together to guide and support students in the construction of their own knowledge.
@@ -123,8 +79,8 @@ It is hard not to draw parallels between these different approaches to education
 
 % section approach_in_relation_to_previous_work (end)
 
-\section{Principles and Approach in Review} % (fold)
-\label{sec:approach_and_principles_in_review}
+\section{Principles in Review} % (fold)
+\label{sec:principles_in_review}
 
 \cref{cha:guiding_principles} provided twelve principles used to guide the creation of the student centred approach to teaching introductory programming presented in \cref{cha:approach}. While each principle has its own individual merits, we believe that they are all required to work together in order to achieve the outcomes presented. This section draws upon the experiences of teaching staff, as reported in \cref{cha:evaluation}, to discuss the potential impact of failing to address each of these principles on the overall learning environment. The following list outlines how the principles are designed to work together, as a reference for this discussion.
 
@@ -168,7 +124,7 @@ Reflections from the evaluation of the unit deliveries across the various iterat
 % subsection constructive_learning_theories (end)
 
 \subsection{Aligned Curriculum} % (fold)
-\label{sub:aligned_curriculum}
+\label{sub:disc_aligned_curriculum}
 
 Aligning all aspects of the teaching and learning environment (\Pref{itm:align}) makes good intuitive sense. Failing to address this principle is likely to result in one of three potential outcomes based upon the alignment between the three component parts: teaching and learning activities, assessment tasks, and intended learning outcomes.
 
@@ -255,25 +211,131 @@ Finally, \pref{itm:reflect} encourages the use of reflection by both staff and s
 \subsection{Principles related to ``What'' we teach} % (fold)
 \label{sub:principles_related_to_}
 
+In addition to the nine principles related to ``how'' we teach, \cref{cha:guiding_principles} presented three principles on ``what'' we teach. These aimed to work together with the ``how'' principles to create an effective environment for students learning introductory programming concepts. As each of these principles relates specifically to teaching introductory programming, they may not be relevant to teaching other units. This also implies that these principles need not even be addressed by other introductory programming units.
+
+\pref{itm:paradigm} indicates that introductory programming units should aim to communicate a  consistent set of programming concepts centred upon a programming paradigm. In the example units presented in \cref{cha:example_impl}, the procedural paradigm was used in the formation of the introductory programming unit, while object oriented programming principles were focused upon in a second unit. While this selection, and order, of paradigms could be adjusted, it would be hard to imagine an introductory unit that did not centre on an in-depth coverage of a single paradigm.  
+
+Each paradigm centres around a number of programming abstractions, with programs being conceptually constructed through the abstract definition and configuration of these abstractions. \pref{itm:concepts} encourages educators to focus on communicating these conceptual structures, and associated programming concepts. Associated concepts, such as DuBoulay's notional machine \cite{DuBoulay:1986}, then become the focus, rather than the specifics of a programming language's syntax. The realisation of this principle enabled the example units to introduce students to a range of programming languages, helping them better understand the underlying concepts. 
+
+While this concept focus was important for these units, \pref{itm:concepts} is not critical to the the overall approach. Ideally educators should aim to communicate underlying concepts, as these provide students with a broader understanding of programming in general. Where depth in a single language is desired, this could still be achieved with a focus on concepts. So there is little reason not to adopt this principle, though it does require a certain level of expertise from teaching staff, and availability of resources for students to use as they learn the syntax themselves.   
+
+Finally, \pref{itm:authentic} advocates for appropriate use of programming languages. Constructive learning theories indicate that the goal of education is to help students ``think and act'' like experts. This necessitates the \emph{appropriate} use of the tools, and concepts, in teaching and learning activities. By not adhering to this principle, students learn how \emph{not to} do something. This is likely to result in students developing inappropriate understandings of how the relevant tools or concepts should function. These understandings must then be unlearnt before students are able to ``think and act'' as experts. If \pref{itm:concepts} is embraced, then there should be no reason to consider using programming languages in ways other than they were intended.
+
 % subsection principles_related_to_ (end)
 
-% \subsection{Focus Strategy on a Programming Paradigm} % (fold)
-% \label{sub:focus_strategy_on_a_programming_paradigm}
+\subsection{Applying the Principles for Other Units} % (fold)
+\label{sub:applying_the_principles_for_other_units}
 
-% % subsection focus_strategy_on_a_programming_paradigm (end)
+\sref{sec:general_applicability_of_constructive_alignment} discussed the general applicability of the approach presented in \cref{cha:approach}, which embodies all of the principles from \cref{cha:guiding_principles}. The general nature of principles 1 to 9 indicate that these can be applied to a range of units. Principles 10 to 12 were formulated to be specific to introductory programming and, as discussed in \sref{sub:principles_related_to_}, would not directly apply to teaching units related to other topics. However, these generalising these three principles provides some insight into how similar principles could be devised for other contexts.
 
-% \subsection{Focus on Concepts} % (fold)
-% \label{sub:focus_on_concepts}
+\pref{itm:paradigm} exists due to the goal of introductory programming of enabling students to develop programs. This goal requires that students develop functioning knowledge of associated concepts, and be able to take on the role of a developer. In embodying this role, students must develop a mindset guided by the chosen programming paradigm. Requiring students to change this mindset part way through the teaching period is likely to be highly disruptive to the cognitive structures students have developed. As a result, generalised forms of this principle are only likely to be relevant where a unit aims to develop functioning knowledge in topic area with alternate mindsets. In these cases, the general form of \pref{itm:paradigm} would suggest that, in order to develop depth of understanding, units should focus on introducing students to a single mindset.
 
-% % subsection focus_on_concepts (end)
+The practical nature of software development often means that it is easy to focus on details of syntax, and ignore underlying concepts. In terms of programming, \citet{Winslow:1996} indicated that experts tended to focus on generalised concepts, an observation that is likely to apply in other context as underlying concepts provide experts with the knowledge required to function in a wide variety of circumstances. The generalised aim of \pref{itm:concepts} is, therefore, likely to apply across a range of topic areas as it encourages a focus on these underlying concepts.Similarly, a generalised focus on appropriate use of concepts and tools, as reflected in \pref{itm:authentic}, is also likely to be widely applicable.
 
-% \subsection{Use Tools Appropriately} % (fold)
-% \label{sub:use_tools_appropriately}
+% subsection applying_the_principles_for_other_units (end)
 
-% % subsection use_tools_appropriately (end)
+% \subsection{Relationships Between Principles} % (fold)
+% \label{sub:relationships_between_principles}
+
+% \begin{table}
+% 	\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c|c|c}
+% 		~ & \Pref{itm:construct} & \Pref{itm:align} & \Pref{itm:formative} & \Pref{itm:focus} & \Pref{itm:expectations} & \Pref{itm:support} & \Pref{itm:theory_y} & \Pref{itm:agile} & \Pref{itm:reflect} & \Pref{itm:paradigm} & \Pref{itm:concepts} & \Pref{itm:authentic} \\
+% 		\hline
+% 		\Pref{itm:construct}	& & & & & & & & & \\	
+% 		\Pref{itm:align}		& & & & & & & & & \\
+% 		\Pref{itm:formative}	& & & & & & & & & \\	
+% 		\Pref{itm:focus}		& & & & & & & & & \\
+% 		\Pref{itm:expectations}	& & & & & & & & & \\	
+% 		\Pref{itm:support}		& & & & & & & & & \\
+% 		\Pref{itm:theory_y}		& & & & & & & & & \\
+% 		\Pref{itm:agile}		& & & & & & & & & \\
+% 		\Pref{itm:reflect}		& & & & & & & & & \\
+% 		\Pref{itm:paradigm}		& & & & & & & & & \\
+% 		\Pref{itm:concepts}		& & & & & & & & & \\
+% 		\Pref{itm:authentic}	& & & & & & & & & \\	
+% 	\end{tabular}
+% \end{table}
+
+% subsection relationships_between_principles (end)
 
 
 % Basically discuss the impact of removing each of the principles from CH3 individually. Reinforce the notion that they work together. 
+
+\section{Approach in Review} % (fold)
+\label{sec:approach_in_review}
+
+\cref{cha:approach} described an approach to delivering constructively aligned introductory programming units that embodied all of the principles from \cref{cha:guiding_principles}. The approach outlined the overall strategy taken, and a number of processes used to create effective learning environments. As discussed in \sref{sec:general_applicability_of_constructive_alignment}, it is believed that this approach can be generalised beyond the context of introductory programming. To illustrate this point, and discuss the critical aspects of this model, this section outlines which aspects of the overall strategy, and which processes, are likely to be needed to recreate an effective learning environment in other contexts.
+
+\subsection{Overall Strategy} % (fold)
+\label{sub:overall_strategy}
+
+\sref{sec:overall_strategy} described the overall strategy used to underpin the development and delivery of the unit discussed in \cref{cha:example_impl}. This strategy centred around the use of portfolio assessment as an assessment approach, and a variety of  student-centred delivery approaches to help embed constructive learning theories in unit delivery. This section discusses these decisions, and if and how alternatives could be incorporated.
+
+\subsubsection{Portfolio Assessment} % (fold)
+ \label{ssub:portfolio_assessment}
+
+Biggs early work on constructive alignment \cite{Biggs:1996c,Biggs:1999} strongly advocated for the use of portfolio assessment. \citet{Biggs:2007} provides a range of alternative means of implementing constructive alignment under the premise that portfolio assessment is not applicable for large class sizes. However, as shown in \cref{cha:evaluation}, our approach has been able to scale from teaching tens of students in early iteration, to hundreds of students in later iterations through the implementation of the principles described in \cref{cha:guiding_principles}.
+
+Alternative assessment schemes involving the use of summative assessment during the teaching period, and examinations at its end, are not going to be able to reproduce the same ``web of consistency'' as they break several of the core principles outlined in \cref{cha:guiding_principles}. Existing work reporting on applications of constructive alignment are largely representative of this situation, with the large majority still producing students final grade as a combination of arbitrarily weighted assignments and exams. It is, therefore, not surprising that \emph{none} reported having experienced a system with the consistency and alignment as reported by \cite{Biggs:1996c}. 
+
+Teaching staff believe that the learning environment experienced as part of this work was only possible due to the shift to portfolio assessment. As a result, portfolio assessment is seen as central to recreating the ``web of consistency'' reported by \citet{Biggs:1996c,Biggs:1999}.
+
+Consider a unit that assesses students using two essays and a final examination. In order to shift to portfolio assessment, with frequent formative feedback, these assessment tasks could be broken down into a number of smaller tasks, with students receiving feedback at each stage. It is likely that these larger assessment tasks included a number of smaller activities; tasks that staff \emph{assumed} students would perform. Making these the weekly tasks ensures students actually perform the required activities, while also providing artefacts that staff can use to provide students with feedback.
+
+These smaller tasks would form the basis of the Pass and Credit criteria for the unit. To balance workload, the scope or scale of these may need to be adjusted, with the expectation that students would perform the task to a high standard in order to achieve a passing grade. The two essays may become the required artefacts for the Pass and Credit criteria, or could potentially become the Distinction criteria with output from the smaller tasks making up the Pass and Credit grades.
+
+Where an essay was still desired, subtasks could require students to demonstrate understanding of relevant background reading material, to prepare outlines for the final essay, and possibly to perform a peer review of other student work. An example set of subtasks is shown in the following list. 
+
+\begin{enumerate}[noitemsep,nolistsep]
+	\item Read background material, and summarise in the form of a blog entry on ``\emph{insert topic}''.
+	\item Prepare a draft outline of essay on ``\emph{insert topic}'', which incorporates references from background reading material.
+	\item Prepare complete draft version of essay on ``\emph{insert topic}''.
+	\item Write a peer review of two other student's work on ``\emph{insert topic}''. 
+	\item Submit final version for assessment in portfolio, along with peer reviews and reflections on alterations made.
+\end{enumerate}
+
+By completing these tasks, staff would have multiple opportunities to guide student learning, ensuring that the resulting essays are likely to demonstrate students have attained at least the Pass grade standard. 
+
+Frequent student interaction would also help to address potential staff workload issues, as staff aim to provide a small amount of feedback on each of the subtasks. Blog entries could be quickly scanned to see that students had captured critical aspects from each of the reading tasks, outlines could be quickly checked to ensure appropriate structure, while more detailed feedback would need to be provided on completed drafts. Each of these could be marked off in a task tracking system like Doubtfire when they had been completed to a satisfactory standard. Assessing the portfolio would then involved checking that work had been marked off, and considering the changes students had made in response to peer feedback.
+
+Tasks appropriate for Distinction and High Distinction would also need to be considered, and staff and student workloads balanced with the core tasks. Distinction tasks can be devised by teaching staff asking themselves what they \emph{really} want student to be able to do by the end of the unit. In the case of the programming units this resulted in the Distinction criteria requiring students to demonstrate the ability to create a program that demonstrated an appropriate application of the unit concepts. This could involve developing mathematical models for units on mathematics, preparing financial reports in units on accounting, or explaining metabolic processes in units on biochemistry, for example. Assessment criteria can then be defined to require students to perform these tasks in order to achieve Distinction and High Distinction grades.
+
+
+ % subsubsection portfolio_assessment (end) 
+
+\subsubsection{Delivery Approach} % (fold)
+\label{ssub:delivery_approach}
+
+\sref{sec:overall_strategy} also outlined the incorporation of constructive learning theories into the teaching and learning activities using the Beyond Bullet Points approach for lecture presentations, interactive lecture demonstrations, and laboratory sessions with lab, core, and  optional tasks. While each of these was seen as effective in the delivery of the example units, other units are likely to need to use different strategies. 
+
+In deciding upon a delivery strategy, teaching staff would need to consider tasks that are likely to actively involve students in constructing their own knowledge. Where previous activities had relied upon knowledge transmission, such as the standard lecture, these would need to be redesigned with constructivist ideals in mind.
+
+Consider again the hypothetical unit, with the essay assignments and exam now broken down into a number of smaller tasks. The overall strategy for delivering the unit should consider kinds of activities that are likely to be the most effective in ensuring students can achieve the tasks successfully. Using this strategy, the design of the activities themselves need to support students as they complete these tasks, providing them with guidance on associated concepts, tools, techniques, and approaches.
+
+% subsubsection delivery_approach (end)
+% subsection overall_strategy (end)
+
+\subsection{Processes within the Model} % (fold)
+\label{sub:processes_within_the_model}
+
+After outlining the overall strategy taken in this work, \cref{cha:approach} presented the model of constructive alignment used, and described a number of processed that existed within this model. Given the use of portfolio assessment, a central aspect of the model as outlined in \sref{ssub:portfolio_assessment}, these processes are likely to be appropriate for the delivery of a number of portfolio based units. For teaching staff, the model presented the following processes:
+
+\begin{enumerate}[noitemsep,nolistsep]
+	\item Define Intended Learning Outcomes
+	\item Construct Assessment Criteria
+	\item Develop Teaching and Learning Activities and Resources
+	\item Deliver Unit
+	\item Provide Feedback and Guidance
+	\item Assess Student Portfolios
+\end{enumerate}
+
+
+
+% subsection processes_within_the_model (end)
+
+
+
+
 
 % What from the Approach can change?
 % - Portfolio Assessment?
@@ -281,12 +343,9 @@ Finally, \pref{itm:reflect} encourages the use of reflection by both staff and s
 % - Guidelines? (CH4)
 
 
+% section approach_in_review (end)
 
 Could you do it differently?
-
-Which principles could be left out? Are they all critical?
-
-Do a principle by principle analysis
 
 No frequent formative feedback = heavy workload to assess portfolios (a little each week, or lots at the end) little each week as added benefits of improved learning, lots at the end ???
 
@@ -314,6 +373,51 @@ Risks:
 % subsection staff_and_student_workloads (end)
 
 % section risk_assessment_of_approach (end)
+
+
+
+% 4: Risk Assessment of Approach
+
+% How does the approach address risks related to "Surface Learning and Plagiarism" (subsection 1) and "Staff and Student Workloads" (subsection 2).
+
+% 5: Challenges for Wider Adoption
+
+% What is likely to limit wider adoption of this approach? Discuss what we believe is the reason why people will resist this.
+% - Required change in view of education (shift to predominant constructivist view)
+% - Perceived release of control
+% - Perceived workload issues
+% - Required Expertise
+% - Misunderstanding required changes  (see section related to removing principles)
+
+% 6: Overall Outcomes
+
+% Is it all worth it?
+% What changes have been observed?
+
+% - Supportive environment focused on learning
+% - Students are empowered to engage their creativity and imagination
+% - Widening of perspective - support students in a wider range of activities
+% - Supporting a wider range of capabilities
+% -- No upper bound on what can be learnt (and given credit for)
+% -- While still catering for 
+% - Encourages interaction between staff and students -- interviews give you access to the best students (and gets them talking to us)
+
+% 7: Other Points of Interest
+
+% Some smaller points of discussion:
+% - Use of Pascal to remove focus from syntax (support existing work)
+% - Objects First / Objects Later and the Paradigm Shift
+% - Failing Students and Student Motivation (link to Guzdial work on non-majors)
+% - Success of Resources -- short/specific had longer life, separation of resources useful
+
+% 8: Future Work
+
+% - Application to non-technical units and beyond tertiary institutes
+% - Find out why people do resist this, and ways to help educators transition.
+% - With wider adoption perform comparison between approaches (traditional/CA portfolio)
+% - Deeper analysis of portfolio contents
+% - Redo McCracken study -- can they program at the end of this?
+
 
 
 
