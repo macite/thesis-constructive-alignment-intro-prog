@@ -1,6 +1,97 @@
-\title{Constructive Alignment for Introductory Programming}
-\author{Andrew Cain}
+%!TEX root = Constructive Alignment for Introductory Programming.tex
 
-\date{2011-02-10}
+% Titlepage
+\title{ \huge{\textbf{Constructive Alignment for Introductory Programming}} \\[1.2cm]
+\vspace{2.2cm} 
+\Large{\textbf{Andrew Cain}} \\[1.2cm]
+\vspace{2cm}
+\large{A thesis presented for the degree of Doctor of Philosophy} \\
+\vspace{2.5cm} 
+} 
+
+\date{2013}
 
 \maketitle
+
+% Abstract
+\chapter*{Abstract}
+
+This thesis applies the principles of constructive alignment with portfolio assessment to improve the teaching of introductory programming by creating a positive, student-centred, teaching and learning environment that encourages students to focus on deep approaches to learning.
+
+Learning to program has been found to be very challenging. This thesis investigates ways to improve student learning outcomes in introductory programming units taught at the university level. It focuses on improvements in the teaching and learning environment that result from applying principles of constructive alignment, including the application of constructive learning theories and aligned curriculum, together with open assessment practices. 
+
+The thesis presents a structured literature review of existing applications of constructive alignment, and argues for the need to explore applications of constructive alignment that truly capture the integrated nature of the original work. It argues that this can only be achieved through through adjustments to delivery and assessment practices, and proposes a set of guiding principles that can be used to create the desired learning environment.
+
+A model of constructive alignment is presented, which encompasses the proposed principles and provides processes and guidelines for its implementation. The practicality of the resulting approach is demonstrated through the description of two programming unit exemplars.
+
+Within this context, a concept-based, procedures-first, approach to introductory programming is also proposed, along with a range of supporting tools and resources. This approach provides students with a solid understanding of programming concepts, and experience of a range of programming languages and paradigms, by the end of their first year of university study. 
+
+Analysis of the exemplar units, and the resulting student learning outcomes, demonstrates the positive potential for learning environments created using the proposed approach. The resulting learning environment supports a wide range of student capabilities, rewards students for deeply engaging with unit material, and encourages them to use their imagination and creativity. Using this approach, teaching staff are consistently astounded by the quality of work students are able to achieve.
+
+% Dedication
+\newpage \vspace*{8cm} 
+\begin{center}
+	\large Dedicated to all my students
+\end{center}
+
+
+% Acknowledgements
+\chapter*{Acknowledgements}
+\vspace{-0.5cm}
+In many ways, this work started when I was still very young and over the years the ideas that now come together have been shaped by a number of influential people, each of whom I would like to acknowledge for their formative role in this work.
+
+I was fortunate to learn programming sitting at the kitchen table with my father. He introduced me to computing, and taught me the importance of programming concepts. Without these understandings, I would not be in the position I am today. Similarly, I would like to thank my mother for her efforts to support the scouting movement that the whole family eventually became engaged with. This helped reinforce the positive attitude of always doing your best, an attitude I now live by and have embedded within the approach presented in this thesis.
+
+My current employer, Swinburne University of Technology, also need a special thanks for allowing me to try these radically different approaches to teaching introductory programming, but more so for introducing me to colleagues who would enable this to succeed. To Dr. Rajesh Vasa and Dr. Clinton Woodward, with whom I have shared an office at various stages, I would like to say thank you for the many discussions on teaching, and for working with me to apply these concepts to your teaching, and promote it to wider audiences. I am also indebted to the tutors who have helped me with the delivery of the programming units, I feel very lucky to have worked with such great teams over the years. To Shannon Pace for all his hard work helping prepare the various research papers we have worked on together, and to Allan Jones, Rohan Liston, and Joost Funke Kupper for the work on teh Doubtfire tool. 
+
+I would like to acknowledge with particular gratitude the assistance of my supervisors, Prof. John Grundy, and Dr. Clinton Woodward. Your support and feedback have been critical in the formation of this thesis, and I hope to continue working with you on this into the future.
+
+Finally, I would like to thank my wife Alison for her loving support during the long period it has taken me to conduct the research and write up this thesis.
+
+\vspace*{2cm}
+Andrew Cain, 2013
+
+% Declaration
+
+\chapter*{Declaration}
+% \vspace{-0.5cm}
+% %	\pdfbookmark[0]{Declaration}{declaration}
+I declare that this thesis contains no material that has been accepted for the award of any other degree or diploma and to the best of my knowledge contains no material previously published or written by another person except where due reference is made in the text of this thesis.
+
+\vspace*{4cm} Andrew Cain, 2013
+\chapter*{Publications Arising from this Thesis}
+\vspace{-0.5cm}
+
+The work described in this thesis has been published as described in the following list:
+\begin{enumerate}
+	\item \citet{Cain:2012a}, Toward constructive alignment with portfolio assessment for introductory programming, in \emph{Proceedings of the first IEEE International Conference on Teaching, Assessment and Learning for Engineering}, IEEE, pp. 345–350.
+
+	\item \citet{Cain:2013c}, Developing assessment criteria for portfolio assessed introductory programming, in \emph{Proceedings of the 2nd IEEE International Conference on Teaching, Assessment and Learning for Engineering}, IEEE.
+
+	\item \citet{Cain:2013a}, Examining student reflections from a constructively aligned introductory programming unit, in \emph{Proceedings of the 15th Australasian Computer Education Conference}, Vol. 136, pp. 127–136.
+
+	\item \citet{Cain:2013b}, Examining student progress in portfolio assessed introductory programming, in \emph{Proceedings of the 2nd IEEE International Conference on Teaching, Assessment and Learning for Engineering}, IEEE.
+
+	\item \citet{Woodward:2013}, Helping students track learning progress using burn down charts, in \emph{Proceedings of the 2nd IEEE International Conference on Teaching, Assessment and Learning for Engineering}, IEEE.
+
+\end{enumerate}
+
+% %\onehalfspacing
+% %The publications heavily influenced the content presented in this thesis. 
+% Although the thesis is written as a linear document, the actual research work involved substantial exploration, idea formation, modelling, experimenting and some backtracking as we hit dead-ends. The following text outlines how the publications relate to this thesis.
+
+% The early articles helped lay the foundation and scope the work presented in this thesis. Specifically, the QAOOSE'03 and ISESE'05 articles (papers 1 and 2) showed that software metrics typically exhibit highly skewed distributions that retain their shape over time and that architectural changes can be detected by analyzing these changing distributions. The article published at SC'2007 (paper 3) expanded on the ISESE'05 article (paper 2) and presented a mathematical model to describe the evolution process and also put forward the thresholds as well as a technique to detect substantial changes between releases.  These papers helped establish and refine the input data selection method (Chapter 3), validate the approach that we take for extracting metrics (Chapter 4), and developed the modelling approach that we eventually used to detect substantial changes between releases (Chapter 5).
+
+% More recent work (in particular, ICSM'07 and ICSM'09 articles and the EVOL'07 article -- papers 4, 5 and 7) contributed to the content presented in Chapters 5 and 6 of this thesis which address the primary research questions. The article in ASWEC'10 (paper 8) showed that the key analysis approach advocated in this thesis can also be used to understand how properties are used in Java software. The IEEE Software article in 2009 (paper 6) presented a method for reasoning about software architecture and the findings from this thesis influenced some of the arguments with respect to the long term stability of software architecture. The implications that we derived from all of the various papers are expanded upon in Chapter 7.
+
+% %	\pdfbookmark[0]{Publications Arising from this Thesis}{publications}
+
+\newpage
+\tableofcontents 
+\newpage
+\listoffigures 
+\newpage
+\listoftables 	
+\newpage
+
+\onehalfspacing
