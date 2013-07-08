@@ -35,7 +35,6 @@ begin
 			lightIsOn := not lightIsOn;
 
 		if KeyDown(vk_Left) then lightX := lightX - 1;
-
 		if KeyDown(vk_Right) then lightX := lightX + 1;
 
 		if lightX < 0 then lightX := 0;
