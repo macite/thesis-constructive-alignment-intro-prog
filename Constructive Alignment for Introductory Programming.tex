@@ -19,6 +19,7 @@
 % \includeonly{08-Discussion}
 % \includeonly{09-Conclusion}
 % \includeonly{appendix/cadata}
+% \includeonly{appendix/ethics}
 
 \begin{document}
 
@@ -38,9 +39,13 @@
 \include{08-Discussion}
 \include{09-Conclusion}
 
-\appendix
-\include{appendix/cadata}
-
 \bibliographystyle{agsm} %{abbrv}
 \bibliography{SenteReferences}
+
+\appendix
+\renewcommand{\thechapter}{A\arabic{chapter}}
+\include{appendix/cadata}
+\include{appendix/ethics}
+
+
 \end{document}
