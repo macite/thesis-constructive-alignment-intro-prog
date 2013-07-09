@@ -290,7 +290,7 @@ Doubtfire was designed to address these concerns through the use of agile develo
 \section{A Game Library to Support Procedures First} % (fold)
 \label{sec:swingame}
 
-\cref{cha:example_impl} described two programming units implemented using the approach described in \cref{cha:approach}, and principles stated in \cref{cha:guiding_principles}. These units adopted an objects-later approach to introductory programming by starting with a procedural programming unit, followed by an object oriented programming unit.
+\cref{cha:example_impl} described two programming units implemented using the approach described in \cref{cha:approach}, and principles stated in \cref{cha:guiding_principles}. Following \pref{itm:paradigm}, these units were each centred around concepts associated with a single programming paradigm. As described in \sref{sec:paradigm_choice}, an objects-later approach was adopted for the introductory programming unit, which focused on introducing students to the procedural programming paradigm, with the subsequent object oriented programming unit introducing the object oriented paradigm.
 
 \pref{itm:concepts} indicates the desire to structure the programming curriculum around programming concepts in such a way that each topic builds upon prior knowledge. This lead to the procedures first approach for the introductory programming unit described in \sref{ssub:procedures_first_topic_sequence}. 
 
@@ -298,7 +298,7 @@ With the procedures first approach to teaching introductory programming, student
 
 The challenge with this approach, as identified by \citet{Pattis:1993}, is finding meaningful tasks for students to perform. Standard programming language features do not provide sufficient functionality for student to perform meaningful, and engaging, actions without having to use a wider range of programming constructs.
 
-This section describes SwinGame, a game development library designed to facilitate a procedure first introduction to programming, and to help students create more interesting programs. \sref{sub:swingame_requirements} outlines the requirements for the SwinGame library, which is then described at a high level in \sref{sub:swingame_solution}. \sref{sub:use_of_swingame} describes how SwinGame was used to support the teaching of introductory programming, and relates this to the principles, approach, and units from chapters \ref{cha:guiding_principles} to \ref{cha:example_impl}. The discussion of SwinGame concluded with a short summar in \sref{sub:swingame_summary}
+This section describes SwinGame \cite{swingame} a game development library designed to facilitate a procedure first introduction to programming, and to help students create more interesting programs. \sref{sub:swingame_requirements} outlines the requirements for the SwinGame library, which is then described at a high level in \sref{sub:swingame_solution}. \sref{sub:use_of_swingame} describes how SwinGame was used to support the teaching of introductory programming, and relates this to the principles, approach, and units from chapters \ref{cha:guiding_principles} to \ref{cha:example_impl}. The discussion of SwinGame concluded with a short summar in \sref{sub:swingame_summary}
 
 \clearpage
 \subsection{Requirements} % (fold)
@@ -365,8 +365,6 @@ SwinGame provides users with a number of components and features. The main compo
   \item \textbf{Utilities}: provides other miscellaneous operations useful for game development.
 \end{itemize}
 
-
-
 % subsection swingame_solution (end)
 
 \subsection{Use and Evaluation of SwinGame} % (fold)
@@ -393,17 +391,17 @@ With the students in full control of their programs, any form of user interactio
 The visual nature of the games developed with SwinGame help create a more engaging atmosphere in lectures. By creating visual programs, the lecture demonstration code can be designed and implemented \emph{with} the students. For example, in Week 3 of the introductory programming unit the lecture demonstration created a small program where the user could move a light around the screen and turn it on and off. The code in \lref{lst:lights} shows a part of the code developed in this lecture. The program was created iteratively, involving the students at each stage, as outlined in the following list.
 
 \begin{enumerate}[noitemsep, nolistsep]
-  \item Initially the program was developed using concepts from previous week, with the code implementing the \texttt{DrawLight} procedure. At this stage a call to \texttt{Delay} was used to keep the program open for a short period.
+  \item Initially the program was developed using concepts from previous week, with the code implementing the \texttt{DrawLight} procedure. At this stage a call to \texttt{Delay} was used to keep the program open for a short period. In this way the example helps build upon student's prior knowledge. (\Pref{itm:concepts})
   \item The first problem was highlighted by explaining how the program worked, while it was running. Half way through the explanation the program ended, leading to the question ``How can we keep the program open until we want it to close?''. Via various prompts the event loop was described, and coded as the repeat loop in main. Counting out a period longer than the previous delay highlighted that the new code had solved the old problem, and the class discussed what was actually happening behind the scenes to enable this. Closing the window demonstrated the ending of the repeat loop.
   \item The next problem was to make the program more interactive: ``Wouldn't it be good to be able to turn the light on and off?''. This lead to a discussion of what needed to \emph{vary} in the program, and the addition of the \texttt{lightIsOn} variable in \texttt{Main}. This was set to false when the program started, and its state was flipped (on to off, and visa versa) in the repeat loop.
   \item Running the program had an \emph{interesting} effect, as the light flickered between its two states. Questions started with ``Do we always want to change the state of the light?'', and eventually lead to ``So, you only want to change the state of the light \textbf{if} the user has typed the space bar?'' and follow on to ``How can we achieve this in our code?''. After reviewing selection, and the syntax for the if statement, the assignment statement that changed the lights state was put within an if statement. The program was executed and the results discussed.
 \end{enumerate}
 
-Other features were added in a similar style, each focusing on the application of the concepts to solve a problem or to introduce a new feature.  
+Other features were added in a similar style, each focusing on the application of the concepts to solve a problem or to introduce a new feature.  The exercise demonstrates the application of constructive learning theories (\Pref{itm:construct}) , in that it aims to help guild students in the construction of their knowledge. The example starts at a point they should be familiar with, and identifies ways in which the new knowledge, control flow in this case, can enhance the functionality of the program they are creating (\Pref{itm:concepts}). In this way, the examples demonstrate appropriate applications of the new concepts, helping students work toward the goal of thinking and acting as experts.
 
 \passection{lst:lights}{The final code from the lecture example developed with students in the Week 3 lecture of the introductory programming unit. The program shows a light bulb image that can be turned on and off with the mouse and space bar, and moved around the screen using arrow keys.}{\pascode{Figures/Supporting/Lights.pas}}
 
-Each week's lecture demonstrations followed a similar sequence of events. SwinGame enabled these interactive through its requirement for explicit control, and its support for multimedia resources. In later weeks lecture demonstrations involved the development, and weekly expansion of a small game. The functionality and theme of these games were proposed by students, with appropriate guidance, helping to ensure students remain engaged with the learning activities. Students supplied images and sound effects, suggested features, discussed implementation strategies and were engaged in the iterative implementation of these games. \fref{fig:games} shows screen-shots of two games developed in the lectures, the code of which was then shared with the students.
+Each week's lecture demonstrations followed a similar sequence. SwinGame enabled the focus on programming concepts (\Pref{itm:concepts}) due to its requirement for explicit control, while its support for multimedia resources helped make the programs more ``fun''. Later week's lecture demonstrations continued to expand on concepts learnt, and culminated in the development of a small game. The functionality and theme of these games were proposed by students, helping them take ownership of the learning activities (\Pref{itm:theory_y}). Students supplied images and sound effects, suggested features, discussed implementation strategies and were engaged in the iterative implementation of these games. \fref{fig:games} shows screen-shots of two games developed in the lectures, the code of which was then shared with the students.
 
 \begin{figure}[thbp]
   \centering
@@ -417,9 +415,9 @@ Each week's lecture demonstrations followed a similar sequence of events. SwinGa
 \subsubsection{Supporting Custom Projects} % (fold)
 \label{sub:supporting_custom_projects}
 
-As well as supporting the delivery of lecture material, SwinGame provided students with a wide range of capabilities they could use in the creation of their \emph{custom projects}. To be eligible for at least a Distinction grade, students needed to demonstrate they could apply the concepts from the unit to the development of a program of their own design. While there was no requirement for students to use the library, most chose to create a game using SwinGame.
+As well as supporting the delivery of lecture material, SwinGame provided students with a wide range of capabilities they could use in the creation of their \emph{custom projects}. The assessment criteria developed for the introductory programming unit, described in \sref{sub:intro_constructing_assessment_criteria}, required students to demonstrate they could apply the concepts from the unit to develop a program of their own design. While there was no requirement for students to use the library, most chose to create a game using SwinGame.
 
-To help support this, the SwinGame functionality was documented on a website (\url{http://swingame.com}), as shown in \fref{fig:website}. The website was created to list the SwinGame functions and procedures, and additional documentation was added for some of the more common tasks. The site also provided a means of distributing the SwinGame library to a wider audience.  
+To help support students with their use of SwinGame was documented on a website \cite{swingame}, as shown in \fref{fig:website}. The website was created to list the SwinGame functions and procedures, and additional documentation was added for some of the more common tasks, with the aim of supporting students as they started to develop their own programs (\Pref{itm:support}). The site also provided a means of distributing the SwinGame library to a wider audience.  
 
 \begin{figure}[thbp]
   \centering
@@ -435,14 +433,16 @@ To help support this, the SwinGame functionality was documented on a website (\u
 
 SwinGame was developed through the collaboration of both staff and students over a number of years. At the end of each year, students were invited to work on enhancing SwinGame's implementation and documentation. This provided an opportunity for staff to work closely with students, and for students to further develop their software development skills outside of the standard teaching periods.
 
+Promoting opportunities to work on SwinGame also provided an opportunity to indicate the depth of knowledge students had developed in the past. This helped communicate the high expectations of staff (\Pref{itm:expectations}) and provided encouragement for students to do their best.
+
 % subsection developing_swingame_and_its_documentation (end)
 
 \subsubsection{Supporting Multiple Languages} % (fold)
 \label{sub:supporting_multiple_languages}
 
-With the introductory programming unit using two programming languages, and object oriented programming using four, SwinGame was required to be accessible from a range of programming languages. This included both procedural and object oriented programming languages. To achieve this goal a number of tools were created to simplify the process of creating programming language specific version of SwinGame.
+With the introductory programming unit using two programming languages, and object oriented programming using four, SwinGame was required to be accessible from a range of programming languages. This included both procedural and object oriented programming languages, which each needed to be supported with appropriate abstractions (\Pref{itm:authentic}). To achieve this goal a number of tools were created to simplify the process of creating programming language specific versions of SwinGame.
 
-SwinGame's core logic is implemented via a number of modules, one for each aspect of the SwinGame functionality. These modules can be accessed via language specific wrappers as shown in \fref{fig:swingame_arch}. Each wrapper mirrors the SwinGame functionality, and acts as an adapter that performs any required transformation of data between the program's runtime environment and the native SwinGame library, which is accessed via the SwinGame Library Interface. This interface consolidates all of the SwinGame functionality and exposes it as a native library, it also acts as an adapter that converts SwinGame types to, and from, appropriate native representations that can be exchanged across the native interface. 
+SwinGame's core logic can be accessed via language specific wrappers as shown in \fref{fig:swingame_arch}. Each wrapper mirrors the SwinGame functionality, and acts as an adapter that performs any required transformation of data between the program's runtime environment and the native SwinGame library, which is accessed via the SwinGame Library Interface. This interface consolidates all of the SwinGame functionality and exposes it as a native library, it also acts as an adapter that converts SwinGame types to, and from, appropriate native representations that can be exchanged across the native interface. 
 
 \begin{figure}[thbp]
   \centering
@@ -464,7 +464,7 @@ SwinGame's language translation scripts requires additional information to enabl
 
 \passection{lst:audio}{Example of markup language used to annotate SwinGame core logic to enable generation of language specific wrappers}{\pascode{Figures/Supporting/Audio.pas}}
 
-\begin{table}[hbp]
+\begin{table}[htbp]
     \footnotesize
     \centering
     \caption{The main language translation attributes, their format and purpose.}
@@ -505,22 +505,80 @@ By supporting both procedural and object oriented programming languages, SwinGam
 \subsubsection{Supporting What We Teach} % (fold)
 \label{sub:supporting_what_we_teach}
 
-SwinGame performed a central role in supporting \emph{what} we taught, as illustrated in \fref{fig:what_we_teach}. SwinGame helped enable interactive lectures, and provided the tools necessary to create engaging examples in the Programming Arcana and the video podcasts. It also provided a consistent library for students to use as they moved between programming languages, and programming units.
+SwinGame performed a central role in supporting \emph{what} was taught in the two example programming units described in \cref{cha:example_impl}. It also provided backing for other resources developed to support the teaching of these units, as illustrated in \fref{fig:what_we_teach}. SwinGame helped enable interactive lectures, and provided the tools necessary to create engaging examples in the Programming Arcana text, outlined in \sref{sec:arcana}, and the video podcasts, described in \sref{sec:vodcasts}. 
+
+It also provided a consistent library for students to use as they moved between programming languages, and programming units (\Pref{itm:support} and \Pref{itm:concepts}). While the SwinGame interface differed slightly, adapting to language conventions and abstractions, the interface was still a familiar quantity as students moved between languages and paradigms. This meant that students could more rapidly create programs in the new language, as the SwinGame library remained relatively consistent between the different environments.
 
 \begin{figure}[thb]
   \centering
   \includegraphics[width=0.8\textwidth]{SupportWhatWeTeach}
-  \caption{What we taught was supported by the Programming Arcana, the video podcasts and SwinGame.}
+  \caption{SwinGame supported unit delivery, the Programming Arcana, and the video podcasts.}
   \label{fig:what_we_teach}
 \end{figure}
 
+% subsection supporting_what_we_teach (end)
+
+\subsubsection{Evaluation and Support of Principles} % (fold)
+\label{ssub:evaluation_and_support_of_principles}
+
+Staff and student reflections indicate that SwinGame has been a successful part of the teaching strategy for the introductory and object oriented programming units. In the introductory programming unit SwinGame enabled staff to use interactive lecture demonstrations, and provided students with a library they could use to create small games for their custom projects. It supported the shift between programming languages, and between programming paradigms as student transition from the introductory programming unit to object oriented programming.
+
+SwinGame has met most of the requirements listed in \sref{sub:swingame_requirements}, the following list outlines current strengths and weaknesses.
+\begin{itemize}[noitemsep,nolistsep]
+  \item Strengths:
+  \begin{itemize}
+    \item Provides required procedural, and object oriented, access to functionality to enable the creation of 2D games.
+    \item Works cross platform, and across multiple languages.
+    \item Device support includes desktop computers, and iOS devices (with touch and accelerometer support).
+    \item Does provide support for drawing (shapes and images), audio, sprites, resource management, camera management, input, timers, networking, and physics.
+    \item Does \textbf{not} take control away from the programmer -- less productive for better understanding.
+  \end{itemize}
+  \item Weaknesses (wish list):
+  \begin{itemize}
+    \item Documentation is very weak, developed by students early in their degree programmes.
+    \item SwinGame is not highly optimised, being developed primarily by students.
+    \item Needs support for a wider range of mobile devices, and support for additional input mechanisms.
+    \item Does not support:
+    \begin{itemize}[noitemsep,nolistsep]
+      \item Image rotation and scaling, an often requested feature.
+      \item Particle effects.
+      \item Special effects, such as blur, fog, etcetera.
+    \end{itemize}
+    \item Lacks developer support beyond immediate teaching staff.
+  \end{itemize}
+\end{itemize}
+
+SwinGame directly supported the programming units outlined in \cref{cha:example_impl}. Many of the lectures and weekly tasks in the introductory programming unit made use of the game library. Similarly, many of the early tasks in the object oriented programming unit used SwinGame as a means of learning the new language, and paradigm, without also needing to learn a new library. 
+
+In terms of the principles stated in \cref{cha:guiding_principles}, and the model outlined in \cref{cha:approach}, SwinGame provided the following support:
+\begin{itemize}[noitemsep,nolistsep]
+  \item SwinGame helped realise the principles through:
+  \begin{itemize}
+    \item Interactive lecture demonstrations aimed to help guide students in the construction of their knowledge. (\Pref{itm:construct})
+    \item Requiring explicit programmer control helped align SwinGame programming tasks with the programming concepts, and in turn the unit's intended learning outcomes. (\Pref{itm:align} and \Pref{itm:concepts})
+    \item The consistent framework helped students overcome language differences, to better focus on programming concepts. (\Pref{itm:focus})
+    \item Student involvement in the development of SwinGame provided a means of communicating high staff expectations. (\Pref{itm:expectations})
+    \item SwinGame documentation, and simple interface, helped support student exploration of the library. (\Pref{itm:support})
+    \item SwinGame helped staff engage with students, enabling them to guide lecture content. (\Pref{itm:theory_y})
+    \item SwinGame provides procedural and object oriented programming abstractions, enabling it to be use in both procedural and object oriented programming languages. (\Pref{itm:paradigm} and \Pref{itm:authentic})
+  \end{itemize}
+  \item SwinGame helped implement the model in the example units by:
+  \begin{itemize}
+    \item Providing a valuable resource used in the teaching and learning activities of both programming units.
+    \item Enabling students to develop a range of games for their custom projects.
+    \item Providing a consistent library to help simplify the transitioning between languages.
+    \item Supporting visual programming, making it easier for students to see when their programs were not working successfully.
+  \end{itemize}
+\end{itemize}
 
 % add principles here
 
-% subsection supporting_what_we_teach (end)
+% subsubsection evaluation_and_support_of_principles (end)
 
 \subsection{Summary} % (fold)
 \label{sub:swingame_summary}
+
+SwinGame provided a valuable resource in supporting students learning in the introductory programming units. The consistent library supported students transition between languages, interactive lecture demonstrations, and provided a wealth of features students could exploit in their custom programs. The strengths of SwinGame help maintain the focus on programming concepts. SwinGame remains an actively used library, and development continues to help address some of its current weaknesses.
 
 % subsection summary (end)
 

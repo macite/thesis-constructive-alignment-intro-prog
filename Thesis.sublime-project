@@ -14,7 +14,10 @@
 				"*.maf",
 				"*.mtc*",
 				"*.synctex*",
-				"*.fls"
+				"*.fls",
+				"*.toc",
+				"*.lof",
+				"*.lot"
 			],
 			"path": "/Users/acain/working/Papers/Thesis"
 		}

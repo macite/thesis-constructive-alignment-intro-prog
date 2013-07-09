@@ -12,4 +12,7 @@
 /*.fdb*
 /*.sublime-workspace
 /*.fls
+*.toc
+*.lof
+*.lot
 .DS_Store
