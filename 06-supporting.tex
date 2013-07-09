@@ -16,40 +16,39 @@ Resources described in this chapter include tools to support both \emph{how}, an
 \section{Visualising Task Progress to Support Formative Feedback} % (fold)
 \label{sec:doubtfire}
 
-% \subsection{Background} % (fold)
-% \label{sub:doubtfire_background}
+Formative feedback (\Pref{itm:formative}) plays an important role in shaping the teaching and learning environment for the units implemented using the model presented in \cref{cha:approach}. The emphasis on iterative feedback helps support the focus on students active construction of their own knowledge 
+(\Pref{itm:construct}) but provides an additional challenge as students no longer have marks to influence their behaviour. 
 
-Formative feedback, \pref{itm:formative}, plays an important role in shaping the teaching and learning environment for the units implemented using the model presented in \cref{cha:approach}. The emphasis on iterative feedback helps support the focus on students active construction of their own knowledge, \pref{itm:construct}, but provides an additional challenge as students no longer have marks to influence their behaviour. To help address this challenge an online task tracking system, named ``Doubtfire'', was developed. 
+One risk of this greater flexibility is the potential for students to underestimate the amount of work required to satisfactorily complete all of the unit's core tasks within the scheduled time frame. As described in \sref{ssub:laboratory_sessions}, these core tasks help the students develop pieces for their portfolio and, ideally, students should complete all of these tasks during the teaching period. 
 
-Doubtfire allows each student to track their progress against weekly assessment tasks using a ``burn down chart'' as shown in \fref{fig:example_chart}. The technique was adapted from the Scrum agile software development process \cite{Schwaber:2002}. Each charts show the cumulative amount of work remaining for a student week-by-week, which decreases as work is complete, or ``burns down'' over time.
-
-\begin{figure}[thb]
-  \centering
-  \includegraphics[width=0.8\textwidth]{ExampleChart}
-  \caption{An example burn down chart showing progress against weekly tasks}
-  \label{fig:example_chart}
-\end{figure}
-
-Agile software development methods \cite{Beck:2001} embrace change \cite{Beck:2000} by specifically allowing for adaptive and periodic adjustment of activities. The basis for such adaptation in Scrum is \emph{empirical} information; a consistent measure of the work remaining (``backlog''), and a measure of the rate work is being completed by the team (``velocity'').
-
-The purpose of a burn down chart is to allow stakeholders to consider the velocity of the team with respect to the current backlog. This chart acts as a ``information radiator'' \cite{Cockburn:2002} for the team, providing details on either release or ``Sprint'' iteration schedules. Since quality of work should not be compromised, the requirements (backlog) of work can be adjusted in order to meet the required schedule and cost~\cite{Sutherland:2007}.
-
-In adapting burn down charts as a tool for supporting students engagement with formative assessment tasks, the assessment tasks become the ``backlog''. Students are then able to see the number of tasks remaining, and use their current ``velocity'' to determine if their progress is sufficient to complete the unit on time. The core tasks represent the minimal set of activities that students should complete by the end of the unit, but additional tasks -- such as the extension tasks, custom project, and research report -- can be acquired if their velocity permits.
+Student engagement in the iterative delivery process, discussed in \sref{ssub:deliver_unit} and \sref{sub:delivering_the_unit}, is integral to the underlying principles (\Pref{itm:construct}, \Pref{itm:formative}, \Pref{itm:support}, and \Pref{itm:theory_y}). To help encourage students to remain actively engaged with the unit, a task tracking tool was developed. This tool, named ``Doubtfire'', is outlined in this section, which expands on previous publications related to the tool \cite{Cain:2013b,Woodward:2013}. \sref{sub:doubtfire_requirements} outlines the requirements for Doubtfire, with \sref{sub:doubtfire_solution} describing the approach taken to address these requirements. A brief analysis of the ability of the Doubtfire tool to meet its requirements is then provided in \sref{sub:use_of_doubtfire}, with further analysis being presented in \cref{cha:evaluation}. The section concludes with a short summary in \sref{sub:doubtfire_summary}.
 
 % subsection background (end)
 
 \subsection{Requirements} % (fold)
 \label{sub:doubtfire_requirements}
 
-The central requirement for the Doubtfire tool was to provide students with feedback on their progress using burn down charts. These charts provide students with a visual representation of the tasks they need to complete, the number of tasks, the scheduled task due dates, and estimated effort. Students should be able to use the tool to assess their progress, and to determine whether they need to increase their rate of progress (velocity). If so, they can commit more time or take greater advantage of the support resources available. 
+Doubtfire's primary requirement was to provide students with a means of tracking their progress on a unit's tasks. To achieve this it was decided to adapt burn down charts from the Scrum agile software development process \cite{Schwaber:2002}. Using this approach, each chart shows the cumulative amount of work remaining for week-by-week, which decreases as work is complete, or ``burns down'' over time.
 
-It was noted that the scrum-style Boolean marking of tasks as completed could be extended to allow students to indicate if they were working on, or having trouble with, particular tasks. This requirement aimed to increase student engagement with the tool, and improve likelihood that students would make active use of the tool throughout the teaching period.
+Agile software development methods \cite{Beck:2001} embrace change \cite{Beck:2000} by specifically allowing for adaptive and periodic adjustment of activities. The basis for such adaptation in Scrum is \emph{empirical} information; a consistent measure of the work remaining (``backlog''), and a measure of the rate work is being completed by the team (``velocity'').
 
-To account for task heterogeneity, staff needed to be able to set a specific \emph{weight} for each task. This weight represents the estimated effort students needed to expend to satisfactorily complete the task, based on staff opinion and historical data. Rather than specifying task weight in terms of hours, this was done in a more abstract unit. One popular approach within agile software development is to assign tasks ``\emph{t-shirt size}'' weights \cite{Peixoto:2010}. Using this approach, task weight is set to a common t-shirt size: \emph{extra small}, \emph{small}, \emph{medium}, \emph{large}, \emph{extra large} etcetera. The t-shirt sizes are then allocated weights, with each increment in size doubling the associated weight: \emph{extra small} had a weight of one, \emph{small} a weight of two, \emph{medium} four, etcetera.
+The purpose of a burn down chart is to allow stakeholders to consider the velocity of the team with respect to the current backlog. This chart acts as a ``information radiator'' \cite{Cockburn:2002} for the team, providing details on either release or ``Sprint'' iteration schedules. Since quality of work should not be compromised, the requirements (backlog) of work can be adjusted in order to meet the required schedule and cost~\cite{Sutherland:2007}.
+
+In adapting burn down charts as a tool for supporting students engagement with formative assessment tasks, the assessment tasks become the ``backlog''. Students are then able to see the number of tasks remaining, and use their current ``velocity'' to determine if their progress is sufficient to complete the unit on time. The core tasks represent the minimal set of activities that students should complete by the end of the unit, but additional tasks -- such as the extension tasks, custom project, and research report -- can be \emph{acquired} if velocity permits.
+
+Burn down charts provide students with a visual representation of the tasks they need to complete, the number of tasks, the scheduled task due dates, and estimated effort. Students should be able to use the tool to assess their progress, and to determine whether they need to increase their rate of progress (velocity). If so, they can commit more time or take greater advantage of the support resources available. 
+
+To assist in providing students with support in their learning (\Pref{itm:support}), it was decided to extend the scrum-style Boolean marking of tasks as completed, to allow students to indicate if they were \emph{working on}, or \emph{having trouble} with, particular tasks. This requirement aimed to increase student engagement with the tool, and improve likelihood that students would make active use of the tool throughout the teaching period.
+
+Gamification \cite{Deterding:2011} provided a second inspiration for encouraging students to further engage with the tool. Badges could be awarded to students for appropriately engaging with the tool, providing them with further motivation to engage appropriately with unit content. Badges could be awarded for completing tasks on time, and for indicating tasks students are working on or having issues with. Encouragement could also be provided for persisting with formative tasks, and getting work signed off after revisions are incorporated.
+
+Task heterogeneity required staff to be able to set a specific \emph{weight} for each task. This weight represents the estimated effort students needed to expend to satisfactorily complete the task, based on staff opinion and historical data. Rather than specifying task weight in terms of hours, this was done in a more abstract unit. One popular approach within agile software development is to assign tasks ``\emph{t-shirt size}'' weights \cite{Peixoto:2010}. Using this approach, task weight is set to a common t-shirt size: \emph{extra small}, \emph{small}, \emph{medium}, \emph{large}, \emph{extra large} etcetera. The t-shirt sizes are then allocated weights, with each increment in size doubling the associated weight: \emph{extra small} had a weight of one, \emph{small} a weight of two, \emph{medium} four, etcetera.
 
 Task weights needed to be incorporated into the burn down chart, with each chart showing the cumulative number of \emph{task-points} remaining. Using task-points in the burn down chart enables it to visually show weeks where more, or less, effort is likely to be required.
 
-Progress also needed to be projected to indicate an expected completion date. This projection can be calculated from the average number of task-points the student completes each week.  For example, if six task-points were completed in one week, based on the velocity, a thirty-six task-point project is expected to be completed in six weeks. Each student's projected completion should be recalculated as time progresses. 
+Progress also needed to be projected to indicate an expected completion date. This projection can be calculated from the average number of task-points the student completes each week, their \emph{velocity}.  For example, if six task-points were completed in one week, based on the velocity, a thirty-six task-point project is expected to be completed in six weeks. Each student's projected completion needed to be recalculated as time progresses. 
+
+To aid with assessment, Doubtfire's requirement also included the ability for teaching staff to sign tasks off as \emph{complete}. This could then be used by teaching staff to indicate that the individual student had demonstrated satisfactory knowledge in the associated concepts. Using the tool in this way also supports the rapid assessment of student portfolios, as work marked as \emph{complete} demonstrates Pass/Credit understanding, and would not need to be checked thoroughly in final portfolio submissions. 
 
 As an interactive system, Doubtfire had a number of requirements to ensure that it could be best utilised by all targeted users. Our aim was to create a tool that was simple and appealing for students to use and was easily accessible from a range of devices and locations. Students not should feel that interaction with the tool is difficult or additional ``work''. The following requirements were identified:
 
@@ -60,10 +59,7 @@ As an interactive system, Doubtfire had a number of requirements to ensure that 
   \item \textbf{Aesthetically pleasing user interface}: To encourage adoption of the tool among students, a visually appealing user interface was desirable.
 \end{itemize}
 
-
-Doubtfire also needed to addressed the requirements of teaching staff. Tutors are responsible for managing classes, and therefore need to be able to respond to student actions. Convenors have overall responsibility for the unit, and need to be able to observe the performance of the student cohort and perform simple administrative actions. All teaching staff benefited from the requirements listed. Importantly, the mobile nature allows tutors to easily check and update students' progress during scheduled classes.
-
-\medskip
+Doubtfire also needed to addressed the requirements of teaching staff. Tutors are responsible for managing classes, and therefore need to be able to respond to student actions. Convenors have overall responsibility for the unit, and need to be able to observe the performance of the student cohort and perform simple administrative actions. All teaching staff benefited from the requirements listed, with the mobile nature allowing tutors to easily check and update student progress during scheduled classes.
 
 In terms of the development and deployment of the tool, a number of software qualities were desirable, including:
 \begin{itemize}[noitemsep,nolistsep]
@@ -72,27 +68,45 @@ In terms of the development and deployment of the tool, a number of software qua
   \item \textbf{Controllable}: The schema that defines the way tutors and students interact over tasks must be easy to alter to allow for adaptation if assessment criteria change.
 \end{itemize}
 
-% It is valuable to add features that track student behaviour in the tool to:
-% \begin{itemize}[noitemsep,nolistsep]
-%   \item Determine whether the expected use of the software matches the actual.
-%   \item Identify possible issues in the unit curriculum, such as inconsistent assignment weighting.
-%   \item Identify possible flaws in the rule system governing student and tutor interaction in the software.
-%   \item Exploit the information to insights into general teaching issues.
-%   \item Optimise the experience based on how students use the software.
-% \end{itemize}
-% As this information is constantly generated through use of the tool, it is simply a matter of storing what actions have been performed. This provides unambiguous information that can then be analysed through quantitative methods.
-
-% This section has described the requirements we deemed non-negotiable in the production of an effective progress management tool for the users identified. There are a number of minor requirements that were not considered significant enough to describe here. From these requirements were produced a number of features accessible to the convenor, tutor and student user groups, which are discussed in the following section.
-
 % subsection requirements (end)
 
 \subsection{Doubtfire Solution} % (fold)
 \label{sub:doubtfire_solution}
 
+
+\subsubsection{Features} % (fold)
+\label{ssub:features}
+
+Doubtfire allows each student to track their progress against a unit's core tasks using a ``burn down chart'' as shown in \fref{fig:example_chart}. The burn down chart consists of three lines, shown in \fref{fig:example_chart}. The lines indicate:
+\begin{itemize}[noitemsep,nolistsep]
+  \item \textbf{Actual Completion}: Shows the number of task-points signed off for the student by week.
+  \item \textbf{Target Completion}: Shows the recommended schedule from the task due dates set by the convenor.
+  \item \textbf{Projected Completion}: Indicates the current velocity, which is then projected to indicate an expected end date if current velocity is maintained.
+\end{itemize}
+
+\begin{figure}[thb]
+  \centering
+  \includegraphics[width=0.8\textwidth]{ExampleChart}
+  \caption{An example burn down chart showing progress against weekly tasks}
+  \label{fig:example_chart}
+\end{figure}
+
+The following list provides an overview of Doubtfire's current features. Each of these features is more fully described in the following section, which describes the features in relation to the associated user roles.
+\begin{itemize}[noitemsep,nolistsep]
+  \item Individual student progress can be monitored using a Burn Down chart
+  \item Collectively, student progress can be viewed in terms of six statuses: \emph{ahead}, \emph{on track}, \emph{behind}, \emph{in danger}, \emph{doomed},\footnote{The ``doomed'' status was a wordplay related to the classic ``Doom'' 3D shooter game, and the notion of incorporating gamification ideas. This status was only visible to staff.} and \emph{haven't started}.
+  \item Units, their tasks and students, can be administered allowing tasks and student to be added and removed.
+  \item Task status can be updated in response to student work, and staff feedback. 
+  \item The tool can be accessed using modern web browser, and provides an adaptable user interface, which caters for both mobile and desktop access.
+  \item Role based access, providing appropriate interfaces and actions for teaching staff and students.
+\end{itemize}
+
+% subsubsection features (end)
+
 \subsubsection{User Roles} % (fold)
 \label{sub:user_roles}
 
-The three user groups in Doubtfire are Convenor, Tutor and Student. Each of these groups has access to a different set of features, as described in \tref{tab:user_features}. Convenor and Tutor roles support teaching staff, with the students having a separate role. 
+Doubtfire provides functionality for three distinct user roles: Convenor, Tutor and Student. Each of these roles has access to a different set of features, as described in \tref{tab:user_features}. Convenor and Tutor roles support teaching staff, with the students having a separate role. 
 
 % This is what can do with the tool
 \begin{table}[htbp]
@@ -165,13 +179,6 @@ Tutors are responsible for conducting the tutorial classes, and providing format
   \label{fig:task_list}
 \end{figure}
 
-Student progress can be viewed as a burn down chart consisting of three lines, shown in \fref{fig:example_chart}. The lines indicate:
-\begin{itemize}[noitemsep,nolistsep]
-  \item \textbf{Actual Completion}: Shows the number of task-points signed off for the student by week.
-  \item \textbf{Target Completion}: Shows the recommended schedule from the task due dates set by the convenor.
-  \item \textbf{Projected Completion}: Indicates the current velocity, which is then projected to indicate an expected end date if current velocity is maintained.
-\end{itemize}
-
 % subsection user_roles (end)
 
 \subsubsection{Task Processes} % (fold)
@@ -201,14 +208,73 @@ Students were able to set the status of a task to \emph{Working on It} or \emph{
 
 % subsection doubtfire_solution (end)
 
-\subsection{Use of Doubtfire} % (fold)
+\clearpage
+\subsubsection{Architecture and Implementation} % (fold)
+\label{ssub:architecture_and_implementation}
+
+\fref{fig:doubtfire_arch} provides an overview of the main components of the Doubtfire system. The core of Doubtfire was implemented using Ruby on Rails \cite{Ruby:2013}, with a RESTful API \cite{Richardson:2007}. This encapsulated the core entities -- units, users, and tasks -- and their associated processing. Data is persisted to a MySQL \cite{mysql} database, while an LDAP \cite{Sermersheim:2006} compliant directory server is accessed to provide authentication against the university wide data store.
+
+On the front end, the dynamic nature of the site is achieved though the use of a number of libraries, backed primarily by the jQuery \cite{jquery} JavaScript library. D3.js \cite{d3}, and NVD3 \cite{nvd3}, are used to provide all of the charts, including the burn down charts.  The visual style, and layout, of the website is achieved through use of Twitter Bootstrap \cite{TwitterBootstrap}.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.5\textwidth]{DoubtfireArch}
+  \caption{Overview of main software components in Doubtfire's implementation}
+  \label{fig:doubtfire_arch}
+\end{figure}
+
+% subsubsection architecture_and_implementation (end)
+
+\subsection{Use and Evaluation of Doubtfire} % (fold)
 \label{sub:use_of_doubtfire}
 
-While \cref{cha:evaluation} provides a more in-depth discussion of the use of Doubtfire, this section briefly comments on how it was used in the delivery of the introductory programming and object oriented programming units. In both cases the teaching and learning activities from \cref{cha:example_impl} were used as the tasks to be completed, and teaching staff assigned each a t-shirt style weighting to represent its relative size.
+While \cref{cha:evaluation} provides a more in-depth discussion of the use of Doubtfire, this section briefly comments on how it was used in the delivery of the introductory programming and object oriented programming units, and discusses how well its implementation met its requirements. 
 
-The effectiveness of the tool for students depended on their engagement with the unit. Capable students made active use of Doubtfire, and responded quickly to addressing issues and closing gaps in their knowledge. Students who struggled to complete the weekly tasks generally made poor use of the tool at the start of the teaching period, but engaged actively later in the semester. While some, characteristically disengaged, students avoided use of the system and attempted to establish progress in their own way.
+Doubtfire has been successfully used in multiple iterations of the programming units described in \cref{cha:example_impl}. In each case, the core tasks from the teaching and learning activities were used as the tasks to be completed, and teaching staff assigned each a t-shirt style weighting to represent its relative size. During unit delivery, students and staff tracked progress against these tasks, with work being signed off by the tutors once complete.
+
+Analysis of student reflections indicated that the effectiveness of the tool, for students, depended on their level of engagement with the unit. Engaged students made active use of Doubtfire, and responded quickly to addressing issues and closing gaps in their knowledge. Students who struggled to complete the weekly tasks generally made poor use of the tool at the start of the teaching period, but engaged actively later in the semester. While some, characteristically disengaged, students avoided use of the system and attempted to establish progress in their own way.
 
 For teaching staff, the Doubtfire tool provided useful information on how students were engaging with the formative process. It was easy to see which students were doing well, to identify those who were falling behind, and those who were not engaging with the unit at all. This information was used to prompt students, encourage those who were doing well and suggest appropriate resources for those who were struggling or falling behind.
+
+In terms of its requirements, Doubtfire was felt to meet its core requirement of providing students with a means of viewing their task progress. The following list outlines the requirements that Doubtfire has met, and those that are currently on the backlog to be implemented in future iterations.
+
+\begin{itemize}[noitemsep,nolistsep]
+  \item Requirements met:
+  \begin{itemize}[noitemsep,nolistsep]
+    \item Staff and students are able to track progress against unit tasks.
+    \item Heterogeneous tasks are supported with task weights.
+    \item Tasks support a range of states, encouraging students to engage with the system beyond marking work as complete.
+    \item Students and staff are able to update task progress based upon their roles.
+    \item Student burn down charts show target, projected, and actual completion lines to help indicate likely end dates if current velocity is maintained.
+    \item Doubtfire is visually appealing, easy to use, and mobile friendly.
+  \end{itemize}
+
+  \item Requirements not implemented:
+  \begin{itemize}[noitemsep,nolistsep]
+    \item Optional tasks can be entered into the system, but cannot be \emph{acquired} by students.
+    \item Gamification ideas were not implement.
+    \item Task overviews are provided to staff, but finer-grain detail requires data to be manually exported from the database.
+  \end{itemize}
+\end{itemize}
+
+In relation to the principles from \cref{cha:guiding_principles}, approach from \cref{cha:approach}, and example units from \cref{cha:example_impl}, Doubtfire provided the following contributions:
+
+\begin{itemize}[nolistsep,noitemsep]
+  \item Doubtfire supported the principles by providing:
+  \begin{itemize}[noitemsep,nolistsep]
+    \item Staff and students with progress data on formative tasks. (\Pref{itm:formative})
+    \item Staff will details to help support student learning. (\Pref{itm:support})
+    \item Staff with a means of verifying students had completed tasks, without having to revert to marks for motivation. (\Pref{itm:theory_y})
+    \item Staff with evidence of student progress that can be used to inform future adjustments to unit delivery. (\Pref{itm:agile} and \Pref{itm:reflect})
+    \item Students with progress details they can reflect upon in their Learning Summary Reports. (\Pref{itm:reflect})
+  \end{itemize}
+  \item Doubtfire supported the approach, and example units by:
+  \begin{itemize}[noitemsep,nolistsep]
+    \item Encouraging students to engage in the formative feedback process.
+    \item Providing evidence that students had completed core tasks.
+    \item Enabling staff to identify students who needed additional help and encouragement.
+  \end{itemize}
+\end{itemize}
 
 \subsection{Summary} % (fold)
 \label{sub:doubtfire_summary}
@@ -224,24 +290,89 @@ Doubtfire was designed to address these concerns through the use of agile develo
 \section{A Game Library to Support Procedures First} % (fold)
 \label{sec:swingame}
 
+\cref{cha:example_impl} described two programming units implemented using the approach described in \cref{cha:approach}, and principles stated in \cref{cha:guiding_principles}. These units adopted an objects-later approach to introductory programming by starting with a procedural programming unit, followed by an object oriented programming unit.
+
+\pref{itm:concepts} indicates the desire to structure the programming curriculum around programming concepts in such a way that each topic builds upon prior knowledge. This lead to the procedures first approach for the introductory programming unit described in \sref{ssub:procedures_first_topic_sequence}. 
+
 With the procedures first approach to teaching introductory programming, students are introduced to calling and creating procedures before being introduced to other programming concepts. This approach promotes a focus on \textbf{sequence} in these early tasks, with students creating procedures to group together a sequence of procedure calls that perform a certain task. 
 
-The challenge with this approach, as identified by \citet{Pattis:1993}, is finding meaningful tasks for students to perform. SwinGame was created to help address this issue, and to provides students with resources that enables them to create more engaging programs.
+The challenge with this approach, as identified by \citet{Pattis:1993}, is finding meaningful tasks for students to perform. Standard programming language features do not provide sufficient functionality for student to perform meaningful, and engaging, actions without having to use a wider range of programming constructs.
 
-SwinGame is a game development library designed to support the teaching of introductory programming. Commercial game development tools focus on performance and productivity, removing control from the programmer in order to improve both and to avoid boilerplate code. In contrast, the goals of SwinGame focus on enabling students to explore programming concepts, while at the same time creating programs that are fun and engaging. 
+This section describes SwinGame, a game development library designed to facilitate a procedure first introduction to programming, and to help students create more interesting programs. \sref{sub:swingame_requirements} outlines the requirements for the SwinGame library, which is then described at a high level in \sref{sub:swingame_solution}. \sref{sub:use_of_swingame} describes how SwinGame was used to support the teaching of introductory programming, and relates this to the principles, approach, and units from chapters \ref{cha:guiding_principles} to \ref{cha:example_impl}. The discussion of SwinGame concluded with a short summar in \sref{sub:swingame_summary}
 
-The goals of SwinGame are to:
+\clearpage
+\subsection{Requirements} % (fold)
+\label{sub:swingame_requirements}
+
+SwinGame was created to help teaching the introductory programming unit described in \cref{cha:example_impl}. The main goal for SwinGame was to provide students with resources to enables them to create more engaging programs, while also providing support for a procedures-first approach to the programming curriculum.
+
+The requirements for SwinGame were to:
 \begin{itemize}[noitemsep, nolistsep]
-   \item Support beginner programmers.
-   \item Provide functions, procedures, and custom types to enable the creation of small two dimensional games.
-   \item Give full control of the program to the developer, requiring explicit requests to perform any actions.
-   \item Enable simple cross platform game development, with support for a range of operating systems.
-   \item Provide support for a range of programming languages.
-   \item Be implemented in such a way that it can be extended by students.
+  \item Provide functions, procedures, and custom types to enable the creation of small two dimensional games. Including:
+  \begin{itemize}[noitemsep,nolistsep]
+    \item Resource management for images, sounds, animations, and maps.
+    \item Drawing operations to draw primitive shapes, images, and text.
+    \item Sprite management, enabling the creation of movable, animated, game entities.
+    \item Ability to play sound effects and music.
+    \item Collision detection operations including collisions of geometric shapes, and pixel level image collisions (image-image, and image-shape collisions).
+    \item Support for two-dimensional game physics.
+    \item Input handling routines to support keyboard, mouse, touch, accelerometer, and gyroscope input.
+    \item Time tracking, and management.
+    \item Camera support, enabling game space coordinates to be mapped to screen coordinates for drawing.
+    \item Network support to enable peer-to-peer interactions, as well as enabling http requests to get/post high score details to web servers, for example.
+  \end{itemize}
+  \item Give the programmer full control over the game's actions, requiring explicit requests to perform any task.
+  \item Enable developers to develop their programs on a number of platforms: Linux, MacOS, and Windows.
+  \item Enable programs to be run on a number of devices: Desktop computers, tablets, and smart phones. 
+  \item Be implemented in such a way that it can be developed and extended by students.
+  \item Provide access to the functionality across a range of programming languages, ensuring that each language provides appropriate programming abstractions to ensure that the library can be used appropriately. (\Pref{itm:authentic})
 \end{itemize} 
 
+% subsection requirements (end)
+\clearpage
+\subsection{SwinGame Solution} % (fold)
+\label{sub:swingame_solution}
 
-\subsection{Supporting Early Exercises and Lecture Demonstrations} % (fold)
+% SwinGame is a game development library designed to support the teaching of introductory programming. Commercial game development tools focus on performance and productivity, removing control from the programmer in order to improve both and to avoid boilerplate code. In contrast, the goals of SwinGame focus on enabling students to explore programming concepts, while at the same time creating programs that are fun and engaging. 
+
+\fref{fig:swingame_overview} provides an overview of the components involved in the use of development of the SwinGame library. The library itself, provides students with an interface that, to procedural programming languages, exposes a range of functions and procedures that can be called to perform required actions. The logic of SwinGame itself is divided into \emph{Core Logic}, and \emph{Back-end Logic}. The components in the Core Logic implement the higher level game engine mechanics, while the components in the Back-end Logic provide a consistent interface to lower level third party components.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{SwinGameOverview}
+  \caption{Overview of the components in the SwinGame library, their connections and organisation.}
+  \label{fig:swingame_overview}
+\end{figure}
+
+The division of SwinGame, into Core Logic and Back-end Logic, decouples the core game engine logic from the lower level libraries used. This enables the library to update Back-end components with minimal impact on the core logic. Currently SwinGame supports a number of different back-end components used to support different platforms and underlying third party libraries.
+
+SwinGame provides users with a number of components and features. The main components are briefly outlined in the following list.
+\begin{itemize}[noitemsep,nolistsep]
+  \item \textbf{Animations}: provides the ability to load and play cell based animations.
+  \item \textbf{Audio}: supports loading and playing of sound effects and music.
+  \item \textbf{Camera}: enables a virtual camera to be moved around the game world -- adjusting what is shown by mapping game to screen coordinates.
+  \item \textbf{Geometry}: provides mathematical operations to manipulate geometric shapes.
+  \item \textbf{Graphics}: enabling a window to be opened and providing functions to draw geometric shapes.
+  \item \textbf{Images}: supports loading and drawing bitmap images.
+  \item \textbf{Input}: supports keyboard, touch, and accelerometer input.
+  \item \textbf{Networking}: provides the ability to create and use network connections.
+  \item \textbf{Physics}: provides functions to perform collisions between entities.
+  \item \textbf{Resources}: supports the management of image and sound resources, mapping names to resources.
+  \item \textbf{Sprites}: enables the creation of image based sprites.
+  \item \textbf{Text}: supports font loading, and text rendering.
+  \item \textbf{Timers}: provides access to components to track and manage time based actions.
+  \item \textbf{User Interface}: enables creation of user interfaces including labels, text boxes, lists, buttons, and other components.
+  \item \textbf{Utilities}: provides other miscellaneous operations useful for game development.
+\end{itemize}
+
+
+
+% subsection swingame_solution (end)
+
+\subsection{Use and Evaluation of SwinGame} % (fold)
+\label{sub:use_of_swingame}
+
+\subsubsection{Supporting Early Exercises and Lecture Demonstrations} % (fold)
 \label{sub:supporting_early_exercises}
 
 SwinGame was used to support the early exercises in the teaching and learning activities for the introductory programming unit described in \cref{cha:example_impl}. For example, procedures were introduced in Week 1 where students developed a small program that drew a house, the resulting code from this exercise is shown in \lref{lst:house_drawing}. This task aims to focus students attention on concepts related to procedure declarations, procedure calls and instruction sequence. Sequence was explored by adjusting the order of the instructions in the program, and examining the results on the images drawn. Core exercises in Week 1 then built on this, having students complete a program that used images and sound effects to deliver a joke, the starting code for which is shown in \lref{lst:joke}. Screen-shots of the resulting programs are shown in \fref{fig:week1_progs}.
@@ -283,7 +414,7 @@ Each week's lecture demonstrations followed a similar sequence of events. SwinGa
 
 % subsection supporting_early_exercises (end)
 
-\subsection{Supporting Custom Projects} % (fold)
+\subsubsection{Supporting Custom Projects} % (fold)
 \label{sub:supporting_custom_projects}
 
 As well as supporting the delivery of lecture material, SwinGame provided students with a wide range of capabilities they could use in the creation of their \emph{custom projects}. To be eligible for at least a Distinction grade, students needed to demonstrate they could apply the concepts from the unit to the development of a program of their own design. While there was no requirement for students to use the library, most chose to create a game using SwinGame.
@@ -299,14 +430,14 @@ To help support this, the SwinGame functionality was documented on a website (\u
 
 % subsection supporting_custom_projects (end)
 
-\subsection{Developing SwinGame and its Documentation} % (fold)
+\subsubsection{Developing SwinGame and its Documentation} % (fold)
 \label{sub:developing_swingame_and_its_documentation}
 
 SwinGame was developed through the collaboration of both staff and students over a number of years. At the end of each year, students were invited to work on enhancing SwinGame's implementation and documentation. This provided an opportunity for staff to work closely with students, and for students to further develop their software development skills outside of the standard teaching periods.
 
 % subsection developing_swingame_and_its_documentation (end)
 
-\subsection{Supporting Multiple Languages} % (fold)
+\subsubsection{Supporting Multiple Languages} % (fold)
 \label{sub:supporting_multiple_languages}
 
 With the introductory programming unit using two programming languages, and object oriented programming using four, SwinGame was required to be accessible from a range of programming languages. This included both procedural and object oriented programming languages. To achieve this goal a number of tools were created to simplify the process of creating programming language specific version of SwinGame.
@@ -371,7 +502,7 @@ The Objective C syntax required special attention, as method signatures do not s
 By supporting both procedural and object oriented programming languages, SwinGame was able to be used in both the introductory programming and object oriented programming units. In introductory programming students worked with SwinGame from Week 1, and explored its use from both the Pascal and C programming languages. In the object oriented programming unit, SwinGame provided a familiar framework for students to work with at the start of the teaching period. As the teaching period progressed, students were transitioned away from using SwinGame to encourage them to explore other commercially available libraries by the end of the unit.
 
 % subsection supporting_multiple_languages (end)
-\subsection{Supporting What We Teach} % (fold)
+\subsubsection{Supporting What We Teach} % (fold)
 \label{sub:supporting_what_we_teach}
 
 SwinGame performed a central role in supporting \emph{what} we taught, as illustrated in \fref{fig:what_we_teach}. SwinGame helped enable interactive lectures, and provided the tools necessary to create engaging examples in the Programming Arcana and the video podcasts. It also provided a consistent library for students to use as they moved between programming languages, and programming units.
@@ -384,7 +515,18 @@ SwinGame performed a central role in supporting \emph{what} we taught, as illust
 \end{figure}
 
 
+% add principles here
+
 % subsection supporting_what_we_teach (end)
+
+\subsection{Summary} % (fold)
+\label{sub:swingame_summary}
+
+% subsection summary (end)
+
+
+% subsection use_of_swingame (end)
+
 
 % section swingame_a_game_library_to_support_procedures_first (end)
 
