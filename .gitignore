@@ -1,6 +1,6 @@
 *.aux
 /*.bbl
-/*.log
+*.log
 /*.maf
 /*.blg
 /*.mtc*
@@ -9,7 +9,7 @@
 /*.pdfsync
 /*.synctex*
 /*.*.out
-/*.fdb*
+*.fdb*
 /*.sublime-workspace
 /*.fls
 *.toc
