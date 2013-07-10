@@ -1,0 +1,76 @@
+%!TEX root = ../Constructive Alignment for Introductory Programming.tex
+
+\chapter{Chapters from the Programming Arcana} % (fold)
+\label{cha:chapters_from_the_programming_arcana}
+
+The following list outlines the chapters from the Programming Arcana, and the concepts covered.
+
+\begin{enumerate}[noitemsep,nolistsep]
+  \item \textbf{Building Programs}: Introduces students to the tools they require, and shows them a basic, ``Hello World'', program they can compile to check that their tools are working.
+  \begin{itemize}[noitemsep,nolistsep]
+    \item \textbf{Programs} are introduced as a sequence of instructions that get the computer to perform actions.
+    \item \textbf{Machine and Assembly code} provides some context as to why compilers are necessary. Machine code is presented as the computer's natural language, and Assembly code as a first step toward making this code more human-friendly.
+    \item \textbf{Source code and compilers} are introduced with the idea of third generation languages, and the need for a compiler to convert source code to machine code.
+    \item The \textbf{Terminal} is introduced as a means of running programs, and the steps for using the compiler are presented. This section also introduces the \textbf{Bash} shell, along with commands to navigate through the file system. 
+    \item The final concept outlines the code for a \textbf{Hello World} program in C and Pascal, together with the steps needed to compile and run this program. 
+  \end{itemize}
+  \item \textbf{Program Creation}: describes how code can be written to create a \emph{Program}.
+  \begin{itemize}[noitemsep,nolistsep]
+    \item Introduces the idea that a \textbf{Program} can be created in code, and that it has a name and a list of instructions for the computer to perform.
+    \item \textbf{Procedures} are introduced as a named group of instructions that performed a task. These instructions can be run using a \textbf{Procedure Call}.
+    \item The idea that procedures can be distributed in a \textbf{Library} was discussed.
+    \item Programming language terminology is also introduced, including \textbf{Statements} as the technical term for commands, \textbf{Expressions} for calculated values, \textbf{Types} to describe different kinds of data, and \textbf{Identifiers} as the names for artefacts such as the programs created and the procedures called. 
+    \item \textbf{Comments} are discussed as a means of documenting code.
+  \end{itemize}
+  \item \textbf{Procedure Declaration}: Introduces the idea that you can create your own procedures to encapsulate the steps of a task. 
+  \begin{itemize}[noitemsep,nolistsep]
+     \item \textbf{Procedure declaration} describes how procedures can be created as a sequence of instructions that are run when the procedure is called.
+     \item The concept of a \textbf{Program} is extended to indicate that a program's code can include procedure declarations.
+   \end{itemize} 
+  \item \textbf{Storing and Using Data}: Makes programs more dynamic using variables and constants to store data, and functions to calculate values.
+  \begin{itemize}[noitemsep,nolistsep]
+    \item \textbf{Variables} are introduced as a means of storing data that changes within the code, while \textbf{Constants} are introduced as a means of storing data that does not change. 
+    \item The \textbf{assignment statement} is introduced as the means of storing a value in the variable, and the concept of an \textbf{expression} is updated to indicate it can read a value from the variable.
+    \item Programming terminology related to the location of a variable is introduced; \textbf{local variables} are declared within a procedure, \textbf{global variables} within a program, and \textbf{parameters} are a means of enabling data to be passed to a procedure.
+    \item The different parameter passing options are presented, with \textbf{pass-by-value} indicating that the value of the expression in the procedure call was passed, while with \textbf{pass-by-reference} the parameter needs to be passed a \emph{variable} to which it will refer.
+    \item Creating \textbf{Functions} to calculate values is also introduced, along with updating what an expressions is to include the use of \textbf{function calls}.
+    \item To realise these concepts, the previous \textbf{statement}, \textbf{program} and \textbf{procedure declaration} concepts are updated.
+  \end{itemize}
+  \item \textbf{Control Flow}: Introduces structured programming principles, along with the control flow mechanisms of selection and repetition.
+  \begin{itemize}[noitemsep,nolistsep]
+    \item \textbf{Boolean data} is discussed as a means of directing the control flow statements. This includes the use of \textbf{comparisons} to calculate boolean values, as well as the \textbf{logical operators} (\emph{and}, \emph{or}, and \emph{not}).
+    \item Selection is described in terms of \textbf{branching}, including the ideas of \textbf{if statements} and \textbf{case statements}.
+    \item \textbf{Looping} introduces \textbf{pre-test loops} that repeated code zero or more times, and \textbf{post-test loops} that repeated code one or more times. 
+    \item Other control flow statements are covered in the section on \textbf{jumping}. This includes \textbf{break} to jump out of a loop, \textbf{continue} to jump to the end of a loop, \textbf{exit/return} to jump out of a function or procedure, and the infamous \textbf{goto} statement.
+    \item Finally, the idea of grouping statements in a \textbf{compound statement} was presented, and explained in terms of providing a sequence of statements within the control flow statements.
+  \end{itemize}
+  \item \textbf{Managing Multiple Values}: Presents the use of arrays to make it easier to work with a large amount of data.
+  \begin{itemize}[noitemsep,nolistsep]
+    \item \textbf{Arrays} are shown as a means of managing a number of values in a single variable. \textbf{String} is discussed as an example of an array students have already been working with.
+    \item The importance of \textbf{pass-by-reference} is reinforced.
+    \item \textbf{For loops} are introduced as a convenient means of looping over the elements of an array. 
+    \item The \textbf{Assignment statement} and \textbf{Expression} concepts are updated to indicate how arrays can be used.
+  \end{itemize}
+  \item \textbf{Custom Data Types}: Describes how developers can create types to help them organise the data in their programs, much as functions and procedures helped to organise functionality.
+  \begin{itemize}[noitemsep,nolistsep]
+    \item \textbf{Types} are described again in more detail to provide context. 
+    \item \textbf{Type declaration} is discussed along with \textbf{records/structs}, \textbf{enumerated types} and \textbf{unions}, as well as what a \textbf{Program} can contain.
+    \item The \textbf{Assignment statement} and \textbf{Expression} concepts are updated to indicate how the various custom types can be used.
+  \end{itemize}
+  \item \textbf{Dynamic Memory Allocation}: Extends programs beyond the confines of the stack, allowing the allocation of data on the heap.
+  \begin{itemize}[noitemsep,nolistsep]
+    \item The \textbf{Stack} and \textbf{Heap} are discussed. This highlights the need for values on the stack to have a known size, requiring another ``space'' for allocating data when its size is not known at compile time.
+    \item \textbf{Pointers} are introduced as a means of referring to space allocated on the Heap.
+    \item The need for specific actions to \textbf{allocate memory}, and to \textbf{free} that allocation are presented.
+    \item Common \textbf{issues with pointers} are discussed, including why they are likely to occur and how to address these issues. This includes \textbf{access violations}, \textbf{memory leaks} and \textbf{accessing released memory}. 
+  \end{itemize}
+  \item \textbf{Input and Output}: Describes how to save and load data from file.
+  \begin{itemize}[noitemsep,nolistsep]
+    \item The concept of \textbf{persisting data} is discussed along with the idea of a process and its memory being freed after a program terminates. This leads to details on saving data from the program's memory onto persistent storage.
+    \item \textbf{Files} and text and binary \textbf{file formats} are discussed. 
+    \item \textbf{Interacting with Files} describes typical input and output operations you likely to perform on files.
+    \item \textbf{Other output devices} relates the concepts presented to terminal input/output and the idea that the same concepts apply to sending data across a network connection.
+  \end{itemize}
+\end{enumerate}
+
+% chapter chapters_from_the_programming_arcana (end)

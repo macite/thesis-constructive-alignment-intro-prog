@@ -1,0 +1,29 @@
+% \paragraph{Generating Railroad Diagrams} % (fold)
+% \label{ssub:railroad_diagrams}
+
+% Another aim in constructing the Programming Arcana was to provide students with descriptions of the programming language grammar. This could be achieved using a textual representation of the programming language grammar with the Backus Naur Form (BNF) \cite{Backus:1959} or the Extended Backus Naur Form (EBNF) \cite{Wirth:1977}. Instead, it was decided to use the ``Railroad diagrams'' described by \citet{Braz:1990}. These provide a more visual means of presenting the grammar, which was intended to be benefit people reading these diagrams for the purpose of writing programs.
+
+% To help automate the creation of the ninety syntax diagrams present in the Programming Arcana, a language translator was developed to convert grammars expressed textually into the graphical railroad diagram notation that could be included in the text and lecture slides. 
+
+% Originally, grammars expressed in BNF used recursion to implement the repetition of elements in the language. In proposing EBNF, \cite{Wirth:1977} included an iteration construct that reduced the heavy use of recursion for expressing simple repetition of elements in the language. The EBNF extension of BNF caters for simple repetitions, but reverts to recursion in many cases.
+
+% To simplify the generation of the railroad diagrams, an adapted for of EBNF was used. The adaptation further simplified repeated patterns that included a separator, a common feature of programming language syntax and one that requires the use recursion to express in BNF and EBNF. For example \lref{lst:param_list} shows the EBNF definition of the syntax for a parameter list where parameters are separated by commas, and the equivalent railroad diagram -- which does not use recursion -- is shown in \fref{syn:paramlist}. 
+
+% \ebnfsection{lst:param_list}{EBNF}{EBNF representation of a parameter list that separates multiple parameters with commas}{\ebnfcode{syntax/paramlist.ebnf}}
+
+% \syntax{syn:paramlist}{Equivalent railroad diagram for the grammar shown in \lref{lst:param_list}}{paramlist}
+
+% \clearpage
+% To cater for the more flexible representation in the railroad diagrams, additional features were added to EBNF to indicate the separator for repetitions, and to indicate if the repetition occurred at least once. The grammar for this extended version of EBNF is shown in its own form in \fref{lst:eebnf}, and as a railroad diagram in \fref{syn:eebnf}.
+
+% \ebnfsection{lst:eebnf}{Adapted EBNF}{Adapted EBNF grammar, with additional data related to repetitions and separator characters.}{\ebnfcode{syntax/eebnf.ebnf}}
+
+% \syntax{syn:eebnf}{Syntax for grammar used in language diagram generation.}{eebnf}
+
+% The \texttt{( + | * )} group included as part of the repetition indicates if the grammar must be repeated at least one or more times (\texttt{+}) or can appear zero or more times (\texttt{*}). The optional group following this, \texttt{[ "(", terminal, ")" ]}, indicates the presence of a separator that will appear between each repetition of the grammar in the language. For example, the parameter list from \fref{syn:paramlist} can be code as shown in \lref{lst:param_list2}.
+
+% \ebnfsection{lst:param_list2}{Adapted EBNF}{Adapted version of the EBNF grammar for the parameter list shown in \lref{lst:param_list}, indicating that the parameter must appear at least once and repetitions are separated by a comma.}{\ebnfcode{syntax/paramlist2.ebnf}}
+
+% This grammar was used to encode all of the language details for the railroad diagrams in the Programming Arcana. This data was then interpreted by a script and appropriate visual representations were output to include in the text. This enabled the syntax to be quickly expressed and documented for both C and Pascal.
+
+% subsubsection railroad_diagrams (end)

@@ -592,125 +592,80 @@ SwinGame provided a valuable resource in supporting students learning in the int
 \section{Programming Text to Support Concept-Based Approach} % (fold)
 \label{sec:arcana}
 
-Concepts are central to \emph{what} we aim to teach. \pref{itm:concepts} indicates that we should aim to focus on concepts over language syntax. In addressing this principle the programming units from \cref{cha:example_impl} had little, if any, coverage of syntax in lectures, leaving these details instead to teaching and learning resources for students to use. These resources will then provide the syntax details students need to turn these concepts into working code.
+Concepts are central to \emph{what} we aim to teach. \pref{itm:concepts} indicates that we should focus on concepts over language syntax. In addressing this principle the programming units from \cref{cha:example_impl} had little, if any, coverage of syntax in lectures, leaving these details instead to teaching and learning resources for students to use. These resources provide the syntax details students need to turn these concepts into working code.
 
 One of the central ideas of ``Beyond Bullet Points'' is to fully document a presentation using the notes attached to a presentation's slides \cite{Atkinson:2007}. In effect, details are moved from a slide itself to the slides' notes area, which can then be printed as an informative handout. While documenting slides in this manner can provide students with the required details, it does mix the purpose of the presentation's slides as a means of guiding student thoughts and providing detailed information.
 
-From our experience using this approach to develop lecture slides for a range of units, this has a number of drawbacks in relation to the principles from \cref{cha:guiding_principles}. The dual purpose of the presentation works against maintaining a clear focus as stated in \pref{itm:focus}, in many cases the details may be better presented in a different order to the presentation slides, and visa versa. Similarly, the need for detailed notes for each slide works against \pref{itm:agile}, being agile and willing to change. The creation of the detailed notes results in significant effort being expended on the creation of each week's presentation, and thereby adds resistance to change if the presentation is found to be ineffective. 
+From our experience using the ``Beyond Bullet Points'' approach, this has a number of drawbacks in relation to the principles from \cref{cha:guiding_principles}. The dual purpose of the presentation works against maintaining a clear focus (\Pref{itm:focus}) as details may be better presented in a different order to the presentation slides, and visa versa. Similarly, the need for detailed notes for each slide works against \pref{itm:agile}, being agile and willing to change. The creation of the detailed notes results in significant effort being expended on the creation of each week's presentation, and thereby adds resistance to change if the presentation is found to be ineffective. 
 
-Instead of documenting these notes in the presentations themselves, they were written up in a separate resource which became the ``\emph{Programming Arcana}'' \cite{Cain:2013arcana}. The title, cover image (see \fref{fig:front_cover_final}), and layout were designed around a magic theme in the aim of engaging students, they are becoming wizards of the modern era, capable to making the computer do amazing things.
+Instead of documenting these notes in the presentations themselves, they were written up in a separate resource which became the ``\emph{Programming Arcana}'' \cite{Cain:2013arcana}. The title, cover image (see \fref{fig:front_cover_final}), and layout were designed around a magic theme in the aim of engaging students, they are becoming wizards of the modern era capable to making the computer do amazing things.
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.4\textwidth]{front_cover_final}
-  \caption{Front cover of the Programming Arcana, which used a magic theme to engage students as they worked towards becoming wizards with the computer}
+  \caption{Front cover of the Programming Arcana, which used a magic theme to engage students as they worked towards becoming wizards with the computer.}
   \label{fig:front_cover_final}
 \end{figure}
 
-Documenting language details in a separate text from the presentations also helped to address another issue raised as a result of choosing Pascal as one of the programming languages. Pascal is not currently a popular language with institutions or text book writers, and while the Free Pascal Language Reference Guide \cite{FPC:2013lang} provides details of the language it is not designed for beginners but experienced programmers. By providing our own text it was possible to maintain the concept-based ideas throughout all teaching and learning resources and activities, while also providing details on the Pascal and C languages, along with suitable programming examples.
+Documenting language details in a separate text from the presentations also helped to address another issue raised as a result of choosing Pascal as one of the programming languages. Pascal is not currently a popular language with institutions or text book writers, and while the Free Pascal Language Reference Guide \cite{FPC:2013lang} provides details of the language it is not designed for beginners. By providing our own text it was possible to maintain the concept-based ideas throughout all teaching and learning resources and activities, while also providing details on the Pascal and C languages, along with suitable programming examples.
 
+This section outlines the requirements that the Programming Arcana aimed to met in \sref{sub:arcana_requirements}. \sref{sub:arcana_solution} describes the structure of the Programming Arcana, and the way in which it met its requirements. A short evaluation of the use of the Programming Arcana follows in \sref{sub:use_and_evaluation_of_the_programming_arcana}. This section then concludes with a brief summary in \sref{sub:arcana_summary}.
 
-\subsection{Chapter Sequence} % (fold)
+\subsection{Requirements} % (fold)
+\label{sub:arcana_requirements}
+
+The requirements for the Programming Arcana were to:
+\begin{itemize}[noitemsep,nolistsep]
+  \item Focus on programming concepts, presenting them in a language neutral manner.
+  \item Order concepts to align with the introductory programming unit.
+  \item Demonstrate application of the concepts to create a sample program, illustrating the thought process experts use.
+  \item Provide syntax details to map concepts to code for the Pascal and C programming languages.
+  \item Explain how the concepts operate on a notional machine.
+  \item Provide sample code demonstrating applications of concepts, large and small.
+  \item Be concise, focusing only aspects necessary to understand core ideas -- rather than presenting details on a range of possible options.
+  \item Communicate ideas using a range of media.
+\end{itemize}
+
+% subsection requirements (end)
+
+\subsection{Arcana Solution} % (fold)
+\label{sub:arcana_solution}
+
+\subsubsection{Chapter Sequence} % (fold)
 \label{ssub:chapter_sequence}
 
-Chapters in the Programming Arcana are designed to align with the main concept topics from the introductory programming unit. This means that the text embodies the concept-based approach, with each chapter providing a coherent set of concepts that builds upon concepts presented earlier in the text. The following list details each chapter and the programming concepts that are presented in the Programming Arcana. This is followed by a discussion of how well the text was able to support the concept-based approach.
+Chapters in the Programming Arcana align with the concept topics from the introductory programming unit. This means that the text embodies the concept-based approach (\Pref{itm:concepts}) with each chapter providing a coherent set of concepts that build upon concepts presented earlier in the text. The following list outlines the main focus for each chapter. Additional details are provided in \aref{cha:chapters_from_the_programming_arcana} which lists the programming concepts that are presented in each of these chapters.
 
 \begin{enumerate}[noitemsep,nolistsep]
   \item \textbf{Building Programs}: Introduces students to the tools they require, and shows them a basic, ``Hello World'', program they can compile to check that their tools are working.
-  \begin{itemize}[noitemsep,nolistsep]
-    \item \textbf{Programs} are introduced as a sequence of instructions that get the computer to perform actions.
-    \item \textbf{Machine and Assembly code} provides some context as to why compilers are necessary. Machine code is presented as the computer's natural language, and Assembly code as a first step toward making this code more human-friendly.
-    \item \textbf{Source code and compilers} are introduced with the idea of third generation languages, and the need for a compiler to convert source code to machine code.
-    \item The \textbf{Terminal} is introduced as a means of running programs, and the steps for using the compiler are presented. This section also introduces the \textbf{Bash} shell, along with commands to navigate through the file system. 
-    \item The final concept outlines the code for a \textbf{Hello World} program in C and Pascal, together with the steps needed to compile and run this program. 
-  \end{itemize}
   \item \textbf{Program Creation}: describes how code can be written to create a \emph{Program}.
-  \begin{itemize}[noitemsep,nolistsep]
-    \item Introduces the idea that a \textbf{Program} can be created in code, and that it has a name and a list of instructions for the computer to perform.
-    \item \textbf{Procedures} are introduced as a named group of instructions that performed a task. These instructions can be run using a \textbf{Procedure Call}.
-    \item The idea that procedures can be distributed in a \textbf{Library} was discussed.
-    \item Programming language terminology is also introduced, including \textbf{Statements} as the technical term for commands, \textbf{Expressions} for calculated values, \textbf{Types} to describe different kinds of data, and \textbf{Identifiers} as the names for artefacts such as the programs created and the procedures called. 
-    \item \textbf{Comments} are discussed as a means of documenting code.
-  \end{itemize}
   \item \textbf{Procedure Declaration}: Introduces the idea that you can create your own procedures to encapsulate the steps of a task. 
-  \begin{itemize}[noitemsep,nolistsep]
-     \item \textbf{Procedure declaration} describes how procedures can be created as a sequence of instructions that are run when the procedure is called.
-     \item The concept of a \textbf{Program} is extended to indicate that a program's code can include procedure declarations.
-   \end{itemize} 
   \item \textbf{Storing and Using Data}: Makes programs more dynamic using variables and constants to store data, and functions to calculate values.
-  \begin{itemize}[noitemsep,nolistsep]
-    \item \textbf{Variables} are introduced as a means of storing data that changes within the code, while \textbf{Constants} are introduced as a means of storing data that does not change. 
-    \item The \textbf{assignment statement} is introduced as the means of storing a value in the variable, and the concept of an \textbf{expression} is updated to indicate it can read a value from the variable.
-    \item Programming terminology related to the location of a variable is introduced; \textbf{local variables} are declared within a procedure, \textbf{global variables} within a program, and \textbf{parameters} are a means of enabling data to be passed to a procedure.
-    \item The different parameter passing options are presented, with \textbf{pass-by-value} indicating that the value of the expression in the procedure call was passed, while with \textbf{pass-by-reference} the parameter needs to be passed a \emph{variable} to which it will refer.
-    \item Creating \textbf{Functions} to calculate values is also introduced, along with updating what an expressions is to include the use of \textbf{function calls}.
-    \item To realise these concepts, the previous \textbf{statement}, \textbf{program} and \textbf{procedure declaration} concepts are updated.
-  \end{itemize}
-  \item \textbf{Control Flow}: Introduces structured programming principles, along with the control flow mechanisms of selection and repetition.
-  \begin{itemize}[noitemsep,nolistsep]
-    \item \textbf{Boolean data} is discussed as a means of directing the control flow statements. This includes the use of \textbf{comparisons} to calculate boolean values, as well as the \textbf{logical operators} (\emph{and}, \emph{or}, and \emph{not}).
-    \item Selection is described in terms of \textbf{branching}, including the ideas of \textbf{if statements} and \textbf{case statements}.
-    \item \textbf{Looping} introduces \textbf{pre-test loops} that repeated code zero or more times, and \textbf{post-test loops} that repeated code one or more times. 
-    \item Other control flow statements are covered in the section on \textbf{jumping}. This includes \textbf{break} to jump out of a loop, \textbf{continue} to jump to the end of a loop, \textbf{exit/return} to jump out of a function or procedure, and the infamous \textbf{goto} statement.
-    \item Finally, the idea of grouping statements in a \textbf{compound statement} was presented, and explained in terms of providing a sequence of statements within the control flow statements.
-  \end{itemize}
+  \item \textbf{Control Flow}: Introduces structured programming principles, along with selection and repetition.
   \item \textbf{Managing Multiple Values}: Presents the use of arrays to make it easier to work with a large amount of data.
-  \begin{itemize}[noitemsep,nolistsep]
-    \item \textbf{Arrays} are shown as a means of managing a number of values in a single variable. \textbf{String} is discussed as an example of an array students have already been working with.
-    \item The importance of \textbf{pass-by-reference} is reinforced.
-    \item \textbf{For loops} are introduced as a convenient means of looping over the elements of an array. 
-    \item The \textbf{Assignment statement} and \textbf{Expression} concepts are updated to indicate how arrays can be used.
-  \end{itemize}
   \item \textbf{Custom Data Types}: Describes how developers can create types to help them organise the data in their programs, much as functions and procedures helped to organise functionality.
-  \begin{itemize}[noitemsep,nolistsep]
-    \item \textbf{Types} are described again in more detail to provide context. 
-    \item \textbf{Type declaration} is discussed along with \textbf{records/structs}, \textbf{enumerated types} and \textbf{unions}, as well as what a \textbf{Program} can contain.
-    \item The \textbf{Assignment statement} and \textbf{Expression} concepts are updated to indicate how the various custom types can be used.
-  \end{itemize}
   \item \textbf{Dynamic Memory Allocation}: Extends programs beyond the confines of the stack, allowing the allocation of data on the heap.
-  \begin{itemize}[noitemsep,nolistsep]
-    \item The \textbf{Stack} and \textbf{Heap} are discussed. This highlights the need for values on the stack to have a known size, requiring another ``space'' for allocating data when its size is not known at compile time.
-    \item \textbf{Pointers} are introduced as a means of referring to space allocated on the Heap.
-    \item The need for specific actions to \textbf{allocate memory}, and to \textbf{free} that allocation are presented.
-    \item Common \textbf{issues with pointers} are discussed, including why they are likely to occur and how to address these issues. This includes \textbf{access violations}, \textbf{memory leaks} and \textbf{accessing released memory}. 
-  \end{itemize}
   \item \textbf{Input and Output}: Describes how to save and load data from file.
-  \begin{itemize}[noitemsep,nolistsep]
-    \item The concept of \textbf{persisting data} is discussed along with the idea of a process and its memory being freed after a program terminates. This leads to details on saving data from the program's memory onto persistent storage.
-    \item \textbf{Files} and text and binary \textbf{file formats} are discussed. 
-    \item \textbf{Interacting with Files} describes typical input and output operations you likely to perform on files.
-    \item \textbf{Other output devices} relates the concepts presented to terminal input/output and the idea that the same concepts apply to sending data across a network connection.
-  \end{itemize}
 \end{enumerate}
 
-In proposing \pref{itm:concepts}, with its focus on programming concepts, \cref{cha:guiding_principles} outlined the requirement ``Introduce programming concepts incrementally''. The Programming Arcana provides an example of how the details of a programming language can be presented in such a way as to ensure most topics are presented incrementally, with each topic building upon the previously presented topics. 
+In proposing \pref{itm:concepts}, with its focus on programming concepts, \cref{cha:guiding_principles} outlined the requirement ``Introduce programming concepts incrementally''. The Programming Arcana provides an example of how the details of a programming language can be presented in such a way as to ensure most topics are presented with each topic building upon the previously presented topics. 
 
-There were two cases where concepts could not be suitably explained within the overall context presented in a chapter, which are listed here.
-
-\begin{itemize}[noitemsep,nolistsep]
+\clearpage
+There were two cases where concepts could not be suitably explained within the overall context presented in a chapter. There were:
+\begin{enumerate}[noitemsep,nolistsep]
   \item In Chapter 1 the code for a working program was given to enable students to compile something before they understood what it represented. However, the main focus of the chapter was the tools being presented and not the specific details of the program's code, and so this does not directly contradict the underlying principle. 
-  \item Chapters 2 and 3 makes use of values passed to procedures before topics related to \emph{how} data can be stored in a program. The idea that data can be passed to a procedure is covered, but not how that data was received.
-\end{itemize}
+  \item Chapters 2 and 3 makes use of values passed to procedures before topics related to \emph{how} data can be stored in a program. The idea that data can be passed to a procedure is covered, but not how that data was received, as the concept of a variable was not introduced until Chapter 4.
+\end{enumerate}
 
 Other than these two cases, all other chapters were able to explain all concepts in terms of the presented, or previously presented, concepts.
 
+When comparing the suitability of the C and Pascal languages for supporting the concept-based approach it was noted that, in general, mapping the concepts to syntax was simpler for the Pascal programming language, with the C\footnote{The C code was compiled with a C++ compiler to add support for function and procedure overloading, and pass-by-reference.} language providing a number of challenges. C's standard input and output functions, \texttt{printf} and \texttt{scanf}, provided a range of challenges associated with the use of format strings and pointers. The format string provides an additional syntax to learn, and results in a range of runtime errors where the types indicated in the format string do not match the types of the associated variables or expressions. The need to pass explicit pointers to scanf also required a brief description of pointers in early material. Other challenges related to the need to understand arrays before working with strings. Early topics avoided strings, or used only string literals. In this way one example can be mapped to both C and Pascal languages. 
 
-When comparing the suitability of the C and Pascal languages for supporting the concept-based approach it was noted that, in general, mapping the concepts to syntax was simpler for the Pascal programming language, with the C\footnote{The C code was compiled with a C++ compiler to add support for function and procedure overloading, and pass-by-reference.} language providing a number of challenges. C's standard input and output functions, \texttt{printf} and \texttt{scanf}, provided a range of challenges related associated with the use of format strings and pointers. The format string provides an additional syntax to learn, and results in a range of runtime errors where the types indicated in the format string do not match the types of the associated variables or expressions. The need to pass explicit pointers to scanf also required a brief description of pointers in early material. Other challenges related to the need to understand arrays before working with strings. This means that early topics need to avoid strings, or are reduced to using string literals and limiting variables to working with numeric values. In this way one example can be mapped to both C and Pascal languages. 
-
-In relation to the use of the text in supporting the unit delivery, many of the issues with C can be avoided due to the use of Pascal in the first part of the unit. This enables the teaching and learning activities to take advantage of Pascal's more convenient support for strings and terminal input and output. For example, consider a program that asked the user to enter their name and then echoes back a welcome message. In C this requires an understanding of variables, format string syntax, arrays, pointers, and how arrays are automatically passed by references where other types are not. In Pascal the same program only requires an understanding of variables and pass-by-reference.
-
-% \begin{itemize}[noitemsep,nolistsep]
-%   \item Introduce programming concepts incrementally;
-%   \item Provide students with time to put concepts into practice;
-%   \item See syntax as a means to an end, not an end in itself;
-%   \item Avoid using language features before concepts that can explain their use; and
-%   \item Map concepts to code using programming language grammars.
-% \end{itemize} 
-
+In relation to the use of the text in supporting the introductory programming unit, many of the issues with C were avoided due to the use of Pascal in the first part of the unit. This enabled teaching and learning activities to take advantage of Pascal's more convenient support for strings and terminal input and output. For example, consider a program that asked the user to enter their name and then echoes back a welcome message. In C this requires an understanding of variables, format string syntax, arrays, pointers, and how arrays are automatically passed by references. In Pascal the same program only requires an understanding of variables and pass-by-reference, as the language abstracts away many underlying details of how strings work.
 
 % subsubsection chapter_sequence (end)
 \clearpage
-\subsection{Chapter Layout} % (fold)
+\subsubsection{Chapter Layout} % (fold)
 \label{ssub:chapter_layout}
 
 Each chapter of the Programming Arcana has a similar sequence to its sections, with the intention of reducing cognitive overhead and promoting a consistent approach to studying each of the topic. In keeping with \pref{itm:concepts}, the concepts were presented as the focus of each chapter.
@@ -727,14 +682,14 @@ Each chapter of the Programming Arcana has a similar sequence to its sections, w
 Details of the sections related to presenting the concepts follow. This outlines how the Programming Arcana implemented the concept-based approach, and reinforce the focus on concepts over syntax throughout the material presented. 
 
 \clearpage
-\subsubsection{Concepts} % (fold)
+\paragraph{Concepts} % (fold)
 \label{par:concepts}
 
-Each chapter starts with a section that provides details of the concepts being presented. This section starts with a brief overview that described how all of the concepts are related, which is followed by subsections that cover the details of each concept. Concepts are presented using a textual description, visual concept map, and a series of notes with important details related to the topic. At the end of the concept section an overall concept map is included to visually show the relationships between the concepts covered. 
+Each chapter starts with a section that provides details of the concepts being presented. This starts with a brief overview describing how all of the concepts are related, with following subsections presenting details for each concept. Concepts are presented using a textual description, visual concept map, and a series of notes with important details related to the topic. At the end of the concept section an overall concept map is included to visually summarise the relationships between the concepts covered. 
 
 \fref{fig:arcana_concepts} shows an example of the concept of branching from Chapter 5 of the Programming Arcana. The diagrams were deliberately drawn using irregular, rough looking, shapes to indicate these were a conceptualisation, rather than an exact representation of the associated concepts.
 
-One of the design goals was to fit each concept on a single page. This goal aimed to help support a student's active construction of knowledge, \pref{itm:construct}. Aiming to keep each topic to a single page ensured that we focused (\pref{itm:focus}) on the most important details, and where topics expanded over multiple pages the details were examined to ensure we had not included any unnecessary details.
+One of the design goals was to fit each concept on a single page. This goal aimed to help support a student's active construction of knowledge, \pref{itm:construct}. Aiming to keep each topic to a single page ensured a focus (\pref{itm:focus}) on the most important details, and where topics expanded over multiple pages the details were examined to ensure they did not included any unnecessary details.
 
 \begin{figure}[h]
   \centering
@@ -745,10 +700,10 @@ One of the design goals was to fit each concept on a single page. This goal aime
 
 % paragraph concepts (end)
 \clearpage
-\subsubsection{Applying the Concepts} % (fold)
+\paragraph{Applying the Concepts} % (fold)
 \label{par:applying_the_concepts_}
 
-After the concepts are presented, the next section outlines how these concepts can work together to create an example program. This section always starts with a specification of a program to be created. This is then followed by a discussion of how a the program can be designed using the concepts covered to that point in the text. The description of the design includes pseudocode, flow charts, sequence diagrams and structure charts, and the section concludes with a complete design for the specified program. \fref{fig:arcana_applying} shows an example of designing a ``Guess that Number'' game that demonstrates the application of control flow concepts.
+After the concepts are presented, the next section outlines how these concepts work together to create an example program. This helps demonstrate the thought process of an expert programmer in applying these concepts to a program design, with the aim of helping students construct similar thought patterns (\Pref{itm:construct}). This section starts with a specification of a program to be created. This is then followed by a discussion of how a program can be designed using the concepts covered to that point in the text. The description of the design includes pseudocode, flow charts, sequence diagrams and structure charts, and the section concludes with a complete design for the specified program. \fref{fig:arcana_applying} shows an example of designing a ``Guess that Number'' game that demonstrates the application of control flow concepts.
 
 \begin{figure}[h]
   \centering
@@ -761,10 +716,10 @@ In each chapter explanatory text accompanies the design, and highlights how the 
 
 % paragraph applying_the_concepts_ (end)
 \clearpage
-\subsubsection{Syntax} % (fold)
+\paragraph{Syntax} % (fold)
 \label{par:syntax}
 
-Having covered concepts, and how they can be used to create a conceptual program, the next two sections deal with realising these concepts using the C and Pascal programming languages. The syntax sections of the Programming Arcana start with an implementation of the program designed in the section on applying the concepts, which is followed by the grammar to implement the various concepts discussed. An example of pages from this section is shown in \fref{fig:arcana_syntax}.
+Having covered concepts, and how they can be used to design a program, the next two sections deal with realising these concepts using the C and Pascal programming languages. The syntax sections start with an implementation of the program designed in the section on applying the concepts, in this way students see design through to its implementation with the aim of helping them develop appropriate conceptual connections (\Pref{itm:construct}). This is followed by details of each part of the language syntax, providing this section with a clear focus (\Pref{itm:focus}). An example of pages from this section is shown in \fref{fig:arcana_syntax}.
 
 \begin{figure}[h]
   \centering
@@ -773,14 +728,16 @@ Having covered concepts, and how they can be used to create a conceptual program
   \label{fig:arcana_syntax}
 \end{figure}
 
-As with concepts, the aim of the syntax section is to explain each aspect of the syntax in a single page. Each page in this section starts with a textual description of the syntax, which is followed by a graphical representation of the grammar using railroad diagrams and one or two examples of its implementation in code. The grammar and examples presented focus on best representing the concepts, in many cases only presenting a small subset of what is possible with the programming language. 
+Maintaining a clear focus on the most important aspects continues in the presentation of the syntax (\Pref{itm:focus}). The design aimed for each aspect of the syntax to be presented in a single page. The grammar, and examples, presented focus on best representing the concepts, which in many cases means only presenting a small subset of what is possible with the programming language. 
 
 % paragraph syntax (end)
 
-\subsubsection{Understanding the Concepts} % (fold)
+\paragraph{Understanding the Concepts} % (fold)
 \label{par:understanding_the_concepts_}
 
-Programming has been likened to understanding how to control a notional machine \cite{DuBoulay:1986}. The notional machine represents an ideal computer in which the programming constructs being taught are realised. To help students realise the goal of controlling this machine, the next section of each chapter in the Programming Arcana provided a series of illustrations that try to communicate the state and behaviour of the notional machine being presented, when executing the example program developed in earlier sections. \fref{fig:notional_machine} shows an example of the notional machine from the Programming Arcana, the machine contains a persistent storage device, central processing unit (CPU), terminal for input and output, and memory that is divided into sections for global values, stack, instructions, and heap -- in later chapters. 
+In order to think and act as experts, the goal of constructivist education, it is important for students to understand how the instructions affect the machine they are programming (\Pref{itm:construct}). The intended learning outcomes of the introductory programming unit indicate that students need to be able to \emph{explain} their programs, and this requires resources they can draw upon to highlight these lower level operations (\Pref{itm:align}).
+
+The notional machine represents an ideal computer in which the programming constructs being taught are realised \cite{DuBoulay:1986}. To help students realise the goal of \emph{understanding} how to program this machine, the next section of each chapter in the Programming Arcana provided a series of illustrations. These illustrations aim to communicate the state and behaviour of the notional machine as it executes the example program developed in earlier sections. \fref{fig:notional_machine} shows an example of the notional machine from the Programming Arcana, the machine contains a persistent storage device, central processing unit (CPU), terminal for input and output, and memory that is divided into sections for global values, stack, instructions, and heap -- in later chapters. 
 
 \begin{figure}[p]
   \centering
@@ -801,111 +758,154 @@ Programming has been likened to understanding how to control a notional machine 
 
 % paragraph understanding_the_concepts_ (end)
 
-\clearpage
-
-% \begin{figure}[p]
-%   \centering
-%   \includegraphics[width=0.8\textwidth]{ArcanaExamples}
-%   \caption{Example code from the Programming Arcana.}
-%   \label{fig:arcana_examples}
-% \end{figure}
-
-
 % subsubsection chapter_layout (end)
 
 
-\subsection{Generating Railroad Diagrams} % (fold)
-\label{ssub:railroad_diagrams}
+\clearpage
+\subsection{Use and Evaluation of the Programming Arcana} % (fold)
+\label{sub:use_and_evaluation_of_the_programming_arcana}
 
-Another aim in constructing the Programming Arcana was to provide students with descriptions of the programming language grammar. This could be achieved using a textual representation of the programming language grammar with the Backus Naur Form (BNF) \cite{Backus:1959} or the Extended Backus Naur Form (EBNF) \cite{Wirth:1977}. Instead, it was decided to use the ``Railroad diagrams'' described by \citet{Braz:1990}. These provide a more visual means of presenting the grammar, which was intended to be benefit people reading these diagrams for the purpose of writing programs.
+The Programming Arcana was able to meet all of its core requirements, though the use of multiple media formats could be enhanced if the book transitioned to an e-book format. Reflections from teaching staff indicate that it has provided a valuable tool in teaching the introductory programming unit. Staff have received a number of messages from students indicating how valuable they found the resource, a sentiment often reflected in reflections from student portfolios. The following list outlines how the Programming Arcana helped with the delivery of the example units, supported the model described in \cref{cha:approach}, and reflected the principles stated in \cref{cha:guiding_principles}.
 
-To help automate the creation of the ninety syntax diagrams present in the Programming Arcana, a language translator was developed to convert grammars expressed textually into the graphical railroad diagram notation that could be included in the text and lecture slides. 
+\begin{itemize}[noitemsep,nolistsep]
+  \item The Programming Arcana embodies the following principles:
+  \begin{itemize}[noitemsep,nolistsep]
+    \item Explanations aim to guide students to deeper understanding of the concepts associated with the introductory programming unit. (\Pref{itm:construct}, \Pref{itm:align}, and \Pref{itm:concepts})
+    \item Each section focuses on important aspects, avoiding unnecessary details. (\Pref{itm:focus})
+    \item Examples and explanations of concepts, syntax, and execution help support student learning. (\Pref{itm:support})
+    \item Resources from the Programming Arcana provided material used in lecture notes. (\Pref{itm:agile})
+    \item The Programming Arcana focuses on communicating procedural programming concepts, in an appropriate manner for the two programming languages. (\Pref{itm:paradigm} and \Pref{itm:authentic})
+    \item Chapters are organised so that later chapters built upon concepts presented in earlier chapters. (\Pref{itm:concepts})
+  \end{itemize}
+  \item The Programming Arcana supported the use of the model in delivering the introductory programming unit by:
+  \begin{itemize}[noitemsep,nolistsep]
+    \item Providing details that were removed from lectures, to enable these to be more interactive.
+    \item Aligning content presented in the text, with the material from lectures and core tasks, thereby providing a consistent experience for students.
+    \item Supporting the focus on concepts, providing students with additional explanations and examples.
+    \item Providing resources to aid students with the core tasks.
+  \end{itemize}
+\end{itemize}
 
-Originally, grammars expressed in BNF used recursion to implement the repetition of elements in the language. In proposing EBNF, \cite{Wirth:1977} included an iteration construct that reduced the heavy use of recursion for expressing simple repetition of elements in the language. The EBNF extension of BNF caters for simple repetitions, but reverts to recursion in many cases.
-
-To simplify the generation of the railroad diagrams, an adapted for of EBNF was used. The adaptation further simplified repeated patterns that included a separator, a common feature of programming language syntax and one that requires the use recursion to express in BNF and EBNF. For example \lref{lst:param_list} shows the EBNF definition of the syntax for a parameter list where parameters are separated by commas, and the equivalent railroad diagram -- which does not use recursion -- is shown in \fref{syn:paramlist}. 
-
-\ebnfsection{lst:param_list}{EBNF}{EBNF representation of a parameter list that separates multiple parameters with commas}{\ebnfcode{syntax/paramlist.ebnf}}
-
-\syntax{syn:paramlist}{Equivalent railroad diagram for the grammar shown in \lref{lst:param_list}}{paramlist}
+% subsection use_and_evaluation_of_the_programming_arcana (end)
 
 \clearpage
-To cater for the more flexible representation in the railroad diagrams, additional features were added to EBNF to indicate the separator for repetitions, and to indicate if the repetition occurred at least once. The grammar for this extended version of EBNF is shown in its own form in \fref{lst:eebnf}, and as a railroad diagram in \fref{syn:eebnf}.
+\subsection{Summary} % (fold)
+\label{sub:arcana_summary}
 
-\ebnfsection{lst:eebnf}{Adapted EBNF}{Adapted EBNF grammar, with additional data related to repetitions and separator characters.}{\ebnfcode{syntax/eebnf.ebnf}}
-
-\syntax{syn:eebnf}{Syntax for grammar used in language diagram generation.}{eebnf}
-
-The \texttt{( + | * )} group included as part of the repetition indicates if the grammar must be repeated at least one or more times (\texttt{+}) or can appear zero or more times (\texttt{*}). The optional group following this, \texttt{[ "(", terminal, ")" ]}, indicates the presence of a separator that will appear between each repetition of the grammar in the language. For example, the parameter list from \fref{syn:paramlist} can be code as shown in \lref{lst:param_list2}.
-
-\ebnfsection{lst:param_list2}{Adapted EBNF}{Adapted version of the EBNF grammar for the parameter list shown in \lref{lst:param_list}, indicating that the parameter must appear at least once and repetitions are separated by a comma.}{\ebnfcode{syntax/paramlist2.ebnf}}
-
-This grammar was used to encode all of the language details for the railroad diagrams in the Programming Arcana. This data was then interpreted by a script and appropriate visual representations were output to include in the text. This enabled the syntax to be quickly expressed and documented for both C and Pascal.
-
-% subsubsection railroad_diagrams (end)
-\clearpage
-\subsection{Embodying the Concept-Based Approach} % (fold)
-\label{ssub:arcana_summary}
-
-The Programming Arcana textbook demonstrates how the concept-based approach of the model can be embedded down to the syntax level. The text provides students with the details related to programming concepts, how they apply to program design, the associated syntax, and details on how they work within a notional machine. A range of learning styles are supported through the presentation of the syntax and concepts using both images and text. Overall, the Programming Arcana supported the concept-based approach to teaching introductory programming by embodying its principles, providing students with details on the concepts, their application, syntax and operations. 
+The Programming Arcana textbook demonstrates how the concept-based approach of the model can be embedded down to the syntax level. The text provides students with the details related to programming concepts, how they apply to program design, the associated syntax, and details on how they work within a notional machine. A range of learning styles are supported through the presentation of the syntax and concepts using both images and text. Overall, the Programming Arcana supported the concept-based approach to teaching introductory programming by providing students with details on the concepts, their application, syntax and operations. 
 
 % subsubsection summary (end)
 
 
 % subsection programming_arcana (end)
-
+\clearpage
 \section{Video Podcasts to Support the Programming Text} % (fold)
 \label{sec:vodcasts}
 
-Text books are limited to providing concepts and language syntax using static text and images. To provide students with an alternative medium, a number of video podcast series were created and made available to students via iTunesU. Three series were created in total, and each took a different approach to what should be presented. The first series, ``Object Oriented Programming'', covers object oriented programming principles and focused on communicating these concepts with little coverage of language syntax. ``Learning Programming with SwinGame'' was the second series created, and focuses on communicating Pascal syntax. The third series, ``Introductory Programming'', focuses on a combination of the two, presenting the concepts and the syntax together. Each of these series is discussed in the following subsections.
+While it was able to meet most of its requirements, the one area where the Programming Arcana was limited was its use of static text and images, a limitation of its format. To provide students with an alternative medium, a number of video podcast series were created and made available to students via iTunesU. Three series were created in total, and each took a different approach to what should be presented. The first series, ``Object Oriented Programming'', covers object oriented programming principles and focused on communicating these concepts with little coverage of language syntax. ``Learning Programming with SwinGame'' was the second series created, and focuses on communicating Pascal syntax. The third series, ``Introductory Programming'', focuses on a combination of the two, presenting the concepts and the syntax together. Each of these series is discussed in the following subsections.
 
-\subsection{Object Oriented Programming} % (fold)
-\label{sub:object_oriented_programming}
+\subsection{Requirements} % (fold)
+\label{sub:vodcast_requirements}
 
-The Object Oriented Programming series contains nineteen video podcasts. This series aimed to enable a classroom ``flip'', with students expected to watch these \emph{before} coming to class. Each podcast focuses on communicating concepts associated with one topics from the unit, with only a small number of episodes presenting language specific material for the C\#, Java and Objective-C programming languages. Episodes lasted between six and thirty six minutes.
+The following list outlines the requirements for the video podcasts. This is divided into general requirements for all podcasts, and specific requirements for the individual series.
 
-% subsection object_oriented_programming (end)
+\begin{itemize}[noitemsep,nolistsep]
+  \item All video podcasts were required to:
+  \begin{itemize}[noitemsep,nolistsep]
+    \item Clearly present a number of concepts or syntax.
+    \item Provide live coding demonstrations.
+    \item Be small in size, enabling fast downloads, while ensuring code was still readable.
+    \item Incorporate Swinburne's introduction and summary video material.
+    \item Be accessible published to iTunesU with associated meta-data.
+  \end{itemize}
+  \item The Object Oriented Programming series was required to:
+  \begin{itemize}[noitemsep,nolistsep]
+    \item Provide all content traditionally delivered in lectures.
+    \item Enable a classroom ``flip'', where lectures are used to discuss content and the video podcast takes the place of the traditional lecture.
+  \end{itemize}
+  \item The Learn Programming with SwinGame series was required to:
+  \begin{itemize}[noitemsep,nolistsep]
+    \item Demonstrate Pascal programming syntax.
+    \item Each video should focus on a single piece of syntax, and demonstrate its use in general and in relation to programming small games.
+  \end{itemize}
+  \item The Introductory Programming series was required to:
+  \begin{itemize}[noitemsep,nolistsep]
+    \item Provide a summary of lecture content of lecture content.
+    \item Demonstrate C programming syntax.
+  \end{itemize}
+\end{itemize}
 
-\subsection{Learning Programming with SwinGame} % (fold)
-\label{sub:learning_programming_with_swingame}
+% subsection requirements (end)
 
-Episodes in this series each focus on a certain aspect of the Pascal programming language. The goal of this series is to provide a number of short videos, with each one covering one piece of the language syntax. Each episode starts with the syntax diagram showing the language grammar in a railroad diagram, making use of the resources created for the Programming Arcana. The syntax is then explored using a simple example with command line input and output. This is then followed by a more interactive example using the game development library discussed in \sref{sec:swingame}.
+\subsection{Video Podcasts Solution} % (fold)
+\label{sub:video_podcasts_solution}
 
-A total of twenty six episodes were created for this series. These are divided into three levels: introductory, intermediate and advanced language concepts. \fref{fig:podcasts} shows the titles of each episodes, and the intended sequence students would follow. Episodes in this series last between two and fifteen minutes.
+Each of the Video Podcast series was developed using a number of video editing tools. Video from coding demonstrations, images of presentation slides, voice over audio, and character animations were all combined together in the video editing software to create each video podcast. Typical processing involved first recording coding demonstrations, and exporting presentation slides, then recording voice over audio. There were then combined with a video editing tool, which involved adjusting slide and video speed to match audio.
 
-\begin{figure}[thb]
+\tref{tbl:vodcasts} provides an overview of the three podcast series. The Object Oriented Programming series was used by the object oriented programming unit, and provided traditional lecture style content. Learning Programming with SwinGame focused on presenting Pascal programming language syntax, as a more dynamic extension of the Programming Arcana. Whereas the Introductory Programming series provided both lecture style content, and coding demonstrations.
+
+\begin{table}[htbp]
   \centering
-  \includegraphics[width=\textwidth]{PodCasts1}
-  \caption{Episodes from Learning Programming with SwinGame video podcasts from iTunesU. The different colours represent the three progressively deeper levels, with the expectation viewers would watch all episodes shown in green before progressing to the ones marked in orange, and all of these would be viewed before the podcasts marked in red.}
-  \label{fig:podcasts}
-\end{figure}
+  \caption{Video podcast series details}
+  \label{tbl:vodcasts}
+  \begin{tabular}{l|c|r}
+  \textbf{Series Name} & \textbf{Episodes} & \textbf{Episode Length} \\
+  \hline
+  Object Oriented Programming & 19 & 6-36 minutes \\
+  Learning Programming with SwinGame & 26 & 2-15 minutes \\
+  Introductory Programming & 7 & 17-38 minutes \\
+  \end{tabular}
+\end{table}
 
-% subsection learning_programming_with_swingame (end)
-
-\subsection{Introductory Programming} % (fold)
-\label{sub:introductory_programming}
-
-Introductory Programming was the last series created, and contains seven episodes that are aligned with the first seven chapters of the Programming Arcana. Each video podcast presents concepts using a number of slides, taken from associated lectures, and includes programming demonstrations in the C and C++ languages. The goal for this series was to provide students with a summary of the concepts from each lecture. Episodes lasted between seventeen and thirty eight minutes.
-
-% subsection introductory_programming (end)
-
-\subsection{Supporting Multiple Modes of Learning} % (fold)
-\label{sub:supporting_multiple_modes_of_learning}
+\subsection{Use and Evaluation of Video Podcasts} % (fold)
+\label{sub:use_and_evaluation_of_video_podcasts}
 
 All three podcast series were used to support students learning in the example units discussed in \cref{cha:example_impl}. The podcasts provided students with an alternative medium for approaching the concepts and syntax that was included in the Programming Arcana, with the expectation that students would be able to use both resources to support the construction of their knowledge.
 
+The following list relates the video podcasts to the principles stated in \cref{cha:guiding_principles}.
+\begin{itemize}[noitemsep,nolistsep]
+  \item Video podcasts provided an additional source of material students could use to help construct their own knowledge. (\Pref{itm:construct})
+  \item Content presented in the video podcasts aligned with the intended learning outcomes of the example programming units. (\Pref{itm:align})
+  \item The video podcasts provided another set of resources to help support student learning efforts. (\Pref{itm:support})
+  \item In each case, episodes demonstrate appropriate use of programming languages. (\Pref{itm:authentic})
+\end{itemize}
+
+In addition to the above list, it was felt that the Learning Programming with SwinGame series had also demonstrated use of the following principles. These principles were not present in the other series which tended to focus on information provision, with a wider set of concepts. 
+\begin{itemize}[noitemsep,nolistsep]
+  \item Episodes focused on demonstrating a single statement, and provided a number of examples to illustrate its use. (\Pref{itm:focus})
+  \item The small focus of these podcasts helped reduce time needed to produce the series. The specific nature of the series also allowed it to be re-used when activities and lecture sequences changed. (\Pref{itm:agile})
+  \item Podcasts provided support for language syntax, allowing other activities to focus on underlying concepts. (\Pref{itm:concepts})
+\end{itemize}
+
+Interestingly, the Learning Programming with SwinGame series proved to be the most useful of the three series. Its clear focus on communicating programming syntax allowed it to be used more flexibly, as it did not depend on other teaching and learning activities. In contrast, the other two series inclusion of concepts meant that they had a greater dependence on how, and in which order, topics were covered in the unit. The use of a larger number of more specific episodes in the Learning Programming with SwinGame series, also made it easier to incorporate the videos in relevant lecture and laboratory notes.
+
+Teaching staff indicated that future video podcasts would continue to use the format of the Learning Programming with SwinGame series. Specifically, the narrow focus and short duration. New series are currently planned to help demonstrate how to achieve certain effects in game programs developed using the SwinGame library. These podcasts would demonstrate how to combine a number of concepts in creating slightly larger programs.
+
+% subsection use_and_evaluation_of_video_podcasts (end)
+
+\subsection{Summary} % (fold)
+\label{sub:vodcast_summary}
+
+Video podcasts provided students with an alternative means for studying unit concepts and programming language syntax. It was found that specific, short duration, podcasts had a longer lifespan as they worked together with teaching and learning activities.
+
+
 % subsection supporting_multiple_modes_of_learning (end)
+
+% subsection video_podcasts_solution (end)
+
+
+
 
 % subsection vodcasts (end)
 
 % section itunesu_vodcasts_to_support_ (end)
-
-\section{Summary} % (fold)
+\clearpage
+\section{Chapter Summary} % (fold)
 \label{sec:supporting_summary}
 
-This chapter has discussed four resources used to support \emph{how} and \emph{what} we taught in the example units from \cref{cha:example_impl}. \sref{sec:doubtfire} described the Doubtfire tool, used to support the use of formative feedback during the semester. In creating Doubtfire we aimed to provide students with visual feedback on their progress in lieu of marks. The Programming Arcana provided students with details on the concepts, their application, associated syntax, and operation on the notional machine. These same concepts were also supported by video podcasts, providing students with an alternative means of study.
+This chapter has discussed four resources used to support \emph{how} and \emph{what} was taught in the example units from \cref{cha:example_impl}. Doubtfire helped to support the use of formative feedback during the semester, with visual feedback being used in lieu of marks to help motivate students. SwinGame provided a game library to help students create rich and interactive programs. The Programming Arcana provided students with details on the concepts, their application, associated syntax, and operation on the notional machine. Which was also supported by the video podcasts, which provided students with an alternative means of study.
 
-\cref{cha:evaluation} presents an evaluation of these resources, the teaching and learning activities from \cref{cha:example_impl}, and model from \cref{cha:approach}.
+\cref{cha:evaluation} presents a further evaluation of these resources, the teaching and learning activities from \cref{cha:example_impl}, and model from \cref{cha:approach}.
 
 % section summary (end)
 
