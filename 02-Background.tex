@@ -5,11 +5,9 @@
 
 \graphicspath{{Figures/Background/}}
 
-This chapter provides a reviews the existing literature related to constructive alignment, its theoretical foundations, applications in higher education, and relationship to published work in computing education research. 
+This chapter reviews the existing literature related to constructive alignment, its theoretical foundations, applications in higher education, and relationship to published work in computing education research. The chapter aims to provide a general background on existing approaches to constructive alignment. Additional background literature is discussed in the following chapters in relation to the specific work presented. 
 
-\sref{sec:constructive_alignment} provides background on constructive alignment, and relevant associated work on constructivism and aligned curriculum. This is followed in \sref{sec:reported_applications_of_constructive_alignment} with a structured literature review of applications of constructive alignment reported in peer reviewed research publications, which outlines how others have approached the application of constructive alignment and their findings. \sref{sec:constructive_alignment_in_introductory_programming} then follows with a discussion of the challenges of teaching introductory programming, associated work from the computing education literature, and specifically looks at how constructive alignment has been applied for introductory programming. The chapter closes with \sref{sec:closing_comments} by briefly commenting on the opportunities for research that are addressed in the remainder of this thesis.
-
-This chapter aims only to provide a general background on existing approaches to constructive alignment. Additional background literature is discussed in the following chapters in relation to the specific work presented. 
+\sref{sec:constructive_alignment} provides background on constructive alignment, and relevant associated work on constructivism and aligned curriculum. This is followed in \sref{sec:reported_applications_of_constructive_alignment} with a systematic literature review of applications of constructive alignment reported in peer reviewed research publications, which outlines how others have approached the application of constructive alignment and their findings. \sref{sec:constructive_alignment_in_introductory_programming} then follows with a discussion of the challenges of teaching introductory programming, associated work from the computing education literature, and specifically looks at how constructive alignment has been applied for introductory programming. The chapter closes with \sref{sec:closing_comments} by briefly commenting on the opportunities for research that are addressed in the remainder of this thesis.
 
 
 \section{Constructive Alignment} % (fold)
@@ -17,16 +15,16 @@ This chapter aims only to provide a general background on existing approaches to
 
 Constructive alignment, as proposed by \citet{Biggs:1996c}, is an amalgamation of constructive learning theory and aligned instruction design. It aims to elicit deep learning approaches from all students. Biggs' model is student focused, with clear and intentional alignment of assessment, teaching and learning activities, and unit objectives. The central role of the learner in building meaning is derived from constructivist learning theories, whilst the alignment of assessment, teaching, and learning activities, has its foundation in instructional design literature. 
 
-This section briefly describes these underlying principles, and related literature, each of which is later expanded upon in \cref{cha:guiding_principles}. \sref{sub:approaches_to_learning} describes the work on approaches to learning, and discusses how the learning environment can influence students' approaches to learning. The central focus on constructive learning theories is then discussed in \sref{sub:constructivism}, with a discussion of aligned curriculum following in \sref{sub:aligned_curriculum}. The section concludes with an overview of the model of constructive alignment, \sref{sub:the_model_of_constructive_alignment}, and then a brief discussion of the example implementation of these principles that was presented by \citet{Biggs:1996c}.
+This section briefly describes these underlying principles and related literature, each of which is later expanded upon in \cref{cha:guiding_principles}. \sref{sub:approaches_to_learning} describes the work on approaches to learning, and discusses how the learning environment can influence students' approaches to learning. The central focus on constructive learning theories is then discussed in \sref{sub:constructivism}, with a discussion of aligned curriculum following in \sref{sub:aligned_curriculum}. The section concludes with an overview of the model of constructive alignment, \sref{sub:the_model_of_constructive_alignment}, and then a brief discussion of the example implementation of these principles that was presented by \citet{Biggs:1996c}.
 
 \subsection{Approaches to Learning} % (fold)
 \label{sub:approaches_to_learning}
 
-\citet{Marton:1976a, Marton:1976b,Marton:2005} studies on student approaches to learning examined the processes and strategies students applied to learning. The work identified two different levels of processing, described as \emph{surface} and \emph{deep} approaches to learning, summarised in \tref{tbl:learning_approach}. When a student adopts a deep approach to learning, they study with the aim of understanding the material. They engage meaningfully with the task at hand, and use high cognitive levels in order to integrate the new knowledge into their current understanding. In contrast, when students use surface approaches to learning they engage lower cognitive levels, and aim only to be able to reproduce the material in test or exam conditions. When reading, for example, surface approaches can be characterised as focusing on the text itself, while deep approaches look for the meaning behind the text. Later work also added a third approach to learning termed a \emph{strategic} approach by \citet{Ramsden:1983}, or \emph{achieving} by  \citet{Biggs:1987}, identified students who switch between deep and surface learning approaches in order to maximise their grade. 
+The studies by \citet{Marton:1976a, Marton:1976b,Marton:2005} on student approaches to learning examined the processes and strategies students applied to learning. The work identified two different levels of processing, described as \emph{surface} and \emph{deep} approaches to learning, summarised in \tref{tbl:learning_approach}. When a student adopts a deep approach to learning, they study with the aim of understanding the material. They engage meaningfully with the task at hand, and use high cognitive levels in order to integrate the new knowledge into their current understanding. In contrast, when students use surface approaches to learning they engage lower cognitive levels, and aim only to be able to reproduce the material in test or exam conditions. When reading, for example, surface approaches can be characterised as focusing on the text itself, while deep approaches look for the meaning behind the text. Later work also added a third approach to learning termed a \emph{strategic} approach by \citet{Ramsden:1983}, or \emph{achieving} by  \citet{Biggs:1987}, identified students who switch between deep and surface learning approaches in order to maximise their grade. 
 
 \begin{table}[h]
 	\centering
-	\caption{Approaches to Learning}
+	\caption{Approaches to Learning identified by \citet{Marton:1976a, Marton:1976b,Marton:2005}}
 	\label{tbl:learning_approach}
 	\begin{tabular}{l|l}
 		\multicolumn{1}{c|}{\textbf{Deep}} & \multicolumn{1}{c}{\textbf{Surface}} \\
@@ -126,9 +124,9 @@ Early work on applying constructive learning theories to teaching computer scien
 
 \citet{Thramboulidis:2003,Thramboulidis:2003a,Thramboulidis:2003b} described a shift from teaching a second programming unit on object oriented programming from a traditional ``textbook'' style approach, to a design-first approach based upon constructivist learning theories. The course presented by Thramboulidis involved students modelling familiar real world situations using object oriented programming principles and class and sequence diagrams. This utilised students understanding of ``objects'' in the real world in the production of object oriented simulations suitable for implementation in computer programs. Following these activities, students went on to design and implement an object oriented calculator, making use of the concepts they had learnt from the earlier tasks. Results reported in this work indicated that the more active engagement of the students had resulted in positive improvements in both the pass rate and programs the students created. 
 
-Constructivism has also been applied to teaching computer graphics, with mixed results. \citet{Taxen:2004} reported on a case study where they had applied constructive learning theories to teaching 3D graphics. The strategy applied in this work related to \emph{discovery learning} \cite{Duffy:1996} where teaching staff refrain from making explicit instruction, and instead provided a series of activities to help student discover the relevant knowledge themselves. The discussion and conclusions of \citet{Taxen:2004} indicated that students had felt the learning environment was too challenging, and they did not have sufficient background knowledge. In reflection, the use of an exam had contributed to a disconnect between the teaching approach and the assessment approach; the exam, in effect, encouraged students to adopt surface approaches that had been actively discouraged in the learning.
+Constructivism has also been applied to teaching computer graphics, with mixed results. \citet{Taxen:2004} reported on a case study where they had applied constructive learning theories to teaching 3D graphics. The strategy applied in this work related to \emph{discovery learning} \cite{Duffy:1996} where teaching staff refrain from making explicit instruction, and instead provided a series of activities to help student discover the relevant knowledge themselves. The discussion and conclusions of \citet{Taxen:2004} indicated that students had felt the learning environment was too challenging, and they did not have sufficient background knowledge. Taxen's reflections indicated the use of an exam had contributed to a disconnect between the teaching approach and the assessment approach; the exam, in effect, encouraged students to adopt surface approaches that had been actively discouraged in the learning.
 
-\citet{Wulf:2005} reported a constructivist based pedagogy for teaching introductory programming and information technology that was considered to have created a more accessible environment for a wider range of students. This work recommended a range of active learning tasks, with collaborative group-based instruction to create a more student-centred learning environment for computer science units.
+\citet{Wulf:2005} reported a constructivist based pedagogy for teaching introductory programming and information technology that was considered to have created a more accessible environment for a wider range of students. This work recommended the active learning tasks outlined by \citet{VanGorp:2001}, and expanded upon this with a studio based approach to teaching introductory programming with collaborative group-based instruction to create a more student-centred learning environment for computer science units.
 
 These various works on constructivism in computer science education indicate that the application of constructivist learning theories should be beneficial for teaching introductory programming. By focusing on the active role of the student in constructing their own knowledge it should be possible to create a unit in which students develop an appropriate model of the computer, gain an understanding of important programming concepts, and acquire associated programming skills.
 
@@ -193,7 +191,9 @@ Constructive alignment aims to encourage students to engage in deep approaches t
 \subsection{Biggs' Example Implementation} % (fold)
 \label{sub:biggs_example_implementation}
 
-Interestingly, the principles of constructive alignment were not conceived and then implemented, but rather \emph{discovered} through reflection. \citet{Biggs:2007} (p.51) describes the discovery of these principles through the application of a portfolio for assessment of a third year psychology unit in the Bachelor of Education, the compelling example used in \citet{Biggs:1996c} and further elaborated upon in \citet{Biggs:1997}. 
+Interestingly, the principles of constructive alignment were not conceived and then implemented, but rather \emph{discovered} through reflection. \citet{Biggs:2007} (p.51) describes the discovery of these principles through the application of a portfolio for assessment of a third year psychology unit in the Bachelor of Education, the compelling example used in \citet{Biggs:1996c} and further elaborated upon in \citet{Biggs:1997}.
+
+\citet{Biggs:1997} described a portfolio as a body of work selected by the student to demonstrate that they had met the unit's intended learning outcomes. A portfolio consisted of a number of \emph{items}, or \emph{pieces} of work, as well as an overall statement indicating \emph{why} the items had been included, and how they demonstrated that the student had met the unit's intended learning outcomes. Portfolios are discussed in further detail in \sref{sub:portfolio_assessment}.
 
 Biggs' example of constructive alignment clearly demonstrated the application of both constructive learning theories, and aligned curriculum. By using a portfolio, the unit revolved around the intended learning outcomes, with students needing to submit a body of work that demonstrated how they had met outcomes in order to pass the unit. The portfolio was assessed holistically, with different grade outcomes relating to how well the learning outcomes had been addressed. Teaching and learning activities revolved around the preparation of portfolio pieces, including a range of student centred activities and guided instruction where appropriate.
 
@@ -207,19 +207,19 @@ Biggs' example of constructive alignment clearly demonstrated the application of
 \section{Reported Applications of Constructive Alignment} % (fold)
 \label{sec:reported_applications_of_constructive_alignment}
 
-In this section we outline a literature review that examines the applications of constructive alignment in Higher Education. This review aims to identify how constructive alignment can be applied to introductory programming, and any gaps in the current research literature. 
+In this section we outline a literature review that examines some applications of constructive alignment in Higher Education. This review aims to identify how constructive alignment can be applied to introductory programming, and any gaps in the current research literature. 
 
 \subsection{Review Method} % (fold)
 \label{sub:review_method}
 
-\citet{Petticrew:2008} defined a structured literature review as a process of systematically analysing all available studies in order to answer specific research questions. The review presented here followed the structured literature review process of \citet{Kitchenham:2004}, and aims to identify, to the best of our knowledge, all available studies on how Constructive Alignment has been applied in Higher Education.
+\citet{Petticrew:2008} defined a systematic literature review as a process of systematically analysing all available studies in order to answer specific research questions. The systematic nature of reviews carried out in this manner ensure that the review is thorough and fair, providing an opportunity to synthesise existing work in a scientific manner. The review presented here followed the systematic literature review process of \citet{Kitchenham:2004}, and aimed to identify, to the best of our knowledge, all available studies on how Constructive Alignment has been applied in Higher Education.
 
-\fref{fig:struct_review_proc} shows the three phases in the structured literature review carried out in this work. The first phase identified appropriate search and filter criteria used in locating associated literature. In Phase 2, the search criteria was used to identify potentially relevant articles from the indicated sources. The articles identified were then filtered, using the filter criteria, to identify the relevant articles to pass on to Phase 3, where relevant data was collected from the articles, and the results analysed.
+\fref{fig:struct_review_proc} shows the three phases in the systematic literature review carried out in this work. The first phase identified appropriate search and filter criteria used in locating associated literature. In Phase 2, the search criteria was used to identify potentially relevant articles from the indicated sources. The articles identified were then filtered, using the filter criteria, to identify the relevant articles to pass on to Phase 3, where relevant data was collected from the articles, and the results analysed.
 
 \begin{figure}[tbph]
 	\centering
 	\includegraphics[width=\textwidth]{SystematicReview}
-	\caption{Structured Literature Review processes carried out in this work, based on steps of \citet{Kitchenham:2004}.}
+	\caption{Systematic Literature Review processes carried out in this work, based on steps of \citet{Kitchenham:2004}.}
 	\label{fig:struct_review_proc}
 \end{figure}
 
@@ -230,7 +230,7 @@ In this section we outline a literature review that examines the applications of
 
 This review focused on the application of constructive alignment, and the effectiveness of the teaching and learning environment created. \citet{Petticrew:2008} suggested that the formulation of research questions for a systematic review should consider five aspects: Population, Intervention, Comparison, Outcome and Context (PICOC). Addressing these five aspects enabled the creation of effective search and filter criteria.
 
-\tref{tbl:picoc} lists the five PICOC aspects related to this review. The Population consists of the specific target group that the study examines. In this study the population included students and academics in the context of Higher Education. This work aimed to review interventions where academics had applied the principles of constructive alignment, and any comparisons they had with existing approaches to teaching and learning. In terms of outcomes, we were interested in examining any positive or negative impacts these changes had on either staff or students.
+\tref{tbl:picoc} lists the five PICOC aspects related to this review. The Population consists of the specific target group that the study examines. In this study the population included students and academics in the context of Higher Education. This work aimed to review interventions where academics had applied the principles of constructive alignment, and any comparisons they had with existing approaches to teaching and learning. It aimed to investigate the range of approaches to delivery, and kinds of assessment used. In terms of outcomes, we were interested in examining any positive or negative impacts these changes had on either staff or students.
 
 \begin{table}[t]
 	\renewcommand{\arraystretch}{1.2}
@@ -250,7 +250,7 @@ This review focused on the application of constructive alignment, and the effect
 \end{table}
 
 
-This structured literature review aimed to answer the following questions:
+This systematic literature review aimed to answer the following questions:
 
 \begin{enumerate}[noitemsep,nolistsep]
 	\item What evidence is there of studies on the application of constructive alignment to teaching and learning in higher education?
@@ -269,7 +269,7 @@ Given the highly sensitive search criteria, a high number of irrelevant articles
 \begin{itemize}[noitemsep,nolistsep]
 	\item The full text of the paper must be available to the researchers, and must be published in English.
 	\item The paper must appear in a peer refereed conference, journal or workshop.
-	\item Constructive Alignment must be mentioned, and discussed.
+	\item Constructive Alignment must be discussed either as the main focus, or an important aspect, of the paper.
 	\item Results must relate to the use of Constructive Alignment in a teaching and learning context.
 \end{itemize}
 
@@ -362,7 +362,7 @@ The search involved the use of seventeen online databases, all of which were sea
 \end{table}
 \end{savenotes}
 
-A total of 335 unique articles were identified, and were filtered using the process indicated in \sref{ssub:identification_of_relevant_literature}, resulting in 38 papers being included in the final analysis. \tref{tbl:exclude_reason} and \fref{fig:filter_results} show the number of papers excluded by each filter.
+A total of 335 unique articles were identified, and were filtered using the process indicated in \sref{ssub:identification_of_relevant_literature}, resulting in 38 papers being included in the final analysis. \tref{tbl:exclude_reason} and \fref{fig:filter_results} show the number of papers excluded by each filter. Filtering for lack of full text and peer reviewed status was relatively straightforward, as was identifying papers that did not mention constructive alignment, or were unrelated to a teaching and learning context. Similarly, papers related to the use of constructive alignment of a module or degree programme were also easy to identify. Filtering for depth of discussion on Constructive Alignment was the one filter that required the most attention. In many of these cases the filter was easily able to exclude papers which lacked any real discussion of constructive alignment beyond stating it should be used, and to include papers which discussed the topic in depth. However a small number of papers had \emph{some} discussion of constructive alignment but did not necessarily provide any depth. In these cases, the papers were initially included for analysis, and if during the data collection there was insufficient discussion to enable the data extraction then the paper was excluded and attributed to this filter.
 
 \begin{table}[p]
 	\centering
@@ -392,7 +392,6 @@ A total of 335 unique articles were identified, and were filtered using the proc
 	\label{fig:filter_results}
 \end{figure}
 
-\clearpage
 \subsubsection{Overview of Papers Collected} % (fold)
 \label{sub:overview_of_papers_collected}
 
@@ -491,8 +490,6 @@ Units in the analysed papers were primarily delivered face to face (82\%), with 
 
 The increasing popularity of constructive alignment, at least in terms of papers reporting its application, can be seen by examining publication years. \fref{fig:year} provides a visual representation of this data, also shown in \tref{tbl:year}, and indicates an increasing number of papers published from 2005. It should be noted that the search was performed on the 18\textsuperscript{th} of July 2012, and therefore figures for 2012 only captures papers indexed by the source databases prior to this time. The data in \fref{fig:year} and \tref{tbl:year} also includes the counts of work that was excluded as duplicate studies, where the one study had been presented in a number of papers.
 
-\clearpage
-
 \begin{table}[p]
 	\centering
 	\caption{Year of publication for the papers analysed. Note that the count for 2012 is partial as the search was conducted on the 18\textsuperscript{th} of July 2012. Numbers in parenthesis indicate the number of papers removed in the filtering process as a duplicate of later papers included. }
@@ -519,7 +516,6 @@ The increasing popularity of constructive alignment, at least in terms of papers
 
 
 % subsection overview_of_papers_collected (end)
-\clearpage
 \subsubsection{Teaching and Learning Activities} % (fold)
 \label{sub:teaching_and_learning_activities}
 
@@ -558,7 +554,7 @@ Interactive lectures and classes indicate a shift away from the objectivist idea
 
 \citet{Palincsar:1998} indicated that from a social constructivist perspective, higher-order thinking can be enhanced through the use of social interaction, such as can be achieved through classroom discussion. A number of papers indicated a shift to group work and classroom discussions as a means of engaging with these constructivist theories. One example of this shift is reported by \citet{Israel:2007}, who reported using tutorials as a means of guiding group research projects in their advanced undergraduate unit on psychology.
 
-\begin{table}[htpb]
+\begin{table}[tpb]
 	\centering
 	\caption{Method of incorporating constructive learning theories into the teaching and learning activities}
 	\label{tbl:class_constructive}
@@ -793,7 +789,7 @@ Student engagement was also reported as a positive result in a number of papers.
     \end{tabular}
 \end{table}
 
-Issues were reported by only a few papers, with seven papers reporting issues related to the teaching and learning environment created. One common issue was additional staff and student workload as a result of the initiatives, as shown in \tref{tbl:neg_results}. Staff workload related to the development of new material, and the provision of feedback. Student workload issues were reported via the student satisfaction surveys. The remaining two issues, classified as other in the table, are detailed in the following list.
+Problems arising from the application of constructive alignment were reported by only a few papers, with seven papers reporting issues related to the teaching and learning environment created. One common issue was additional staff and student workload as a result of the initiatives, as shown in \tref{tbl:neg_results}. Staff workload related to the development of new material, and the provision of feedback. Student workload issues were reported via the student satisfaction surveys. The remaining two issues, classified as other in the table, are detailed in the following list.
 
 \begin{itemize}[noitemsep,nolistsep]
 	\item \citet{Lin:2004} indicated that the less capable students may have found the problem-based learning approach used too complex and challenging.
@@ -961,7 +957,7 @@ Overall the work of \citet{Gaspar:2012} and \citet{Thota:2010} are representativ
 
 % section constructive_alignment_in_introductory_programming (end)
 \clearpage
-\section{Closing Comments} % (fold)
+\section{Summary} % (fold)
 \label{sec:closing_comments}
 
 \citet{Biggs:1996c} vision of constructive alignment provided a strong and compelling argument for focusing on \textbf{student-centred} approaches to learning and assessment. Biggs' example unit demonstrated clear alignment between the intended learning outcomes and assessment, with learning activities providing students with the means of addressing these outcomes in the preparation of their portfolios. In contrast, the reported applications of constructive alignment have remained primarily \textbf{teacher-centred}, with teaching staff defining teaching and learning activities that are then assessed using traditional weighted assignments and exams.
